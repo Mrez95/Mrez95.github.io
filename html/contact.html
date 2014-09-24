@@ -366,19 +366,19 @@
                     'overflow': 'visible',
                     'height': 'auto',
                 })
-//                $('#container')
-//                        .delay(5400)
-//                        .queue(function() {
-//                            $(this).fadeOut(1000, function() {                               
-//                                $('html, body').css({
-//                                'overflow': 'visible',
-//                                'height': 'auto',                                
-//                            })
-//                            $('#loading').fadeOut(600);
-//                            });
-//                            ;                            
-//                            $(this).dequeue();
-//                        });
+                $('#container')
+                        .delay(5400)
+                        .queue(function() {
+                            $(this).fadeOut(1000, function() {                               
+                                $('html, body').css({
+                                'overflow': 'visible',
+                                'height': 'auto',                                
+                            })
+                            $('#loading').fadeOut(600);
+                            });
+                            ;                            
+                            $(this).dequeue();
+                        });
                 if ($(window).width() > 768) {
                     $('.name-container').css(
                             {
@@ -889,23 +889,27 @@
                 color: rgba(255,255,255,0.6);
             }
             input::-webkit-input-placeholder { /* WebKit browsers */
+                font-family: 'Rock Salt', cursive;
                 color:    rgba(255,255,255,0.3);
-                font-size:15px;
+                font-size:12px;
                 line-height:  normal;
             }
             input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+                font-family: 'Rock Salt', cursive;
                 color:    rgba(255,255,255,0.3);
-                font-size:15px;
+                font-size:12px;
                 line-height:  normal;
             }
             input::-moz-placeholder { /* Mozilla Firefox 19+ */
+                font-family: 'Rock Salt', cursive;
                 color:    rgba(255,255,255,0.3);
                 font-size:15px;
                 line-height:  normal;
             }
             input:-ms-input-placeholder { /* Internet Explorer 10+ */
+                font-family: 'Rock Salt', cursive;
                 color:    rgba(255,255,255,0.3);
-                font-size:15px;
+                font-size:12px;
                 line-height:  normal;
             }
             #client{
@@ -930,7 +934,7 @@
     </head>
 
     <body class="background">
-<!--                <div id='loading'>
+                <div id='loading'>
                     <div id="container"> 
                         <video id="signature" preload="auto" autoplay="true" muted="muted">
                             <source src="../signature/Signature_21.mp4" type="video/mp4">
@@ -940,21 +944,21 @@
                         </div>
                         <div id="qoute" style="position:relative; opacity:0"><b>“</b> Sing like no one’s listening, love like you’ve never been hurt, dance like nobody’s watching, and live like its heaven on earth. <b>”</b> <p>-<b> Mark Twain</b></p></div>
                     </div>
-                </div>-->
+                </div>
         <script type="text/javascript">
-//            document.getElementById("loading").style.display = "block";
-//            $('html, body').css({//ide scroll bar
-//                'overflow': 'hidden',
-//                'height': '100%'
-//            })
-//            $("#qoute").delay(400)
-//                    .queue(function() {
-//                        $(this).stop().animate({
-//                            top: '45%',
-//                            opacity: '1'
-//                        }, 3000, 'swing');
-//                        $(this).dequeue();
-//                    });
+            document.getElementById("loading").style.display = "block";
+            $('html, body').css({//ide scroll bar
+                'overflow': 'hidden',
+                'height': '100%'
+            })
+            $("#qoute").delay(400)
+                    .queue(function() {
+                        $(this).stop().animate({
+                            top: '45%',
+                            opacity: '1'
+                        }, 3000, 'swing');
+                        $(this).dequeue();
+                    });
         </script>
 
         <nav class="navbar navbar-inverse navbar-fixed-top" id="default-nav" style="border-bottom:0px; z-index:9;background-color: rgba(0,0,0,0.0) !important; " >
@@ -1150,12 +1154,12 @@
 
                             </div>
                             <div id="contact-me">
-                                <div class="letter-writing" style="margin:15px">
+                                <div class="letter-writing" style="margin:30px;margin-top:17px">
                                     <div>
-                                        <p style="margin-top:20px; font-size:20px;">To: &nbsp Eddie Zhang</p>
+                                        <br><p style="font-size:20px;">To: &nbsp Eddie Zhang</p>
 
                                         <form name="input" action="../php/contact.php" method="post" >
-                                            <div style="position:absolute;top:38%;font-size:20px">
+                                            <div style="position:absolute;top:55%;font-size:20px">
                                                 From: &nbsp<input type="text" name="client" id='client'><br>
                                                 Return Address: &nbsp<input type="text" name="address" id='return'><br>
 
