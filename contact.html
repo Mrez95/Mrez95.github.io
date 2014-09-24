@@ -33,6 +33,11 @@
             var wordGap = 11;
             /* ]]> */
             $(document).ready(function() {
+            var vid = document.getElementById("signature");
+            vid.display
+vid.onloadedmetadata = function() {
+    $("#signature").css('visibility','visible');
+};
                 typerColor = 'rgba(241,194,214,0.6)'; // sends to typer.js
 
                 var tempHeight = $(window).height() - $('.container').height();
@@ -232,13 +237,6 @@
             });
 
             function updateVisual() {
-//$("#client").css("width", $("#contact-me").width() * 0.5);
-//                    $("#return").css("width", $("#contact-me").width() * 0.35);
-//                    $("#message").css("width", $("#contact-me").width() * 0.715);
-//                    $("#message-con").css("width", $("#contact-me").width() * 0.43);
-//                    $("#message-con-2").css("width", $("#message-con").width());
-//                    $("#message-con-3").css("width", $("#message-con").width());
-//                    $("#message-con-4").css("width", $("#message-con").width());
                 $("#message-con-0").attr("maxlength", Math.round($("#message-con-0").width() / wordGap));
                 $("#message-con-1").attr("maxlength", Math.round($("#message-con-1").width() / wordGap));
                 $("#message-con-2").attr("maxlength", Math.round($("#message-con-2").width() / wordGap));
@@ -363,10 +361,11 @@
             $(window).load(function() {
                 updateVisual();
                 $('html, body').css({
-                    'overflow': 'visible',
+                    'overflow': 'hidden',
                     'height': 'auto',
                 })
-                $('#container')
+               /*
+ $('#container')
                         .delay(5400)
                         .queue(function() {
                             $(this).fadeOut(1000, function() {                               
@@ -379,6 +378,7 @@
                             ;                            
                             $(this).dequeue();
                         });
+*/
                 if ($(window).width() > 768) {
                     $('.name-container').css(
                             {
@@ -740,9 +740,9 @@
                 background: url(images/filter1.png) bottom center repeat;
             }
             video#signature{
-                display:block;
+            	display:block;
+                visibility: hidden;
                 position:relative;
-                height:90%;
                 width:90%;
                 top:30%;
                 margin:auto;
@@ -769,7 +769,7 @@
                 display:block;
                 position:relative;
                 overflow:hidden;
-                top: 40%;
+                top: 45%;
                 left:-10%;
                 margin:auto;
                 width: 125%;
@@ -946,8 +946,8 @@
                     </div>
                 </div>
         <script type="text/javascript">
-            document.getElementById("loading").style.display = "block";
-            $('html, body').css({//ide scroll bar
+       
+            $('html, body').css({//hide scroll bar
                 'overflow': 'hidden',
                 'height': '100%'
             })
