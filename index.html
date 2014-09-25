@@ -1,5 +1,5 @@
 <html><head>
-        <title>Tianyi Zhang</title>
+        <title>Eddie Zhang | Home</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8">
         <!--<link href="css/main.css" rel="stylesheet" type="type/css">-->
@@ -10,7 +10,7 @@
         <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet" type="text/css">
         <link href="css/scroll.css" rel="stylesheet" type="text/css">
         <link href="css/fontello.css" rel="stylesheet" type="text/css">
-        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="images/mstile-310x310.png" type="image/x-icon">
         <link rel="icon" href="images/favicon.ico" type="image/x-icon">
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
@@ -33,11 +33,13 @@
             var wordGap = 11;
             /* ]]> */
             $(document).ready(function() {
-            var vid = document.getElementById("signature");
-            vid.display
-vid.onloadedmetadata = function() {
-    $("#signature").css('visibility','visible');
-};
+            	/*
+var vid = document.getElementById("signature");
+            	vid.display
+				vid.onloadedmetadata = function() {
+					$("#signature").css('visibility','visible');
+				};
+*/
                 typerColor = 'rgba(241,194,214,0.6)'; // sends to typer.js
 
                 var tempHeight = $(window).height() - $('.container').height();
@@ -70,7 +72,7 @@ vid.onloadedmetadata = function() {
                                 classes: {
                                     base: {
                                         "white-space": "nowrap",
-                                        "background-color": "rgba(255,255,255,0.8)",
+                                        "background-color": "rgba(255,255,255,0.9)",
                                         "padding": "35px",
                                         "margin-right": "10px"
                                     },
@@ -182,10 +184,10 @@ vid.onloadedmetadata = function() {
             }
             function animate_scroll_button() {
                 $("#scroll_down").animate({
-                    bottom: "35px"
+                    bottom: "50px"
                 }, 1000, function() {
                     $("#scroll_down").animate({
-                        bottom: "15px"
+                        bottom: "20px"
                     }, {
                         duration: 2000,
                         easing: "easeOutBounce"
@@ -245,30 +247,28 @@ vid.onloadedmetadata = function() {
                 $("#message-con-4").attr("maxlength", Math.round($("#message-con-4").width() / wordGap));
                 $("#footer").css("height", window.innerHeight - $("#navbar").height());
                 $("#icon-wrapper").css("width", $("#about-me").width());
-                if (window.innerHeight > 800) {
-                    $(".name-container").css({
-                        width: '40%',
-                        height: '50%',
-                        top: window.innerHeight * 0.18
-                    });
-                    $(".logo").css("margin-bottom", "15px");
-                    $("#nameTag").css("font-size", $('.name-container').width() / 8.5 + "px");
-                    $("#typer").css("font-size", $('.name-container').width() / 25 + "px");
-                    $(".demo-3").css("margin-top", "35px");
-                    $(".box").css("margin", "6px");
-
-                }
-                else {
-                    $(".name-container").css({
-                        width: '566px',
-                        height: '457px',
-                        top: window.innerHeight * 0.10
-                    });
-                    $(".logo").css("margin-bottom", "-30px");
+                $(".logo").css("margin-bottom", "-30px");
                     $("#nameTag").css("font-size", "69px");
                     $("#typer").css("font-size", "22px");
                     $(".demo-3").css("margin-top", "none");
                     $(".box").css("margin", "2px");
+                if (window.innerHeight > 800) {
+ $("#personal-bio").css('font-size','20px');
+                    $(".name-container").css({
+                        width: '566px',
+                        height: '457px',
+                        top: window.innerHeight * 0.21
+                    });
+                    
+
+                }
+                else {
+                                $("#personal-bio").css('font-size','16px');
+                    $(".name-container").css({
+                        width: '566px',
+                        height: '457px',
+                        top: window.innerHeight * 0.11
+                    });
                 }
 
             }
@@ -362,10 +362,11 @@ vid.onloadedmetadata = function() {
             $(window).load(function() {
                 updateVisual();
                 $('html, body').css({
-                    'overflow': 'hidden',
+                    'overflow': 'visible', //TODO: change back to visible
                     'height': 'auto',
                 })
-                $('#container')
+                /*
+$('#container')
                         .delay(5400)
                         .queue(function() {
                             $(this).fadeOut(1000, function() {                               
@@ -378,6 +379,7 @@ vid.onloadedmetadata = function() {
                             ;                            
                             $(this).dequeue();
                         });
+*/
                 if ($(window).width() > 768) {
                     $('.name-container').css(
                             {
@@ -409,7 +411,7 @@ vid.onloadedmetadata = function() {
                 width: 100%;
                 height: 100%;
                 z-index: 1;
-                background: url(images/filter1.png) top left repeat;
+                background: url(images/filter_blue.png) top left repeat;
             }
             #navbar{
                 opacity:0;
@@ -929,11 +931,34 @@ vid.onloadedmetadata = function() {
             .letter-writing{
                 font-family: 'Nothing You Could Do', cursive;
             }
+            #about-photo{
+            	border-style:solid;
+border-color: black;
+width: 250px;
+height:250px;
+text-align: center;
+border-radius: 300px;
+vertical-align:middle;
+display:table;
+padding: 5px;       
+margin: auto ; 
+top:25%;   
+}
+            #personal-bio{
+	            display:block;
+            	position:relative;
+				margin: auto;
+				width:60%;
+				top:17%;
+				line-height:200%;
+				font-size: 20px;
+            }
         </style>
     </head>
 
     <body class="background">
-                <div id='loading'>
+               <!--
+ <div id='loading'>
                     <div id="container"> 
                         <video id="signature" preload="auto" autoplay="true" muted="muted">
                             <source src="signature/Signature_21.mp4" type="video/mp4">
@@ -959,6 +984,7 @@ vid.onloadedmetadata = function() {
                         $(this).dequeue();
                     });
         </script>
+-->
 
         <nav class="navbar navbar-inverse navbar-fixed-top" id="default-nav" style="border-bottom:0px; z-index:9;background-color: rgba(0,0,0,0.0) !important; " >
             <div class="container" style="position:relative;height:100%; z-index:-2;margin-left:4%;margin-right:1%">
@@ -976,7 +1002,7 @@ vid.onloadedmetadata = function() {
                     <ul id="nav-points" class="nav navbar-nav navbar-right">
                         <li class="current" id="home"><a href="#_home" id="home" style="padding-left:5px;padding-right:5px;">Home</a></li>
                         <li id="about"><a href="#_about" id="about" data-scroll="about" style="padding-left:5px;padding-right:5px">About</a></li>
-                        <li id="portfolio"><a href="#_portfolio" id="portfolio" data-scroll="portfolio" style="padding-left:5px;padding-right:5px">Portfolio</a></li>
+                        <li id="portfolio"><a href="#_portfolio" id="portfolio" data-scroll="portfolio" style="padding-left:5px;padding-right:5px; padding-top:30$0%">Portfolio</a></li>
                         <!--CHANGE: make it embedded emailing-->
                         <li id="contact"><a id="contact" href="#footer" style="padding-left:5px;padding-right:5px">Contact</a></li>
                     </ul>
@@ -1000,7 +1026,7 @@ vid.onloadedmetadata = function() {
                     <ul id="nav-points" class="nav navbar-nav navbar-right">
                         <li class="current" id="home"><a href="#_home" id="home" style="padding-left:5px;padding-right:5px;color:black">Home</a></li>
                         <li id="about"><a href="#_about" id="about" data-scroll="about" style="padding-left:5px;padding-right:5px;color:black">About</a></li>
-                        <li id="portfolio"><a href="#_portfolio" id="portfolio" data-scroll="portfolio" style="padding-left:5px;padding-right:5px;color:black">Portfolio</a></li>
+                        <li id="portfolio"><a href="#_portfolio" id="portfolio" data-scroll="portfolio" style="padding-left:5px;padding-right:5px;color:black; ">Portfolio</a></li>
                         <!--CHANGE: make it embedded emailing-->
                         <li id="contact"><a id="contact" href="#footer" style="padding-left:5px;padding-right:5px;color:black">Contact</a></li>
                     </ul>
@@ -1032,7 +1058,6 @@ vid.onloadedmetadata = function() {
                             </svg>
                             <h5>About</h5>
                         </a>
-
                     </div>
                     <div class="box" style="margin:4px;z-index:3">
                         <a href="portfolio.html" style="text-decoration:none; color:rgba(255,255,255,0.7);">
@@ -1061,7 +1086,7 @@ vid.onloadedmetadata = function() {
 
                 </section>
             </main>
-            <a href="#_about" data-scroll="about" id="scroll_down" style="position: absolute"><span>Scroll</span><i class="icon-dol"></i></a>
+            <a href="#_about" data-scroll="about" id="scroll_down" style="position: absolute"><i class="icon-dol" style="font:90px"></i></a>
         </div>
 
 
@@ -1070,7 +1095,7 @@ vid.onloadedmetadata = function() {
             <div id="main-content" class="container" style=" min-width:100%; padding:0">
                 <div id="portfolio-grid" class="da-thumbs isotope" style="overflow: hidden; min-width:100%; display: block;background-color:white">
                     <div class="portfolio-item  folio-36 isotope-item" style="width: 355px; position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(0px, 0px, 0px);padding:0">
-                        <a href="#pfolio/2829" rel="2829"><img width="480" height="295" src="images/Oliver_light.png" data-lazy-type="image" data-lazy-src="images/Oliver_light.png" class="lazy attachment-folio-thumb2 wp-post-image data-lazy-ready" alt="living_simple" style="display: inline;">
+                        <a href="#pfolio/2829" rel="2829 width="480" height="295" src="images/Oliver_light.png" data-lazy-type="image" data-lazy-src="images/Oliver_light.png" class="lazy attachment-folio-thumb2 wp-post-image data-lazy-ready" alt="living_simple" style="display: inline;">
                             <div class="da-animate da-slideFromBottom" style="display: block;">
                                 <span>
                                     <h2>Living Simple</h2>
@@ -1131,7 +1156,15 @@ vid.onloadedmetadata = function() {
                     </div>
                 </div>
             </div><!-- .container /--></div>
-        <div id="_portfolio" data-anchor="portfolio" class="image" style="margin-bottom:0px">  "Currently Under Construction" </div>
+            
+        <div id="_portfolio" data-anchor="portfolio" class="image" style="margin-bottom:0px; padding-top:6%">
+        <div id="about-photo" style="overflow:hidden;padding-bottom:0px; border-top:6px solid black; border-bottom:0px;border-right:2px solid black;border-left:2px solid black">
+        	<img src="images/contact_white.png" style="height:100%;" class="img-circle img-thumbnail center-block">
+			</div>
+			<div id="personal-bio" >
+			 Hi there! My name is Eddie Zhang and I’m currently a <a href="https://uwaterloo.ca/find-out-more/programs/computer-engineering" style="cursor:pointer" target="_blank">Computer Engineering</a> student at <a style="cursor:pointer" href="https://uwaterloo.ca" target="_blank">University of Waterloo</a>. One thing to know about me is that I absolutely love technology and fell head over heels for it when I was young and found a passion for it in the field of software development. Recently I interned as a software engineer at <a style="cursor:pointer" href="http://www.veeva.com" target="_blank">Veeva Systems</a> in Toronto and prior at <a style="cursor:pointer" href="http://www.titletrading.com" target="_blank">Title Trading</a> as UI/UX front-end developer. At school I try getting involved as much as I can with an engineering schedule. I was an orientating leader and I'm currently apart of four directorships as well as the ECE class of 2018 EngSoc and academic rep. When I'm not at school or programming, you can probably find me with a rod by the lake or dueling it out on the badminton court.
+			 </div>
+        </div>
 
 
         <!--hidden-sm hidden-xs-->
@@ -1145,9 +1178,10 @@ vid.onloadedmetadata = function() {
                         <div id="inner-border">
                             <div id="about-me">
                                 <br><h5 class="letter-writing" style="text-align:center; font-size:45px">Contact Me!</h5>
-                                <br><p class="letter-writing" style="margin:30px; line-height: 200%;color:rgba(255,255,255,0.5); font-size:15px">
-                                    You still there? Awesome! If you have any questions, suggestion, collaborative ideas or just chat about life's mysteries please feel free to drop me a line. I love talking and can't wait to hear from you!
-                                    Just quickly fill out the form to the right or shoot me an email and I will get back to you as soon as possible. If you don't get an answer immediately, I might just be traveling through the middle of nowhere. I will get back to you as soon as I can. That's a 
+                                <br><p class="letter-writing" style="margin:24px; line-height: 170%;color:rgba(255,255,255,0.5); font-size:16px">
+                                	
+                                    If you have any questions, suggestion, collaborative ideas please feel free to drop me a line. I can't wait to hear from you!
+                                    Just quickly fill out the form to the right or shoot me an email and I will get back to you as soon as possible. If you don't get from back from me immediately, I might just be traveling through the middle of nowhere. I will get back to you as soon as I can. That's a 
                                     promise!
                                 </p>
 
@@ -1155,10 +1189,10 @@ vid.onloadedmetadata = function() {
                             <div id="contact-me">
                                 <div class="letter-writing" style="margin:30px;margin-top:17px">
                                     <div>
-                                        <br><p style="font-size:20px;">To: &nbsp Eddie Zhang</p>
+                                        <br><p style="font-size:19px;">To: &nbsp Eddie Zhang</p>
 
                                         <form name="input" action="php/contact.php" method="post" >
-                                            <div style="position:absolute;top:55%;font-size:20px">
+                                            <div style="position:absolute;top:55%;font-size:19px">
                                                 From: &nbsp<input type="text" name="client" id='client'><br>
                                                 Return Address: &nbsp<input type="text" name="address" id='return'><br>
 
@@ -1178,7 +1212,7 @@ vid.onloadedmetadata = function() {
                                         </div>
                                         <div id="icon-wrapper"><i class="fa fa-github"></i><i class="fa fa-facebook-square"></i><i class="fa fa-linkedin-square"></i><i class="fa fa-envelope-square"></i></div>
 
-                                        <img id="custom-stamp" src="images/stamps/default.png" style="height:32%;position:absolute;top:14.5%;right:4.7%">
+                                        <img id="custom-stamp" src="images/stamps/default.png" style="height:34%;position:absolute;top:14.5%;right:4.7%">
                                     </div>
                                 </div>
                             </div>
