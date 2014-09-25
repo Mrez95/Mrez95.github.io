@@ -34,11 +34,13 @@
             /* ]]> */
             $(document).ready(function() {
                 getTime();
-                var vid = document.getElementById("signature");
+               /*
+ var vid = document.getElementById("signature");
                 vid.display
                 vid.onloadedmetadata = function() {
                     $("#signature").css('visibility', 'visible');
                 };
+*/
                 typerColor = 'rgba(241,194,214,0.6)'; // sends to typer.js
 
                 var tempHeight = $(window).height() - $('.container').height();
@@ -182,15 +184,15 @@
                 var greeting;
                 if (time < 12)
                 {
-                    greeting = "<br><br><br><h2 style='color:black;font-size:45px;margin-top:5px'>Good morning!</h2>";
+                    greeting = "<br><br><br><h2 style='color:black;font-size:43px;margin-top:5px'>Good morning!</h2>";
                 }
                 else if (time > 12 && time < 18)
                 {
-                    greeting = "<br><br><br><h2 style='color:black;font-size:45px;margin-top:5px'>Good afternoon!</h2>";
+                    greeting = "<br><br><br><h2 style='color:black;font-size:43px;margin-top:5px'>Good afternoon!</h2>";
                 }
                 else
                 {
-                    greeting = "<br><br><br><h2 style='color:black;font-size:45px;margin-top:5px'>Good evening!</h2>";
+                    greeting = "<br><br><br><h2 style='color:black;font-size:43px;margin-top:5px'>Good evening!</h2>";
                 }
                 $("#about-photo").after(greeting);
             }
@@ -224,13 +226,10 @@
             function show_menu() {
                 if ($("#navbar").hasClass("hidden_nav")) {
                     $("#navbar").removeClass("hidden_nav");
-                    $('#navbar')
-                            .delay(250) // NOTE: fixes safari nav dropdown bug
-                            .queue(function() {
-                                $(this).css({opacity: '1'});
+                    $('#navbar').css({opacity: '1'});
                                 $("#navbar").addClass("display_nav");
-                                $(this).dequeue();
-                            });
+                                $("#navbar").dequeue();
+                             
                 }
             }
 
@@ -279,7 +278,7 @@
                     });
                     $("p.letter-writing").css({
                         fontSize: '20px',
-                        marginTop: '23%',
+                        marginTop: '25%',
                     });
 					$(".image").css('height','90%');
                 }
@@ -291,7 +290,7 @@
                         top: window.innerHeight * 0.11
                     });
                     $("p.letter-writing").css({
-                        fontSize: '17px',
+                        fontSize: '15px',
                         marginTop: '13%',
                     });
                     $(".image").css('height','115%');
@@ -314,8 +313,9 @@
 
             $(window).scroll(function() {
                 var currentId = $("li.current").attr('id');
-                if ($(this).scrollTop() + 85 >= $('div[data-anchor="home"]').offset().top && $(this).scrollTop() < $('div[data-anchor="about"]').offset().top - 85) {
-                    hide_menu();
+                if ($(this).scrollTop() + 85 >= $('div[data-anchor="home"]').offset().top && $(this).scrollTop() < $('div[data-anchor="portfolio"]').offset().top - 85) {
+                    console.log("wawef");
+                    hide_menu()
                     if (!$('nav a#home').hasClass('active')) {
                         $('nav a#about').removeClass('active');
                         $('nav a#portfolio').removeClass('active');
@@ -328,7 +328,7 @@
                         $('nav li#home').addClass('current');
                     }
                 }
-                if ($(this).scrollTop() + 85 >= $('div[data-anchor="about"]').offset().top && $(this).scrollTop() < $('div[data-anchor="portfolio"]').offset().top) {
+                if ($(this).scrollTop() + 85 >= $('div[data-anchor="portfolio"]').offset().top && $(this).scrollTop() < $('div[data-anchor="about"]').offset().top) {
                     show_menu();
                     if (!$('nav a#about').hasClass('active')) {
                         $('nav a#home').removeClass('active');
@@ -343,7 +343,8 @@
                         $('nav li#about').addClass('current');
                     }
                 }
-                if ($(this).scrollTop() >= $('div[data-anchor="portfolio"]').offset().top && $(this).scrollTop() < $('div[data-anchor="contact"]').offset().top - 60) {
+                if ($(this).scrollTop() >= $('div[data-anchor="about"]').offset().top && $(this).scrollTop() < $('div[data-anchor="contact"]').offset().top - 60) {
+               
                     if (!$('nav a#portfolio').hasClass('active')) {
                         $('nav a#home').removeClass('active');
                         $('nav a#about').removeClass('active');
@@ -378,7 +379,7 @@
                             $("li.current a").removeClass('active');
                         }
                     }, 800)
-                });
+                }); 
                 previousId = currentId;
                 var sT = $(this).scrollTop();
                 var page = $(".filter").height();
@@ -391,7 +392,8 @@
                     'overflow': 'visible', //TODO: change back to visible
                     'height': 'auto',
                 })
-                $('#container')
+           /*
+     $('#container')
                         .delay(5400)
                         .queue(function() {
                             $(this).fadeOut(1000, function() {
@@ -404,6 +406,7 @@
                             ;
                             $(this).dequeue();
                         });
+*/
                 if ($(window).width() > 768) {
                     $('.name-container').css(
                             {
@@ -982,7 +985,8 @@
     </head>
 
     <body class="background">
-        <div id='loading'>
+  <!--
+      <div id='loading'>
             <div id="container"> 
                 <video id="signature" preload="auto" autoplay="true" muted="muted">
                     <source src="signature/Signature_21.mp4" type="video/mp4">
@@ -1008,6 +1012,7 @@
                         $(this).dequeue();
                     });
         </script>
+-->
 
         <nav class="navbar navbar-inverse navbar-fixed-top" id="default-nav" style="border-bottom:0px; z-index:9;background-color: rgba(0,0,0,0.0) !important; " >
             <div class="container" style="position:relative;height:100%; z-index:-2;margin-left:4%;margin-right:1%">
