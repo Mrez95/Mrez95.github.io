@@ -1,0 +1,247 @@
+<html><head>
+        <title>Eddie Zhang | Portfolio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <!--<link href="css/main.css" rel="stylesheet" type="type/css">-->
+
+        <link href="css/refined-style.css" rel="stylesheet" media="screen">
+        <link rel="stylesheet" type="text/css" media="all" href="css/portfolio.css">
+        <link href="http://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet" type="text/css">
+        <link href="css/scroll.css" rel="stylesheet" type="text/css">
+        <link href="css/fontello.css" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="images/mstile-310x310.png" type="image/x-icon">
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Nothing+You+Could+Do' rel='stylesheet' type='text/css'>
+        <script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+        <script type="text/javascript" src="js/portfolio/jquery.tipsy-min.js"></script>
+        <script type="text/javascript" src="js/portfolio/jquery.isotope.min.js"></script>
+        <script type="text/javascript" src="js/portfolio/jquery.prettyPhoto-min.js"></script>
+        <script type="text/javascript" src="js/easing.js"></script>
+        <script src="js/collapse.js" type="text/javascript"></script>
+        <script src="js/typer.js" type="text/javascript"></script>
+        <script type="text/javascript" src="js/portfolio/tie-scripts-min.js"></script>
+
+        <script>
+            $(document).ready(function() {
+               
+            });
+
+            function hide_menu() {
+                if ($("#navbar").hasClass("display_nav")) {
+                    $("#navbar").removeClass("display_nav");
+                    $("#navbar").addClass("hidden_nav");
+                    $("#navbar").css({opacity: '0'});
+                }
+            }
+
+            function show_menu() {
+                if ($("#navbar").hasClass("hidden_nav")) {
+                    $("#navbar").removeClass("hidden_nav");
+                    $('#navbar')
+                            .delay(250) // NOTE: fixes safari nav dropdown bug
+                            .queue(function() {
+                                $(this).css({opacity: '1'});
+                                $("#navbar").addClass("display_nav");
+                                $(this).dequeue();
+                            });
+                }
+            }
+
+            $(function() { // page scrolling
+                $('a[href*=#]:not([href=#])').click(function() {
+                    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                        var target = $(this.hash);
+                        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                        if (target.length) {
+                            $('html,body').animate({
+                                scrollTop: target.offset().top
+                            }, 1000);
+                            return false;
+                        }
+                    }
+                });
+            });
+
+            $(window).resize(function() {
+                updateVisual();
+            });
+
+            function updateVisual() {
+                if (window.innerHeight > 800) {
+                   
+                }
+                else {
+                   
+                }
+
+            }
+
+            $('nav a').on('click', function() {
+
+            })
+
+            $(window).scroll(function() {
+ 
+             });
+
+            $(window).load(function() {
+
+            });
+
+        </script>
+        <style type="text/css">
+            #navbar{
+                opacity:0;
+                background-color: white;
+                -webkit-transform:translateY(-50px);
+                -moz-transform:translateY(-50px);
+                transform:translateY(-50px);
+            }
+            .hidden_nav {
+                opacity:0;
+                -webkit-transform:translateY(-50px);
+                -moz-transform:translateY(-50px);
+                transform:translateY(-50px);
+                transition-duration: 0.6s;
+                transition-timing-function: ease-in-out;
+            }
+            .display_nav {
+                -webkit-transform:translateY(0px) !important;
+                -moz-transform:translateY(0px) !important;
+                transform:translateY(0px) !important;
+                transition-duration: 0.45s !important;
+                transition-timing-function: ease-in-out !important;
+            }
+            #default-nav li.current{
+                border-bottom: 3px solid white;
+                -webkit-transition: border-color 0.7s ease 0.95s !important;
+                -moz-transition: border-color 0.7s ease 0.95s !important;
+                transition: border-color 0.7s ease 0.95s !important;
+            }
+            #navbar li.current{
+                border-bottom: 3px solid black;
+                -webkit-transition: border-color 0.6s ease 0.95s !important;
+                -moz-transition: border-color 0.6s ease 0.95s !important;
+                transition: border-color 0.6s ease 0.95s !important;
+            }
+            body.background {
+                overflow:hidden;
+                background-size: 0%;
+                background-repeat:no-repeat;
+                padding: 0px;
+                margin: 0px;
+                background-position: center center;
+                height: 100%;
+                background-color: #000;
+                background-attachment: fixed;
+            }
+            #nav-points a {
+                text-decoration:none
+            }
+            #nav-points a:hover {
+                color:rgba(255,255,255,1);
+                -webkit-transition:-webkit-transform .3s, opacity .2s;
+                -moz-transition:-moz-transform .3s, opacity .2s;
+                transition:transform .3s, opacity .2s
+            }
+            #nav-points a::after, #nav-points a::before {
+                display:inline-block;
+                opacity:0;
+                -webkit-transition:-webkit-transform .3s, opacity .2s;
+                -moz-transition:-moz-transform .3s, opacity .2s;
+                transition:transform .3s, opacity .2s
+            }
+            #nav-points a::before{
+                margin-right:10px;
+                content:'{';
+                -webkit-transform:translateX(20px);
+                -moz-transform:translateX(20px);
+                transform:translateX(20px);
+            }
+            #nav-points a::after {
+                margin-left:10px;
+                content:'}';
+                -webkit-transform:translateX(-20px);
+                -moz-transform:translateX(-20px);
+                transform:translateX(-20px);
+            }
+            #nav-points{
+                display:inline-block;
+                color:rgba(255,255,255,0) !important;
+                opacity:1!important;
+                -webkit-transform:translateX(0px)!important;
+                -moz-transform:translateX(0px)!important;
+                transform:translateX(0px)!important
+            }
+            #nav-points a:hover::after, #nav-points a:hover::before, #default-nav a.active::before, #default-nav a.active::after {
+                color:rgba(241,194,214,1);
+                opacity:1 !important;
+                -webkit-transform:translateX(0px) !important;
+                -moz-transform:translateX(0px) !important;
+                transform:translateX(0px) !important;
+            }
+            #navbar a:hover::after, #navbar a:hover::before, #navbar a.active::before, #navbar a.active::after {
+                color:black ;
+                opacity:1 !important;
+                -webkit-transform:translateX(0px) !important;
+                -moz-transform:translateX(0px) !important;
+                transform:translateX(0px) !important;
+            }
+        </style>
+    </head>
+
+    <body class="background">
+        <div id='loading'>
+        </div>
+        <script type="text/javascript">
+
+            $('html, body').css({//hide scroll bar
+                'overflow': 'hidden',
+                'height': '100%'
+            })
+            $("#qoute").delay(400)
+                    .queue(function() {
+                        $(this).stop().animate({
+                            top: '45%',
+                            opacity: '1'
+                        }, 3000, 'swing');
+                        $(this).dequeue();
+                    });
+        </script>
+
+        <nav class="navbar navbar-inverse navbar-fixed-top" id="default-nav" style="border-bottom:0px; z-index:9;background-color: rgba(0,0,0,0.0) !important; " >
+            <div class="container" style="position:relative;height:100%; z-index:-2;margin-left:4%;margin-right:1%">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <a class="navbar-brand" href="#" >Eddie Tianyi Zhang</a>
+                </div>
+                <!--top toolbar menu-->
+                <div class="collapse navbar-collapse">
+                    <ul id="nav-points" class="nav navbar-nav navbar-right">
+                        <li class="current" id="home"><a href="#_home" id="home" style="padding-left:5px;padding-right:5px;">Home</a></li>
+                        <li id="about"><a href="#_about" id="about" data-scroll="about" style="padding-left:5px;padding-right:5px">About</a></li>
+                        <li id="portfolio"><a href="#_portfolio" id="portfolio" data-scroll="portfolio" style="padding-left:5px;padding-right:5px; padding-top:30$0%">Portfolio</a></li>
+                        <!--CHANGE: make it embedded emailing-->
+                        <li id="contact"><a id="contact" href="#footer" style="padding-left:5px;padding-right:5px">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+                <div id="moretext-mobile" class="visible-xs visible-sm hidden">
+                    <div>
+                        <p class="mobile-subtext"></p>
+                        <p class="lesstext">less</p>
+                    </div>
+                </div>
+                </body></html>

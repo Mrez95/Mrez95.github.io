@@ -182,7 +182,7 @@
                 var greeting;
                 if (time < 12)
                 {
-                    greeting = "<br><br><br><h2 style='color:black;font-size:45px;margin-top:5px'>Good morning!</h2><br><br><br>";
+                    greeting = "<br><br><br><h2 style='color:black;font-size:45px;margin-top:5px'>Good morning!</h2>";
                 }
                 else if (time > 12 && time < 18)
                 {
@@ -190,7 +190,7 @@
                 }
                 else
                 {
-                    greeting = "<br><br><br><h2 style='color:black;font-size:45px;margin-top:5px'>Good evening!</h2><br><br><br>";
+                    greeting = "<br><br><br><h2 style='color:black;font-size:45px;margin-top:5px'>Good evening!</h2>";
                 }
                 $("#about-photo").after(greeting);
             }
@@ -271,7 +271,7 @@
                 $(".demo-3").css("margin-top", "none");
                 $(".box").css("margin", "2px");
                 if (window.innerHeight > 800) {
-                    $("#personal-bio").css('font-size', '20px');
+                    $("#personal-bio").css('font-size', '18px');
                     $(".name-container").css({
                         width: '566px',
                         height: '457px',
@@ -281,8 +281,7 @@
                         fontSize: '20px',
                         marginTop: '23%',
                     });
-
-
+					$(".image").css('height','90%');
                 }
                 else {
                     $("#personal-bio").css('font-size', '16px');
@@ -293,8 +292,9 @@
                     });
                     $("p.letter-writing").css({
                         fontSize: '17px',
-                        marginTop: '15%',
+                        marginTop: '13%',
                     });
+                    $(".image").css('height','115%');
                 }
 
             }
