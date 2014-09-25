@@ -33,13 +33,11 @@
             var wordGap = 11;
             /* ]]> */
             $(document).ready(function() {
-            	/*
-var vid = document.getElementById("signature");
+            	var vid = document.getElementById("signature");
             	vid.display
 				vid.onloadedmetadata = function() {
 					$("#signature").css('visibility','visible');
 				};
-*/
                 typerColor = 'rgba(241,194,214,0.6)'; // sends to typer.js
 
                 var tempHeight = $(window).height() - $('.container').height();
@@ -109,12 +107,6 @@ var vid = document.getElementById("signature");
                             })
 
                         })
-/*
-                $('.fa-github').on("click",function(){
-  alert();
-  //post code
-})
-*/
 
                 $(".fa-facebook-square")
                         .on("mouseenter", function() {
@@ -371,8 +363,7 @@ var vid = document.getElementById("signature");
                     'overflow': 'visible', //TODO: change back to visible
                     'height': 'auto',
                 })
-                /*
-$('#container')
+                $('#container')
                         .delay(5400)
                         .queue(function() {
                             $(this).fadeOut(1000, function() {                               
@@ -385,7 +376,6 @@ $('#container')
                             ;                            
                             $(this).dequeue();
                         });
-*/
                 if ($(window).width() > 768) {
                     $('.name-container').css(
                             {
@@ -851,7 +841,7 @@ $('#container')
             }
             #icon-wrapper{
                 position:absolute;
-                bottom:-8.5%;
+                bottom:-8%;
                 right:2%;
                 height:40px;
             }
@@ -965,8 +955,7 @@ top:25%;
     </head>
 
     <body class="background">
-               <!--
- <div id='loading'>
+                <div id='loading'>
                     <div id="container"> 
                         <video id="signature" preload="auto" autoplay="true" muted="muted">
                             <source src="signature/Signature_21.mp4" type="video/mp4">
@@ -992,7 +981,6 @@ top:25%;
                         $(this).dequeue();
                     });
         </script>
--->
 
         <nav class="navbar navbar-inverse navbar-fixed-top" id="default-nav" style="border-bottom:0px; z-index:9;background-color: rgba(0,0,0,0.0) !important; " >
             <div class="container" style="position:relative;height:100%; z-index:-2;margin-left:4%;margin-right:1%">
