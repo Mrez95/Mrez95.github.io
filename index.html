@@ -34,11 +34,13 @@
             /* ]]> */
             $(document).ready(function() {
                 getTime();
-                var vid = document.getElementById("signature");
+               /*
+ var vid = document.getElementById("signature");
                 vid.display
                 vid.onloadedmetadata = function() {
                     $("#signature").css('visibility', 'visible');
                 };
+*/
                 typerColor = 'rgba(241,194,214,0.6)'; // sends to typer.js
 
                 var tempHeight = $(window).height() - $('.container').height();
@@ -180,7 +182,7 @@
                 var d = new Date()
                 var time = d.getHours()
                 var greeting;
-                if (time < 12)
+                if (time > 4 && time < 12)
                 {
                     greeting = "<br><br><br><h2 style='color:black;font-size:43px;margin-top:5px'>Good morning!</h2>";
                 }
@@ -294,7 +296,7 @@
                         fontSize: '15px',
                         marginTop: '13%',
                     });
-                    $(".image").css('height','115%');
+                    $(".image").css('height','120%');
                 }
 
             }
@@ -393,7 +395,8 @@
                     'overflow': 'visible', //TODO: change back to visible
                     'height': 'auto',
                 })
-                $('#container')
+           /*
+     $('#container')
                         .delay(5400)
                         .queue(function() {
                             $(this).fadeOut(1000, function() {
@@ -406,6 +409,7 @@
                             ;
                             $(this).dequeue();
                         });
+*/
                 if ($(window).width() > 768) {
                     $('.name-container').css(
                             {
@@ -654,7 +658,7 @@
             .image {
                 position: relative;
                 left: 0px;
-                height: 115%;
+                height: 120%;
                 background-color:white;
                 background-position: 50% 50%;
                 background-size: cover;
@@ -846,9 +850,9 @@
                 font-variant: small-caps; 
             }
             .fa{
-                font-size:35px;
-                margin:6%;
-                width:6%;
+                font-size:38px;
+                margin:4%;
+                width:7%;
                 cursor:pointer;
                 color: rgba(255,255,255,0.4);
             }
@@ -984,7 +988,8 @@
     </head>
 
     <body class="background">
-        <div id='loading'>
+  <!--
+      <div id='loading'>
             <div id="container"> 
                 <video id="signature" preload="auto" autoplay="true" muted="muted">
                     <source src="signature/Signature_21.mp4" type="video/mp4">
@@ -1010,6 +1015,7 @@
                         $(this).dequeue();
                     });
         </script>
+-->
 
         <nav class="navbar navbar-inverse navbar-fixed-top" id="default-nav" style="border-bottom:0px; z-index:9;background-color: rgba(0,0,0,0.0) !important; " >
             <div class="container" style="position:relative;height:100%; z-index:-2;margin-left:4%;margin-right:1%">
@@ -1120,7 +1126,7 @@
                 <img src="images/contact_white.png" style="height:100%;" class="img-circle img-thumbnail center-block">
             </div>
             <div id="personal-bio" >
-                Hi there! My name is Eddie Zhang and I’m currently a <a href="https://uwaterloo.ca/find-out-more/programs/computer-engineering" style="cursor:pointer" target="_blank">Computer Engineering</a> student at <a style="cursor:pointer" href="https://uwaterloo.ca" target="_blank">University of Waterloo</a>. One thing to know about me is that I absolutely love technology and fell head over heels for it when I was young and found a passion for it in the field of software development. Recently I interned as a software engineer at <a style="cursor:pointer" href="http://www.veeva.com" target="_blank">Veeva Systems</a> in Toronto and prior at <a style="cursor:pointer" href="http://www.titletrading.com" target="_blank">Title Trading</a> as UI/UX front-end developer. At school I try getting involved as much as I can with an engineering schedule. I was an orientating leader and I'm currently apart of four directorships as well as the ECE class of 2018 EngSoc and academic rep. When I'm not at school or programming, you can probably find me with a rod by the lake or dueling it out on the badminton court.
+                Hi there! My name is Eddie Zhang and I’m currently a <a href="https://uwaterloo.ca/find-out-more/programs/computer-engineering" style="cursor:pointer" target="_blank">Computer Engineering</a> student at <a style="cursor:pointer" href="https://uwaterloo.ca" target="_blank">University of Waterloo</a>. One thing to know about me is that I absolutely love technology and fell head over heels for it when I was young and soon found a passion for it in the field of software development. Recently I interned as a software engineer at <a style="cursor:pointer" href="http://www.veeva.com" target="_blank">Veeva Systems</a> in Toronto and prior at <a style="cursor:pointer" href="http://www.titletrading.com" target="_blank">Title Trading</a> as a full stack front-end developer. At school I try getting involved as much as I can with an engineering schedule. I was an orientating leader and I'm currently a part of four directorships as well as the ECE class of 2018 EngSoc and academic rep. When I'm not at school or programming, you can probably find me with a rod by the lake or dueling it out on the badminton court.
             </div>
         </div>
 
