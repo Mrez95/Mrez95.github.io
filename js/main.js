@@ -6,11 +6,11 @@
             /* ]]> */
             $(document).ready(function() {
                 getTime();
-                // var vid = document.getElementById("signature");
-                // vid.display
-                // vid.onloadedmetadata = function() {
-                //     $("#signature").css('visibility', 'visible');
-                // };
+                var vid = document.getElementById("signature");
+                vid.display
+                vid.onloadedmetadata = function() {
+                    $("#signature").css('visibility', 'visible');
+                };
                 typerColor = 'rgba(241,194,214,0.6)'; // sends to typer.js
 
                 var tempHeight = $(window).height() - $('.container').height();
@@ -364,19 +364,19 @@
                     'overflow': 'visible', //TODO: change back to visible
                     'height': 'auto',
                 })
-                // $('#container')
-                //         .delay(5400)
-                //         .queue(function() {
-                //             $(this).fadeOut(1000, function() {
-                //                 $('html, body').css({
-                //                     'overflow': 'visible',
-                //                     'height': 'auto',
-                //                 })
-                //                 $('#loading').fadeOut(600);
-                //             });
-                //             ;
-                //             $(this).dequeue();
-                //         });
+                $('#container')
+                        .delay(5400)
+                        .queue(function() {
+                            $(this).fadeOut(1000, function() {
+                                $('html, body').css({
+                                    'overflow': 'visible',
+                                    'height': 'auto',
+                                })
+                                $('#loading').fadeOut(600);
+                            });
+                            ;
+                            $(this).dequeue();
+                        });
                 if ($(window).width() > 768) {
                     $('.name-container').css(
                             {
