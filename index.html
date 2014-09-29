@@ -18,25 +18,25 @@ $(document).ready(function() {
     var randBackground = Math.floor((Math.random() * 6) + 1);
     switch (randBackground) {
         case 1:
-        $("#background").append('<source src="background/atmosphere_6.mp4" type="video/mp4">');
-        typerColor = 'rgba(255,149,0,0.5)';
+        $("#background").append('<source src="background/atmosphere_6.mp4" type="video/mp4"><source src="background/atmosphere_6.oggtheora.ogv" type="video/ogg">');
+        typerColor = 'rgba(255,149,0,0.4)';
         break;
         case 2:
-        $("#background").append('<source src="background/meidera_13_blur.mp4" type="video/mp4">');
+        $("#background").append('<source src="background/meidera_13_blur.mp4" type="video/mp4"><source src="background/atmosphere_6.oggtheora.ogv" type="video/ogg">');
         break;
         case 3:
-        $("#background").append('<source src="background/melan_7.mp4" type="video/mp4">'); 
+        $("#background").append('<source src="background/melan_7.mp4" type="video/mp4"><source src="background/atmosphere_6.oggtheora.ogv" type="video/ogg">'); 
         typerColor = 'rgba(255,255,255,0.4)'; 
         break;
         case 4:
-        $("#background").append('<source src="background/sak_5_blur.mp4" type="video/mp4">');
+        $("#background").append('<source src="background/sak_5_blur.mp4" type="video/mp4"><source src="background/atmosphere_6.oggtheora.ogv" type="video/ogg">');
         break;
         case 5:
-        $("#background").append('<source src="background/sak_7_blur.mp4" type="video/mp4">');
+        $("#background").append('<source src="background/sak_7_blur.mp4" type="video/mp4"><source src="background/atmosphere_6.oggtheora.ogv" type="video/ogg">');
         typerColor = 'rgba(232,99,43,0.4)';
         break;
         case 6:
-        $("#background").append('<source src="background/sunset.mp4" type="video/mp4">');
+        $("#background").append('<source src="background/sunset.mp4" type="video/mp4"><source src="background/atmosphere_6.oggtheora.ogv" type="video/ogg">');
         break;
     }
 
@@ -145,9 +145,6 @@ $(document).ready(function() {
 .image{
     height:auto !important;
 }
-.about-photo{
-    border-top: 10px;
-}
 #personal-bio{
     margin-top:100px;
     padding-bottom:70px;
@@ -160,6 +157,8 @@ $(document).ready(function() {
         <div id="container"> 
             <video id="signature" preload="auto" autoplay="true" muted="muted">
                 <source src="signature/Signature_21.mp4" type="video/mp4">
+                <source src="signature/Signature_21.oggtheora.ogv" type="video/ogg">
+                   
                 </video>
                 <div class="loader">
                     <span><span class="progress"></span></span>
