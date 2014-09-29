@@ -281,7 +281,7 @@ function show_menu() {
                     });
                     $("p.letter-writing").css({
                         fontSize: '20px',
-                        marginTop: '25%',
+                        marginTop: '23%',
                     });
                     $(".image").css('height','90%');
                 }
@@ -294,7 +294,7 @@ function show_menu() {
                     });
                     $("p.letter-writing").css({
                         fontSize: '15px',
-                        marginTop: '12%',
+                        marginTop: '11%',
                     });
                     $(".image").css('height','120%');
                 }
