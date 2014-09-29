@@ -4,7 +4,13 @@ var previousId = "";
 var tie = {};
 var wordGap = 11;
 /* ]]> */
-$('#container')
+$(document).ready(function() {
+    getTime();
+    var vid = document.getElementById("signature");
+    vid.display
+    vid.onloadedmetadata = function() {
+        $("#signature").css('visibility', 'visible');
+        $('#container')
 .delay(5400)
 .queue(function() {
     $(this).fadeOut(1000, function() {
@@ -17,12 +23,6 @@ $('#container')
     ;
     $(this).dequeue();
 });
-$(document).ready(function() {
-    getTime();
-    var vid = document.getElementById("signature");
-    vid.display
-    vid.onloadedmetadata = function() {
-        $("#signature").css('visibility', 'visible');
     };
     $('html, body').css({
                     'overflow': 'hidden', //TODO: change back to visible
@@ -280,8 +280,8 @@ function show_menu() {
                         top: window.innerHeight * 0.21
                     });
                     $("p.letter-writing").css({
-                        fontSize: '18px',
-                        marginTop: '23%',
+                        fontSize: '17px',
+                        marginTop: '21%',
                     });
                     $(".image").css('height','90%');
                 }
