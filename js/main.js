@@ -1,16 +1,29 @@
 
-            var previousId = "";
-            /* <![CDATA[ */
-            var tie = {};
-            var wordGap = 11;
-            /* ]]> */
-            $(document).ready(function() {
-                getTime();
-                var vid = document.getElementById("signature");
-                vid.display
-                vid.onloadedmetadata = function() {
-                    $("#signature").css('visibility', 'visible');
-                };
+var previousId = "";
+/* <![CDATA[ */
+var tie = {};
+var wordGap = 11;
+/* ]]> */
+$(document).ready(function() {
+    getTime();
+    var vid = document.getElementById("signature");
+    vid.display
+    vid.onloadedmetadata = function() {
+        $("#signature").css('visibility', 'visible');
+        $('#container')
+        .delay(5400)
+        .queue(function() {
+            $(this).fadeOut(1000, function() {
+                $('html, body').css({
+                    'overflow': 'visible',
+                    'height': 'auto',
+                })
+                $('#loading').fadeOut(600);
+            });
+            ;
+            $(this).dequeue();
+        });
+    };
                 typerColor = 'rgba(241,194,214,0.6)'; // sends to typer.js
 
                 var tempHeight = $(window).height() - $('.container').height();
@@ -37,174 +50,174 @@
                     }
                 });
                 $("#submit")
-                        .on("click", function() {
-                            $.notify.addStyle('postage', {
-                                html: "<div>&#10527;<span data-notify-text/>&#10528;</div>",
-                                classes: {
-                                    base: {
-                                        "white-space": "nowrap",
-                                        "background-color": "rgba(255,255,255,0.9)",
-                                        "padding": "35px",
-                                        "margin-right": "10px"
-                                    },
-                                    postage: {
-                                        "color": "black",
-                                        "background-color": "white",
-                                    }
-                                }
-                            });
-                            $(".navbar-collapse").delay(500).
-                                    queue(function() {
-                                        $(this).notify("Let's keep in touch!", {
-                                            style: 'postage',
-                                            elementPosition: 'bottom centre',
-                                            showDuration: 450,
-                                            hideDuration: 200,
-                                            autoHideDelay: 2400,
-                                            arrowShow: false,
-                                            showAnimation: 'slideDown',
-                                            hideAnimation: 'slideUp',
-                                            className: 'success',
-                                            gap: 0
-                                        });
-                                        $(this).dequeue();
-                                    });
-
-                        })
-                $(".fa-github")
-                        .on("mouseenter", function() {
-                            $("#custom-stamp").attr("src", "images/stamps/github.png");
-                            $(this).css({
-                                color: "rgba(182,156,255,0.5)",
-                                transition: "color ease 0.4s"
-                            })
-
-                        })
-
-                $(".fa-facebook-square")
-                        .on("mouseenter", function() {
-                            $("#custom-stamp").attr("src", "images/stamps/facebook.png");
-                            $(this).css({
-                                color: "rgba(89,119,204,0.5)",
-                                transition: "color ease 0.4s"
-                            });
-                        })
-
-                $(".fa-linkedin-square")
-                        .on("mouseenter", function() {
-                            $("#custom-stamp").attr("src", "images/stamps/linkedin.png");
-                            $(this).css({
-                                color: "rgba(0,168,255,0.5)",
-                                transition: "color ease 0.4s"})
-                        })
-
-                $(".fa-envelope-square")
-                        .on("mouseenter", function() {
-                            $("#custom-stamp").attr("src", "images/stamps/email.png");
-                            $(this).css({
-                                color: "rgba(127,224,80,0.5)",
-                                transition: "color ease 0.4s"
-                            })
-                        })
-                $(".fa-envelope-square")
-                        .on("mouseenter", function() {
-                            $("#custom-stamp").attr("src", "images/stamps/email.png");
-                            $(this).css({
-                                color: "rgba(127,224,80,0.5)",
-                                transition: "color ease 0.4s"
-                            })
-                        })
-                $("#submit")
-                        .on("mouseenter", function() {
-                            $("#custom-stamp").attr("src", "images/stamps/choice.png");
-                        })
-                $("#client")
-                        .on("focus", function() {
-                            $(this).attr("placeholder", "Your Name");
-                        })
-                        .on("focusout", function() {
-                            $(this).attr("placeholder", "");
-                        })
-                $("#return")
-                        .on("focus", function() {
-                            $(this).attr("placeholder", "Your Email");
-                        })
-                        .on("focusout", function() {
-                            $(this).attr("placeholder", "");
-                        })
-                $("#message-con-0")
-                        .on("focus", function() {
-                            $(this).attr("placeholder", "Let's Chat!");
-                        })
-                        .on("focusout", function() {
-                            $(this).attr("placeholder", "");
-                        })
-                $(".fa").on("mouseleave", function() {
-                    $(this).css({
-                        color: "rgba(255,255,255,0.4)",
-                        transition: "color ease 0.5s"
-                    })
-                });
-
-            });
-
-            function getTime() {
-                var d = new Date()
-                var time = d.getHours()
-                var greeting;
-                if (time > 4 && time < 12)
-                {
-                    greeting = "<br><br><br><h2 style='color:black;font-size:43px;margin-top:5px'>Good morning!</h2>";
-                }
-                else if (time > 12 && time < 18)
-                {
-                    greeting = "<br><br><br><h2 style='color:black;font-size:43px;margin-top:5px'>Good afternoon!</h2>";
-                }
-                else
-                {
-                    greeting = "<br><br><br><h2 style='color:black;font-size:43px;margin-top:5px'>Good evening!</h2>";
-                }
-                $("#about-photo").after(greeting);
-            }
-
-            function position_h_center(el) {
-                var _width = $("#" + el).parent().outerWidth();
-                var _el_width = $("#" + el).width();
-                $("#" + el).css("left", ((_width - _el_width) / 2) + "px");
-            }
-            function animate_scroll_button() {
-                $("#scroll_down").animate({
-                    bottom: "30px"
-                }, 1000, function() {
-                    $("#scroll_down").animate({
-                        bottom: "7px"
-                    }, {
-                        duration: 2000,
-                        easing: "easeOutBounce"
+                .on("click", function() {
+                    $.notify.addStyle('postage', {
+                        html: "<div>&#10527;<span data-notify-text/>&#10528;</div>",
+                        classes: {
+                            base: {
+                                "white-space": "nowrap",
+                                "background-color": "rgba(255,255,255,0.9)",
+                                "padding": "35px",
+                                "margin-right": "10px"
+                            },
+                            postage: {
+                                "color": "black",
+                                "background-color": "white",
+                            }
+                        }
                     });
-                });
-            }
+                    $(".navbar-collapse").delay(500).
+                    queue(function() {
+                        $(this).notify("Let's keep in touch!", {
+                            style: 'postage',
+                            elementPosition: 'bottom centre',
+                            showDuration: 450,
+                            hideDuration: 200,
+                            autoHideDelay: 2400,
+                            arrowShow: false,
+                            showAnimation: 'slideDown',
+                            hideAnimation: 'slideUp',
+                            className: 'success',
+                            gap: 0
+                        });
+                        $(this).dequeue();
+                    });
 
-            function hide_menu() {
-                if ($("#navbar").hasClass("display_nav")) {
-                    $("#navbar").removeClass("display_nav");
-                    $("#navbar").addClass("hidden_nav");
-                    $("#navbar").css({opacity: '0'});
-                }
-            }
+                })
+$(".fa-github")
+.on("mouseenter", function() {
+    $("#custom-stamp").attr("src", "images/stamps/github.png");
+    $(this).css({
+        color: "rgba(182,156,255,0.5)",
+        transition: "color ease 0.4s"
+    })
 
-            function show_menu() {
-                if ($("#navbar").hasClass("hidden_nav")) {
-                    $("#navbar").removeClass("hidden_nav");
-                    $('#navbar')
+})
+
+$(".fa-facebook-square")
+.on("mouseenter", function() {
+    $("#custom-stamp").attr("src", "images/stamps/facebook.png");
+    $(this).css({
+        color: "rgba(89,119,204,0.5)",
+        transition: "color ease 0.4s"
+    });
+})
+
+$(".fa-linkedin-square")
+.on("mouseenter", function() {
+    $("#custom-stamp").attr("src", "images/stamps/linkedin.png");
+    $(this).css({
+        color: "rgba(0,168,255,0.5)",
+        transition: "color ease 0.4s"})
+})
+
+$(".fa-envelope-square")
+.on("mouseenter", function() {
+    $("#custom-stamp").attr("src", "images/stamps/email.png");
+    $(this).css({
+        color: "rgba(127,224,80,0.5)",
+        transition: "color ease 0.4s"
+    })
+})
+$(".fa-envelope-square")
+.on("mouseenter", function() {
+    $("#custom-stamp").attr("src", "images/stamps/email.png");
+    $(this).css({
+        color: "rgba(127,224,80,0.5)",
+        transition: "color ease 0.4s"
+    })
+})
+$("#submit")
+.on("mouseenter", function() {
+    $("#custom-stamp").attr("src", "images/stamps/choice.png");
+})
+$("#client")
+.on("focus", function() {
+    $(this).attr("placeholder", "Your Name");
+})
+.on("focusout", function() {
+    $(this).attr("placeholder", "");
+})
+$("#return")
+.on("focus", function() {
+    $(this).attr("placeholder", "Your Email");
+})
+.on("focusout", function() {
+    $(this).attr("placeholder", "");
+})
+$("#message-con-0")
+.on("focus", function() {
+    $(this).attr("placeholder", "Let's Chat!");
+})
+.on("focusout", function() {
+    $(this).attr("placeholder", "");
+})
+$(".fa").on("mouseleave", function() {
+    $(this).css({
+        color: "rgba(255,255,255,0.4)",
+        transition: "color ease 0.5s"
+    })
+});
+
+});
+
+function getTime() {
+    var d = new Date()
+    var time = d.getHours()
+    var greeting;
+    if (time > 4 && time < 12)
+    {
+        greeting = "<br><br><br><h2 style='color:black;font-size:43px;margin-top:5px'>Good morning!</h2>";
+    }
+    else if (time > 12 && time < 18)
+    {
+        greeting = "<br><br><br><h2 style='color:black;font-size:43px;margin-top:5px'>Good afternoon!</h2>";
+    }
+    else
+    {
+        greeting = "<br><br><br><h2 style='color:black;font-size:43px;margin-top:5px'>Good evening!</h2>";
+    }
+    $("#about-photo").after(greeting);
+}
+
+function position_h_center(el) {
+    var _width = $("#" + el).parent().outerWidth();
+    var _el_width = $("#" + el).width();
+    $("#" + el).css("left", ((_width - _el_width) / 2) + "px");
+}
+function animate_scroll_button() {
+    $("#scroll_down").animate({
+        bottom: "30px"
+    }, 1000, function() {
+        $("#scroll_down").animate({
+            bottom: "7px"
+        }, {
+            duration: 2000,
+            easing: "easeOutBounce"
+        });
+    });
+}
+
+function hide_menu() {
+    if ($("#navbar").hasClass("display_nav")) {
+        $("#navbar").removeClass("display_nav");
+        $("#navbar").addClass("hidden_nav");
+        $("#navbar").css({opacity: '0'});
+    }
+}
+
+function show_menu() {
+    if ($("#navbar").hasClass("hidden_nav")) {
+        $("#navbar").removeClass("hidden_nav");
+        $('#navbar')
                             .delay(140) // NOTE: fixes safari nav dropdown bug
                             .queue(function() {
                                 $(this).css({opacity: '1'});
                                 $("#navbar").addClass("display_nav");
                                 $(this).dequeue();
                             });
-                }
-            }
+                        }
+                    }
 
             $(function() { // page scrolling
                 $('a[href*=#]:not([href=#])').click(function() {
@@ -253,7 +266,7 @@
                         fontSize: '20px',
                         marginTop: '25%',
                     });
-					$(".image").css('height','90%');
+                    $(".image").css('height','90%');
                 }
                 else {
                     $("#personal-bio").css('font-size', '16px');
@@ -274,7 +287,7 @@
             $('nav a').on('click', function() {
 
                 var scrollAnchor = $(this).attr('data-scroll'),
-                        scrollPoint = $('section[data-anchor="' + scrollAnchor + '"]').offset().top - 28;
+                scrollPoint = $('section[data-anchor="' + scrollAnchor + '"]').offset().top - 28;
 
                 $('body,html').animate({
                     scrollTop: scrollPoint
@@ -316,7 +329,7 @@
                     }
                 }
                 if ($(this).scrollTop() + 100 >= $('div[data-anchor="about"]').offset().top && $(this).scrollTop() < $('div[data-anchor="contact"]').offset().top ) {
-               
+                 
                     if (!$('nav a#portfolio').hasClass('active')) {
                         $('nav a#home').removeClass('active');
                         $('nav a#about').removeClass('active');
@@ -358,42 +371,30 @@
                 $("#default-nav").css("opacity", (0.8 - (sT / page))).show();
             });
 
-            $(window).load(function() {
-                updateVisual();
-                $('html, body').css({
-                    'overflow': 'visible', //TODO: change back to visible
-                    'height': 'auto',
+$(window).load(function() {
+    updateVisual();
+    $('html, body').css({
+                    'overflow': 'hidden', //TODO: change back to visible
+                    'height': '100%',
                 })
-                $('#container')
-                        .delay(5400)
-                        .queue(function() {
-                            $(this).fadeOut(1000, function() {
-                                $('html, body').css({
-                                    'overflow': 'visible',
-                                    'height': 'auto',
-                                })
-                                $('#loading').fadeOut(600);
-                            });
-                            ;
-                            $(this).dequeue();
-                        });
-                if ($(window).width() > 768) {
-                    $('.name-container').css(
-                            {
-                                position: 'absolute',
-                                left: ($(window).width() - $('.name-container').outerWidth()) / 2,
-                                top: ($(window).height() - $('.name-container').outerHeight()) / 2,
-                                opacity: 1
-                            });
-                }
-                else {
-                    $('.name-container').css(
-                            {
-                                position: 'relative',
-                                top: 0,
-                                left: 0
-                            });
-                }
+    
+    if ($(window).width() > 768) {
+        $('.name-container').css(
+        {
+            position: 'absolute',
+            left: ($(window).width() - $('.name-container').outerWidth()) / 2,
+            top: ($(window).height() - $('.name-container').outerHeight()) / 2,
+            opacity: 1
+        });
+    }
+    else {
+        $('.name-container').css(
+        {
+            position: 'relative',
+            top: 0,
+            left: 0
+        });
+    }
 
                 // call resize` to center elements
                 $(window).resize();
