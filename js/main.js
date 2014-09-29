@@ -4,26 +4,43 @@ var previousId = "";
 var tie = {};
 var wordGap = 11;
 /* ]]> */
+$('#container')
+.delay(5400)
+.queue(function() {
+    $(this).fadeOut(1000, function() {
+        $('html, body').css({
+            'overflow': 'visible',
+            'height': 'auto',
+        })
+        $('#loading').fadeOut(600);
+    });
+    ;
+    $(this).dequeue();
+});
 $(document).ready(function() {
     getTime();
     var vid = document.getElementById("signature");
     vid.display
     vid.onloadedmetadata = function() {
         $("#signature").css('visibility', 'visible');
-        $('#container')
-        .delay(5400)
-        .queue(function() {
-            $(this).fadeOut(1000, function() {
-                $('html, body').css({
-                    'overflow': 'visible',
-                    'height': 'auto',
-                })
-                $('#loading').fadeOut(600);
-            });
-            ;
-            $(this).dequeue();
-        });
     };
+    $('html, body').css({
+                    'overflow': 'hidden', //TODO: change back to visible
+                    'height': '100%',
+                })
+    $('#container')
+    .delay(5400)
+    .queue(function() {
+        $(this).fadeOut(1000, function() {
+            $('html, body').css({
+                'overflow': 'visible',
+                'height': 'auto',
+            })
+            $('#loading').fadeOut(600);
+        });
+        ;
+        $(this).dequeue();
+    });
                 typerColor = 'rgba(241,194,214,0.6)'; // sends to typer.js
 
                 var tempHeight = $(window).height() - $('.container').height();
@@ -329,7 +346,7 @@ function show_menu() {
                     }
                 }
                 if ($(this).scrollTop() + 100 >= $('div[data-anchor="about"]').offset().top && $(this).scrollTop() < $('div[data-anchor="contact"]').offset().top ) {
-                 
+
                     if (!$('nav a#portfolio').hasClass('active')) {
                         $('nav a#home').removeClass('active');
                         $('nav a#about').removeClass('active');
@@ -373,11 +390,8 @@ function show_menu() {
 
 $(window).load(function() {
     updateVisual();
-    $('html, body').css({
-                    'overflow': 'hidden', //TODO: change back to visible
-                    'height': '100%',
-                })
-    
+
+
     if ($(window).width() > 768) {
         $('.name-container').css(
         {
