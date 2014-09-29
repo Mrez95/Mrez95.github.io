@@ -280,7 +280,7 @@ function show_menu() {
                         top: window.innerHeight * 0.21
                     });
                     $("p.letter-writing").css({
-                        fontSize: '20px',
+                        fontSize: '18px',
                         marginTop: '23%',
                     });
                     $(".image").css('height','90%');
