@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MEOW~!</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <style type="text/css">
+            .exit {
+                background-color:black !important;
+                cursor: default !important;
+            }
+        </style>
+        <script>
+            var newX, newY, intendedDirection; //global
+            var even, odd = false;
+            $(document).ready(function() {
+                $(document).on('click', ".hex:not('.exit'):not('.active')", function() {
+                    $(this).addClass("blocked");
+                    findPath(cat_x, cat_y, intendedDirection);
+                });
+                var arr = [];
+                for (var x = 0; x < 11; x++) { // generate the map
+                    var classType = x % 2 == 0 ? "even" : "odd";
+                    arr[x] = $('<ol>').addClass(classType).attr("id", x);
+                    arr[x].appendTo('div.hex-container');
+                    var loopCount = x % 2 == 0 ? 11 : 12
+                    for (var y = 0; y < loopCount; y++) {
+                        if (x === 0 || x === 10 || y === 0 || y == loopCount - 1) { // invisible border for escape
+                            arr[x][y] = $('<li>').addClass("hex exit").attr("id", x + "-" + y);
+                            arr[x][y].appendTo('ol#' + x + "." + classType); // to pick unique even/odd pairs
+                        }
+                        else {
+                            arr[x][y] = $('<li>').addClass("hex").attr("id", x + "-" + y);
+                            arr[x][y].appendTo('ol#' + x + "." + classType); // to pick unique even/odd pairs
+                        }
+                    }
+                }
+
+                cat_x = getRandInt(); // called only once on load
+                cat_y = getRandInt();
+                var index = Math.floor(Math.random() * 6); // 0-5
+                var indexPool = [1, 3, 5, 6, 7, 8];
+                intendedDirection = indexPool[index]; // randomly selects a number from pool
+
+                $("li#" + cat_x + "-" + cat_y).addClass("active");
+
+                for (var z = 0; z < 8; z++) { // random inital map setup 
+                    var randX = Math.floor((Math.random() * 10) + 1);
+                    var randY = Math.floor((Math.random() * 10) + 1);
+                    if ($("li#" + randX + "-" + randY).hasClass("active")) {
+                        z--; // increment one more time to randomly generate a fence
+                    }
+                    else {
+                        $("li#" + randX + "-" + randY).addClass("blocked");
+                    }
+                }
+                $("div.button").click(function() {
+                    location.reload();
+                });
+            });
+
+            function findPath(x, y, direction) { //NOTE: x is up/down. y is left/right. x-1 is up 1. y-1 is left 1      
+                var pathFinding;
+                var randSide = Math.floor((Math.random() * 2) + 1);
+                switch (direction) {
+                    case 1:
+                        randSide == 1 ? pathFinding = [1, 5, 7, 6, 8, 3] : pathFinding = [1, 7, 5, 6, 8, 3]; //done  
+                        break;
+                    case 3:
+                        randSide == 1 ? pathFinding = [3, 6, 8, 5, 7, 1] : pathFinding = [3, 8, 6, 5, 7, 1]; //done
+                        break;
+                    case 5:
+                        randSide == 1 ? pathFinding = [5, 1, 6, 7, 3, 8] : pathFinding = [5, 1, 6, 7, 3, 8]; //done
+                        break;
+                    case 6:
+                        randSide == 1 ? pathFinding = [6, 3, 5, 1, 8, 7] : pathFinding = [6, 5, 3, 1, 8, 7]; //done
+                        break;
+                    case 7:
+                        randSide == 1 ? pathFinding = [7, 1, 8, 5, 3, 6] : pathFinding = [7, 8, 1, 5, 3, 6]; //done
+                        break;
+                    case 8:
+                        randSide == 1 ? pathFinding = [8, 3, 7, 6, 1, 5] : pathFinding = [8, 7, 3, 6, 1, 5]; //done
+                        break;
+                }
+
+                for (i = 0; i < 6; i++) {
+                    if (window["direction".concat(pathFinding[i])](x, y)) { // todo: combine hex and div into 1 condition with ||
+                        $("li#" + x + "-" + y).removeClass("active") // moved. Change preoccupied color to neutral
+                        $("li#" + newX + "-" + newY).addClass("active"); // new position
+                        if ($("li#" + newX + "-" + newY).hasClass("exit")) {
+                            alert("Uh-oh. The cat has escaped. YOU LOST!");
+                        }
+                        cat_x = newX;
+                        cat_y = newY; // update new cat location
+                        intendedDirection = pathFinding[i]; // gets intended direction
+                        break;
+                    }
+                    else if (i >= 5) { // last loop and break didn't trigger so all paths failed.
+                        alert("YOU WON!!");
+                    }
+                }
+            }
+
+            //NOTE: positioned in way that opposite directions are placed furthest apart
+            function direction1(x, y) {
+                if (!$("li#" + x + "-" + (y - 1)).hasClass("blocked")) { // left
+                    newX = x;
+                    newY = y - 1;
+                    return true;
+                }
+                return false;
+            }
+            function direction3(x, y) {
+                if (!$("li#" + x + "-" + (y + 1)).hasClass("blocked")) { // right
+                    newX = x;
+                    newY = y + 1;
+                    return true;
+                }
+                return false;
+            }
+            function direction5(x, y) {
+                if (!$("li#" + (x - 1) + "-" + (y - 1)).hasClass("blocked") && $(".active").parent().hasClass("odd")) { // top-left
+                    newX = x - 1;
+                    newY = y - 1;
+                    return true;
+                }
+                else if (!$("li#" + (x - 1) + "-" + y).hasClass("blocked") && $(".active").parent().hasClass("even")) {
+                    newX = x - 1;
+                    newY = y;
+                    return true;
+                }
+                return false;
+            }
+            function direction6(x, y) {
+                if (!$("li#" + (x - 1) + "-" + y).hasClass("blocked") && $(".active").parent().hasClass("odd")) { // top-right
+                    newX = x - 1;
+                    newY = y;
+                    return true;
+                }
+                else if (!$("li#" + (x - 1) + "-" + (y + 1)).hasClass("blocked") && $(".active").parent().hasClass("even")) {
+                    newX = x - 1;
+                    newY = y + 1;
+                    return true;
+                }
+                return false;
+            }
+            function direction7(x, y) {
+                if (!$("li#" + (x + 1) + "-" + (y - 1)).hasClass("blocked") && $(".active").parent().hasClass("odd")) { // bottom-left
+                    newX = x + 1;
+                    newY = y - 1;
+                    return true;
+                }
+                else if (!$("li#" + (x + 1) + "-" + y).hasClass("blocked") && $(".active").parent().hasClass("even")) {
+                    newX = x + 1;
+                    newY = y;
+                    return true;
+                }
+                return false;
+            }
+            function direction8(x, y) {
+                if (!$("li#" + (x + 1) + "-" + y).hasClass("blocked") && $(".active").parent().hasClass("odd")) { // bottom-right
+                    newX = x + 1;
+                    newY = y;
+                    return true;
+                }
+                else if (!$("li#" + (x + 1) + "-" + (y + 1)).hasClass("blocked") && $(".active").parent().hasClass("even")) {
+                    newX = x + 1;
+                    newY = y + 1;
+                    return true;
+                }
+                return false;
+            }
+            function getRandInt() { // returns random # 4-5
+                return Math.floor((Math.random() * 3) + 4);
+            }
+
+        </script>
+    </head>
+    <body>
+        <div class="hex-container"></div>
+        <div class="button">Restart Game</div>
+    </body>
+</html>

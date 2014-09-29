@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MEOW~!</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <style type="text/css">
+            div{
+                border-radius:5px;
+            }
+            .choice{
+                padding-top:350px;
+                width:250px;
+                height:50px;
+                margin:auto;
+                color:white;
+            }
+            .level_1{
+                width:20%;
+                margin-right:20%;
+                float:left;
+                cursor: pointer;
+            }
+            .level_2{
+                width:20%;
+                margin-right:20%;
+                float:left;
+                cursor: pointer;
+            }
+            .level_3{
+                width:20%;
+                float:right;
+                cursor: pointer;
+            }
+            .platform, .platform_exit {
+                background-color: rgba(204, 204, 204,1);
+            }
+            .platform:hover, .blocked {
+                background: #F58787; 
+            }
+        </style>
+        <script>
+            var newX, newY, intendedDirection; //global
+            $(document).ready(function() {
+                $(".cover").css('height', $(".wrapper").height());
+                var arr = [];
+                for (var x = 0; x < 12; x++) { // generate the map
+                    arr[x] = [];
+                    for (var y = 0; y < 12; y++) {
+                        if (x === 0 || x === 11 || y === 0 || y === 11) { // invisible border for escape
+                            arr[x][y] = $('<div>').addClass("platform_exit").attr("id", x + "-" + y);
+                        }
+                        else {
+                            arr[x][y] = $('<div style="z-index:-100">').addClass("platform").attr("id", x + "-" + y);
+                        }
+                        arr[x][y].appendTo('div.wrapper');
+                    }
+                }
+
+                cat_x = getRandInt(); // called only once on load
+                cat_y = getRandInt();
+                intendedDirection = Math.floor((Math.random() * 4) + 1); // randomly selects a direction to start 1-4
+                $("div#" + cat_x + "-" + cat_y).addClass("active");
+                for (var z = 0; z < 8; z++) { // generate z initial blocks
+                    var randX = Math.floor((Math.random() * 10) + 1);
+                    var randY = Math.floor((Math.random() * 10) + 1);
+                    if ($("div#" + randX + "-" + randY).hasClass("active")) {
+                        z--; // increment one more time to randomly generate a fence
+                    }
+                    else {
+                        $("div#" + randX + "-" + randY).addClass("blocked");
+                    }
+                }
+                getAi();
+            });
+
+            function findPath(x, y, direction) { //NOTE: x is up/down. y is left/right. x-1 is up 1. y-1 is left 1      
+                var pathFinding;
+                var randSide = Math.floor((Math.random() * 2) + 1);
+                switch (direction) {
+                    case 1:
+                        randSide == 1 ? pathFinding = [1, 2, 4, 3] : pathFinding = [1, 4, 2, 3];
+                        break;
+                    case 2:
+                        randSide == 1 ? pathFinding = [2, 1, 3, 4] : pathFinding = [2, 3, 1, 4];
+                        break;
+                    case 3:
+                        randSide == 1 ? pathFinding = [3, 2, 4, 1] : pathFinding = [3, 4, 2, 1];
+                        break;
+                    case 4:
+                        randSide == 1 ? pathFinding = [4, 3, 1, 2] : pathFinding = [4, 1, 3, 2];
+                        break;
+                }
+                for (i = 0; i < 4; i++) {
+                    if (window["direction".concat(pathFinding[i])](x, y)) {
+                        $("div#" + x + "-" + y).removeClass("active") // moved. Change preoccupied color to neutral
+                        $("div#" + newX + "-" + newY).addClass("active"); // new position
+                        cat_x = newX;
+                        cat_y = newY; // update new cat location
+                        intendedDirection = pathFinding[i]; // gets intended direction
+                        if ($("div#" + newX + "-" + newY).hasClass("platform_exit")) {
+                            for (var x = 0; x < 12; x++) { // generate the map
+                                for (var y = 0; y < 12; y++) {
+                                    $("div#" + x + "-" + y).removeClass("blocked");
+                                    $("div#" + x + "-" + y).removeClass("active");
+                                }
+                            }
+                            cat_x = getRandInt(); // called only once on load
+                            cat_y = getRandInt();
+                            intendedDirection = Math.floor((Math.random() * 4) + 1); // randomly selects a direction to start 1-4
+                            $("div#" + cat_x + "-" + cat_y).addClass("active");
+                            //findPath(cat_x, cat_y, intendedDirection);
+                        }          
+                        getAi();
+                        break;
+                    }
+                    else if (i >= 3) { // last loop and break didn't trigger so all paths failed.
+                        alert("YOU WON!!");
+                    }
+                }
+            }
+            function getAi() { // imatate human turn
+                for (var z = 0; z < 1; z++) { // generate z initial blocks
+                    var randX = Math.floor((Math.random() * 10) + 1);
+                    var randY = Math.floor((Math.random() * 10) + 1);
+                    if ($("div#" + randX + "-" + randY).hasClass("active")) {
+                        z--; // increment one more time to randomly generate a fence
+                    }
+                    else {
+                        $("div#" + randX + "-" + randY).addClass("blocked");
+                        setTimeout(function() {
+                            findPath(cat_x, cat_y, intendedDirection)
+                        }, 800);
+                    }
+                }
+            }
+            //NOTE: positioned in way that opposite directions are placed furthest apart
+            function direction1(x, y) {
+                if (!$("div#" + x + "-" + (y - 1)).hasClass("blocked")) { // left
+                    newX = x;
+                    newY = y - 1;
+                    return true;
+                }
+                return false;
+            }
+            function direction2(x, y) {
+                if (!$("div#" + (x + 1) + "-" + y).hasClass("blocked")) { // down
+                    newX = x + 1;
+                    newY = y;
+                    return true;
+                }
+                return false;
+            }
+            function direction3(x, y) {
+                if (!$("div#" + x + "-" + (y + 1)).hasClass("blocked")) { // right
+                    newX = x;
+                    newY = y + 1;
+                    return true;
+                }
+                return false;
+            }
+            function direction4(x, y) {
+                if (!$("div#" + (x - 1) + "-" + y).hasClass("blocked")) { // up
+                    newX = x - 1;
+                    newY = y;
+                    return true;
+                }
+                return false;
+            }
+
+            function getRandInt() { // returns random # 4-5
+                return Math.floor((Math.random() * 5) + 4);
+            }
+
+        </script>
+    </head>
+    <body>
+        <div class="cover" style="position:absolute;z-index:2">
+            <div class="choice" style="position:relative">
+                <div class="level_1" style="position:relative">
+                    <a href="square.html" style="text-decoration:none; color:white">Level 1</a>
+                </div>
+                <div class="level_2" style="position:relative">
+                    <a href="hex.html" style="text-decoration:none; color:white">Level 2</a>
+                </div>
+                <div class="level_3" style="position:relative">
+                    <a href="circle.html" style="text-decoration:none; color:white">Level 3</a>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper" style="z-index:1"></div>
+    </body>
+</html>

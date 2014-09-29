@@ -81,7 +81,7 @@ ol.odd {
  }
   
 .platform_exit {
-  background-color: grey !important;
+  background-color: black !important;
   opacity: 0.0;}
 
 .platform:hover{
@@ -96,7 +96,7 @@ ol.odd {
   width: 564px;
   height: 348px;
   margin: auto;
-  background-color: grey;}
+  background-color: black;}
 
 .active {
   z-index:2;
