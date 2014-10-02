@@ -10,26 +10,14 @@ $(document).ready(function() {
     vid.display
     vid.onloadedmetadata = function() {
         $("#signature").css('visibility', 'visible');
-        $('#container')
-.delay(5400)
-.queue(function() {
-    $(this).fadeOut(1000, function() {
-        $('html, body').css({
-            'overflow': 'visible',
-            'height': 'auto',
-        })
-        $('#loading').fadeOut(600);
-    });
-    ;
-    $(this).dequeue();
-});
+      
     };
     $('html, body').css({
                     'overflow': 'hidden', //TODO: change back to visible
                     'height': '100%',
                 })
     $('#container')
-    .delay(5400)
+    .delay(5800)
     .queue(function() {
         $(this).fadeOut(1000, function() {
             $('html, body').css({

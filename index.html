@@ -15,6 +15,7 @@
 
 <script>
 $(document).ready(function() {
+    $( "#social-wrapper").css( "width",$("#contact-me").width());
     var randBackground = Math.floor((Math.random() * 6) + 1);
     switch (randBackground) {
         case 1:
@@ -39,6 +40,9 @@ $(document).ready(function() {
         $("#background").append('<source src="background/sunset.webmhd.webm" type="video/webm"><source src="background/sunset.mp4" type="video/mp4">');
         break;
     }
+    $( window ).resize(function() {
+      $( "#social-wrapper").css( "width",$("#contact-me").width());
+  });
 
 });
 </script>
@@ -111,10 +115,8 @@ $(document).ready(function() {
     transition: color ease 0.5s;
 }
 #icon-wrapper{
-    position:absolute;
-    bottom:-8%;
-    height:40px;
-    right:0%;
+    position:relative;
+    float:right;
 }
 #submit{
     border: 2px solid rgba(255,255,255,0.4);
@@ -157,16 +159,16 @@ $(document).ready(function() {
         <div id="container"> 
             <video id="signature" preload="auto" autoplay="true" muted="muted">
                 <source src="signature/Signature_21.mp4" type="video/mp4">
-                <source src="signature/Signature_21.oggtheora.ogv" type="video/ogg">
-                   
-                </video>
-                <div class="loader">
-                    <span><span class="progress"></span></span>
+                    <source src="signature/Signature_21.oggtheora.ogv" type="video/ogg">
+
+                    </video>
+                    <div class="loader">
+                        <span><span class="progress"></span></span>
+                    </div>
+                    <div id="qoute" style="position:relative; opacity:0"><b>“</b> Sing like no one’s listening, love like you’ve never been hurt, dance like nobody’s watching, and live like its heaven on earth. <b>”</b> <p>-<b> Mark Twain</b></p></div>
                 </div>
-                <div id="qoute" style="position:relative; opacity:0"><b>“</b> Sing like no one’s listening, love like you’ve never been hurt, dance like nobody’s watching, and live like its heaven on earth. <b>”</b> <p>-<b> Mark Twain</b></p></div>
             </div>
-        </div>
-        <script type="text/javascript">
+            <script type="text/javascript">
 
             $('html, body').css({//hide scroll bar
                 'overflow': 'hidden',
@@ -462,10 +464,11 @@ $(document).ready(function() {
                                                 </div>
                                             </form>
 
-
-                                            <div id="submit" style="width:210px;position:absolute;bottom:-15%">
-                                                <div class="sender" style="width:75%;position:relative;margin-left:auto;margin-right:auto;margin-top:4px;margin-bottom:6px;">
-                                                    Say Hello! <i class="fa fa-paper-plane"></i></div>
+                                            <div id="social-wrapper" style="position:absolute;width:100%;height:80px;bottom:-15%">
+                                                <div id="submit" style="position:relative; float:left">
+                                                    <div class="sender" style="width:75%;position:relative;margin-left:auto;margin-right:auto;margin-top:4px;margin-bottom:6px;">
+                                                        Say Hello! <i class="fa fa-paper-plane"></i>
+                                                    </div>
                                                 </div>
                                                 <div id="icon-wrapper">
                                                     <a href="https://github.com/mrez95" target="_blank"><i class="fa fa-github"></i></a>
@@ -473,20 +476,21 @@ $(document).ready(function() {
                                                     <a href="ca.linkedin.com/in/eddietyzhang" target="_blank"><i class="fa fa-linkedin-square"></i></a>
                                                     <a href="mailto:ez95@live.ca" target="_blank"><i class="fa fa-envelope-square"></i></a>
                                                 </div>
-
-                                                <img id="custom-stamp" src="images/stamps/default.png" style="height:34%;position:absolute;top:14.5%;right:4.7%">
                                             </div>
+
+                                            <img id="custom-stamp" src="images/stamps/default.png" style="height:34%;position:absolute;top:14.5%;right:4.7%">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div id="moretext-mobile" class="visible-xs visible-sm hidden">
-                            <div>
-                                <p class="mobile-subtext"></p>
-                                <p class="lesstext">less</p>
-                            </div>
+                    </div>
+                    <div id="moretext-mobile" class="visible-xs visible-sm hidden">
+                        <div>
+                            <p class="mobile-subtext"></p>
+                            <p class="lesstext">less</p>
                         </div>
+                    </div>
 
 
-                    </body></html>
+                </body></html>
