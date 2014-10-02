@@ -17,7 +17,7 @@
 $(document).ready(function() {
     $( "#social-wrapper").css( "width",$("#contact-me").width());
     $( "#icon-wrapper").css( "width",$("#social-wrapper").width()-$("#submit").width()-5);
-    document.write(document.referrer);
+    console.log(document.referrer);
     var randBackground = Math.floor((Math.random() * 6) + 1);
     switch (randBackground) {
         case 1:
