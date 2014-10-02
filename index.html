@@ -17,35 +17,38 @@
 $(document).ready(function() {
     $( "#social-wrapper").css( "width",$("#contact-me").width());
     $( "#icon-wrapper").css( "width",$("#social-wrapper").width()-$("#submit").width()-5);
-    console.log(document.referrer);
-    var randBackground = Math.floor((Math.random() * 6) + 1);
-    switch (randBackground) {
-        case 1:
-        $("#background").append('<source src="background/atmosphere_6.webmhd.webm" type="video/webm"><source src="background/atmosphere_6.mp4" type="video/mp4">');
-        typerColor = 'rgba(255,149,0,0.4)';
-        break;
-        case 2:
-        $("#background").append('<source src="background/meidera_13_blur.webmhd.webm" type="video/webm"><source src="background/meidera_13_blur.mp4" type="video/mp4">');
-        break;
-        case 3:
-        $("#background").append('<source src="background/melan_7.webmhd.webm" type="video/webm"><source src="background/melan_7.mp4" type="video/mp4">'); 
-        typerColor = 'rgba(255,255,255,0.4)'; 
-        break;
-        case 4:
-        $("#background").append('<source src="background/sak_5_blur.webmhd.webm" type="video/webm"><source src="background/sak_5_blur.mp4" type="video/mp4">');
-        break;
-        case 5:
-        $("#background").append('<source src="background/sak_7_blur.webmhd.webm" type="video/webm"><source src="background/sak_7_blur.mp4" type="video/mp4">');
-        typerColor = 'rgba(232,99,43,0.4)';
-        break;
-        case 6:
-        $("#background").append('<source src="background/sunset.webmhd.webm" type="video/webm"><source src="background/sunset.mp4" type="video/mp4">');
-        break;
-    }
-    $( window ).resize(function() {
-      $( "#social-wrapper").css( "width",$("#contact-me").width());
-      $( "#icon-wrapper").css( "width",$("#social-wrapper").width()-$("#submit").width()-5);
-  });
+    alert(document.referrer)
+        if (document.referrer.match("bazhanga.com") == null) {
+       alert();
+   }
+   var randBackground = Math.floor((Math.random() * 6) + 1);
+   switch (randBackground) {
+    case 1:
+    $("#background").append('<source src="background/atmosphere_6.webmhd.webm" type="video/webm"><source src="background/atmosphere_6.mp4" type="video/mp4">');
+    typerColor = 'rgba(255,149,0,0.4)';
+    break;
+    case 2:
+    $("#background").append('<source src="background/meidera_13_blur.webmhd.webm" type="video/webm"><source src="background/meidera_13_blur.mp4" type="video/mp4">');
+    break;
+    case 3:
+    $("#background").append('<source src="background/melan_7.webmhd.webm" type="video/webm"><source src="background/melan_7.mp4" type="video/mp4">'); 
+    typerColor = 'rgba(255,255,255,0.4)'; 
+    break;
+    case 4:
+    $("#background").append('<source src="background/sak_5_blur.webmhd.webm" type="video/webm"><source src="background/sak_5_blur.mp4" type="video/mp4">');
+    break;
+    case 5:
+    $("#background").append('<source src="background/sak_7_blur.webmhd.webm" type="video/webm"><source src="background/sak_7_blur.mp4" type="video/mp4">');
+    typerColor = 'rgba(232,99,43,0.4)';
+    break;
+    case 6:
+    $("#background").append('<source src="background/sunset.webmhd.webm" type="video/webm"><source src="background/sunset.mp4" type="video/mp4">');
+    break;
+}
+$( window ).resize(function() {
+  $( "#social-wrapper").css( "width",$("#contact-me").width());
+  $( "#icon-wrapper").css( "width",$("#social-wrapper").width()-$("#submit").width()-5);
+});
 
 });
 </script>
