@@ -5,30 +5,29 @@ var tie = {};
 var wordGap = 11;
 /* ]]> */
 $(document).ready(function() {
+    $('html, body').css({
+                    'overflow': 'hidden', //TODO: change back to visible
+                    'height': '100%',
+                })
     getTime();
     var vid = document.getElementById("signature");
     vid.display
     vid.onloadedmetadata = function() {
         $("#signature").css('visibility', 'visible');
-      
-    };
-    $('html, body').css({
-                    'overflow': 'hidden', //TODO: change back to visible
-                    'height': '100%',
+        $('#container')
+        .delay(5300)
+        .queue(function() {
+            $(this).fadeOut(1000, function() {
+                $('html, body').css({
+                    'overflow': 'visible',
+                    'height': 'auto',
                 })
-    $('#container')
-    .delay(5800)
-    .queue(function() {
-        $(this).fadeOut(1000, function() {
-            $('html, body').css({
-                'overflow': 'visible',
-                'height': 'auto',
-            })
-            $('#loading').fadeOut(600);
+                $('#loading').fadeOut(600);
+            });
+            ;
+            $(this).dequeue();
         });
-        ;
-        $(this).dequeue();
-    });
+        
                 typerColor = 'rgba(241,194,214,0.6)'; // sends to typer.js
 
                 var tempHeight = $(window).height() - $('.container').height();
