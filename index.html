@@ -16,7 +16,7 @@
 <script>
 $(document).ready(function() {
     $( "#social-wrapper").css( "width",$("#contact-me").width());
-    $( "#icon-wrapper").css( "width",$("#social-wrapper").width()-$("#submit").width()-"45px");
+    $( "#icon-wrapper").css( "width",$("#social-wrapper").width()-$("#submit").width()-"45px !important");
     var randBackground = Math.floor((Math.random() * 6) + 1);
     switch (randBackground) {
         case 1:
@@ -43,7 +43,7 @@ $(document).ready(function() {
     }
     $( window ).resize(function() {
       $( "#social-wrapper").css( "width",$("#contact-me").width());
-      $( "#icon-wrapper").css( "width",$("#social-wrapper").width()-$("#submit").width()-"45px");
+      $( "#icon-wrapper").css( "width",$("#social-wrapper").width()-$("#submit").width()-"45px !important");
   });
 
 });
