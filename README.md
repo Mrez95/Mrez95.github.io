@@ -1,21 +1,23 @@
 Personal Website
 ===========
 
-Personal portfolio designed from scratch using HTML5, CSS3 and JQuery techniques.
+Personal website portfolio designed and implemented from scratch using HTML5, CSS3 and JQuery techniques
 
 ![alt='images/home_screen.png'](images/home_screen.png)
 
 Features
 ------------
 
-+ online portfolio to showcase an array of past projects
-+ orginall responsive navigation bar with dynmaic animations
-+ elegant home page implemented with Typer.js
++ online portfolio showcasing an array of various past projects
++ custom loading screen with animated personal signature
++ customized greeting message based on the current time of day 
++ orginal responsive navigation bar design
++ live backend contact form made using PHP
 
 Usage
 ------------
 
-Live Website @ www.bazhanga.com
+Live Website DEMO @ www.bazhanga.com
 
 License
 -------------
