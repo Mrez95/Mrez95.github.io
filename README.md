@@ -12,7 +12,7 @@ Features
 + custom loading screen with animated personal signature
 + customized greeting message based on the current time of day 
 + orginal responsive navigation bar design
-+ live backend contact form made using PHP
++ live backend PHP contact form 
 
 Usage
 ------------
