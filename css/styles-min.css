@@ -9,9 +9,14 @@
         width:60%;
     }
     .name-container .logo {
-    width: 145px;
-    margin-top:25px !important;
-    margin-bottom:25px !important;
+        display: block;
+        margin: auto;
+        width: 185px;
+    }
+    #typer{
+        font-size:18px !important;
+    }
+
 }
 @media screen and (min-width: 700px){
     #default-nav{
@@ -917,10 +922,6 @@ nav {
 .name-container hr {
     border: none;
     border-top: 1px dashed #fff;
-}
-.name-container .logo {
-    display: block;
-    margin: auto;
 }
 .btn-same-size {
     width: 120px;
