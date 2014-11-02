@@ -25,10 +25,15 @@
     }
     #signature{
         width:100% !important;
-        margin-bottom:60px !important;
+        margin-bottom:30px !important;
+        margin-top:-10% !important;
     }
     #qoute{
-        font-size:12px !important;
+        font-size:13px !important;
+    }
+    .navbar-brand {
+    padding-left: 5px !important;
+    font-size: 15px !important;
     }
 
 }
