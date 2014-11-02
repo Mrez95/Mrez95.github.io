@@ -1,3 +1,13 @@
+@media screen and (max-width: 700px){
+    #default-nav{
+        background-color:rgba(0,0,0,0.4);
+    }
+}
+@media screen and (min-width: 700px){
+    #default-nav{
+      background-color:rgba(0,0,0,0); 
+    }
+}
 #navbar {
     opacity: 0;
     background-color: #fff;
@@ -334,16 +344,20 @@ div#loading {
 }
 @-webkit-keyframes progressBar {
     0% {
-    width: 0;
+    width: 0px;
 }
 100% {
     width: 100%}
 }@-moz-keyframes progressBar {
     0% {
-    width: 0;
+    width: 0px;
 }
 100% {
     width: 100%}
+}
+@keyframes progressBar {
+    0%   {width: 0px;}
+    100% {width: 100%}
 }#qoute {
     display: block;
     position: relative;
@@ -1000,8 +1014,6 @@ blockquote {
 }.container>.navbar-collapse, .container>.navbar-header {
     margin-right: -15px;
     margin-left: -15px;
-}
-.navbar-static-top {
     border-width: 0 0 1px;
 }
 .navbar-fixed-bottom, .navbar-fixed-top {
