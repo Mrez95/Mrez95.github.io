@@ -20,8 +20,7 @@ $(document).ready(function() {
     var randBackground = Math.floor((Math.random() * 6) + 1);
     switch (randBackground) {
         case 1:
-        $("#background").append('<source src="background/atmosphere_6.webmhd.webm" type="video/webm"><source src="background/atmosphere_6.mp4" type="video/mp4">');
-        typerColor = 'rgba(255,149,0,0.4)';
+        $("#background").append('<source src="background/sunset.webmhd.webm" type="video/webm"><source src="background/sunset.mp4" type="video/mp4">');
         break;
         case 2:
         $("#background").append('<source src="background/meidera_13_blur.webmhd.webm" type="video/webm"><source src="background/meidera_13_blur.mp4" type="video/mp4">');
@@ -32,14 +31,13 @@ $(document).ready(function() {
         break;
         case 4:
         $("#background").append('<source src="background/sak_5_blur.webmhd.webm" type="video/webm"><source src="background/sak_5_blur.mp4" type="video/mp4">');
+        typerColor = 'rgba(255,255,255,0.4)'; 
         break;
         case 5:
         $("#background").append('<source src="background/sak_7_blur.webmhd.webm" type="video/webm"><source src="background/sak_7_blur.mp4" type="video/mp4">');
         typerColor = 'rgba(232,99,43,0.4)';
         break;
-        case 6:
-        $("#background").append('<source src="background/sunset.webmhd.webm" type="video/webm"><source src="background/sunset.mp4" type="video/mp4">');
-        break;
+
     }
     $( window ).resize(function() {
       $( "#social-wrapper").css( "width",$("#contact-me").width());
@@ -166,7 +164,7 @@ $(document).ready(function() {
                     <div class="loader">
                         <span><span class="progress"></span></span>
                     </div>
-                    <div id="qoute" style="position:relative; opacity:0"><b>“</b> Sing like no one’s listening, love like you’ve never been hurt, dance like nobody’s watching, and live like its heaven on earth. <b>”</b> <p>-<b> Mark Twain</b></p></div>
+                    <div id="qoute" style="position:relative; opacity:0"><b>“</b> Sing like no one’s listening, love like you’ve never been hurt, dance like nobody’s watching, and live like its heaven on earth.&nbsp;<b>”</b> <p>-<b> Mark Twain</b></p></div>
                 </div>
             </div>
             <script type="text/javascript">
@@ -175,12 +173,12 @@ $(document).ready(function() {
                 'overflow': 'hidden',
                 'height': '100%'
             })
-            $("#qoute").delay(400)
+            $("#qoute").delay(800)
             .queue(function() {
                 $(this).stop().animate({
-                    top: '45%',
+                    top: '55%',
                     opacity: '1'
-                }, 3000, 'swing');
+                }, 2500, 'swing');
                 $(this).dequeue();
             });
             </script>
