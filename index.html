@@ -19,7 +19,7 @@ $(document).ready(function() {
     $( "#icon-wrapper").css( "width",$("#social-wrapper").width()-$("#submit").width()-5);
 
     // var randBackground = Math.floor((Math.random() * 6) + 1);
-    $("#background").append('<source src="background/melan_7.webmhd.webm" type="video/webm"><source src="background/melan_7.mp4" type="video/mp4" poster="background/static_blue.png">'); 
+    $("#background").append('<source src="background/melan_7.webmhd.webm" type="video/webm"><source src="background/melan_7.mp4" type="video/mp4">'); 
     typerColor = 'rgba(255,255,255,0.45)'; 
     //     typerColor = 'rgba(255,255,255,0.4)'; 
     // switch (randBackground) {
@@ -234,8 +234,8 @@ $(document).ready(function() {
             </nav>
             <!--        <div class="blurred-background " style="background-video: url('blueblur.png'); background-attachment: fixed; background-repeat: no-repeat;">-->
             <div class="filter"></div>
-            <video id="background" preload="auto" autoplay="true" loop="loop" muted="muted" >
-
+            <video id="background" preload="auto" autoplay="true" loop="loop" muted="muted" poster="background/static_blue.png" >
+                <!-- video source gets appended via JS -->
             </video>
 
             <div id="_home" data-anchor="home" style="position:relative;height:100%; margin-bottom:0px; border-bottom:0px">
