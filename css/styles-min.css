@@ -11,9 +11,9 @@
     .name-container .logo {
         display: block;
         margin: auto;
-        width: 180px;
-        margin-bottom:0px !important;
-        margin-top:0px !important;
+        width: 150px;
+        margin-bottom:-10px !important;
+        margin-top:-10px !important;
     }
     #typer{
         font-size:18px !important;
@@ -26,7 +26,7 @@
     #signature{
         width:100% !important;
         margin-bottom:30px !important;
-        margin-top:-10% !important;
+        margin-top:-11.4% !important;
     }
     #qoute{
         font-size:13px !important;
