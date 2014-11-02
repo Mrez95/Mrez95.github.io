@@ -12,11 +12,23 @@
         display: block;
         margin: auto;
         width: 180px;
-        margin-bottom:10px !important;
+        margin-bottom:0px !important;
         margin-top:0px !important;
     }
     #typer{
         font-size:18px !important;
+    }
+    #container {
+        height: 150px !important;
+        width: 250px !important;
+        top: 35%;
+    }
+    #signature{
+        width:100% !important;
+        margin-bottom:60px !important;
+    }
+    #qoute{
+        font-size:12px !important;
     }
 
 }
