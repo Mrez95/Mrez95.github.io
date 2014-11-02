@@ -3,16 +3,25 @@
         background-color:rgba(0,0,0,0.4);
     }
     #nameTag{
-        font-size:50px !important;
+        font-size:35px !important;
     }
     .name-container hr{
-        width:80%;
+        width:60%;
     }
+    .name-container .logo {
+    width: 145px;
+    margin-top:25px !important;
+    margin-bottom:25px !important;
 }
 @media screen and (min-width: 700px){
     #default-nav{
       background-color:rgba(0,0,0,0); 
     }
+    .name-container .logo {
+    display: block;
+    margin: auto;
+    width: 225px;
+}
 }
 #navbar {
     opacity: 0;
@@ -912,7 +921,6 @@ nav {
 .name-container .logo {
     display: block;
     margin: auto;
-    width: 225px;
 }
 .btn-same-size {
     width: 120px;
