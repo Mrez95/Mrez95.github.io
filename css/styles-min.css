@@ -2,6 +2,9 @@
     #default-nav{
         background-color:rgba(0,0,0,0.4);
     }
+    #nameTag{
+        font-size:50px !important;
+    }
 }
 @media screen and (min-width: 700px){
     #default-nav{
