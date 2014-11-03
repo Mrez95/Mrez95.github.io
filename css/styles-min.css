@@ -3,20 +3,32 @@
         background-color:rgba(0,0,0,0.4);
     }
     #nameTag{
-        font-size:35px !important;
+        font-size:30px !important;
+        margin-top: 15px !important;
     }
     .name-container hr{
         width:54%;
+        margin-bottom: 15px !important;
     }
+
     .name-container .logo {
         display: block;
         margin: auto;
-        width: 150px;
-        margin-bottom:-10px !important;
-        margin-top:-10px !important;
+        width: 105px;
+        margin-top: 10px !important;
+        margin-bottom:-13px !important;
+    }
+    .icon-dol{
+        font-size: 28px !important;
+    }
+    #typer + hr{
+         margin-top:15px !important;
+         margin-bottom: 20px !important;
     }
     #typer{
-        font-size:18px !important;
+        font-size:16px !important;
+        margin-top: 10px !important;
+        margin-bottom: 0px !important;
     }
     #container {
         height: 150px !important;
@@ -24,7 +36,7 @@
         top: 35%;
     }
     #signature{
-        width:100% !important;
+        width:90% !important;
         margin-bottom:30px !important;
         margin-top:-11.4% !important;
     }
@@ -32,8 +44,19 @@
         font-size:13px !important;
     }
     .navbar-brand {
-    padding-left: 5px !important;
-    font-size: 15px !important;
+    padding-left: 3px !important;
+    font-size: 16px !important;
+    }
+    .box{
+        height:40px !important;
+    }
+    .box h5{
+        font-size: 15px;
+    }
+    .demo-3{
+        width:120px !important;
+        margin: auto !important;
+        padding:0px !important;
     }
 
 }
