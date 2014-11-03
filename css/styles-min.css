@@ -1,6 +1,6 @@
 @media screen and (max-width: 700px){
     #default-nav{
-        background-color:rgba(0,0,0,0.4);
+        background-color:rgba(0,0,0,0.23);
     }
     #about-photo img{
         height:186px !important;
@@ -74,8 +74,8 @@
     font-size: 16px !important;
     }
     .box{
-        height:42px !important;
-        margin-bottom: 2px !important;
+        height:43px !important;
+        margin-bottom: 3px !important;
     }
     .box h5{
         font-size: 15px;
