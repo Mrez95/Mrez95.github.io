@@ -2,12 +2,34 @@
     #default-nav{
         background-color:rgba(0,0,0,0.4);
     }
+    #about-photo img{
+        height:186px !important;
+    }
+    #about-photo{
+        margin-top:25px !important;
+        width: 186px !important;
+        height: 186px !important;
+        border-width: 5px 3px 0px !important;
+    }
+    #personal-bio{
+        margin-top: 70px !important;
+        font-size: 14px !important;
+        font-weight: 200 !important;
+        width: 80% !important;
+    }
+    .image h2{
+        font-size: 34px !important
+    }
     #nameTag{
         font-size:30px !important;
         margin-top: 15px !important;
     }
+    .name-container{
+        height: 100% !important;
+        width: 100% !important;
+    }
     .name-container hr{
-        width:54%;
+        width:86%;
         margin-bottom: 15px !important;
     }
     .name-container .logo {
@@ -35,12 +57,14 @@
         top: 35%;
     }
     #signature{
-        width:90% !important;
+        width:80% !important;
         margin-bottom:30px !important;
         margin-top:-11.4% !important;
     }
     .loader{
-        width:85% !important;
+        width:110% !important;
+        margin-left: 5% !important;
+        margin-right: 5% !important;
     }
     #qoute{
         font-size:13px !important;
