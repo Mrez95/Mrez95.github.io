@@ -85,6 +85,9 @@
         margin: auto !important;
         padding:0px !important;
     }
+    .nav-logo{
+        display: none !important;
+    }
 
 }
 @media screen and (min-width: 700px){
@@ -927,6 +930,13 @@ ol ol, ol ul, ul ol, ul ul {
 .navbar-inverse .navbar-toggle .icon-bar {
     background-color: #fff;
 }
+#navbar .navbar-toggle .icon-bar {
+    background-color: black;
+}
+#navbar .navbar-toggle:hover .icon-bar {
+    background-color: white;
+}
+
 .navbar-inverse .navbar-collapse {
     border-color: rgba(0, 0, 0, .5);
 }
@@ -938,6 +948,14 @@ html {
     height: 100%}
 body {
     padding-top: 70px;
+}
+a{
+    text-decoration: none !important;
+}
+a div h3{
+    font-weight:300 !important;
+}
+.navbar-header button span.icon-bar{
 }
 .margin-top-lg {
     margin-top: 100px;
