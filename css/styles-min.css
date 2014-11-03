@@ -10,11 +10,10 @@
         width:54%;
         margin-bottom: 15px !important;
     }
-
     .name-container .logo {
         display: block;
         margin: auto;
-        width: 105px;
+        width: 115px;
         margin-top: 10px !important;
         margin-bottom:-13px !important;
     }
@@ -23,7 +22,7 @@
     }
     #typer + hr{
          margin-top:15px !important;
-         margin-bottom: 20px !important;
+         margin-bottom: 25px !important;
     }
     #typer{
         font-size:16px !important;
@@ -36,9 +35,12 @@
         top: 35%;
     }
     #signature{
-        width:90% !important;
+        width:80% !important;
         margin-bottom:30px !important;
         margin-top:-11.4% !important;
+    }
+    .loader{
+        width:85% !important;
     }
     #qoute{
         font-size:13px !important;
@@ -48,7 +50,8 @@
     font-size: 16px !important;
     }
     .box{
-        height:40px !important;
+        height:42px !important;
+        margin-bottom: 2px !important;
     }
     .box h5{
         font-size: 15px;
