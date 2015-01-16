@@ -18,7 +18,8 @@ $(document).ready(function() {
     $( "#social-wrapper").css( "width",$("#contact-me").width());
     $( "#icon-wrapper").css( "width",$("#social-wrapper").width()-$("#submit").width()-5);
     var randBackground = Math.floor((Math.random() * 8) + 1); // rad number 1-8
-
+    typerColor = 'rgba(255,255,255,0.5)';
+    
 switch (randBackground) {
     case 1:
     $("#background").append('<source src="background/night_loop.webmhd.webm" type="video/webm"><source src="background/night_loop.mp4" type="video/mp4">');

@@ -164,8 +164,8 @@ body.background {
     left: 0;
 }
 .box svg line {
-    stroke-width: 2;
-    stroke: rgba(255, 255, 255, .2);
+    stroke-width: 3;
+    stroke: rgba(255, 255, 255, .3);
     -webkit-transition: all .8s ease-in-out;
     transition: all .8s ease-in-out;
 }
@@ -1364,15 +1364,15 @@ a#scroll_down:hover {
 }
 a#scroll_down:hover i {
     color: rgba(255, 255, 255, 0.7);
-    opacity: .8;
+    opacity: .9;
 }
 a#scroll_down span {
     display: block;
     opacity: .6;
 }
 a#scroll_down i {
-    font-size: 40px;
-    opacity: .55;
+    font-size: 32px;
+    opacity: .6;
 }
 @font-face {
     font-family: fontello;
