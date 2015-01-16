@@ -1,0 +1,34 @@
+Q: Tell me about yourself and why you want to be part of ____________.
+
+Arguably just finished up the hardest term in ECE and is now set free on coop in Toronto for the next 4 months! If you ask anyone that knows me, they would tell you I am a very outgoing and energetic guy. I love meeting new people and getting involved. Whether it be in elementary, high school or even university with a 43 hr/week schedule it doesn't change who I am and it is evident through the array of activities and events (above) I partook and helped organize. Joining the Hack the North team would be a dream come true as it provides the opportunity I cherish to combine both my passions of leadership/volunteering with web/technology. 
+
+
+Q: Past volunteer experience 
+
+> EngHack 2014 (Hackathon Director)
+> Engineering Orientation 2014 (Orientation Leader, Guinness World Record Director) 
+> Engineering Society (Resume Critique Director, 2018 ECE Class Representative, Academic Representative)
+> Night It Up!  (Logistics Coordinator) 
+> HS Yearbook (Senior Editor, Head of Events)
+> Music Fest Nationals (Film/Stage Crew)
+> HS Talent Show (Co-Host)
+
+
+Q: Why are you the best person for the role?
+
+In addition to my passion and volunteer experiences I talked about previously, some relevant professional experiences which underlines my competency for this position include: 
+> 5 years of solid experience with front-end development and technologies
+> UI/UX Front-End Developer @ Title Trading Inc. 
+> Software Engineer @ Veeva Systems 
+> Software Engineer @ Zynga Inc. 
+> Personal website developed completely from scratch @ www.bazhanga.com
+
+(Read more on what I worked on at each company and technologies used at www.linkedin.com/in/eddietyzhang)
+
+
+Q: What do you love and hate about favourite technology?
+
+I have a love hate relationship with my favourite programming language JavaScript! What I truly love about it is the online community and the wealth and abundance of useful resource and helpful support readily available online. However, any experienced web developer would know JavaScript also comes with its own set of own unique bugs and unconventional glitches which can bring a lot of head scratching and puzzled questions (ex. the infamous JavaScript closures in for-loops. This one really got my head spinning!).
+
+
+

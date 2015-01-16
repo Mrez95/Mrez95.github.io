@@ -17,34 +17,38 @@
 $(document).ready(function() {
     $( "#social-wrapper").css( "width",$("#contact-me").width());
     $( "#icon-wrapper").css( "width",$("#social-wrapper").width()-$("#submit").width()-5);
+    var randBackground = Math.floor((Math.random() * 8) + 1); // rad number 1-8
 
-    // var randBackground = Math.floor((Math.random() * 6) + 1);
-    $("#background").append('<source src="background/melan_7.webmhd.webm" type="video/webm"><source src="background/melan_7.mp4" type="video/mp4">'); 
-    typerColor = 'rgba(255,255,255,0.45)'; 
-    //     typerColor = 'rgba(255,255,255,0.4)'; 
-    // switch (randBackground) {
-    //     case 1:
-    //     $("#background").append('<source src="background/sunset.webmhd.webm" type="video/webm"><source src="background/sunset.mp4" type="video/mp4">');
-    //     break;
-    //     case 2:
-    //     $("#background").append('<source src="background/meidera_13_blur.webmhd.webm" type="video/webm"><source src="background/meidera_13_blur.mp4" type="video/mp4">');
-    //     break;
-    //     case 3:
-    //     $("#background").append('<source src="background/melan_7.webmhd.webm" type="video/webm"><source src="background/melan_7.mp4" type="video/mp4">'); 
-    //     typerColor = 'rgba(255,255,255,0.4)'; 
-    //     break;
-    //     case 4:
-    //     $("#background").append('<source src="background/sak_5_blur.webmhd.webm" type="video/webm"><source src="background/sak_5_blur.mp4" type="video/mp4">');
-    //     typerColor = 'rgba(255,255,255,0.4)'; 
-    //     break;
-    //     case 5:
-    //     $("#background").append('<source src="background/sak_7_blur.webmhd.webm" type="video/webm"><source src="background/sak_7_blur.mp4" type="video/mp4">');
-    //     break;
-    // }
-    $( window ).resize(function() {
-      $( "#social-wrapper").css( "width",$("#contact-me").width());
-      $( "#icon-wrapper").css( "width",$("#social-wrapper").width()-$("#submit").width()-5);
-  });
+switch (randBackground) {
+    case 1:
+    $("#background").append('<source src="background/night_loop.webmhd.webm" type="video/webm"><source src="background/night_loop.mp4" type="video/mp4">');
+    break;
+    case 2:
+    $("#background").append('<source src="background/looping_clouds.webmhd.webm" type="video/webm"><source src="background/looping_clouds.mp4" type="video/mp4">'); 
+    break;
+    case 3:
+    $("#background").append('<source src="background/diamond_loop.webmhd.webm" type="video/webm"><source src="background/diamond_loop.mp4" type="video/mp4">');
+    break;
+    case 4:
+    $("#background").append('<source src="background/mobile_loop.webmhd.webm" type="video/webm"><source src="background/mobile_loop.mp4" type="video/mp4">');
+    break;
+    case 5:
+    $("#background").append('<source src="background/winter_loop_2.webmhd.webm" type="video/webm"><source src="background/winter_loop_2.mp4" type="video/mp4">');
+    break;
+    case 6:
+    $("#background").append('<source src="background/timelapse_1.webmhd.webm" type="video/webm"><source src="background/timelapse_1.mp4" type="video/mp4">');
+    break;
+    case 7:
+    $("#background").append('<source src="background/timelapse_2.webmhd.webm" type="video/webm"><source src="background/timelapse_2.mp4" type="video/mp4">');
+    break;
+    case 8:
+    $("#background").append('<source src="background/timelapse_3.webmhd.webm" type="video/webm"><source src="background/timelapse_3.mp4" type="video/mp4">');
+    break;
+}
+$( window ).resize(function() {
+  $( "#social-wrapper").css( "width",$("#contact-me").width());
+  $( "#icon-wrapper").css( "width",$("#social-wrapper").width()-$("#submit").width()-5);
+});
 
 });
 </script>
@@ -160,9 +164,9 @@ $(document).ready(function() {
         <div id="container"> 
             <video id="signature" preload="auto" autoplay="true" muted="muted" poster="signature/signature_text.png">
                 <source src="signature/Signature_21.mp4" type="video/mp4">
-                <source src="signature/Signature_21.oggtheora.ogv" type="video/ogg">
-                <img src="signature/signature_text.png">
-            </video>
+                    <source src="signature/Signature_21.oggtheora.ogv" type="video/ogg">
+                        <img src="signature/signature_text.png">
+                    </video>
                     <div class="loader">
                         <span><span class="progress"></span></span>
                     </div>
