@@ -18,9 +18,11 @@ $(document).ready(function() {
     $( "#social-wrapper").css( "width",$("#contact-me").width());
     $( "#icon-wrapper").css( "width",$("#social-wrapper").width()-$("#submit").width()-5);
     var randBackground = Math.floor((Math.random() * 8) + 1); // rad number 1-8
+    var d = new Date();
+    var n = d.getMonth();
+    randBackground = 5;
 
-//TODO: DELETE ME
-//            $("#background").append('<source src="background/japan_loop.mp4" type="video/mp4">');
+ //$("#background").append('<source src="background/sideCloud_loop.mp4" type="video/mp4">');
  typerColor = 'rgba(255,255,255,0.5)';
 
 switch (randBackground) {
@@ -37,7 +39,14 @@ switch (randBackground) {
     $("#background").append('<source src="background/mobile_loop.webmhd.webm" type="video/webm"><source src="background/mobile_loop.mp4" type="video/mp4">');
     break;
     case 5:
-    $("#background").append('<source src="background/winter_loop_2.webmhd.webm" type="video/webm"><source src="background/winter_loop_2.mp4" type="video/mp4">');
+    if(n>2 && n < 11){ 
+        $(".filter").css("background-color","rgba(0,0,0,0.35)"); // too bright
+        $("#contact_layer").css("background-color","rgba(0,0,0,0.35)");  
+        $("#background").append('<source src="background/japan_loop.webmhd.webm" type="video/webm"><source src="background/japan_loop.mp4" type="video/mp4">');
+    }
+    else{ // winter season April ~ Nov 
+        $("#background").append('<source src="background/winter_loop_2.webmhd.webm" type="video/webm"><source src="background/winter_loop_2.mp4" type="video/mp4">');
+    }
     break;
     case 6:
     $("#background").append('<source src="background/timelapse_1.webmhd.webm" type="video/webm"><source src="background/timelapse_1.mp4" type="video/mp4">');
