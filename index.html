@@ -15,11 +15,10 @@
 
 <script>
 $(document).ready(function() {
+    console.log("PREVIOUS URL --> " + document.referrer);
     $( "#social-wrapper").css( "width",$("#contact-me").width());
     $( "#icon-wrapper").css( "width",$("#social-wrapper").width()-$("#submit").width()-5);
-    var randBackground = Math.floor((Math.random() * 8) + 1); // rad number 1-8
-    var d = new Date();
-    var n = d.getMonth();
+    var randBackground = Math.floor((Math.random() * 7) + 1); // rad number 1-8
     typerColor = 'rgba(255,255,255,0.5)';
 
 
@@ -30,29 +29,19 @@ switch (randBackground) {
     case 2:
     $("#background").append('<source src="background/looping_clouds.webmhd.webm" type="video/webm"><source src="background/looping_clouds.mp4" type="video/mp4">'); 
     break;
-    case 3:
+    case 3: //maybe
     $("#background").append('<source src="background/diamond_loop.webmhd.webm" type="video/webm"><source src="background/diamond_loop.mp4" type="video/mp4">');
     break;
-    case 4:
+    case 4: //maybe
     $("#background").append('<source src="background/mobile_loop.webmhd.webm" type="video/webm"><source src="background/mobile_loop.mp4" type="video/mp4">');
     break;
     case 5:
-    if(n>2 && n < 11){ 
-        $(".filter").css("background-color","rgba(0,0,0,0.35)"); // too bright
-        $("#contact_layer").css("background-color","rgba(0,0,0,0.35)");  
-        $("#background").append('<source src="background/japan_loop.webmhd.webm" type="video/webm"><source src="background/japan_loop.mp4" type="video/mp4">');
-    }
-    else{ // winter season April ~ Nov 
-        $("#background").append('<source src="background/winter_loop_2.webmhd.webm" type="video/webm"><source src="background/winter_loop_2.mp4" type="video/mp4">');
-    }
-    break;
-    case 6:
     $("#background").append('<source src="background/timelapse_1.webmhd.webm" type="video/webm"><source src="background/timelapse_1.mp4" type="video/mp4">');
     break;
-    case 7:
+    case 6:
     $("#background").append('<source src="background/timelapse_2.webmhd.webm" type="video/webm"><source src="background/timelapse_2.mp4" type="video/mp4">');
     break;
-    case 8:
+    case 7:
     $("#background").append('<source src="background/timelapse_3.webmhd.webm" type="video/webm"><source src="background/timelapse_3.mp4" type="video/mp4">');
     break;
 }
@@ -167,35 +156,41 @@ $( window ).resize(function() {
     margin-top:100px;
     padding-bottom:70px;
 }
+#signature{
+    width:80% !important;
+    margin-bottom:10px !important;
+    margin-top:-5% !important;
+}
 </style>   
 </head>
 
 <body class="background">
+    <div id="cover-curtain">
     <div id='loading'>
         <div id="container"> 
-            <video id="signature" preload="auto" autoplay="true" muted="muted" poster="signature/signature_text.png">
+            <video id="signature" preload="auto" autoplay="true" muted="muted">
                 <source src="signature/Signature_21.mp4" type="video/mp4">
-                    <source src="signature/Signature_21.oggtheora.ogv" type="video/ogg">
-                        <img src="signature/signature_text.png">
-                    </video>
+            </video>
                     <div class="loader">
                         <span><span class="progress"></span></span>
                     </div>
-                    <div id="qoute" style="position:relative; opacity:0"><b>“</b> Sing like no one’s listening, love like you’ve never been hurt, dance like nobody’s watching, and live like its heaven on earth.&nbsp;<b>”</b> <p>-<b> Mark Twain</b></p></div>
+        <div id="qoute" style="position:relative; opacity:0"><b>“</b> Sing like no one’s listening, love like you’ve never been hurt, dance like nobody’s watching, and live like its heaven on earth.&nbsp;<b>”</b> <p>-<b> Mark Twain</b></p></div>
+<!--                     <div id="qoute" style="position:relative; opacity:0"><b>“</b> Living in the present. Grateful for yesterday. Hopeful of tomorrow.&nbsp;<b>”</b> <p>-<b> Eddie Zhang</b></p></div> -->
+    </div>
+    </div>
                 </div>
-            </div>
             <script type="text/javascript">
 
             $('html, body').css({//hide scroll bar
                 'overflow': 'hidden',
                 'height': '100%'
             })
-            $("#qoute").delay(800)
+            $("#qoute").delay(1350)
             .queue(function() {
                 $(this).stop().animate({
-                    top: '60%',
+                    top: '50%',
                     opacity: '1'
-                }, 2100, 'swing');
+                }, 2500, 'swing');
                 $(this).dequeue();
             });
             </script>

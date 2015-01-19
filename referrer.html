@@ -15,13 +15,12 @@
 
 <script>
 $(document).ready(function() {
+    console.log("PREVIOUS URL --> " + document.referrer);
     $( "#social-wrapper").css( "width",$("#contact-me").width());
     $( "#icon-wrapper").css( "width",$("#social-wrapper").width()-$("#submit").width()-5);
     var randBackground = Math.floor((Math.random() * 8) + 1); // rad number 1-8
     var d = new Date();
     var n = d.getMonth();
-    randBackground = 5;
-
  //$("#background").append('<source src="background/sideCloud_loop.mp4" type="video/mp4">');
  typerColor = 'rgba(255,255,255,0.5)';
 
