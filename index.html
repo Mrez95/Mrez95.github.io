@@ -15,7 +15,27 @@
 
 <script>
 $(document).ready(function() {
-    console.log("PREVIOUS URL --> " + document.referrer);
+    // var d = new Date(); 
+    // var t = d.getTime(); // ms since midnight Jan 1, 1970
+    // if (localStorage.getItem("initialVisit") == null && localStorage.getItem("currentVisit") == null){ // first time visiting
+    //     localStorage.setItem("currentVisit", t);    // set time accordingly
+    //     localStorage.setItem("initialVisit", null); // never visited initially. First visit
+    //     // DO NOTHING: LOAD SIGNATURE
+    // }
+    // else{
+    //     localStorage.setItem("initialVisit",localStorage.getItem("currentVisit")); // update recent visit times 2+ times visiting
+    //     localStorage.setItem("currentVisit", t);
+    //     // CHECK TIMELAPSE -> CONDITIONAL. DECIDED TO SHOW OR HIDE
+    //     if (localStorage.getItem("currentVisit")-localStorage.getItem("initialVisit") <= 1000000){ // timeout 16.66 min 
+    //         // TODO: Load referrer.html or JS remove css/hide elements. NOTE: if referrer.html load BEFORE display no black background please!!!! + change referrer.html URL
+    //     } 
+    //     else{
+    //         // SHOW LOAD
+    //     }
+    //     // else do nothing and display load
+    //     // THOUGHTS: AN AJAX APPROACH???
+    // }
+    
     $( "#social-wrapper").css( "width",$("#contact-me").width());
     $( "#icon-wrapper").css( "width",$("#social-wrapper").width()-$("#submit").width()-5);
     var randBackground = Math.floor((Math.random() * 7) + 1); // rad number 1-8
@@ -165,7 +185,6 @@ $( window ).resize(function() {
 </head>
 
 <body class="background">
-    <div id="cover-curtain">
     <div id='loading'>
         <div id="container"> 
             <video id="signature" preload="auto" autoplay="true" muted="muted">
@@ -176,7 +195,6 @@ $( window ).resize(function() {
                     </div>
         <div id="qoute" style="position:relative; opacity:0"><b>“</b> Sing like no one’s listening, love like you’ve never been hurt, dance like nobody’s watching, and live like its heaven on earth.&nbsp;<b>”</b> <p>-<b> Mark Twain</b></p></div>
 <!--                     <div id="qoute" style="position:relative; opacity:0"><b>“</b> Living in the present. Grateful for yesterday. Hopeful of tomorrow.&nbsp;<b>”</b> <p>-<b> Eddie Zhang</b></p></div> -->
-    </div>
     </div>
                 </div>
             <script type="text/javascript">
