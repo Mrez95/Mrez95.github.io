@@ -43,12 +43,12 @@ $(document).ready(function() {
         }), getTime();
         var t = document.getElementById("signature");
         t.display, t.onloadedmetadata = function() {
-            $("#signature").css("visibility", "visible"), $("#container").delay(6200).queue(function() {
+            $("#signature").css("visibility", "visible"), $("#container").delay(0).queue(function() {
                 $(this).fadeOut(1e3, function() {
                     $("html, body").css({
                         overflow: "visible",
                         height: "auto"
-                    }), $("#loading").fadeOut(800)
+                    }), $("#loading").fadeOut(0)
                 }), $(this).dequeue()
             })
         }
@@ -72,7 +72,7 @@ switch (randBackground) {
     case 4:
     $("#background").append('<source src="background/mobile_loop.webmhd.webm" type="video/webm"><source src="background/mobile_loop.mp4" type="video/mp4">');
     break;
-    case 5:
+    case 5: 
     if(n>2 && n < 11){ 
         $(".filter").css("background-color","rgba(0,0,0,0.35)"); // too bright
         $("#contact_layer").css("background-color","rgba(0,0,0,0.35)");  
@@ -213,12 +213,10 @@ $( window ).resize(function() {
 }
 .progress { 
     background-color: #000!important;
-    -webkit-animation: progressBar 1s ease-in;
+    -webkit-animation: progressBar 0.8s ease-in;
     -webkit-animation-fill-mode: both;
-    -moz-animation: progressBar 1s ease-in;
+    -moz-animation: progressBar 0.8s ease-in;
     -moz-animation-fill-mode: both;
-    -webkit-animation-delay: 0.2s;
-    animation-delay: 0.2s;
 }
 </style>    
 </head>
@@ -227,7 +225,7 @@ $( window ).resize(function() {
 <div id='loading'>
         <div id="container"> 
                 <video id="signature" preload="auto" autoplay="true" muted="muted">
-                    <source src="signature/Signature_quick.mp4" type="video/mp4">
+                    <source src="signature/Signature_new.mp4" type="video/mp4">
                 </video>
                     <div class="loader">
                         <span><span class="progress"></span></span>
@@ -242,12 +240,12 @@ $( window ).resize(function() {
                 'overflow': 'hidden',
                 'height': '100%'
             })
-            $("#qoute").delay(1350)
+            $("#qoute").delay(0)
             .queue(function() {
                 $(this).stop().animate({
                     top: '50%',
                     opacity: '1'
-                }, 2500, 'swing');
+                }, 800, 'swing');
                 $(this).dequeue();
             });
             </script>
