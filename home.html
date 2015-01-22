@@ -40,15 +40,15 @@ $(document).ready(function() {
        $("html, body").css({
             overflow: "hidden",
             height: "100%"
-        }), getTime();
+        });
         var t = document.getElementById("signature");
         t.display, t.onloadedmetadata = function() {
             $("#signature").css("visibility", "visible"), $("#container").delay(0).queue(function() {
-                $(this).fadeOut(1e3, function() {
+                $(this).fadeOut(0, function() {
                     $("html, body").css({
                         overflow: "visible",
                         height: "auto"
-                    }), $("#loading").fadeOut(0)
+                    }), $("#loading").fadeOut(1000)
                 }), $(this).dequeue()
             })
         }

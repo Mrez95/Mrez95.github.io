@@ -1,538 +1,553 @@
-<html><head>
-<title>Eddie Zhang | Home</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta charset="utf-8">
-<link href="css/styles-min.css" rel="stylesheet" media="screen">
-<link href="http://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet" type="text/css">
-<link rel="shortcut icon" href="images/mstile-310x310.png" type="image/x-icon">
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-<link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Nothing+You+Could+Do' rel='stylesheet' type='text/css'>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script src="js/min/main-min.js" type="text/javascript"></script>
+    <html><head>
+    <title>Eddie Zhang | Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link href="css/styles-min.css" rel="stylesheet" media="screen">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="images/mstile-310x310.png" type="image/x-icon">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Nothing+You+Could+Do' rel='stylesheet' type='text/css'>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="js/min/main-min.js" type="text/javascript"></script>
 
 
-<script>
-$(document).ready(function() {
-    var d = new Date(); 
-    var t = d.getTime(); // ms since midnight Jan 1, 1970
-            //alert(localStorage.getItem("initialVisit"));
-//alert(localStorage.getItem("currentVisit"));
-    if (localStorage.getItem("initialVisit") == null && localStorage.getItem("currentVisit") == null){ // first time visiting
-        localStorage.setItem("currentVisit", t);    // set time accordingly
-        localStorage.setItem("initialVisit", null); // never visited initially. First visit
+    <script>
+    $(document).ready(function() {
+        var d = new Date(); 
+        var t = d.getTime(); // ms since midnight Jan 1, 1970
+                //alert(localStorage.getItem("initialVisit"));
+    //alert(localStorage.getItem("currentVisit"));
+        if (localStorage.getItem("initialVisit") == null && localStorage.getItem("currentVisit") == null){ // first time visiting
+            localStorage.setItem("currentVisit", t);    // set time accordingly
+            localStorage.setItem("initialVisit", null); // never visited initially. First visit
 
-        // DO NOTHING: LOAD SIGNATURE
-    }
-    else{
-        localStorage.setItem("initialVisit",localStorage.getItem("currentVisit")); // update recent visit times 2+ times visiting
-        localStorage.setItem("currentVisit", t);
-        // CHECK TIMELAPSE -> CONDITIONAL. DECIDED TO SHOW OR HIDE
-        if (localStorage.getItem("currentVisit")-localStorage.getItem("initialVisit") <= 500000){ // timeout 8 min 
-            // TODO: Load referrer.html or JS remove css/hide elements. NOTE: if referrer.html load BEFORE display no black background please!!!! + change referrer.html URL
-            window.location.href = "home.html"; // TODO: hide url
-        } 
-        // else do nothing and display load
-        // THOUGHTS: AN AJAX APPROACH???
-    }
+            // DO NOTHING: LOAD SIGNATURE
+        }
+        else{
+            localStorage.setItem("initialVisit",localStorage.getItem("currentVisit")); // update recent visit times 2+ times visiting
+            localStorage.setItem("currentVisit", t);
+            // CHECK TIMELAPSE -> CONDITIONAL. DECIDED TO SHOW OR HIDE
+            if (localStorage.getItem("currentVisit")-localStorage.getItem("initialVisit") <= 500000){ // timeout 8 min 
+                // TODO: Load referrer.html or JS remove css/hide elements. NOTE: if referrer.html load BEFORE display no black background please!!!! + change referrer.html URL
+                /////////////////////////////////
+                $("html, body").css({
+                    overflow: "hidden",
+                    height: "100%"
+                });
+                var t = document.getElementById("signature");
+                t.display, t.onloadedmetadata = function() {
+                    $("#signature").css("visibility", "visible"), $("#container").delay(0).queue(function() {
+                        $(this).fadeOut(0, function() {
+                            $("html, body").css({
+                                overflow: "visible",
+                                height: "auto"
+                            }), $("#loading").fadeOut(1000)
+                        }), $(this).dequeue()
+                    })
+                }
+            } 
+            // else do nothing and display load
+            // THOUGHTS: AN AJAX APPROACH???
+        }
 
-    $( "#social-wrapper").css( "width",$("#contact-me").width());
-    $( "#icon-wrapper").css( "width",$("#social-wrapper").width()-$("#submit").width()-5);
-    var randBackground = Math.floor((Math.random() * 7) + 1); // rad number 1-8
-    typerColor = 'rgba(255,255,255,0.5)';
-
-
-    switch (randBackground) {
-        case 1:
-        $("#background").append('<source src="background/night_loop.webmhd.webm" type="video/webm"><source src="background/night_loop.mp4" type="video/mp4">');
+        $( "#social-wrapper").css( "width",$("#contact-me").width());
+        $( "#icon-wrapper").css( "width",$("#social-wrapper").width()-$("#submit").width()-5);
+        var randBackground = Math.floor((Math.random() * 7) + 1); // rad number 1-8
+        typerColor = 'rgba(255,255,255,0.5)';
+        switch (randBackground) {
+            case 1:
+            $("#background").append('<source src="background/night_loop.webmhd.webm" type="video/webm"><source src="background/night_loop.mp4" type="video/mp4">');
+            break;
+            case 2:
+            $("#background").append('<source src="background/looping_clouds.webmhd.webm" type="video/webm"><source src="background/looping_clouds.mp4" type="video/mp4">'); 
+            break;
+        case 3: //maybe
+        $("#background").append('<source src="background/diamond_loop.webmhd.webm" type="video/webm"><source src="background/diamond_loop.mp4" type="video/mp4">');
         break;
-        case 2:
-        $("#background").append('<source src="background/looping_clouds.webmhd.webm" type="video/webm"><source src="background/looping_clouds.mp4" type="video/mp4">'); 
+        case 4: //maybe
+        $("#background").append('<source src="background/mobile_loop.webmhd.webm" type="video/webm"><source src="background/mobile_loop.mp4" type="video/mp4">');
         break;
-    case 3: //maybe
-    $("#background").append('<source src="background/diamond_loop.webmhd.webm" type="video/webm"><source src="background/diamond_loop.mp4" type="video/mp4">');
-    break;
-    case 4: //maybe
-    $("#background").append('<source src="background/mobile_loop.webmhd.webm" type="video/webm"><source src="background/mobile_loop.mp4" type="video/mp4">');
-    break;
-    case 5:
-    $("#background").append('<source src="background/timelapse_1.webmhd.webm" type="video/webm"><source src="background/timelapse_1.mp4" type="video/mp4">');
-    break;
-    case 6:
-    $("#background").append('<source src="background/timelapse_2.webmhd.webm" type="video/webm"><source src="background/timelapse_2.mp4" type="video/mp4">');
-    break;
-    case 7:
-    $("#background").append('<source src="background/timelapse_3.webmhd.webm" type="video/webm"><source src="background/timelapse_3.mp4" type="video/mp4">');
-    break;
-}
-$( window ).resize(function() {
-  $( "#social-wrapper").css( "width",$("#contact-me").width());
-  $( "#icon-wrapper").css( "width",$("#social-wrapper").width()-$("#submit").width()-5);
-});
+        case 5:
+        $(".filter").css("background-color","rgba(0,0,0,0.1)");
+        $("#background").append('<source src="background/timelapse_1.webmhd.webm" type="video/webm"><source src="background/timelapse_1.mp4" type="video/mp4">');
+        break;
+        case 6:
+        $("#background").append('<source src="background/timelapse_2.webmhd.webm" type="video/webm"><source src="background/timelapse_2.mp4" type="video/mp4">');
+        break;
+        case 7:
+        $(".filter").css("background-color","rgba(0,0,0,0.1)");
+        $("#background").append('<source src="background/timelapse_3.webmhd.webm" type="video/webm"><source src="background/timelapse_3.mp4" type="video/mp4">');
+        break;
+    }
+    $( window ).resize(function() {
+      $( "#social-wrapper").css( "width",$("#contact-me").width());
+      $( "#icon-wrapper").css( "width",$("#social-wrapper").width()-$("#submit").width()-5);
+    });
 
-});
-</script>
-<style type="text/css">
-.filter{
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    background: url(images/filter_blue.png) top left repeat;
-}
-#navbar{
-    opacity:0;
-    background-color: white;
-    -webkit-transform:translateY(-50px);
-    -moz-transform:translateY(-50px);
-    transform:translateY(-50px);
-}
-.hidden_nav {
-    opacity:0;
-    -webkit-transform:translateY(-50px);
-    -moz-transform:translateY(-50px);
-    transform:translateY(-50px);
-    transition-duration: 0.6s;
-    transition-timing-function: ease-in-out;
-}
-.display_nav {
-    -webkit-transform:translateY(0px) !important;
-    -moz-transform:translateY(0px) !important;
-    transform:translateY(0px) !important;
-    transition-duration: 0.45s !important;
-    transition-timing-function: ease-in-out !important;
-}
-#default-nav li.current{
-    border-bottom: 3px solid white;
-    -webkit-transition: border-color 0.7s ease 0.95s !important;
-    -moz-transition: border-color 0.7s ease 0.95s !important;
-    transition: border-color 0.7s ease 0.95s !important;
-}
-#navbar li.current{
-    border-bottom: 3px solid black;
-    -webkit-transition: border-color 0.6s ease 0.95s !important;
-    -moz-transition: border-color 0.6s ease 0.95s !important;
-    transition: border-color 0.6s ease 0.95s !important;
-}
-.fa{
-    font-size:38px;
-    width:33px;
-    cursor:pointer;
-    color: rgba(255,255,255,0.4);
-}
-.fa-envelope-square{
-    margin-right:14%;
-}
-.fa-github{
-    margin-left:14%;
-}
-.fa-paper-plane{
-    font-size:30px;
-    margin:5%;
-    margin-left:6%;
-    width:18%;
-    cursor:pointer;
-    color: rgba(255,255,255,0.5);
-    -webkit-transition: color ease 0.5s;
-    -moz-transition: color ease 0.5s;
-    transition: color ease 0.5s;
-}
-#icon-wrapper{
-    position:relative;
-    float:right;
-}
-#submit{
-    border: 2px solid rgba(255,255,255,0.4);
-    border-radius: 10px;  
-    width: 30%;
-    line-height: normal;
-    color: rgba(255,255,255,0.6);
-    -webkit-transition: color ease 0.5s,border-color ease 0.5s !important;
-    -moz-transition: color ease 0.5s,border-color ease 0.5s !important;
-    transition: color ease 0.5s, border-color ease 0.5s !important;
-}          
-#submit:hover{
-    cursor: pointer;
-    color:rgba(241,194,214,0.4);
-    border: 2px solid rgba(241,194,214,0.4);  
-    transition: color ease 0.4s;
-    -webkit-transition: color ease 0.5s;
-    -moz-transition: color ease 0.5s;
-    transition: color ease 0.5s;
-} 
-#submit:hover .fa-paper-plane{
-    cursor: pointer;
-    color: rgba(241,194,214,0.5) !important;
-    transition: color ease-in-out 0.5s;
-    -webkit-transition: color ease 0.5s;
-    -moz-transition: color ease 0.5s;
-} 
-.image{
-    height:auto !important;
-}
-#personal-bio{
-    margin-top:100px;
-    padding-bottom:70px;
-}
-#signature{
-    width:80% !important;
-    margin-bottom:10px !important;
-    margin-top:-5% !important;
-}
-</style>   
-</head>
+    });
+    </script>
+    <style type="text/css">
+    .filter{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background: url(images/filter_blue.png) top left repeat;
+    }
+    #navbar{
+        opacity:0;
+        background-color: white;
+        -webkit-transform:translateY(-50px);
+        -moz-transform:translateY(-50px);
+        transform:translateY(-50px);
+    }
+    .hidden_nav {
+        opacity:0;
+        -webkit-transform:translateY(-50px);
+        -moz-transform:translateY(-50px);
+        transform:translateY(-50px);
+        transition-duration: 0.6s;
+        transition-timing-function: ease-in-out;
+    }
+    .display_nav {
+        -webkit-transform:translateY(0px) !important;
+        -moz-transform:translateY(0px) !important;
+        transform:translateY(0px) !important;
+        transition-duration: 0.45s !important;
+        transition-timing-function: ease-in-out !important;
+    }
+    #default-nav li.current{
+        border-bottom: 3px solid white;
+        -webkit-transition: border-color 0.7s ease 0.95s !important;
+        -moz-transition: border-color 0.7s ease 0.95s !important;
+        transition: border-color 0.7s ease 0.95s !important;
+    }
+    #navbar li.current{
+        border-bottom: 3px solid black;
+        -webkit-transition: border-color 0.6s ease 0.95s !important;
+        -moz-transition: border-color 0.6s ease 0.95s !important;
+        transition: border-color 0.6s ease 0.95s !important;
+    }
+    .fa{
+        font-size:38px;
+        width:33px;
+        cursor:pointer;
+        color: rgba(255,255,255,0.4);
+    }
+    .fa-envelope-square{
+        margin-right:14%;
+    }
+    .fa-github{
+        margin-left:14%;
+    }
+    .fa-paper-plane{
+        font-size:30px;
+        margin:5%;
+        margin-left:6%;
+        width:18%;
+        cursor:pointer;
+        color: rgba(255,255,255,0.5);
+        -webkit-transition: color ease 0.5s;
+        -moz-transition: color ease 0.5s;
+        transition: color ease 0.5s;
+    }
+    #icon-wrapper{
+        position:relative;
+        float:right;
+    }
+    #submit{
+        border: 2px solid rgba(255,255,255,0.4);
+        border-radius: 10px;  
+        width: 30%;
+        line-height: normal;
+        color: rgba(255,255,255,0.6);
+        -webkit-transition: color ease 0.5s,border-color ease 0.5s !important;
+        -moz-transition: color ease 0.5s,border-color ease 0.5s !important;
+        transition: color ease 0.5s, border-color ease 0.5s !important;
+    }          
+    #submit:hover{
+        cursor: pointer;
+        color:rgba(241,194,214,0.4);
+        border: 2px solid rgba(241,194,214,0.4);  
+        transition: color ease 0.4s;
+        -webkit-transition: color ease 0.5s;
+        -moz-transition: color ease 0.5s;
+        transition: color ease 0.5s;
+    } 
+    #submit:hover .fa-paper-plane{
+        cursor: pointer;
+        color: rgba(241,194,214,0.5) !important;
+        transition: color ease-in-out 0.5s;
+        -webkit-transition: color ease 0.5s;
+        -moz-transition: color ease 0.5s;
+    } 
+    .image{
+        height:auto !important;
+    }
+    #personal-bio{
+        margin-top:100px;
+        padding-bottom:70px;
+    }
+    #signature{
+        width:80% !important;
+        margin-bottom:10px !important;
+        margin-top:-5% !important;
+    }
+    </style>   
+    </head>
 
-<body class="background">
-    <div id='loading'>
-        <div id="container"> 
-            <video id="signature" preload="auto" autoplay="true" muted="muted">
-                <source src="signature/Signature_21.mp4" type="video/mp4">
+    <body class="background">
+        <div id='loading'>
+            <div id="container"> 
+                <video id="signature" preload="auto" autoplay="true" muted="muted">
+                    <source src="signature/Signature_21.mp4" type="video/mp4">
+                    </video>
+                    <div class="loader">
+                        <span><span class="progress"></span></span>
+                    </div>
+                    <div id="qoute" style="position:relative; opacity:0"><b>“</b> Sing like no one’s listening, love like you’ve never been hurt, dance like nobody’s watching, and live like its heaven on earth.&nbsp;<b>”</b> <p>-<b> Mark Twain</b></p></div>
+                    <!--                     <div id="qoute" style="position:relative; opacity:0"><b>“</b> Living in the present. Grateful for yesterday. Hopeful of tomorrow.&nbsp;<b>”</b> <p>-<b> Eddie Zhang</b></p></div> -->
+                </div>
+            </div>
+            <script type="text/javascript">
+
+                $('html, body').css({//hide scroll bar
+                    'overflow': 'hidden',
+                    'height': '100%'
+                })
+                $("#qoute").delay(1350)
+                .queue(function() {
+                    $(this).stop().animate({
+                        top: '50%',
+                        opacity: '1'
+                    }, 2500, 'swing');
+                    $(this).dequeue();
+                });
+                </script>
+
+                <nav class="navbar navbar-inverse navbar-fixed-top" id="default-nav" style="border-bottom:0px; z-index:9;" >
+                    <div class="container" style="position:relative;height:100%; z-index:-2;margin-left:4%;margin-right:1%">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+
+                            <a class="navbar-brand" href="#" >Eddie Tianyi Zhang</a>
+                        </div>
+                        <!--top toolbar menu-->
+                        <div class="collapse navbar-collapse">
+                            <ul id="nav-points" class="nav navbar-nav navbar-right">
+                                <li class="current" id="home"><a href="#_home" id="home" style="padding-left:5px;padding-right:5px;">Home</a></li>
+                                <li id="about"><a href="#_about" id="about" data-scroll="about" style="padding-left:5px;padding-right:5px">About</a></li>
+                                <li id="portfolio"><a href="#_portfolio" id="portfolio" data-scroll="portfolio" style="padding-left:5px;padding-right:5px; padding-top:30$0%">Portfolio</a></li>
+                                <!--CHANGE: make it embedded emailing-->
+                                <li id="contact"><a id="contact" href="#footer" style="padding-left:5px;padding-right:5px">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <nav class="navbar navbar-inverse navbar-fixed-top hidden_nav" id="navbar" style="z-index:999999;border-bottom:0px">
+                    <div class="container" style="position:relative;height:100%; z-index:-2000;margin-left:4%;margin-right:1%">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+
+                            <a class="navbar-brand" style="color:black" href="#" >Eddie Tianyi Zhang</a>
+                        </div>
+                        <div class="nav-logo" style="position: absolute; height:100%; left: 47%"><img src="images/logo_default.png" style="height:100%"></div>
+                        <!--top toolbar menu-->
+                        <div class="collapse navbar-collapse">
+                            <ul id="nav-points" class="nav navbar-nav navbar-right">
+                                <li class="current" id="home"><a href="#_home" id="home" style="padding-left:5px;padding-right:5px;color:black">Home</a></li>
+                                <li id="about"><a href="#_about" id="about" data-scroll="about" style="padding-left:5px;padding-right:5px;color:black">About</a></li>
+                                <li id="portfolio"><a href="#_portfolio" id="portfolio" data-scroll="portfolio" style="padding-left:5px;padding-right:5px;color:black; ">Portfolio</a></li>
+                                <!--CHANGE: make it embedded emailing-->
+                                <li id="contact"><a id="contact" href="#footer" style="padding-left:5px;padding-right:5px;color:black">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <!--        <div class="blurred-background " style="background-video: url('blueblur.png'); background-attachment: fixed; background-repeat: no-repeat;">-->
+                <div class="filter"></div>
+                <video id="background" preload="none" autoplay="true" loop="loop" muted="muted" poster="background/static_blue.png">
+                    <!-- video source gets appended via JS -->
                 </video>
-                <div class="loader">
-                    <span><span class="progress"></span></span>
+
+                <div id="_home" data-anchor="home" style="position:relative;height:100%; margin-bottom:0px; border-bottom:0px">
+                    <main class="name-container" style="position: absolute; left: 299px;  opacity: 1">
+                        <img src="images/logo_white.png" alt="logo" class="logo" style="position:relative; z-index:3">
+                        <hr>
+                        <h1 id="nameTag" style="position:relative; z-index:3; color:rgba(255,255,255,1)"> Eddie Tianyi <span style="font-weight: 300">Zhang</span></h1>
+                        <h2 id="typer" style="position:relative; z-index:3; color:rgba(255,255,255,0.8);" data-typer-targets="industrial design · front-end development,product design · front-end development,ui / ux design · front-end development, ui / ux design · mobile development, ui / ux design · web development, ui / ux design · front-end development"> ui / ux design · front-end development</h2>
+                        <hr>
+
+                        <section class="demo-3" style="padding-top:0px">
+                            <div class="box" style="margin:4px; z-index:3">
+                                <a class="scroll" href="#_about" style="text-decoration:none; color:rgba(255,255,255,0.7);">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+                                        <line class="top" x1="0" y1="0" x2="360" y2="0"></line>
+                                        <line class="left" x1="0" y1="50" x2="0" y2="-100"></line>
+                                        <line class="bottom" x1="120" y1="50" x2="-240" y2="50"></line>
+                                        <line class="right" x1="120" y1="0" x2="120" y2="150"></line>
+                                    </svg>
+                                    <h5>About</h5>
+                                </a>
+                            </div>
+                            <div class="box" style="margin:4px;z-index:3">
+                                <a href="#_portfolio" style="text-decoration:none; color:rgba(255,255,255,0.7);">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+                                        <line class="top" x1="0" y1="0" x2="360" y2="0"></line>
+                                        <line class="left" x1="0" y1="50" x2="0" y2="-100"></line>
+                                        <line class="bottom" x1="120" y1="50" x2="-240" y2="50"></line>
+                                        <line class="right" x1="120" y1="0" x2="120" y2="150"></line>
+                                    </svg>
+                                    <h5>Portfolio</h5>
+                                </a>
+
+                            </div>
+                            <div class="box" style="margin:4px;z-index:3">
+                                <a class="scroll" href="#footer" style="text-decoration:none; color:rgba(255,255,255,0.7);">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+                                        <line class="top" x1="0" y1="0" x2="360" y2="0"></line>
+                                        <line class="left" x1="0" y1="50" x2="0" y2="-100"></line>
+                                        <line class="bottom" x1="120" y1="50" x2="-240" y2="50"></line>
+                                        <line class="right" x1="120" y1="0" x2="120" y2="150"></line>
+                                    </svg>
+                                    <h5>Contact</h5>
+                                </a>
+                            </div>
+
+                        </section>
+                    </main>
+                    <a href="#_about" data-scroll="about" id="scroll_down" style="position: absolute"><i class="icon-dol" style="font:90px"></i></a>
                 </div>
-                <div id="qoute" style="position:relative; opacity:0"><b>“</b> Sing like no one’s listening, love like you’ve never been hurt, dance like nobody’s watching, and live like its heaven on earth.&nbsp;<b>”</b> <p>-<b> Mark Twain</b></p></div>
-                <!--                     <div id="qoute" style="position:relative; opacity:0"><b>“</b> Living in the present. Grateful for yesterday. Hopeful of tomorrow.&nbsp;<b>”</b> <p>-<b> Eddie Zhang</b></p></div> -->
-            </div>
-        </div>
-        <script type="text/javascript">
 
-            $('html, body').css({//hide scroll bar
-                'overflow': 'hidden',
-                'height': '100%'
-            })
-            $("#qoute").delay(1350)
-            .queue(function() {
-                $(this).stop().animate({
-                    top: '50%',
-                    opacity: '1'
-                }, 2500, 'swing');
-                $(this).dequeue();
-            });
-            </script>
-
-            <nav class="navbar navbar-inverse navbar-fixed-top" id="default-nav" style="border-bottom:0px; z-index:9;" >
-                <div class="container" style="position:relative;height:100%; z-index:-2;margin-left:4%;margin-right:1%">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-
-                        <a class="navbar-brand" href="#" >Eddie Tianyi Zhang</a>
+                <div id="_about" data-anchor="portfolio" class="image" style="margin-bottom:0px; padding-top:10%">
+                    <div id="about-photo" style="overflow:hidden;padding-bottom:0px; border-top:7px solid black; border-bottom:0px;border-right:4px solid black;border-left:4px solid black">
+                        <img src="images/contact_white.png" style="height:100%;" class="img-circle img-thumbnail center-block">
                     </div>
-                    <!--top toolbar menu-->
-                    <div class="collapse navbar-collapse">
-                        <ul id="nav-points" class="nav navbar-nav navbar-right">
-                            <li class="current" id="home"><a href="#_home" id="home" style="padding-left:5px;padding-right:5px;">Home</a></li>
-                            <li id="about"><a href="#_about" id="about" data-scroll="about" style="padding-left:5px;padding-right:5px">About</a></li>
-                            <li id="portfolio"><a href="#_portfolio" id="portfolio" data-scroll="portfolio" style="padding-left:5px;padding-right:5px; padding-top:30$0%">Portfolio</a></li>
-                            <!--CHANGE: make it embedded emailing-->
-                            <li id="contact"><a id="contact" href="#footer" style="padding-left:5px;padding-right:5px">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            <nav class="navbar navbar-inverse navbar-fixed-top hidden_nav" id="navbar" style="z-index:999999;border-bottom:0px">
-                <div class="container" style="position:relative;height:100%; z-index:-2000;margin-left:4%;margin-right:1%">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-
-                        <a class="navbar-brand" style="color:black" href="#" >Eddie Tianyi Zhang</a>
-                    </div>
-                    <div class="nav-logo" style="position: absolute; height:100%; left: 47%"><img src="images/logo_default.png" style="height:100%"></div>
-                    <!--top toolbar menu-->
-                    <div class="collapse navbar-collapse">
-                        <ul id="nav-points" class="nav navbar-nav navbar-right">
-                            <li class="current" id="home"><a href="#_home" id="home" style="padding-left:5px;padding-right:5px;color:black">Home</a></li>
-                            <li id="about"><a href="#_about" id="about" data-scroll="about" style="padding-left:5px;padding-right:5px;color:black">About</a></li>
-                            <li id="portfolio"><a href="#_portfolio" id="portfolio" data-scroll="portfolio" style="padding-left:5px;padding-right:5px;color:black; ">Portfolio</a></li>
-                            <!--CHANGE: make it embedded emailing-->
-                            <li id="contact"><a id="contact" href="#footer" style="padding-left:5px;padding-right:5px;color:black">Contact</a></li>
-                        </ul>
+                    <div id="personal-bio" style="height:auto">
+                        Hi there! My name is Eddie Zhang and I’m currently a <a href="https://uwaterloo.ca/find-out-more/programs/computer-engineering" style="cursor:pointer" target="_blank">Computer Engineering</a> student at <a style="cursor:pointer" href="https://uwaterloo.ca" target="_blank">University of Waterloo</a>. One thing to know about me is that I absolutely love technology and fell head over heels for it when I was young and soon found a passion for it in the field of software development. Recently I interned as a software engineer at <a style="cursor:pointer" href="http://www.veeva.com" target="_blank">Veeva Systems</a> in Toronto and prior at <a style="cursor:pointer" href="http://www.titletrading.com" target="_blank">Title Trading</a> as a UI/UX front-end developer. At school I try getting involved as much as I can with an engineering schedule. I was an orientating leader and I'm currently a part of four directorships as well as the ECE class of 2018 EngSoc and academic rep. When I'm not at school or programming, you can probably find me with a rod by the lake or dueling it out on the badminton court. <br>
                     </div>
                 </div>
-            </nav>
-            <!--        <div class="blurred-background " style="background-video: url('blueblur.png'); background-attachment: fixed; background-repeat: no-repeat;">-->
-            <div class="filter"></div>
-            <video id="background" preload="none" autoplay="true" loop="loop" muted="muted" poster="background/static_blue.png">
-                <!-- video source gets appended via JS -->
-            </video>
 
-            <div id="_home" data-anchor="home" style="position:relative;height:100%; margin-bottom:0px; border-bottom:0px">
-                <main class="name-container" style="position: absolute; left: 299px;  opacity: 1">
-                    <img src="images/logo_white.png" alt="logo" class="logo" style="position:relative; z-index:3">
-                    <hr>
-                    <h1 id="nameTag" style="position:relative; z-index:3; color:rgba(255,255,255,1)"> Eddie Tianyi <span style="font-weight: 300">Zhang</span></h1>
-                    <h2 id="typer" style="position:relative; z-index:3; color:rgba(255,255,255,0.8);" data-typer-targets="industrial design · front-end development,product design · front-end development,ui / ux design · front-end development, ui / ux design · mobile development, ui / ux design · web development, ui / ux design · front-end development"> ui / ux design · front-end development</h2>
-                    <hr>
-
-                    <section class="demo-3" style="padding-top:0px">
-                        <div class="box" style="margin:4px; z-index:3">
-                            <a class="scroll" href="#_about" style="text-decoration:none; color:rgba(255,255,255,0.7);">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-                                    <line class="top" x1="0" y1="0" x2="360" y2="0"></line>
-                                    <line class="left" x1="0" y1="50" x2="0" y2="-100"></line>
-                                    <line class="bottom" x1="120" y1="50" x2="-240" y2="50"></line>
-                                    <line class="right" x1="120" y1="0" x2="120" y2="150"></line>
-                                </svg>
-                                <h5>About</h5>
-                            </a>
+                
+                <!--<div id="_about" data-anchor="about" class="image" style="margin-bottom:0px"> About me </div>-->
+                <div id="_portfolio" data-anchor="about" style="margin-bottom:0px; height:auto">
+                    <div id="main-content" class="container" style=" min-width:100%; padding:0">
+                        <div id="portfolio-grid" class="da-thumbs isotope" style="overflow: hidden; min-width:100%; display: block;background-color:black">
+                            <div class="portfolio-item  folio-35 isotope-item" style="width: 355px; position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(355px, 0px, 0px);padding:0">
+                                <a href="breakSmasher.html" rel="2786"><img width="480" height="295" src="images/portfolio/breakout/Break_Cover_2.png" data-lazy-type="image" data-lazy-src="images/portfolio/breakout/Break_Cover_2.png" class="lazy attachment-folio-thumb2 wp-post-image data-lazy-ready" alt="awesome_light" style="display: inline;">
+                                    <div class="da-animate da-slideFromTop" style="display: block;">
+                                        <span>
+                                            <img style="width:45px;height:45px;margin-top:-50px" src="images/breakout.svg"> 
+                                            <h2>Break Breaker</h2>
+                                            <h3 style="color:#ccc">Breakout Java Clone</h3>
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="portfolio-item  folio-36 folio-26 folio-44 folio-45 isotope-item" style="width: 355px; position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(0px, 218px, 0px);padding:0">
+                                <a href="oculus.html" rel="2016"><img width="480" height="295" src="images/portfolio/oculus/oculus_cover.png" data-lazy-type="image" data-lazy-src="images/portfolio/oculus/oculus_cover.png" class="lazy attachment-folio-thumb2 wp-post-image data-lazy-ready" alt="" style="display: inline;">
+                                    <div class="da-animate da-slideFromTop" style="display: block;">
+                                        <span>
+                                            <img style="width:47px;height:47px;margin-top:-50px" src="images/oculus_logo.png"> 
+                                            <h2>The Grasslands</h2>
+                                            <h3 style="color:#ccc">Oculus & Myo Hack</h3>
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="portfolio-item  folio-44 folio-35 isotope-item" style="width: 355px; position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(355px, 218px, 0px);padding:0">
+                                <a href="pacman.html" rel="1943"><img width="480" height="295" src="images/portfolio/pacman/pacman_cover.png" data-lazy-type="image" data-lazy-src="images/portfolio/pacman/pacman_cover.png" class="lazy attachment-folio-thumb2 wp-post-image data-lazy-ready" alt="" style="display: inline;">
+                                    <div class="da-animate da-slideFromTop" style="display: block;">
+                                        <span>
+                                            <img style="width:103px;height:40px;margin-top:-50px" src="images/pacman_logo.png"> 
+                                            <h2>Pac-Man</h2>
+                                            <h3 style="color:#ccc">Classic Arcade Game</h3>
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="portfolio-item  folio-33 folio-38 folio-35 isotope-item" style="width: 355px; position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(355px, 436px, 0px);padding:0">
+                                <a href="ScarletNight.html" rel="1656"><img width="480" height="295" src="images/portfolio/scarletNight/scarlet_cover.png" data-lazy-type="image" data-lazy-src="images/portfolio/scarletNight/scarlet_cover.png" class="lazy attachment-folio-thumb2 wp-post-image data-lazy-ready" alt="" style="display: inline;">
+                                    <div class="da-animate da-slideFromLeft" style="display: block;">
+                                        <span>
+                                            <img style="width:61px;height:61px;margin-top:-48px" src="images/guns.png"> 
+                                            <h2>Scarlet Night</h2>
+                                            <h3 style="color:#ccc">Java SSB Fighter</h3>
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="portfolio-item  folio-35 isotope-item" style="width: 355px; position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(710px, 0px, 0px);padding:0">
+                                <a href="conshield.html" rel="2714"><img width="480" height="295" src="images/portfolio/Conshield/Conshield_Cover_2.png" data-lazy-type="image" data-lazy-src="images/portfolio/Conshield/Conshield_Cover_2.png" style="display: inline;">
+                                    <div class="da-animate da-slideFromBottom" style="display: block;">
+                                        <span>
+                                            <img style="width:52px;height:52px;margin-top:-50px" src="images/shield-icon.png"> 
+                                            <h2>ConShield</h2>
+                                            <h3 style="color:#ccc">Personal Security App</h3>
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="portfolio-item  folio-35 isotope-item" style="width: 355px; position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(710px, 0px, 0px);padding:0">
+                                <a href="pathfind.html" rel="2714"><img width="480" height="295" src="images/portfolio/pathfind/pathfind.png" data-lazy-type="image" data-lazy-src="images/portfolio/pathfind/pathfind.png" style="display: inline;">
+                                    <div class="da-animate da-slideFromBottom" style="display: block;">
+                                        <span>
+                                            <img style="width:50px;height:50px;margin-top:-50px;margin-bottom:3px" src="images/web.svg"> 
+                                            <h2>Indoor Navigator</h2>
+                                            <h3 style="color:#ccc">Android Pathfinder App</h3>
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="portfolio-item  folio-35 isotope-item" style="width: 355px; position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(710px, 0px, 0px);padding:0">
+                                <a href="recorder.html" rel="2714"><img width="480" height="295" src="images/portfolio/recorder/recorder_cover.png" data-lazy-type="image" data-lazy-src="images/portfolio/recorder/recorder_cover.png" style="display: inline;">
+                                    <div class="da-animate da-slideFromBottom" style="display: block;">
+                                        <span>
+                                            <img style="width:45px;height:45px;margin-top:-50px" src="images/interface.svg"> 
+                                            <h2>Re'corder</h2>
+                                            <h3 style="color:#ccc">OCR Budget Planner</h3>
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="portfolio-item  folio-35 isotope-item" style="width: 355px; position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(710px, 0px, 0px);padding:0">
+                                <a href="fox.html" rel="2714"><img width="480" height="295" src="images/fox-2.png" data-lazy-type="image" data-lazy-src="images/portfolio/fox/fox_cover.png"style="display: inline;">
+                                    <div class="da-animate da-slideFromBottom" style="display: block;">
+                                        <span>
+                                            <img style="width:70px;height:70px;margin-top:-50px" src="images/fox_logo.png"> 
+                                            <h2>Where does the fox jump</h2>
+                                            <h3 style="color:#ccc">JavaScript puzzle game</h3>
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="portfolio-item  folio-35 isotope-item" style="width: 355px; position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(710px, 0px, 0px);padding:0">
+                                <a href="color.html" rel="2714"><img width="480" height="295" src="images/portfolio/color/color_cover.png" data-lazy-type="image" data-lazy-src="images/portfolio/color/color_cover.png:                                                                                                                                                                                                                                                   "style="display: inline;">
+                                    <div class="da-animate da-slideFromBottom" style="display: block;">
+                                        <span>
+                                            <img style="width:45px;height:45px;margin-top:-36px" src="images/colorGame.svg"> 
+                                            <h2>Color Game</h2>
+                                            <h3 style="color:#ccc">JavaScript strategy game</h3>
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="portfolio-item  folio-35 isotope-item" style="width: 355px; position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(710px, 0px, 0px);padding:0">
+                                <a href="bomber.html" rel="2714"><img width="480" height="295" src="images/portfolio/bomber/bomber_cover.png" data-lazy-type="image" data-lazy-src="images/portfolio/bomber/bomber_cover.png"  style="display: inline;">
+                                    <div class="da-animate da-slideFromBottom" style="display: block;">
+                                        <span>
+                                            <img style="width:51px;height:51px;margin-bottom:2px;margin-top:-43px" src="images/portfolio/bomber/bomb2.png"> 
+                                            <h2>Bomber-Man</h2>
+                                            <h3 style="color:#ccc">Java Game</h3>
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="portfolio-item  folio-35 isotope-item" style="width: 355px; position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(710px, 0px, 0px);padding:0">
+                                <a href="pong.html" rel="2714"><img width="480" height="295" src="images/portfolio/pong/pong_title.png" data-lazy-type="image" data-lazy-src="images/portfolio/pong/pong_title.png"  style="display: inline;">
+                                    <div class="da-animate da-slideFromBottom" style="display: block;">
+                                        <span>
+                                            <img style="width:45px;height:45px;margin-bottom:-2px;margin-top:-50px" src="images/portfolio/pong/pong_cover.png"> 
+                                            <h2>Pong-Out!</h2>
+                                            <h3 style="color:#ccc">Class pong with a surprising twist</h3>
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="portfolio-item  folio-35 isotope-item" style="width: 355px; position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(710px, 0px, 0px);padding:0">
+                                <a href="helic.html" rel="2714"><img width="480" height="295" src="images/portfolio/Helic/helic_title.png" data-lazy-type="image" data-lazy-src="images/portfolio/Helic/helic_title.png"  style="display: inline;">
+                                    <div class="da-animate da-slideFromBottom" style="display: block;">
+                                        <span>
+                                            <img style="width:50px;height:50px;margin-top:-50px" src="images/portfolio/Helic/heli.png"> 
+                                            <h2>H.E.L.I.C</h2>
+                                            <h3 style="color:#ccc">Helicopter game remade in Perl</h3>
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
-                        <div class="box" style="margin:4px;z-index:3">
-                            <a href="#_portfolio" style="text-decoration:none; color:rgba(255,255,255,0.7);">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-                                    <line class="top" x1="0" y1="0" x2="360" y2="0"></line>
-                                    <line class="left" x1="0" y1="50" x2="0" y2="-100"></line>
-                                    <line class="bottom" x1="120" y1="50" x2="-240" y2="50"></line>
-                                    <line class="right" x1="120" y1="0" x2="120" y2="150"></line>
-                                </svg>
-                                <h5>Portfolio</h5>
-                            </a>
-
-                        </div>
-                        <div class="box" style="margin:4px;z-index:3">
-                            <a class="scroll" href="#footer" style="text-decoration:none; color:rgba(255,255,255,0.7);">
-
-                                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-                                    <line class="top" x1="0" y1="0" x2="360" y2="0"></line>
-                                    <line class="left" x1="0" y1="50" x2="0" y2="-100"></line>
-                                    <line class="bottom" x1="120" y1="50" x2="-240" y2="50"></line>
-                                    <line class="right" x1="120" y1="0" x2="120" y2="150"></line>
-                                </svg>
-                                <h5>Contact</h5>
-                            </a>
-                        </div>
-
-                    </section>
-                </main>
-                <a href="#_about" data-scroll="about" id="scroll_down" style="position: absolute"><i class="icon-dol" style="font:90px"></i></a>
-            </div>
-
-            <div id="_about" data-anchor="portfolio" class="image" style="margin-bottom:0px; padding-top:5%">
-                <div id="about-photo" style="overflow:hidden;padding-bottom:0px; border-top:7px solid black; border-bottom:0px;border-right:4px solid black;border-left:4px solid black">
-                    <img src="images/contact_white.png" style="height:100%;" class="img-circle img-thumbnail center-block">
-                </div>
-                <div id="personal-bio" style="height:auto">
-                    Hi there! My name is Eddie Zhang and I’m currently a <a href="https://uwaterloo.ca/find-out-more/programs/computer-engineering" style="cursor:pointer" target="_blank">Computer Engineering</a> student at <a style="cursor:pointer" href="https://uwaterloo.ca" target="_blank">University of Waterloo</a>. One thing to know about me is that I absolutely love technology and fell head over heels for it when I was young and soon found a passion for it in the field of software development. Recently I interned as a software engineer at <a style="cursor:pointer" href="http://www.veeva.com" target="_blank">Veeva Systems</a> in Toronto and prior at <a style="cursor:pointer" href="http://www.titletrading.com" target="_blank">Title Trading</a> as a UI/UX front-end developer. At school I try getting involved as much as I can with an engineering schedule. I was an orientating leader and I'm currently a part of four directorships as well as the ECE class of 2018 EngSoc and academic rep. When I'm not at school or programming, you can probably find me with a rod by the lake or dueling it out on the badminton court. <br>
-                </div>
-            </div>
-
-            
-            <!--<div id="_about" data-anchor="about" class="image" style="margin-bottom:0px"> About me </div>-->
-            <div id="_portfolio" data-anchor="about" style="margin-bottom:0px; height:auto">
-                <div id="main-content" class="container" style=" min-width:100%; padding:0">
-                    <div id="portfolio-grid" class="da-thumbs isotope" style="overflow: hidden; min-width:100%; display: block;background-color:black">
-                        <div class="portfolio-item  folio-35 isotope-item" style="width: 355px; position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(355px, 0px, 0px);padding:0">
-                            <a href="breakSmasher.html" rel="2786"><img width="480" height="295" src="images/portfolio/breakout/Break_Cover_2.png" data-lazy-type="image" data-lazy-src="images/portfolio/breakout/Break_Cover_2.png" class="lazy attachment-folio-thumb2 wp-post-image data-lazy-ready" alt="awesome_light" style="display: inline;">
-                                <div class="da-animate da-slideFromTop" style="display: block;">
-                                    <span>
-                                        <img style="width:45px;height:45px;margin-top:-50px" src="images/breakout.svg"> 
-                                        <h2>Break Breaker</h2>
-                                        <h3 style="color:#ccc">Breakout Java Clone</h3>
-                                    </span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="portfolio-item  folio-36 folio-26 folio-44 folio-45 isotope-item" style="width: 355px; position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(0px, 218px, 0px);padding:0">
-                            <a href="oculus.html" rel="2016"><img width="480" height="295" src="images/portfolio/oculus/oculus_cover.png" data-lazy-type="image" data-lazy-src="images/portfolio/oculus/oculus_cover.png" class="lazy attachment-folio-thumb2 wp-post-image data-lazy-ready" alt="" style="display: inline;">
-                                <div class="da-animate da-slideFromTop" style="display: block;">
-                                    <span>
-                                        <img style="width:47px;height:47px;margin-top:-50px" src="images/oculus_logo.png"> 
-                                        <h2>The Grasslands</h2>
-                                        <h3 style="color:#ccc">Oculus & Myo Hack</h3>
-                                    </span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="portfolio-item  folio-44 folio-35 isotope-item" style="width: 355px; position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(355px, 218px, 0px);padding:0">
-                            <a href="pacman.html" rel="1943"><img width="480" height="295" src="images/portfolio/pacman/pacman_cover.png" data-lazy-type="image" data-lazy-src="images/portfolio/pacman/pacman_cover.png" class="lazy attachment-folio-thumb2 wp-post-image data-lazy-ready" alt="" style="display: inline;">
-                                <div class="da-animate da-slideFromTop" style="display: block;">
-                                    <span>
-                                        <img style="width:103px;height:40px;margin-top:-50px" src="images/pacman_logo.png"> 
-                                        <h2>Pac-Man</h2>
-                                        <h3 style="color:#ccc">Classic Arcade Game</h3>
-                                    </span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="portfolio-item  folio-33 folio-38 folio-35 isotope-item" style="width: 355px; position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(355px, 436px, 0px);padding:0">
-                            <a href="ScarletNight.html" rel="1656"><img width="480" height="295" src="images/portfolio/scarletNight/scarlet_cover.png" data-lazy-type="image" data-lazy-src="images/portfolio/scarletNight/scarlet_cover.png" class="lazy attachment-folio-thumb2 wp-post-image data-lazy-ready" alt="" style="display: inline;">
-                                <div class="da-animate da-slideFromLeft" style="display: block;">
-                                    <span>
-                                        <img style="width:61px;height:61px;margin-top:-48px" src="images/guns.png"> 
-                                        <h2>Scarlet Night</h2>
-                                        <h3 style="color:#ccc">Java SSB Fighter</h3>
-                                    </span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="portfolio-item  folio-35 isotope-item" style="width: 355px; position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(710px, 0px, 0px);padding:0">
-                            <a href="conshield.html" rel="2714"><img width="480" height="295" src="images/portfolio/Conshield/Conshield_Cover_2.png" data-lazy-type="image" data-lazy-src="images/portfolio/Conshield/Conshield_Cover_2.png" style="display: inline;">
-                                <div class="da-animate da-slideFromBottom" style="display: block;">
-                                    <span>
-                                        <img style="width:52px;height:52px;margin-top:-50px" src="images/shield-icon.png"> 
-                                        <h2>ConShield</h2>
-                                        <h3 style="color:#ccc">Personal Security App</h3>
-                                    </span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="portfolio-item  folio-35 isotope-item" style="width: 355px; position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(710px, 0px, 0px);padding:0">
-                            <a href="pathfind.html" rel="2714"><img width="480" height="295" src="images/portfolio/pathfind/pathfind.png" data-lazy-type="image" data-lazy-src="images/portfolio/pathfind/pathfind.png" style="display: inline;">
-                                <div class="da-animate da-slideFromBottom" style="display: block;">
-                                    <span>
-                                        <img style="width:50px;height:50px;margin-top:-50px;margin-bottom:3px" src="images/web.svg"> 
-                                        <h2>Indoor Navigator</h2>
-                                        <h3 style="color:#ccc">Android Pathfinder App</h3>
-                                    </span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="portfolio-item  folio-35 isotope-item" style="width: 355px; position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(710px, 0px, 0px);padding:0">
-                            <a href="recorder.html" rel="2714"><img width="480" height="295" src="images/portfolio/recorder/recorder_cover.png" data-lazy-type="image" data-lazy-src="images/portfolio/recorder/recorder_cover.png" style="display: inline;">
-                                <div class="da-animate da-slideFromBottom" style="display: block;">
-                                    <span>
-                                        <img style="width:45px;height:45px;margin-top:-50px" src="images/interface.svg"> 
-                                        <h2>Re'corder</h2>
-                                        <h3 style="color:#ccc">OCR Budget Planner</h3>
-                                    </span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="portfolio-item  folio-35 isotope-item" style="width: 355px; position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(710px, 0px, 0px);padding:0">
-                            <a href="fox.html" rel="2714"><img width="480" height="295" src="images/fox-2.png" data-lazy-type="image" data-lazy-src="images/portfolio/fox/fox_cover.png"style="display: inline;">
-                                <div class="da-animate da-slideFromBottom" style="display: block;">
-                                    <span>
-                                        <img style="width:70px;height:70px;margin-top:-50px" src="images/fox_logo.png"> 
-                                        <h2>Where does the fox jump</h2>
-                                        <h3 style="color:#ccc">JavaScript puzzle game</h3>
-                                    </span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="portfolio-item  folio-35 isotope-item" style="width: 355px; position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(710px, 0px, 0px);padding:0">
-                            <a href="color.html" rel="2714"><img width="480" height="295" src="images/portfolio/color/color_cover.png" data-lazy-type="image" data-lazy-src="images/portfolio/color/color_cover.png:                                                                                                                                                                                                                                                   "style="display: inline;">
-                                <div class="da-animate da-slideFromBottom" style="display: block;">
-                                    <span>
-                                        <img style="width:45px;height:45px;margin-top:-36px" src="images/colorGame.svg"> 
-                                        <h2>Color Game</h2>
-                                        <h3 style="color:#ccc">JavaScript strategy game</h3>
-                                    </span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="portfolio-item  folio-35 isotope-item" style="width: 355px; position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(710px, 0px, 0px);padding:0">
-                            <a href="bomber.html" rel="2714"><img width="480" height="295" src="images/portfolio/bomber/bomber_cover.png" data-lazy-type="image" data-lazy-src="images/portfolio/bomber/bomber_cover.png"  style="display: inline;">
-                                <div class="da-animate da-slideFromBottom" style="display: block;">
-                                    <span>
-                                        <img style="width:51px;height:51px;margin-bottom:2px;margin-top:-43px" src="images/portfolio/bomber/bomb2.png"> 
-                                        <h2>Bomber-Man</h2>
-                                        <h3 style="color:#ccc">Java Game</h3>
-                                    </span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="portfolio-item  folio-35 isotope-item" style="width: 355px; position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(710px, 0px, 0px);padding:0">
-                            <a href="pong.html" rel="2714"><img width="480" height="295" src="images/portfolio/pong/pong_title.png" data-lazy-type="image" data-lazy-src="images/portfolio/pong/pong_title.png"  style="display: inline;">
-                                <div class="da-animate da-slideFromBottom" style="display: block;">
-                                    <span>
-                                        <img style="width:45px;height:45px;margin-bottom:-2px;margin-top:-50px" src="images/portfolio/pong/pong_cover.png"> 
-                                        <h2>Pong-Out!</h2>
-                                        <h3 style="color:#ccc">Class pong with a surprising twist</h3>
-                                    </span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="portfolio-item  folio-35 isotope-item" style="width: 355px; position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(710px, 0px, 0px);padding:0">
-                            <a href="helic.html" rel="2714"><img width="480" height="295" src="images/portfolio/Helic/helic_title.png" data-lazy-type="image" data-lazy-src="images/portfolio/Helic/helic_title.png"  style="display: inline;">
-                                <div class="da-animate da-slideFromBottom" style="display: block;">
-                                    <span>
-                                        <img style="width:50px;height:50px;margin-top:-50px" src="images/portfolio/Helic/heli.png"> 
-                                        <h2>H.E.L.I.C</h2>
-                                        <h3 style="color:#ccc">Helicopter game remade in Perl</h3>
-                                    </span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div><!-- .container /--></div>
+                    </div><!-- .container /--></div>
 
 
 
-                <!--hidden-sm hidden-xs-->
+                    <!--hidden-sm hidden-xs-->
 
-                <div data-anchor="contact" id ="footer" style="position:relative; margin-bottom:0px; -ra-bottom:0px; padding-bottom:100px">
-                    <div id="contact_layer"></div>
-                    <div class="blurred-background" >
-                        <div class="container" id="physical-footer">
-                            <h4 class="text-center margin-top-lg" style="position:relative;margin-top:3%;margin-bottom:3%; z-index:4">Get In Touch!</h4>
-                            <div id="postcard">
-                                <div id="inner-border">
-                                    <div id="about-me">
-                                        <br><h5 class="letter-writing" style="text-align:center; font-size:45px">Contact Me!</h5>
-                                        <br><p class="letter-writing" style="margin:24px; margin-top:17%; line-height: 170%;color:rgba(255,255,255,0.5); font-size:16px">
+                    <div data-anchor="contact" id ="footer" style="position:relative; margin-bottom:0px; -ra-bottom:0px; padding-bottom:100px">
+                        <div id="contact_layer"></div>
+                        <div class="blurred-background" >
+                            <div class="container" id="physical-footer">
+                                <h4 class="text-center margin-top-lg" style="position:relative;margin-top:3%;margin-bottom:3%; z-index:4">Get In Touch!</h4>
+                                <div id="postcard">
+                                    <div id="inner-border">
+                                        <div id="about-me">
+                                            <br><h5 class="letter-writing" style="text-align:center; font-size:45px">Contact Me!</h5>
+                                            <br><p class="letter-writing" style="margin:24px; margin-top:17%; line-height: 170%;color:rgba(255,255,255,0.5); font-size:16px">
 
-                                        If you have any questions, suggestion, collaborative ideas please feel free to drop me a line. I can't wait to hear from you!
-                                        Just quickly fill out the form to the right or shoot me an email and I will get back to you as soon as possible. If you don't get from back from me immediately, I might just be traveling through the middle of nowhere. I will get back to you as soon as I can. That's a 
-                                        promise!
-                                    </p>
+                                            If you have any questions, suggestion, collaborative ideas please feel free to drop me a line. I can't wait to hear from you!
+                                            Just quickly fill out the form to the right or shoot me an email and I will get back to you as soon as possible. If you don't get from back from me immediately, I might just be traveling through the middle of nowhere. I will get back to you as soon as I can. That's a 
+                                            promise!
+                                        </p>
 
-                                </div>
-                                <div id="contact-me">
-                                    <div class="letter-writing" style="margin:30px;margin-top:17px">
-                                        <div>
-                                            <br><p style="font-size:19px;">To: &nbsp Eddie Zhang</p>
+                                    </div>
+                                    <div id="contact-me">
+                                        <div class="letter-writing" style="margin:30px;margin-top:17px">
+                                            <div>
+                                                <br><p style="font-size:19px;">To: &nbsp Eddie Zhang</p>
 
-                                            <form name="input" action="php/contact.php" method="post" >
-                                                <div style="position:absolute;top:45%;font-size:19px">
-                                                    From: &nbsp<input type="text" name="client" id='client'><br>
-                                                    Return Address: &nbsp<input type="text" name="address" id='return'><br>
+                                                <form name="input" action="php/contact.php" method="post" >
+                                                    <div style="position:absolute;top:45%;font-size:19px">
+                                                        From: &nbsp<input type="text" name="client" id='client'><br>
+                                                        Return Address: &nbsp<input type="text" name="address" id='return'><br>
 
-                                                    Message: &nbsp
-                                                    <input type ="text" name="message" id='message-con-0'> 
-                                                    <input type ="text" name="message" id='message-con-1'>
-                                                    <input type ="text" name="message" id='message-con-2'>
-                                                    <input type ="text" name="message" id='message-con-3'>
-                                                    <input type ="text" name="message" id='message-con-4'>
-                                                </div>
-                                            </form>
+                                                        Message: &nbsp
+                                                        <input type ="text" name="message" id='message-con-0'> 
+                                                        <input type ="text" name="message" id='message-con-1'>
+                                                        <input type ="text" name="message" id='message-con-2'>
+                                                        <input type ="text" name="message" id='message-con-3'>
+                                                        <input type ="text" name="message" id='message-con-4'>
+                                                    </div>
+                                                </form>
 
-                                            <div id="social-wrapper" style="position:absolute;width:100%;height:60px;bottom:-15%">
-                                                <div id="submit" style="position:relative; float:left; width: 208px">
-                                                    <div class="sender" style="width:75%;position:relative;margin-left:auto;margin-right:auto;margin-top:4px;margin-bottom:6px;">
-                                                        Say Hello! <i class="fa fa-paper-plane"></i>
+                                                <div id="social-wrapper" style="position:absolute;width:100%;height:60px;bottom:-15%">
+                                                    <div id="submit" style="position:relative; float:left; width: 208px">
+                                                        <div class="sender" style="width:75%;position:relative;margin-left:auto;margin-right:auto;margin-top:4px;margin-bottom:6px;">
+                                                            Say Hello! <i class="fa fa-paper-plane"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div id="icon-wrapper">
+                                                        <a href="https://github.com/mrez95" target="_blank"><i class="fa fa-github"></i></a>
+                                                        <a href="https://www.facebook.com/mrez95" target="_blank"><i class="fa fa-facebook-square"></i></a>
+                                                        <a href="https://ca.linkedin.com/in/eddietyzhang" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                                                        <a href="mailto:ez95@live.ca" target="_blank"><i class="fa fa-envelope-square"></i></a>
                                                     </div>
                                                 </div>
-                                                <div id="icon-wrapper">
-                                                    <a href="https://github.com/mrez95" target="_blank"><i class="fa fa-github"></i></a>
-                                                    <a href="https://www.facebook.com/mrez95" target="_blank"><i class="fa fa-facebook-square"></i></a>
-                                                    <a href="https://ca.linkedin.com/in/eddietyzhang" target="_blank"><i class="fa fa-linkedin-square"></i></a>
-                                                    <a href="mailto:ez95@live.ca" target="_blank"><i class="fa fa-envelope-square"></i></a>
-                                                </div>
-                                            </div>
 
-                                            <img id="custom-stamp" src="images/stamps/default.png" style="height:34%;position:absolute;top:14.5%;right:4.7%">
+                                                <img id="custom-stamp" src="images/stamps/default.png" style="height:34%;position:absolute;top:14.5%;right:4.7%">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div id="moretext-mobile" class="visible-xs visible-sm hidden">
-                        <div>
-                            <p class="mobile-subtext"></p>
-                            <p class="lesstext">less</p>
+                        <div id="moretext-mobile" class="visible-xs visible-sm hidden">
+                            <div>
+                                <p class="mobile-subtext"></p>
+                                <p class="lesstext">less</p>
+                            </div>
                         </div>
-                    </div>
 
 
-                </body></html>
+                    </body></html>
