@@ -2153,9 +2153,15 @@ $(document).ready(function() {
             $(this).attr("placeholder", "Let's Chat!")
         }).on("focusout", function() {
             $(this).attr("placeholder", "")
-        }), $(".fa").on("mouseleave", function() {
+        }), $("#icon-wrapper .fa").on("mouseleave", function() {
             $(this).css({
                 color: "rgba(255,255,255,0.4)",
+                transition: "color ease 0.5s"
+            })
+        })
+        $("#nav_icon").on("mouseleave", function() {
+            $(this).css({
+                color: "black",
                 transition: "color ease 0.5s"
             })
         })
