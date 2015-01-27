@@ -112,12 +112,6 @@ $(document).ready(function() {
                 }), $(this).dequeue()
             })
         }), 
-$("#nav_icons").on("mouseenter", function() {
-		$(this).css({
-                color: "rgba(0,0,0,0.7)",
-                transition: "color ease 0.4s"
-            })
-        }), 
 $(".fa-github").on("mouseenter", function() {
             $("#custom-stamp").attr("src", "images/stamps/github.png"), $(this).css({
                 color: "rgba(182,156,255,0.5)",
@@ -2114,7 +2108,14 @@ $(document).ready(function() {
                     gap: 0
                 }), $(this).dequeue()
             })
-        }), $(".fa-github").on("mouseenter", function() {
+        }), 
+		$("#nav_icon").on("mouseenter", function() {
+			$(this).css({
+                color: "rgba(0,0,0,0.7)",
+                transition: "color ease 0.4s"
+            })
+        }), 	
+		$(".fa-github").on("mouseenter", function() {
             $("#custom-stamp").attr("src", "images/stamps/github.png"), $(this).css({
                 color: "rgba(182,156,255,0.5)",
                 transition: "color ease 0.4s"
