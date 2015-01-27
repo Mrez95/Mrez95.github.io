@@ -468,26 +468,6 @@ div#loading {
     cursor: pointer;
     color: rgba(255, 255, 255, .4);
 }
-.fa-git {
-    font-size: 20px;
-    color:black;
-}
-.fa-facebook{
-    font-size: 20px;
-    color:black;
-}
-.fa-linkedin{
-    font-size: 20px;
-    color:black;
-}
-.fa-envelope-o{
-    font-size: 20px;
-    color:black;
-}
-.fa-instagram{
-    font-size: 20px;
-    color:black;
-}
 .fa-envelope-square {
     margin-right: 14%}
 .fa-github {
