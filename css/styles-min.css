@@ -414,7 +414,7 @@ div#loading {
     margin: auto;
     width: 125%;
     height: 1px;
-    background: rgba(0,0,0,0.15);
+    background: rgba(0,0,0,0.2);
 }
 .loader span {
     display: block;
