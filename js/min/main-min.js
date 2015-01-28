@@ -2110,6 +2110,7 @@ $(document).ready(function() {
             })
         }), 
 		$("#nav_icon").on("mouseenter", function() {
+			alert(),
 			$(this).css({
                 color: "rgba(0,0,0,0.7)",
                 transition: "color ease 0.4s"
@@ -2162,7 +2163,7 @@ $(document).ready(function() {
         })
         $("#nav_icon").on("mouseleave", function() {
             $(this).css({
-                color: "black",
+                color: "black !important",
                 transition: "color ease 0.5s"
             })
         })
