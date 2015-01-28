@@ -1,11 +1,3 @@
-
-function getTime() {
-    var t = new Date,
-        e = t.getHours(),
-        i;
-    i = e > 4 && 12 > e ? "<br><br><br><h2 style='color:black;font-size:43px;margin-top:5px'>Good morning!</h2>" : e > 12 && 18 > e ? "<br><br><br><h2 style='color:black;font-size:43px;margin-top:5px'>Good afternoon!</h2>" : "<br><br><br><h2 style='color:black;font-size:43px;margin-top:5px'>Good evening!</h2>", $("#about-photo").after(i)
-}
-
 function position_h_center(t) {
     var e = $("#" + t).parent().outerWidth(),
         i = $("#" + t).width();
