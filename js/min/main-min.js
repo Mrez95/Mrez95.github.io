@@ -107,32 +107,28 @@ $(document).ready(function() {
         }), 
 $(".fa-git").on("mouseenter", function() {
 			$(this).css({
-                color: "rgba(0,0,0,0.7)",
-                transition: "color ease 0.4s"
+                color: "rgba(0,0,0,0.5)"
             })
         }),
 $(".fa-facebook").on("mouseenter", function() {
 		$(this).css({
-                color: "rgba(0,0,0,0.7)",
-                transition: "color ease 0.4s"
+                color: "rgba(0,0,0,0.5)"
             })
         }),
 $(".fa-linkedin").on("mouseenter", function() {
 		$(this).css({
-                color: "rgba(0,0,0,0.7)",
-                transition: "color ease 0.4s"
+                color: "rgba(0,0,0,0.5)"
             })
         }),
 $(".fa-envelope-o").on("mouseenter", function() {
             $("#custom-stamp").attr("src", "images/stamps/github.png"), $(this).css({
-                color: "rgba(0,0,0,0.7)",
-                transition: "color ease 0.4s"
+                color: "rgba(0,0,0,0.5)"
             })
         }),
 $("#nav_icon").on("mouseleave", function() {
 		$(this).css({
-                color: "black",
-                transition: "color ease 0.4s"
+                color: "rgba(0,0,0,1)",
+                transition: "color ease 0.3s"
             })
         }),
 
@@ -175,7 +171,7 @@ $(".fa-github").on("mouseenter", function() {
             $(this).attr("placeholder", "Let's Chat!")
         }).on("focusout", function() {
             $(this).attr("placeholder", "")
-        }), $(".fa").on("mouseleave", function() {
+        }), $(".reach_me .fa").on("mouseleave", function() {
             $(this).css({
                 color: "rgba(255,255,255,0.4)",
                 transition: "color ease 0.5s"
