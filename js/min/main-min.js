@@ -59,7 +59,7 @@ $(document).ready(function() {
         }), getTime();
         var t = document.getElementById("signature");
         t.display, t.onloadedmetadata = function() {
-            $("#signature").css("visibility", "visible"), $("#container").delay(6200).queue(function() {
+            $("#signature").css("visibility", "visible"), $("#container").delay(6000).queue(function() {
                 $(this).fadeOut(1e3, function() {
                     $("html, body").css({
                         overflow: "visible",
@@ -105,6 +105,37 @@ $(document).ready(function() {
                 }), $(this).dequeue()
             })
         }), 
+$(".fa-git").on("mouseenter", function() {
+			$(this).css({
+                color: "rgba(0,0,0,0.7)",
+                transition: "color ease 0.4s"
+            })
+        }),
+$(".fa-facebook").on("mouseenter", function() {
+		$(this).css({
+                color: "rgba(0,0,0,0.7)",
+                transition: "color ease 0.4s"
+            })
+        }),
+$(".fa-linkedin").on("mouseenter", function() {
+		$(this).css({
+                color: "rgba(0,0,0,0.7)",
+                transition: "color ease 0.4s"
+            })
+        }),
+$(".fa-envelope-o").on("mouseenter", function() {
+            $("#custom-stamp").attr("src", "images/stamps/github.png"), $(this).css({
+                color: "rgba(0,0,0,0.7)",
+                transition: "color ease 0.4s"
+            })
+        }),
+$("#nav_icon").on("mouseleave", function() {
+		$(this).css({
+                color: "black",
+                transition: "color ease 0.4s"
+            })
+        }),
+
 $(".fa-github").on("mouseenter", function() {
             $("#custom-stamp").attr("src", "images/stamps/github.png"), $(this).css({
                 color: "rgba(182,156,255,0.5)",
