@@ -107,28 +107,28 @@ $(document).ready(function() {
         }), 
 $(".fa-git").on("mouseenter", function() {
 			$(this).css({
-                color: "rgba(0,0,0,0.5)"
+                color: "rgba(0,0,0,0.6)"
             })
         }),
 $(".fa-facebook").on("mouseenter", function() {
 		$(this).css({
-                color: "rgba(0,0,0,0.5)"
+                color: "rgba(0,0,0,0.6)"
             })
         }),
 $(".fa-linkedin").on("mouseenter", function() {
 		$(this).css({
-                color: "rgba(0,0,0,0.5)"
+                color: "rgba(0,0,0,0.6)"
             })
         }),
 $(".fa-envelope-o").on("mouseenter", function() {
             $("#custom-stamp").attr("src", "images/stamps/github.png"), $(this).css({
-                color: "rgba(0,0,0,0.5)"
+                color: "rgba(0,0,0,0.6)"
             })
         }),
-$("#nav_icon").on("mouseleave", function() {
+$(".navbar-header .fa").on("mouseleave", function() {
 		$(this).css({
                 color: "rgba(0,0,0,1)",
-                transition: "color ease 0.3s"
+                transition: "color ease 0.2s"
             })
         }),
 
