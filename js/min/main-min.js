@@ -128,7 +128,7 @@ $(".fa-envelope-o").on("mouseenter", function() {
 $(".navbar-header .fa").on("mouseleave", function() {
 		$(this).css({
                 color: "rgba(0,0,0,1)",
-                transition: "color ease 0.2s"
+                transition: "color ease 0.4s"
             })
         }),
 
