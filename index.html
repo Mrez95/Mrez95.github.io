@@ -20,7 +20,7 @@
                     //alert(localStorage.getItem("initialVisit"));
         //alert(localStorage.getItem("currentVisit"));
             if (localStorage.getItem("initialVisit") == null && localStorage.getItem("currentVisit") == null){ // first time visiting
-                localStorage.setItem("currentVisit", t);    // set time accordingly
+                localStorage.setItem("currentVisit", t);    // set time accordinglyx`
                 localStorage.setItem("initialVisit", null); // never visited initially. First visit
 
                 // DO NOTHING: LOAD SIGNATURE
@@ -53,8 +53,8 @@
             }
 
             $( "#social-wrapper").css( "width",$("#contact-me").width());
-            $( "#icon-wrapper").css( "width",$("#social-wrapper").width()-180 + "!important");
-            var randBackground = Math.floor((Math.random() * 7) + 1); // rad number 1-8
+            $( "#icon-wrapper").css( "width",$("#social-wrapper").width()-$("#submit").width()-5);
+            var randBackground = Math.floor((Math.random() * 7) + 1); // rad number 1-8 
             typerColor = 'rgba(255,255,255,0.5)';
             switch (randBackground) {
                 case 1:
@@ -214,7 +214,7 @@
                     <source src="signature/Signature_21.mp4" type="video/mp4">
                     </video>
                     <div class="loader">
-                        <span><span class="progress"></span></span>
+                        <span class="progress"></span>
                     </div>
                     <div id="qoute" style="position:relative; opacity:0"><b>“</b> Be forever grateful for the gift of today, never forget the lessons of yesterday and be hopeful for the unwritten chapter of tomorrow.&nbsp;<b>”</b> <p>-<b> Eddie Zhang</b></p></div>
                     <!--                     <div id="qoute" style="position:relative; opacity:0"><b>“</b> Living in the present. Grateful for yesterday. Hopeful of tomorrow.&nbsp;<b>”</b> <p>-<b> Eddie Zhang</b></p></div> -->
@@ -545,7 +545,7 @@
                                                             <a href="https://www.facebook.com/mrez95" target="_blank"><i class="fa fa-facebook-square"></i></a>
                                                             <a href="https://ca.linkedin.com/in/eddietyzhang" target="_blank"><i class="fa fa-linkedin-square"></i></a>
                                                             <a href="mailto:ez95@live.ca" target="_blank"><i class="fa fa-envelope-square"></i></a>
-                                                            <a href="http://instagram.com/zhangular" target="_blank"><i class="fa fa-instagram"></i></a>
+<!--                                                             <a href="http://instagram.com/zhangular" target="_blank"><i class="fa fa-instagram"></i></a> -->
                                                         </div>
                                                     </div>
 
