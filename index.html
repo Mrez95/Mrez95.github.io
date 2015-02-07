@@ -1,68 +1,61 @@
-        <html><head>
+<html>
+    <head>
         <title>Eddie Zhang | Home</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8">
         <link href="css/styles-min.css" rel="stylesheet" media="screen">
         <link href="http://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet" type="text/css">
         <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
         <link rel="shortcut icon" href="images/mstile-310x310.png" type="image/x-icon">
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Nothing+You+Could+Do' rel='stylesheet' type='text/css'>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <script src="js/min/main-min.js" type="text/javascript"></script>
-
-
         <script>
         $(document).ready(function() {
             var d = new Date(); 
             var t = d.getTime(); // ms since midnight Jan 1, 1970
-                    //alert(localStorage.getItem("initialVisit"));
-        //alert(localStorage.getItem("currentVisit"));
-            if (localStorage.getItem("initialVisit") == null && localStorage.getItem("currentVisit") == null){ // first time visiting
-                localStorage.setItem("currentVisit", t);    // set time accordinglyx`
-                localStorage.setItem("initialVisit", null); // never visited initially. First visit
+            // if (localStorage.getItem("initialVisit") == null && localStorage.getItem("currentVisit") == null){  
+            //     localStorage.setItem("currentVisit", t);    // set time accordinglyx`
+            //     localStorage.setItem("initialVisit", null); // never visited initially. First visit
+            // }
+            // else{
+            //     localStorage.setItem("initialVisit",localStorage.getItem("currentVisit")); 
+            //     localStorage.setItem("currentVisit", t);
 
-                // DO NOTHING: LOAD SIGNATURE
-            }
-            else{
-                localStorage.setItem("initialVisit",localStorage.getItem("currentVisit")); // update recent visit times 2+ times visiting
-                localStorage.setItem("currentVisit", t);
-                // CHECK TIMELAPSE -> CONDITIONAL. DECIDED TO SHOW OR HIDE
-                if (localStorage.getItem("currentVisit")-localStorage.getItem("initialVisit") <= 500000){ // timeout 8 min 
-                    // TODO: Load referrer.html or JS remove css/hide elements. NOTE: if referrer.html load BEFORE display no black background please!!!! + change referrer.html URL
-                    /////////////////////////////////
-                    $("html, body").css({
-                        overflow: "hidden",
-                        height: "100%"
-                    });
-                    var t = document.getElementById("signature");
-                    t.display, t.onloadedmetadata = function() {
-                        $("#signature").css("visibility", "visible"), $("#container").delay(0).queue(function() {
-                            $(this).fadeOut(0, function() {
-                                $("html, body").css({
-                                    overflow: "visible",
-                                    height: "auto"
-                                }), $("#loading").fadeOut(1000)
-                            }), $(this).dequeue()
-                        })
-                    }
-                } 
-                // else do nothing and display load
-                // THOUGHTS: AN AJAX APPROACH???
-            }
-
+            //     if (localStorage.getItem("currentVisit")-localStorage.getItem("initialVisit") <= 500000){ // timeout 8 min 
+            //         $("html, body").css({
+            //             overflow: "hidden",
+            //             height: "100%"
+            //         });
+            //         var t = document.getElementById("signature");
+            //         t.display, t.onloadedmetadata = function() {
+            //             $("#signature").css("visibility", "visible"), $("#container").delay(0).queue(function() {
+            //                 $(this).fadeOut(0, function() {
+            //                     $("html, body").css({
+            //                         overflow: "visible",
+            //                         height: "auto"
+            //                     }), $("#loading").fadeOut(1000)
+            //                 }), $(this).dequeue()
+            //             })
+            //         }
+            //     } 
+            // }
             $( "#social-wrapper").css( "width",$("#contact-me").width());
             $( "#icon-wrapper").css( "width",$("#social-wrapper").width()-$("#submit").width()-5);
             var randBackground = Math.floor((Math.random() * 7) + 1); // rad number 1-8 
             typerColor = 'rgba(255,255,255,0.5)';
-            switch (randBackground) {
-                case 1:
-                $("#background").append('<source src="background/night_loop.webmhd.webm" type="video/webm"><source src="background/night_loop.mp4" type="video/mp4">');
-                break;
-                case 2:
-                $("#background").append('<source src="background/looping_clouds.webmhd.webm" type="video/webm"><source src="background/looping_clouds.mp4" type="video/mp4">'); 
-                break;
+            // Random backgroud 
+            switch (randBackground) { 
+            case 1:
+            $("#background").append('<source src="background/night_loop.webmhd.webm" type="video/webm"><source src="background/night_loop.mp4" type="video/mp4">');
+            break;
+            case 2:
+            $("#background").append('<source src="background/looping_clouds.webmhd.webm" type="video/webm"><source src="background/looping_clouds.mp4" type="video/mp4">'); 
+            break;
             case 3: //maybe
             $("#background").append('<source src="background/diamond_loop.webmhd.webm" type="video/webm"><source src="background/diamond_loop.mp4" type="video/mp4">');
             break;
@@ -216,8 +209,7 @@
                     <div class="loader">
                         <span class="progress"></span>
                     </div>
-                    <div id="qoute" style="position:relative; opacity:0"><b>“</b> Be forever grateful for the gift of today, never forget the lessons of yesterday and be hopeful for the unwritten chapter of tomorrow.&nbsp;<b>”</b> <p>-<b> Eddie Zhang</b></p></div>
-                    <!--                     <div id="qoute" style="position:relative; opacity:0"><b>“</b> Living in the present. Grateful for yesterday. Hopeful of tomorrow.&nbsp;<b>”</b> <p>-<b> Eddie Zhang</b></p></div> -->
+                    <div id="qoute" style="position:relative; opacity:0"><b style="font-size:20px">“</b> Welcome every day as if it were your first. <br>Cherish each moment as if it were to be your last&nbsp;<b style="font-size:20px">”</b><p style="font-size:18px; margin-top:12px">-<b>  Eddie Zhang</b></p></div>
                 </div>
             </div>
             <script type="text/javascript">
@@ -226,12 +218,12 @@
                         'overflow': 'hidden',
                         'height': '100%'
                     })
-                    $("#qoute").delay(1350)
+                    $("#qoute").delay(2500)
                     .queue(function() {
                         $(this).stop().animate({
                             top: '50%',
                             opacity: '1'
-                        }, 2500, 'swing');
+                        }, 2500, 'easeOutQuart');
                         $(this).dequeue();
                     });
                     </script>
@@ -253,7 +245,6 @@
                                     <li class="current" id="home"><a href="#_home" id="home" style="padding-left:5px;padding-right:5px;">Home</a></li>
                                     <li id="about"><a href="#_about" id="about" data-scroll="about" style="padding-left:5px;padding-right:5px">About</a></li>
                                     <li id="portfolio"><a href="#_portfolio" id="portfolio" data-scroll="portfolio" style="padding-left:5px;padding-right:5px; padding-top:30$0%">Portfolio</a></li>
-                                    <!--CHANGE: make it embedded emailing-->
                                     <li id="contact"><a id="contact" href="#footer" style="padding-left:5px;padding-right:5px">Contact</a></li>
                                 </ul>
                             </div>
@@ -565,3 +556,4 @@
 
 
                         </body></html>
+
