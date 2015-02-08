@@ -1,7 +1,7 @@
 Personal Website
 ===========
 
-Personal website portfolio designed and implemented from scratch using HTML5, CSS3 and JQuery techniques
+Personal website portfolio designed and implemented from scratch using HTML5, CSS3 and JavaScript/JQuery techniques
 
 ![alt='images/home_screen.png'](images/home_screen.png)
 
