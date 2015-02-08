@@ -18,32 +18,32 @@
         $(document).ready(function() {
             var d = new Date(); 
             var t = d.getTime(); // ms since midnight Jan 1, 1970
-            // if (localStorage.getItem("initialVisit") == null && localStorage.getItem("currentVisit") == null){  
-            //     localStorage.setItem("currentVisit", t);    // set time accordinglyx`
-            //     localStorage.setItem("initialVisit", null); // never visited initially. First visit
-            // }
-            // else{
-            //     localStorage.setItem("initialVisit",localStorage.getItem("currentVisit")); 
-            //     localStorage.setItem("currentVisit", t);
+            if (localStorage.getItem("initialVisit") == null && localStorage.getItem("currentVisit") == null){  
+                localStorage.setItem("currentVisit", t);    // set time accordinglyx`
+                localStorage.setItem("initialVisit", null); // never visited initially. First visit
+            }
+            else{
+                localStorage.setItem("initialVisit",localStorage.getItem("currentVisit")); 
+                localStorage.setItem("currentVisit", t);
 
-            //     if (localStorage.getItem("currentVisit")-localStorage.getItem("initialVisit") <= 500000){ // timeout 8 min 
-            //         $("html, body").css({
-            //             overflow: "hidden",
-            //             height: "100%"
-            //         });
-            //         var t = document.getElementById("signature");
-            //         t.display, t.onloadedmetadata = function() {
-            //             $("#signature").css("visibility", "visible"), $("#container").delay(0).queue(function() {
-            //                 $(this).fadeOut(0, function() {
-            //                     $("html, body").css({
-            //                         overflow: "visible",
-            //                         height: "auto"
-            //                     }), $("#loading").fadeOut(1000)
-            //                 }), $(this).dequeue()
-            //             })
-            //         }
-            //     } 
-            // }
+                if (localStorage.getItem("currentVisit")-localStorage.getItem("initialVisit") <= 500000){ // timeout 8 min 
+                    $("html, body").css({
+                        overflow: "hidden",
+                        height: "100%"
+                    });
+                    var t = document.getElementById("signature");
+                    t.display, t.onloadedmetadata = function() {
+                        $("#signature").css("visibility", "visible"), $("#container").delay(0).queue(function() {
+                            $(this).fadeOut(0, function() {
+                                $("html, body").css({
+                                    overflow: "visible",
+                                    height: "auto"
+                                }), $("#loading").fadeOut(1000)
+                            }), $(this).dequeue()
+                        })
+                    }
+                } 
+            }
             $( "#social-wrapper").css( "width",$("#contact-me").width());
             $( "#icon-wrapper").css( "width",$("#social-wrapper").width()-$("#submit").width()-5);
             var randBackground = Math.floor((Math.random() * 7) + 1); // rad number 1-8 
@@ -218,12 +218,12 @@
                         'overflow': 'hidden',
                         'height': '100%'
                     })
-                    $("#qoute").delay(2500)
+                    $("#qoute").delay(2200)
                     .queue(function() {
                         $(this).stop().animate({
                             top: '50%',
                             opacity: '1'
-                        }, 2500, 'easeOutQuart');
+                        }, 2500, 'easeOutCubic');
                         $(this).dequeue();
                     });
                     </script>
@@ -291,7 +291,7 @@
                             <img src="images/logo_white.png" alt="logo" class="logo" style="position:relative; z-index:3">
                             <hr>
                             <h1 id="nameTag" style="position:relative; z-index:3; color:rgba(255,255,255,1)"> Eddie Tianyi <span style="font-weight: 300">Zhang</span></h1>
-                            <h2 id="typer" style="position:relative; z-index:3; color:rgba(255,255,255,0.8);" data-typer-targets="industrial design · front-end development,product design · front-end development,ui / ux design · front-end development, ui / ux design · mobile development, ui / ux design · web development, ui / ux design · front-end development"> ui / ux design · front-end development</h2>
+                            <h2 id="typer" style="position:relative; z-index:3; color:rgba(255,255,255,0.8);" data-typer-targets="interactive design · front-end development, interactive design · mobile development, creative design · mobile development,scalable design · mobile development,scalable design · application development,scalable design · back-end development, ui / ux design · front-end development"> ui / ux design · front-end development</h2>
                             <hr>
 
                             <section class="demo-3" style="padding-top:0px">
