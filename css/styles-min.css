@@ -1,3 +1,40 @@
+@font-face {
+    font-family: stalemate_regular;
+    src: url(../font/Stalemate-Regular.ttf);
+}
+@font-face{
+    font-family: lobster_bold_italic;
+    src: url(../font/LobsterTwo-BoldItalic.ttf);
+}
+@font-face {
+    font-family: proxima_regular;
+    src: url(../font/proximanova-regular-webfont.woff);
+}
+@font-face{
+    font-family: scriptina;
+    src: url(../font/SCRIPTIN.ttf);
+}
+@font-face{
+    font-family: great_vibe;
+    src: url(../font/GreatVibes-Regular.ttf);
+}
+@font-face{
+    font-family: mawns;
+    src: url(../font/Mawns_Handwriting.ttf);
+}
+@font-face{
+    font-family: worstveld_oblique;
+    src: url(../font/Worstveld_oblique.otf);
+}
+@font-face{
+    font-family: worstveld_sling;
+    src: url(../font/WorstveldSling.ttf);
+}
+@font-face{
+    font-family: yore_script;
+    src: url(../font/Yore_Script.ttf);
+}
+
 @media screen and (max-width: 700px){
     #default-nav{
         background-color:rgba(0,0,0,0.23);
@@ -445,7 +482,48 @@ div#loading {
 @keyframes progressBar {
     0%   {width: 0px;}
     100% {width: 100%}
-}#qoute {
+}
+.greeting{
+    font-family: great_vibe;
+    color:black;
+    font-size:60px;
+    margin-top:15px;
+}
+.life{
+    font-family:scriptina;
+    font-size:55px;
+}
+.qoute-typed{
+    font-family:yore_script;
+    font-size:85px;
+}
+.qoute-right{
+    font-family:yore_script;
+    font-size:70px;
+}
+.qoute-body{
+    font-family:worstveld_sling;
+    font-weight:300;
+    font-size:30px;
+}
+.qoute-dance{
+    font-family:great_vibe;
+    font-size:70px;
+}
+.qoute-life{
+    background-color: rgba(0,0,0,0.5);
+    position:relative; 
+    margin-bottom:0px;
+    bottom:0px;
+    padding-bottom:80px;
+    padding-top: 80px;
+    text-align: center;
+}
+.qoute-container{
+    color:rgba(255,255,255,0.7);
+    font-size:25px;
+}
+#qoute {
     display: block;
     position: relative;
     overflow: hidden;
@@ -1337,10 +1415,6 @@ blockquote {
 .portfolio-item img {
     width: 100%;
     height: auto;
-}
-@font-face {
-    font-family: proxima_regular;
-    src: url(../font/proximanova-regular-webfont.woff);
 }
 .icon-dol:before {
     content: '\e80c'}
