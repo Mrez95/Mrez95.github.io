@@ -491,7 +491,7 @@ div#loading {
     height:125px;
     margin-bottom: 0px;
     /*background-color: rgba(245,245,245,1);*/
-    background-color: rgba(255,255,255,0.6);
+    background-color: rgba(255,255,255,0.7);
     color:black;
 }
 .about-header{
@@ -504,11 +504,11 @@ div#loading {
 #project-banner{
     position: relative;
     width: 100%;
-    height:135px;
+    height:140px;
     margin-bottom: 0px;
     /*background-color: rgba(245,245,245,1);*/
-    background-color: rgba(255,255,255,0.6);
-    color:black;
+    background-color: rgba(0,0,0,0.7);
+    color:white;
 }
 .project-header{
     font-family: scriptina;
