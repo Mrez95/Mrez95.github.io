@@ -212,7 +212,9 @@ $(".fa-github").on("mouseenter", function() {
         var e = $(this).scrollTop(),
             i = $(".filter").height();
         $("#default-nav").css("opacity", .8 - e / i).show()
-    }), $(window).load(function() {
+        $("#scroll_down").css("opacity", 0.65 - e / i).show()
+    }), 
+$(window).load(function() {
         updateVisual(), $(".name-container").css($(window).width() > 768 ? {
             position: "absolute",
             left: ($(window).width() - $(".name-container").outerWidth()) / 2,
