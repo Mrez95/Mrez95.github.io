@@ -591,7 +591,7 @@ div#loading {
     text-align: center;
 }
 .qoute-container{
-    color:rgba(2255,255,255,1);
+    color:rgba(2255,255,255,0.7);
     font-size:25px;
 }
 #qoute {
