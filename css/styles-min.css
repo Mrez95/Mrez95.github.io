@@ -34,6 +34,10 @@
     font-family: yore_script;
     src: url(../font/Yore_Script.ttf);
 }
+@font-face{
+    font-family: allura_regular;
+    src: url(../font/Allura-Regular.ttf);
+}
 
 @media screen and (max-width: 700px){
     #default-nav{
@@ -574,7 +578,7 @@ div#loading {
     font-size:30px;
 }
 .qoute-dance{
-    font-family:great_vibe;
+    font-family:allura_regular;
     font-size:70px;
 }
 .qoute-life{
@@ -587,7 +591,7 @@ div#loading {
     text-align: center;
 }
 .qoute-container{
-    color:rgba(255,255,255,1);
+    color:rgba(2255,255,255,1);
     font-size:25px;
 }
 #qoute {
