@@ -226,6 +226,7 @@ $(window).load(function() {
             left: 0
         }), $(window).resize()
     }),
+
     function(t, e, i) {
         "use strict";
         var o = t.document,
