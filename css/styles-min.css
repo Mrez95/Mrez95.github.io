@@ -1502,7 +1502,7 @@ a#scroll_down {
     font-family: proxima_regular!important;
     z-index: 3;
     position: absolute;
-    bottom: 20px;
+    bottom: 25px;
     display: block;
     text-align: center;
     font-size: 15px!important;

@@ -6,11 +6,11 @@ function position_h_center(t) {
 }
 
 function animate_scroll_button() {
-    $("#scroll_down").animate({
-        bottom: "30px"
-    }, 1e3, function() {
+    $("#scroll_down").animate({ 
+        bottom: "45px"
+    }, 500, function() {
         $("#scroll_down").animate({
-            bottom: "7px"
+            bottom: "20px"
         }, {
             duration: 2e3,
             easing: "easeOutBounce"
@@ -211,8 +211,9 @@ $(".fa-github").on("mouseenter", function() {
         }), previousId = t;
         var e = $(this).scrollTop(),
             i = $(".filter").height();
-        $("#default-nav").css("opacity", .8 - e / i).show()
-        $("#scroll_down").css("opacity", 0.65 - e / i).show()
+        $("#default-nav").css("opacity", .8 - e / i).show();
+        $("#scroll_down").css("opacity", 0.65 - e / i).show();
+        $(".dotted-lines").css("opacity", 0.65 - e / i).show()
     }), 
 $(window).load(function() {
         updateVisual(), $(".name-container").css($(window).width() > 768 ? {
