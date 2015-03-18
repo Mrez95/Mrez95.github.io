@@ -579,7 +579,8 @@ div#loading {
     font-size:30px;
 }
 .qoute-dance{
-    font-family:allura_regular;
+    font-family:great_vibe;
+    font-weight:200;
     font-size:70px;
 }
 .qoute-life{
@@ -592,7 +593,7 @@ div#loading {
     text-align: center;
 }
 .qoute-container{
-    color:rgba(2255,255,255,0.7);
+    color:rgba(2255,255,255,0.85);
     font-size:25px;
 }
 #qoute {
@@ -611,6 +612,10 @@ div#loading {
     font-size: 13pt;
     font-variant: small-caps;
 }
+@media (min-width:768px) {
+    
+}
+
 .fa {
     font-size: 40px;
     margin: 4%;

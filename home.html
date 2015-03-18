@@ -1,6 +1,6 @@
 <html><head>
 <title>Eddie Zhang | Home</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <meta charset="utf-8">
 <link href="css/styles-min.css" rel="stylesheet" media="screen">
 <link href="http://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet" type="text/css">
@@ -17,25 +17,7 @@
 $(document).ready(function() { 
     var d = new Date(); 
     var n = d.getMonth();
-    var t = d.getTime(); // <-- TODO: something that yields the time
-    // if (localStorage.getItem("initialVisit") == null && localStorage.getItem("currentVisit") == null){ // first time visiting
-    //     localStorage.setItem("currentVisit", t);    // set time accordingly
-    //     localStorage.setItem("initialVisit", null); // never visited initially. First visit
-    //     // DO NOTHING: LOAD SIGNATURE
-    // }
-    // else{
-    //     localStorage.setItem("initialVisit",localStorage.getItem("currentVisit")); // update recent visit times 2+ times visiting
-    //     localStorage.setItem("currentVisit", t);
-    //     // CHECK TIMELAPSE -> CONDITIONAL. DECIDED TO SHOW OR HIDE
-    //     if (localStorage.getItem("currentVisit")-localStorage.getItem("initialVisit") <= 1000000){ // timeout 16.66 min 
-    //         // TODO: Load referrer.html or JS remove css/hide elements. NOTE: if referrer.html load BEFORE display no black background please!!!! + change referrer.html URL
-    //     } 
-    //     else{
-    //         // SHOW LOAD
-    //     }
-    //     // else do nothing and display load
-    //     // THOUGHTS: AN AJAX APPROACH???
-    // }
+    var t = d.getTime(); 
 
        $("html, body").css({
             overflow: "hidden",
