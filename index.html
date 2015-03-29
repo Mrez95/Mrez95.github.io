@@ -49,7 +49,6 @@
                     } 
                 }
             } catch (e) {
-                alert("YOUR BROWSER DOES NOT SUPPORT LOCAL STORAGE!");
                 $("html, body").css({
                     overflow: "hidden",
                     height: "100%"
@@ -66,7 +65,7 @@
                     })
                 }
             }
-            
+
             $( "#social-wrapper").css( "width",$("#contact-me").width());
             $( "#icon-wrapper").css( "width",$("#social-wrapper").width()-$("#submit").width()-5);
             var randBackground = Math.floor((Math.random() * 7) + 1); // rad number 1-8 
