@@ -1,84 +1,61 @@
 <html>
-<head>
-    <title>Eddie Zhang | Home</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta charset="utf-8">
-    <link href="css/styles-min.css" rel="stylesheet" media="screen">
-    <link href="http://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
-    <link rel="shortcut icon" href="images/mstile-310x310.png" type="image/x-icon">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Nothing+You+Could+Do' rel='stylesheet' type='text/css'>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script src="js/min/main-min.js" type="text/javascript"></script>
-    <script>
-    $(document).ready(function() {
-        var d = new Date(); 
+    <head>
+        <title>Eddie Zhang | Home</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta charset="utf-8">
+        <link href="css/styles-min.css" rel="stylesheet" media="screen">
+        <link href="http://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+        <link rel="shortcut icon" href="images/mstile-310x310.png" type="image/x-icon">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Nothing+You+Could+Do' rel='stylesheet' type='text/css'>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="js/min/main-min.js" type="text/javascript"></script>
+        <script>
+        $(document).ready(function() {
+            var d = new Date(); 
             var t = d.getTime(); // ms since midnight Jan 1, 1970
-
-            // Safari, in Private Browsing Mode, looks like it supports localStorage but all calls to setItem
-            // throw QuotaExceededError. We're going to detect this and just silently drop any calls to setItem
-            // to avoid the entire page breaking, without having to do a check at each usage of Storage.
-            try {
-                if (localStorage.getItem("initialVisit") == null && localStorage.getItem("currentVisit") == null){  
-                    localStorage.setItem("currentVisit", t);    // set time accordinglyx`
-                    localStorage.setItem("initialVisit", null); // never visited initially. First visit
-                }
-                else{
-                    localStorage.setItem("initialVisit",localStorage.getItem("currentVisit")); 
-                    localStorage.setItem("currentVisit", t);
-                    if (localStorage.getItem("currentVisit")-localStorage.getItem("initialVisit") <= 500000){ // timeout 8 min 
-                        $("html, body").css({
-                            overflow: "hidden",
-                            height: "100%"
-                        });
-                        var t = document.getElementById("signature");
-                        t.display, t.onloadedmetadata = function() {
-                            $("#signature").css("visibility", "visible"), $("#container").delay(0).queue(function() {
-                                $(this).fadeOut(0, function() {
-                                    $("html, body").css({
-                                        overflow: "visible",
-                                        height: "auto"
-                                    }), $("#loading").fadeOut(1000)
-                                }), $(this).dequeue()
-                            })
-                        }
-                    } 
-                }
-            } catch (e) {
-                alert("YOUR BROWSER DOES NOT SUPPORT LOCAL STORAGE!");
-                $("html, body").css({
-                    overflow: "hidden",
-                    height: "100%"
-                });
-                var t = document.getElementById("signature");
-                t.display, t.onloadedmetadata = function() {
-                    $("#signature").css("visibility", "visible"), $("#container").delay(0).queue(function() {
-                        $(this).fadeOut(0, function() {
-                            $("html, body").css({
-                                overflow: "visible",
-                                height: "auto"
-                            }), $("#loading").fadeOut(1000)
-                        }), $(this).dequeue()
-                    })
-                }
+            if (localStorage.getItem("initialVisit") == null && localStorage.getItem("currentVisit") == null){  
+                localStorage.setItem("currentVisit", t);    // set time accordinglyx`
+                localStorage.setItem("initialVisit", null); // never visited initially. First visit
             }
+            else{
+                localStorage.setItem("initialVisit",localStorage.getItem("currentVisit")); 
+                localStorage.setItem("currentVisit", t);
 
-    $( "#social-wrapper").css( "width",$("#contact-me").width());
-    $( "#icon-wrapper").css( "width",$("#social-wrapper").width()-$("#submit").width()-5);
+                if (localStorage.getItem("currentVisit")-localStorage.getItem("initialVisit") <= 500000){ // timeout 8 min 
+                    $("html, body").css({
+                        overflow: "hidden",
+                        height: "100%"
+                    });
+                    var t = document.getElementById("signature");
+                    t.display, t.onloadedmetadata = function() {
+                        $("#signature").css("visibility", "visible"), $("#container").delay(0).queue(function() {
+                            $(this).fadeOut(0, function() {
+                                $("html, body").css({
+                                    overflow: "visible",
+                                    height: "auto"
+                                }), $("#loading").fadeOut(1000)
+                            }), $(this).dequeue()
+                        })
+                    }
+                } 
+            }
+            $( "#social-wrapper").css( "width",$("#contact-me").width());
+            $( "#icon-wrapper").css( "width",$("#social-wrapper").width()-$("#submit").width()-5);
             var randBackground = Math.floor((Math.random() * 7) + 1); // rad number 1-8 
             typerColor = 'rgba(255,255,255,0.5)';
             // Random backgroud 
             switch (randBackground) { 
-                case 1:
-                $("#background").append('<source src="background/night_loop.webmhd.webm" type="video/webm"><source src="background/night_loop.mp4" type="video/mp4">');
-                break;
-                case 2:
-                $("#background").append('<source src="background/edit_cloud.webmhd.webm" type="video/webm"><source src="background/edit_cloud.mp4" type="video/mp4">'); 
-                break;
+            case 1:
+            $("#background").append('<source src="background/night_loop.webmhd.webm" type="video/webm"><source src="background/night_loop.mp4" type="video/mp4">');
+            break;
+            case 2:
+            $("#background").append('<source src="background/edit_cloud.webmhd.webm" type="video/webm"><source src="background/edit_cloud.mp4" type="video/mp4">'); 
+            break;
             case 3: //maybe
             $("#background").append('<source src="background/diamond_loop.webmhd.webm" type="video/webm"><source src="background/diamond_loop.mp4" type="video/mp4">');
             break;
@@ -103,139 +80,139 @@
       });
 
     });
-</script>
-<style type="text/css">
-.filter{
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    background: url(images/filter_blue.png) top left repeat;
-}
-#navbar{
-    opacity:0;
-    background-color: white;
-    -webkit-transform:translateY(-50px);
-    -moz-transform:translateY(-50px);
-    transform:translateY(-50px);
-}
-.hidden_nav {
-    opacity:0;
-    -webkit-transform:translateY(-50px);
-    -moz-transform:translateY(-50px);
-    transform:translateY(-50px);
-    transition-duration: 0.6s;
-    transition-timing-function: ease-in-out;
-}
-.display_nav {
-    -webkit-transform:translateY(0px) !important;
-    -moz-transform:translateY(0px) !important;
-    transform:translateY(0px) !important;
-    transition-duration: 0.45s !important;
-    transition-timing-function: ease-in-out !important;
-}
-#default-nav li.current{
-    border-bottom: 3px solid white;
-    -webkit-transition: border-color 0.7s ease 0.95s !important;
-    -moz-transition: border-color 0.7s ease 0.95s !important;
-    transition: border-color 0.7s ease 0.95s !important;
-}
-#navbar li.current{
-    border-bottom: 3px solid black;
-    -webkit-transition: border-color 0.6s ease 0.95s !important;
-    -moz-transition: border-color 0.6s ease 0.95s !important;
-    transition: border-color 0.6s ease 0.95s !important;
-}
-.fa{
-    font-size:38px;
-    width:33px;
-    cursor:pointer;
-    color: rgba(255,255,255,0.4);
-}
-#nav_icon{
- font-size: 21px !important;
- color:black;
- padding-top:15px !important; 
- padding-bottom:15px !important;
- margin:14px;
-}
-.fa-envelope-square{
-    margin-right:14%;
-}
-.fa-github{
-    margin-left:14%;
-}
-.fa-paper-plane{
-    font-size:30px;
-    margin:5%;
-    margin-left:6%;
-    width:18%;
-    cursor:pointer;
-    color: rgba(255,255,255,0.5);
-    -webkit-transition: color ease 0.5s;
-    -moz-transition: color ease 0.5s;
-    transition: color ease 0.5s;
-}
-#icon-wrapper{
-    position:relative;
-    float:right;
-}
-#submit{
-    border: 2px solid rgba(255,255,255,0.4);
-    border-radius: 10px;  
-    width: 180px;
-    line-height: normal;
-    color: rgba(255,255,255,0.6);
-    -webkit-transition: color ease 0.5s,border-color ease 0.5s !important;
-    -moz-transition: color ease 0.5s,border-color ease 0.5s !important;
-    transition: color ease 0.5s, border-color ease 0.5s !important;
-}          
-#submit:hover{
-    cursor: pointer;
-    color:rgba(241,194,214,0.4);
-    border: 2px solid rgba(241,194,214,0.4);  
-    transition: color ease 0.4s;
-    -webkit-transition: color ease 0.5s;
-    -moz-transition: color ease 0.5s;
-    transition: color ease 0.5s;
-} 
-#submit:hover .fa-paper-plane{
-    cursor: pointer;
-    color: rgba(241,194,214,0.5) !important;
-    transition: color ease-in-out 0.5s;
-    -webkit-transition: color ease 0.5s;
-    -moz-transition: color ease 0.5s;
-} 
-.image{
-    height:auto !important;
-}
-#personal-bio{
-    margin-top:100px;
-    padding-bottom:70px;
-}
-#signature{
-    width:80% !important;
-    margin-bottom:10px !important;
-    margin-top:-5% !important;
-}
-</style>   
-</head>
+        </script>
+        <style type="text/css">
+        .filter{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background: url(images/filter_blue.png) top left repeat;
+        }
+        #navbar{
+            opacity:0;
+            background-color: white;
+            -webkit-transform:translateY(-50px);
+            -moz-transform:translateY(-50px);
+            transform:translateY(-50px);
+        }
+        .hidden_nav {
+            opacity:0;
+            -webkit-transform:translateY(-50px);
+            -moz-transform:translateY(-50px);
+            transform:translateY(-50px);
+            transition-duration: 0.6s;
+            transition-timing-function: ease-in-out;
+        }
+        .display_nav {
+            -webkit-transform:translateY(0px) !important;
+            -moz-transform:translateY(0px) !important;
+            transform:translateY(0px) !important;
+            transition-duration: 0.45s !important;
+            transition-timing-function: ease-in-out !important;
+        }
+        #default-nav li.current{
+            border-bottom: 3px solid white;
+            -webkit-transition: border-color 0.7s ease 0.95s !important;
+            -moz-transition: border-color 0.7s ease 0.95s !important;
+            transition: border-color 0.7s ease 0.95s !important;
+        }
+        #navbar li.current{
+            border-bottom: 3px solid black;
+            -webkit-transition: border-color 0.6s ease 0.95s !important;
+            -moz-transition: border-color 0.6s ease 0.95s !important;
+            transition: border-color 0.6s ease 0.95s !important;
+        }
+        .fa{
+            font-size:38px;
+            width:33px;
+            cursor:pointer;
+            color: rgba(255,255,255,0.4);
+        }
+        #nav_icon{
+           font-size: 21px !important;
+           color:black;
+           padding-top:15px !important; 
+           padding-bottom:15px !important;
+           margin:14px;
+        }
+        .fa-envelope-square{
+            margin-right:14%;
+        }
+        .fa-github{
+            margin-left:14%;
+        }
+        .fa-paper-plane{
+            font-size:30px;
+            margin:5%;
+            margin-left:6%;
+            width:18%;
+            cursor:pointer;
+            color: rgba(255,255,255,0.5);
+            -webkit-transition: color ease 0.5s;
+            -moz-transition: color ease 0.5s;
+            transition: color ease 0.5s;
+        }
+        #icon-wrapper{
+            position:relative;
+            float:right;
+        }
+        #submit{
+            border: 2px solid rgba(255,255,255,0.4);
+            border-radius: 10px;  
+            width: 180px;
+            line-height: normal;
+            color: rgba(255,255,255,0.6);
+            -webkit-transition: color ease 0.5s,border-color ease 0.5s !important;
+            -moz-transition: color ease 0.5s,border-color ease 0.5s !important;
+            transition: color ease 0.5s, border-color ease 0.5s !important;
+        }          
+        #submit:hover{
+            cursor: pointer;
+            color:rgba(241,194,214,0.4);
+            border: 2px solid rgba(241,194,214,0.4);  
+            transition: color ease 0.4s;
+            -webkit-transition: color ease 0.5s;
+            -moz-transition: color ease 0.5s;
+            transition: color ease 0.5s;
+        } 
+        #submit:hover .fa-paper-plane{
+            cursor: pointer;
+            color: rgba(241,194,214,0.5) !important;
+            transition: color ease-in-out 0.5s;
+            -webkit-transition: color ease 0.5s;
+            -moz-transition: color ease 0.5s;
+        } 
+        .image{
+            height:auto !important;
+        }
+        #personal-bio{
+            margin-top:100px;
+            padding-bottom:70px;
+        }
+        #signature{
+            width:80% !important;
+            margin-bottom:10px !important;
+            margin-top:-5% !important;
+        }
+        </style>   
+    </head>
 
-<body class="background">
-    <div id='loading'>
-        <div id="container"> 
-            <video id="signature" preload="auto" autoplay="true" muted="muted">
-                <source src="signature/Signature_21.mp4" type="video/mp4">
-                </video>
-                <div class="loader">
-                    <span class="progress"></span>
+    <body class="background">
+        <div id='loading'>
+            <div id="container"> 
+                <video id="signature" preload="auto" autoplay="true" muted="muted">
+                    <source src="signature/Signature_21.mp4" type="video/mp4">
+                    </video>
+                    <div class="loader">
+                        <span class="progress"></span>
+                    </div>
+                    <div id="qoute" style="position:relative; opacity:0"><b style="font-size:20px">“</b> Welcome every day as if it were your first. <br>Cherish each moment as if it were your last&nbsp;<b style="font-size:20px">”</b><p style="font-size:18px; margin-top:12px">-<b>  Eddie Zhang</b></p></div>
                 </div>
-                <div id="qoute" style="position:relative; opacity:0"><b style="font-size:20px">“</b> Welcome every day as if it were your first. <br>Cherish each moment as if it were your last&nbsp;<b style="font-size:20px">”</b><p style="font-size:18px; margin-top:12px">-<b>  Eddie Zhang</b></p></div>
             </div>
-        </div>
-        <script type="text/javascript">
+            <script type="text/javascript">
 
                     $('html, body').css({//hide scroll bar
                         'overflow': 'hidden',
@@ -415,12 +392,12 @@
                             <p class="project-header">My Works</p>
                         </div>
 
-                        <div id="layer-3"></div>
-                        <div id="layer-4"></div>
-                        <div id="layer-3"></div>
-                        <div id="layer-4"></div> 
-                        <div id="layer-3"></div>
-                        <div id="layer-4"></div> 
+                    <div id="layer-3"></div>
+                    <div id="layer-4"></div>
+                    <div id="layer-3"></div>
+                    <div id="layer-4"></div> 
+                    <div id="layer-3"></div>
+                    <div id="layer-4"></div> 
                         <div id="main-content" class="container" style=" min-width:100%; padding:0">
                             <div id="portfolio-grid" class="da-thumbs isotope" style="overflow: hidden; min-width:100%; display: block;background-color:black">
                                 <div class="portfolio-item  folio-35 isotope-item" style="width: 355px; position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(355px, 0px, 0px);padding:0">
@@ -606,7 +583,7 @@
                                                             <a href="https://www.facebook.com/mrez95" target="_blank"><i class="fa fa-facebook-square"></i></a>
                                                             <a href="https://ca.linkedin.com/in/eddietyzhang" target="_blank"><i class="fa fa-linkedin-square"></i></a>
                                                             <a href="mailto:ez95@live.ca" target="_blank"><i class="fa fa-envelope-square"></i></a>
-                                                            <!--                                                             <a href="http://instagram.com/zhangular" target="_blank"><i class="fa fa-instagram"></i></a> -->
+<!--                                                             <a href="http://instagram.com/zhangular" target="_blank"><i class="fa fa-instagram"></i></a> -->
                                                         </div>
                                                     </div>
 
