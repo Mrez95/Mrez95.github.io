@@ -612,8 +612,18 @@ div#loading {
     font-size: 13pt;
     font-variant: small-caps;
 }
-@media (min-width:768px) {
-    
+@media screen and (max-width: 700px) {
+
+    .qoute-body{
+        font-family:worstveld_sling;
+        font-weight:300;
+        font-size:20px;
+    }
+    .qoute-dance{
+        font-family:great_vibe;
+        font-weight:200;
+        font-size:45px;
+    }
 }
 
 .fa {
