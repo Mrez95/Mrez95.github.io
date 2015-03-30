@@ -68,7 +68,7 @@
 
             $( "#social-wrapper").css( "width",$("#contact-me").width());
             $( "#icon-wrapper").css( "width",$("#social-wrapper").width()-$("#submit").width()-5);
-            var randBackground = Math.floor((Math.random() * 7) + 1); // rad number 1-8 
+            var randBackground = Math.floor((Math.random() * 6) + 1); // rad number 1-8 
             typerColor = 'rgba(255,255,255,0.5)';
             // Random backgroud 
             switch (randBackground) { 
@@ -79,21 +79,19 @@
             $("#background").append('<source src="background/edit_cloud.webmhd.webm" type="video/webm"><source src="background/edit_cloud.mp4" type="video/mp4">'); 
             break;
             case 3: //maybe
+            $(".filter").css("background-color","rgba(0,0,0,0)");
             $("#background").append('<source src="background/diamond_loop.webmhd.webm" type="video/webm"><source src="background/diamond_loop.mp4" type="video/mp4">');
             break;
             case 4: //maybe
-            $("#background").append('<source src="background/mobile_loop.webmhd.webm" type="video/webm"><source src="background/mobile_loop.mp4" type="video/mp4">');
+            $(".filter").css("background-color","rgba(0,0,0,0.3)");
+            $("#background").append('<source src="background/japan_loop.webmhd.webm" type="video/webm"><source src="background/japan_loop.mp4" type="video/mp4">');
             break;
             case 5:
             $(".filter").css("background-color","rgba(0,0,0,0.1)");
-            $("#background").append('<source src="background/timelapse_1.webmhd.webm" type="video/webm"><source src="background/timelapse_1.mp4" type="video/mp4">');
+            $("#background").append('<source src="background/timelapse_3.webmhd.webm" type="video/webm"><source src="background/timelapse_3.mp4" type="video/mp4">');
             break;
             case 6:
             $("#background").append('<source src="background/timelapse_2.webmhd.webm" type="video/webm"><source src="background/timelapse_2.mp4" type="video/mp4">');
-            break;
-            case 7:
-            $(".filter").css("background-color","rgba(0,0,0,0.1)");
-            $("#background").append('<source src="background/timelapse_3.webmhd.webm" type="video/webm"><source src="background/timelapse_3.mp4" type="video/mp4">');
             break;
         }
         $( window ).resize(function() {

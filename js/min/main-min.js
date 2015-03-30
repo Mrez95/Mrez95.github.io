@@ -107,27 +107,27 @@ $(document).ready(function() {
         }), 
 $(".fa-git").on("mouseenter", function() {
 			$(this).css({
-                color: "rgba(0,0,0,0.5)"
+                color: "rgba(0,0,0,0.4)"
             })
         }),
 $(".fa-facebook").on("mouseenter", function() {
 		$(this).css({
-                color: "rgba(0,0,0,0.5)"
+                color: "rgba(0,0,0,0.4)"
             })
         }),
 $(".fa-linkedin").on("mouseenter", function() {
 		$(this).css({
-                color: "rgba(0,0,0,0.5)"
+                color: "rgba(0,0,0,0.4)"
             })
         }),
 $(".fa-envelope-o").on("mouseenter", function() {
             $("#custom-stamp").attr("src", "images/stamps/github.png"), $(this).css({
-                color: "rgba(0,0,0,0.5)"
+                color: "rgba(0,0,0,0.4)"
             })
         }),
 $(".fa-instagram").on("mouseenter", function() {
             $("#custom-stamp").attr("src", "images/stamps/github.png"), $(this).css({
-                color: "rgba(0,0,0,0.5)"
+                color: "rgba(0,0,0,0.4)"
             })
         }),
 $(".navbar-header .fa").on("mouseleave", function() {

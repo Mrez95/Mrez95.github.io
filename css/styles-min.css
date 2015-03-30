@@ -59,7 +59,7 @@
         width: 80% !important;
     }
     .image h2{
-        font-size: 34px !important
+        font-size: 40px !important
     }
     #nameTag{
         font-size:30px !important;
@@ -103,11 +103,30 @@
         margin-right: 5% !important;
     }
     #qoute{
-        font-size:13px !important;
+        font-size:13px;
+        font-weight: 100;
+    }
+    span.life{
+        font-size: 36px;
+    }
+    span.qoute-dance{
+        font-size: 42px;
+    }
+    span.qoute-typed{
+        margin-left:11%;
+        margin-right:85%;
+        font-size: 110px;
+    }
+    span.qoute-right{
+        font-size: 65px;
+        visibility: hidden;
+    }
+    div.qoute-life{
+        padding-bottom: 50px;
     }
     .navbar-brand {
-    padding-left: 3px !important;
-    font-size: 16px !important;
+        padding-left: 3px !important;
+        font-size: 16px !important;
     }
     .box{
         height:43px !important;
@@ -403,6 +422,7 @@ video#background {
     border-color: rgba(255, 255, 255, .7);
     border-width: 0;
 }
+
 #contact-me {
     float: right;
     height: 100%;
@@ -541,6 +561,14 @@ div#loading {
     padding-top: 12px;
     padding-bottom: 16px;
 }
+@media screen and (max-width: 700px) {
+    #about-banner{
+        height:100px;
+    }
+    .about-header{
+        font-size: 40px;
+    }
+}
 #project-banner{
     position: relative;
     width: 100%;
@@ -575,13 +603,13 @@ div#loading {
 }
 .qoute-body{
     font-family:worstveld_sling;
-    font-weight:300;
+    font-weight:300;s
     font-size:30px;
 }
 .qoute-dance{
     font-family:great_vibe;
-    font-weight:200;
-    font-size:70px;
+    font-weight:200;    
+    font-size:63px;
 }
 .qoute-life{
     background-color: rgba(0,0,0,0.5);
