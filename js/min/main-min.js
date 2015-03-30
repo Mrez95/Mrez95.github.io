@@ -107,33 +107,32 @@ $(document).ready(function() {
         }), 
 $(".fa-git").on("mouseenter", function() {
 			$(this).css({
-                color: "rgba(0,0,0,0.4)"
+                color: "rgba(0,0,0,0.5)"
             })
         }),
 $(".fa-facebook").on("mouseenter", function() {
 		$(this).css({
-                color: "rgba(0,0,0,0.4)"
+                color: "rgba(0,0,0,0.5)"
             })
         }),
 $(".fa-linkedin").on("mouseenter", function() {
 		$(this).css({
-                color: "rgba(0,0,0,0.4)"
+                color: "rgba(0,0,0,0.5)"
             })
         }),
 $(".fa-envelope-o").on("mouseenter", function() {
             $("#custom-stamp").attr("src", "images/stamps/github.png"), $(this).css({
-                color: "rgba(0,0,0,0.4)"
+                color: "rgba(0,0,0,0.5)"
             })
         }),
 $(".fa-instagram").on("mouseenter", function() {
             $("#custom-stamp").attr("src", "images/stamps/github.png"), $(this).css({
-                color: "rgba(0,0,0,0.4)"
+                color: "rgba(0,0,0,0.5)"
             })
         }),
 $(".navbar-header .fa").on("mouseleave", function() {
 		$(this).css({
-                color: "rgba(0,0,0,1)",
-                transition: "color ease 0.2s"
+                color: "rgba(0,0,0,1)"
             })
         }),
 
