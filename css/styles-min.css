@@ -122,10 +122,12 @@
     #postcard{
         background-image: none !important;
         border-top: none !important;
+        margin: 0 !important;
     }
     #inner-border{ 
         background-image: none !important;
         border-top: none !important;
+        margin: 0 !important;
     }
     #about-me{
         display:none;
