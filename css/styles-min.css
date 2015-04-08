@@ -150,6 +150,9 @@
     #icon-wrapper{
         display:none;
     }
+    #submit{
+        
+    }
     span.life{
         font-size: 36px;
     }
@@ -722,9 +725,9 @@ div#loading {
         font-size:45px;
     }
 }
-#postcard{
+/*#postcard{
     width: 100%;
-}
+}*/
 #contact-title{
     font-size: 36px;
     position:relative;
@@ -732,13 +735,13 @@ div#loading {
     margin-bottom:25px;
     z-index:4;
 }
-#contact-me{
+/*#contact-me{
     width:100%;
 }
 #form-input{
     position: relative;
     margin-top: 50px;
-}
+}*/
 .fa {
     font-size: 40px;
     margin: 4%;
