@@ -134,7 +134,12 @@
     #contact-me{
         border:none !important;
         float:left !important;
+        width:100% !important;
     }
+    #footer{
+        height: 110% !important;
+    }
+
     #client {
         width: 70% !important;
     }
@@ -151,7 +156,7 @@
         display:none;
     }
     #submit{
-        
+
     }
     span.life{
         font-size: 36px;
@@ -198,6 +203,10 @@
     }
     #social-wrapper{
         position: relative !important;
+        width:208px !important;
+        margin: auto !important;
+        margin-top: 45px !important;
+        padding:0px !important;
     }
 }
 /*iphone 4,4s,5,5s*/
@@ -491,7 +500,8 @@ video#background {
     border-style: solid;
     border-color: rgba(255, 255, 255, .7);
     border-width: 0 0 0 2px;
-    border-image: linear-gradient(to bottom, rgba(255, 255, 255, .7), rgba(0, 0, 0, 0)) 1 100%}
+    border-image: linear-gradient(to bottom, rgba(255, 255, 255, .7), rgba(0, 0, 0, 0)) 1 100%
+}
 #contact_layer {
     position: absolute;
     right: 0;
@@ -712,6 +722,14 @@ div#loading {
     font-size: 13pt;
     font-variant: small-caps;
 }
+#contact-title{
+    font-size: 36px;
+    position:relative;
+    margin-top:30px !important;
+    margin-bottom:25px;
+    z-index:4;
+}
+
 @media screen and (max-width: 700px) {
 
     .qoute-body{
@@ -724,24 +742,26 @@ div#loading {
         font-weight:200;
         font-size:45px;
     }
+    #postcard{
+        width: 100%;
+    }
+    #form-input{
+        position: relative;
+        margin-top: 50px;
+    }
+/*    #contact_layer {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: 0;
+        background: url(../images/filter1.png) bottom center;
+    }*/
 }
-/*#postcard{
-    width: 100%;
-}*/
-#contact-title{
-    font-size: 36px;
-    position:relative;
-    margin-top:30px !important;
-    margin-bottom:25px;
-    z-index:4;
-}
-/*#contact-me{
-    width:100%;
-}
-#form-input{
-    position: relative;
-    margin-top: 50px;
-}*/
+
 .fa {
     font-size: 40px;
     margin: 4%;
@@ -790,6 +810,12 @@ div#loading {
 }
 .sender {
     font-family: 'Rock Salt', cursive;
+}
+#footer {
+    position:relative; 
+    margin-bottom:0px; 
+    -ra-bottom:0px; 
+    padding-bottom:100px;
 }
 input {
     background-color: transparent;
