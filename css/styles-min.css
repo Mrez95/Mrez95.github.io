@@ -228,6 +228,8 @@
 #navbar {
     opacity: 0;
     background-color: #fff;
+    z-index:999999;
+    border-bottom:0px;
     -webkit-transform: translateY(-50px);
     -moz-transform: translateY(-50px);
     transform: translateY(-50px);
@@ -1113,6 +1115,9 @@ ol ol, ol ul, ul ol, ul ul {
     margin-left: auto;
     padding-left: 15px;
     padding-right: 15px;
+    position:relative;
+    height:100%;
+    z-index:-2;
 }
 .container:after, .container:before {
     content: " ";
@@ -1691,6 +1696,23 @@ a#scroll_down i {
 #qoute p{
     font-size:12px;
     margin-top: 7px;
+}
+#default-nav{
+    border-bottom:0px; 
+    z-index:9;
+}
+#nav-points li a{
+    padding-left:5px;
+    padding-right:5px;
+}
+#nav_icon{
+   font-size: 21px;
+   color:black;
+   padding-top:15px; 
+   padding-bottom:15px;
+   margin:14px;
+   margin-top:0%; 
+   margin-bottom:0%
 }
 @font-face {
     font-family: fontello;

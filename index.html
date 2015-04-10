@@ -30,7 +30,7 @@
                 else{
                     localStorage.setItem("initialVisit",localStorage.getItem("currentVisit")); 
                     localStorage.setItem("currentVisit", t);
-                    if (localStorage.getItem("currentVisit")-localStorage.getItem("initialVisit") <= 5){ // timeout 8 min 
+                    if (localStorage.getItem("currentVisit")-localStorage.getItem("initialVisit") <= 420000){ // timeout 8 min 
                         $("html, body").css({
                             overflow: "hidden",
                             height: "100%"
@@ -151,13 +151,6 @@
             cursor:pointer;
             color: rgba(255,255,255,0.4);
         }
-        #nav_icon{
-           font-size: 21px !important;
-           color:black;
-           padding-top:15px !important; 
-           padding-bottom:15px !important;
-           margin:14px;
-        }
         .fa-envelope-square{
             margin-right:14%;
         }
@@ -248,8 +241,8 @@
                     });
                     </script>
 
-                    <nav class="navbar navbar-inverse navbar-fixed-top" id="default-nav" style="border-bottom:0px; z-index:9;" >
-                        <div class="container" style="position:relative;height:100%; z-index:-2;margin-left:4%;margin-right:1%">
+                    <nav class="navbar navbar-inverse navbar-fixed-top" id="default-nav">
+                        <div class="container">
                             <div class="navbar-header">
                                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                                     <span class="icon-bar"></span>
@@ -262,16 +255,16 @@
                             <!--top toolbar menu-->
                             <div class="collapse navbar-collapse">
                                 <ul id="nav-points" class="nav navbar-nav navbar-right">
-                                    <li class="current" id="home"><a href="#_home" id="home" style="padding-left:5px;padding-right:5px;">Home</a></li>
-                                    <li id="about"><a href="#_about" id="about" data-scroll="about" style="padding-left:5px;padding-right:5px">About</a></li>
-                                    <li id="portfolio"><a href="#_portfolio" id="portfolio" data-scroll="portfolio" style="padding-left:5px;padding-right:5px; padding-top:30$0%">Portfolio</a></li>
-                                    <li id="contact"><a id="contact" href="#footer" style="padding-left:5px;padding-right:5px">Contact</a></li>
+                                    <li class="current" id="home"><a href="#_home" id="home">Home</a></li>
+                                    <li id="about"><a href="#_about" id="about" data-scroll="about">About</a></li>
+                                    <li id="portfolio"><a href="#_portfolio" id="portfolio" data-scroll="portfolio">Portfolio</a></li>
+                                    <li id="contact"><a id="contact" href="#footer">Contact</a></li>
                                 </ul>
                             </div>
                         </div>
                     </nav>
-                    <nav class="navbar navbar-inverse navbar-fixed-top hidden_nav" id="navbar" style="z-index:999999;border-bottom:0px">
-                        <div class="container" style="position:relative;height:100%; z-index:-2000;margin-left:4%;margin-right:1%">
+                    <nav class="navbar navbar-inverse navbar-fixed-top hidden_nav" id="navbar">
+                        <div class="container">
                             <div class="navbar-header">
                                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                                     <span class="icon-bar"></span>
@@ -279,11 +272,11 @@
                                     <span class="icon-bar"></span>
                                 </button>
                                 <div id="icon-wrapper">
-                                    <a href="https://github.com/mrez95" target="_blank"><i class="fa fa-git" id="nav_icon" style="padding-top:7px; padding-bottom:7px; margin-top:0%; margin-bottom:0%"></i></a>
-                                    <a href="https://ca.linkedin.com/in/eddietyzhang" target="_blank"><i class="fa fa-linkedin" id="nav_icon" style="padding-top:7px; padding-bottom:7px; margin-top:0%; margin-bottom:0%"></i></a>
-                                    <a href="https://www.facebook.com/mrez95" target="_blank"><i class="fa fa-facebook" id="nav_icon" style="padding-top:7px; padding-bottom:7px; margin-top:0%; margin-bottom:0%"></i></a>
-                                    <a href="mailto:ez95@live.ca" target="_blank"><i class="fa fa-envelope-o" id="nav_icon" style="padding-top:7px; padding-bottom:7px; margin-top:0%; margin-bottom:0%"></i></a>
-                                    <a href="http://instagram.com/zhangular" target="_blank"><i class="fa fa-instagram" id="nav_icon" style="padding-top:7px; padding-bottom:7px; margin-top:0%; margin-bottom:0%"></i></a>
+                                    <a href="https://github.com/mrez95" target="_blank"><i class="fa fa-git" id="nav_icon"></i></a>
+                                    <a href="https://ca.linkedin.com/in/eddietyzhang" target="_blank"><i class="fa fa-linkedin" id="nav_icon"></i></a>
+                                    <a href="https://www.facebook.com/mrez95" target="_blank"><i class="fa fa-facebook" id="nav_icon"></i></a>
+                                    <a href="mailto:ez95@live.ca" target="_blank"><i class="fa fa-envelope-o" id="nav_icon"></i></a>
+                                    <a href="http://instagram.com/zhangular" target="_blank"><i class="fa fa-instagram" id="nav_icon"></i></a>
                                 </div>
                             </div>
                             <div class="nav-logo" style="position: absolute; height:100%; left: 45.5%"><img src="images/logo_default.png" style="height:100%"></div>
