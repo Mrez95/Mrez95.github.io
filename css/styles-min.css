@@ -1109,14 +1109,6 @@ ol, ul {
 ol ol, ol ul, ul ol, ul ul {
     margin-bottom: 0;
 }
-.contact-container{
-    position:relative;
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-    height:100%;
-}
 .container {
     position:relative;
     margin-right: auto;
@@ -1132,11 +1124,11 @@ ol ol, ol ul, ul ol, ul ul {
     margin-left: auto;
     height:100%;
 }
-.container:after, .container:before {
+.container:after, .container:before, .portfolio-container:after, .portfolio-container:before,.contact-container:after, .contact-container:before {
     content: " ";
     display: table;
 }
-.container:after {
+.container:after, .portfolio-container:after, .contact-container:after{
     clear: both;
 }
 .collapse {
