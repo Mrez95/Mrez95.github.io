@@ -1109,15 +1109,28 @@ ol, ul {
 ol ol, ol ul, ul ol, ul ul {
     margin-bottom: 0;
 }
-
-.container {
+.contact-container{
+    position:relative;
     margin-right: auto;
     margin-left: auto;
     padding-left: 15px;
     padding-right: 15px;
+    height:100%;
+}
+.container {
     position:relative;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
     height:100%;
     z-index:-2;
+}
+.portfolio-container, .contact-container{
+    position:relative;
+    margin-right: auto;
+    margin-left: auto;
+    height:100%;
 }
 .container:after, .container:before {
     content: " ";
