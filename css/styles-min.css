@@ -711,16 +711,18 @@ div#loading {
     position: relative;
     overflow: hidden;
     top: 75%;
+    right: 10%;
     height: 100%;
     font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
     letter-spacing: .1em;
-    width: 100%;
+    width: 120%;
     text-align: center;
     margin: 40px auto;
     text-transform: lowercase;
     line-height: 145%;
-    font-size: 13pt;
+    font-size: 11pt;
     font-variant: small-caps;
+    opacity:0
 }
 #contact-title{
     font-size: 36px;
@@ -1679,6 +1681,16 @@ a#scroll_down span {
 a#scroll_down i {
     font-size: 32px;
     opacity: .6;
+}
+#qoute b{
+    font-size:18px
+}
+#qoute p i{
+    font-size:13px;
+}
+#qoute p{
+    font-size:12px;
+    margin-top: 7px;
 }
 @font-face {
     font-family: fontello;

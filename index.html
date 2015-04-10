@@ -30,7 +30,7 @@
                 else{
                     localStorage.setItem("initialVisit",localStorage.getItem("currentVisit")); 
                     localStorage.setItem("currentVisit", t);
-                    if (localStorage.getItem("currentVisit")-localStorage.getItem("initialVisit") <= 500000){ // timeout 8 min 
+                    if (localStorage.getItem("currentVisit")-localStorage.getItem("initialVisit") <= 5){ // timeout 8 min 
                         $("html, body").css({
                             overflow: "hidden",
                             height: "100%"
@@ -229,7 +229,7 @@
                     <div class="loader">
                         <span class="progress"></span>
                     </div>
-                    <div id="qoute" style="position:relative; opacity:0"><b style="font-size:20px">“</b> Welcome each day as if it were your first. <br>Cherish every moment to be as if it were your last&nbsp;<b style="font-size:20px">”</b><p style="font-size:18px; margin-top:12px">-<b>  Eddie Zhang</b></p></div>
+                    <div id="qoute"><b >“</b> Welcome every day as if it was your first. <br>Cherish every moment as if it were to be your last&nbsp;<b>”</b><p>-<b><i>  Eddie Zhang</i></b></p></div>
                 </div>
             </div>
             <script type="text/javascript">
