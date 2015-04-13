@@ -143,7 +143,7 @@ $(".fa-github").on("mouseenter", function() {
             })
         }),$(".fa-facebook-square").on("mouseenter", function() {
             $("#custom-stamp").attr("src", "images/stamps/facebook.png"), $(this).css({
-                color: "rgb(75, 102, 160, 0.6)",
+                color: "rgba(75, 102, 160, 0.6)",
                 transition: "color ease 0.4s"
             })
         }), $(".fa-linkedin-square").on("mouseenter", function() {
@@ -162,7 +162,7 @@ $(".fa-github").on("mouseenter", function() {
                 transition: "color ease 0.4s"
             })
         }), $("#submit").on("mouseenter", function() {
-            $("#custom-stamp").attr("src", "images/stamps/choice.png")
+            $("#custom-stamp").attr("src", "images/stamps/default.png")
         }), $("#client").on("focus", function() {
             $(this).attr("placeholder", "Your Name")
         }).on("focusout", function() {

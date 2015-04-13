@@ -155,9 +155,6 @@
     #icon-wrapper{
         display:none;
     }
-    #submit{
-
-    }
     span.life{
         font-size: 36px;
     }
@@ -777,9 +774,11 @@ div#loading {
     }*/
 }
 #submit {
-    border: 2px solid rgba(255, 255, 255, .4);
+    position:relative;
+    float:left;
+    border: 1px solid rgba(255, 255, 255, .4);
     border-radius: 10px;
-    width: 30%;
+    width: 170;
     line-height: normal;
     color: rgba(255, 255, 255, .6);
     -webkit-transition: color ease .5s, border-color ease .5s!important;
@@ -788,21 +787,23 @@ div#loading {
 }
 #submit:hover {
     cursor: pointer;
-    color: rgba(255, 255, 255, .4);
-    border: 2px solid rgba(255, 255, 255, .4);
+    color: rgba(255, 255, 255, .8);
+    border: 1px solid rgba(255, 255, 255, .8);
     -webkit-transition: color ease .5s;
     -moz-transition: color ease .5s;
     transition: color ease .5s;
 }
 #submit:hover .fa-paper-plane {
     cursor: pointer;
-    color: rgba(255, 255, 255, .5)!important;
+    color: rgba(255, 255, 255, .8)!important;
     transition: color ease-in-out .5s;
     -webkit-transition: color ease .5s;
     -moz-transition: color ease .5s;
 }
 .sender {
     font-family: 'Rock Salt', cursive;
+    margin-left:0px !important;
+    padding-left:16px;
 }
 #footer {
     position:relative; 
@@ -1781,11 +1782,6 @@ a#scroll_down i {
 #contact-me #contact-letter p {
     font-size:19px
 }
-#submit {
-    position:relative;
-    float:left;
-    width: 208px
-}
 .sender {
     width:140px;
     position:relative;
@@ -1841,32 +1837,6 @@ a#scroll_down i {
     position:relative;
     float:right;
 }
-#submit{
-    border: 2px solid rgba(255,255,255,0.4);
-    border-radius: 10px;  
-    width: 180px;
-    line-height: normal;
-    color: rgba(255,255,255,0.6);
-    -webkit-transition: color ease 0.5s,border-color ease 0.5s !important;
-    -moz-transition: color ease 0.5s,border-color ease 0.5s !important;
-    transition: color ease 0.5s, border-color ease 0.5s !important;
-}          
-#submit:hover{
-    cursor: pointer;
-    color:rgba(241,194,214,0.4);
-    border: 2px solid rgba(241,194,214,0.4);  
-    transition: color ease 0.4s;
-    -webkit-transition: color ease 0.5s;
-    -moz-transition: color ease 0.5s;
-    transition: color ease 0.5s;
-} 
-#submit:hover .fa-paper-plane{
-    cursor: pointer;
-    color: rgba(241,194,214,0.5) !important;
-    transition: color ease-in-out 0.5s;
-    -webkit-transition: color ease 0.5s;
-    -moz-transition: color ease 0.5s;
-} 
 .image{
     height:auto !important;
 }
