@@ -69,7 +69,7 @@
             $( "#social-wrapper").css( "width",$("#contact-me").width());
             $( "#icon-wrapper").css( "width",$("#social-wrapper").width()-$("#submit").width()-5);
             var randBackground = Math.floor((Math.random() * 6) + 1); // rad number 1-8 
-            typerColor = 'rgba(255,255,255,0.5)';
+            typerColor = 'rgba(255,255,255,0.4)';
             // Random backgroud 
             switch (randBackground) { 
             case 1:
@@ -279,38 +279,36 @@
                                     <a href="http://instagram.com/zhangular" target="_blank"><i class="fa fa-instagram" id="nav_icon"></i></a>
                                 </div>
                             </div>
-                            <div class="nav-logo" style="position: absolute; height:100%; left: 47.2%"><img src="images/logo_default.png" style="height:100%"></div>
+                            <div class="nav-logo"><img src="images/logo_default.png"></div>
                             <!--top toolbar menu-->
                             <div class="collapse navbar-collapse">
                                 <ul id="nav-points" class="nav navbar-nav navbar-right">
-                                    <li class="current" id="home"><a href="#_home" id="home" style="padding-left:5px;padding-right:5px;color:black">Home</a></li>
-                                    <li id="about"><a href="#_about" id="about" data-scroll="about" style="padding-left:5px;padding-right:5px;color:black">About</a></li>
-                                    <li id="portfolio"><a href="#_portfolio" id="portfolio" data-scroll="portfolio" style="padding-left:5px;padding-right:5px;color:black; ">Portfolio</a></li>
+                                    <li class="current" id="home"><a href="#_home" id="home">Home</a></li>
+                                    <li id="about"><a href="#_about" id="about" data-scroll="about">About</a></li>
+                                    <li id="portfolio"><a href="#_portfolio" id="portfolio" data-scroll="portfolio">Portfolio</a></li>
                                     <!--CHANGE: make it embedded emailing-->
-                                    <li id="contact"><a id="contact" href="#footer" style="padding-left:5px;padding-right:5px;color:black">Contact</a></li>
+                                    <li id="contact"><a id="contact" href="#footer">Contact</a></li>
                                 </ul>
                             </div>
                         </div>
                     </nav>
-
-                    <!-- <div class="blurred-background " style="background-video: url('blueblur.png'); background-attachment: fixed; background-repeat: no-repeat;"> -->
                     <div class="filter"></div>
                     <video id="background" preload="none" autoplay="true" loop="loop" muted="muted" poster="background/static_blue.png">
                         <!-- video source gets appended via JS -->
                     </video>
 
-                    <div id="_home" data-anchor="home" style="position:relative;height:100%; margin-bottom:0px; border-bottom:0px">
-                        <main class="name-container" style="position: absolute; left: 299px;  opacity: 1">
-                            <img src="images/logo_white.png" alt="logo" class="logo" style="position:relative; z-index:3">
+                    <div id="_home" data-anchor="home">
+                        <main class="name-container">
+                            <img src="images/logo_white.png" alt="logo" class="logo">
                             <hr class="dotted-lines">
-                            <h1 id="nameTag" style="position:relative; z-index:3; color:rgba(255,255,255,1)"> Eddie Tianyi <span style="font-weight: 300">Zhang</span></h1>
-                            <h2 id="typer" style="position:relative; z-index:3; color:rgba(255,255,255,0.8);" data-typer-targets="interactive design · front-end development, interactive design · mobile development, interactive design · full stack development,responsive design · full stack development,responsive design · object-oriented development,creative design · object-oriented development,scalable design · object-oriented development, scalable design · game development,scalable design · back-end development, graphic design · back-end development, web design · back-end development,ui / ux design · front-end development"> ui / ux design · front-end development</h2>
+                            <h1 id="nameTag"> Eddie Tianyi <span>Zhang</span></h1>
+                            <h2 id="typer" data-typer-targets="interactive design · front-end development, interactive design · mobile development, interactive design · full stack development,responsive design · full stack development,responsive design · object-oriented development,creative design · object-oriented development,scalable design · object-oriented development, scalable design · game development,scalable design · back-end development, graphic design · back-end development, web design · back-end development,ui / ux design · front-end development"> ui / ux design · front-end development</h2>
                             <hr class="dotted-lines">
 
-                            <section class="demo-3" style="padding-top:0px">
-                                <div class="box" style="margin:4px; z-index:3">
-                                    <a class="scroll" href="#_about" style="text-decoration:none; color:rgba(255,255,255,0.7);">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+                            <section class="demo-3">
+                                <div class="box">
+                                    <a class="scroll" href="#_about">
+                                        <svg xmlns="http://www.w3.org/2000/svg">
                                             <line class="top" x1="0" y1="0" x2="360" y2="0"></line>
                                             <line class="left" x1="0" y1="50" x2="0" y2="-100"></line>
                                             <line class="bottom" x1="120" y1="50" x2="-240" y2="50"></line>
@@ -319,9 +317,9 @@
                                         <h5>About</h5>
                                     </a>
                                 </div>
-                                <div class="box" style="margin:4px;z-index:3">
-                                    <a href="#_portfolio" style="text-decoration:none; color:rgba(255,255,255,0.7);">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+                                <div class="box">
+                                    <a href="#_portfolio">
+                                        <svg xmlns="http://www.w3.org/2000/svg">
                                             <line class="top" x1="0" y1="0" x2="360" y2="0"></line>
                                             <line class="left" x1="0" y1="50" x2="0" y2="-100"></line>
                                             <line class="bottom" x1="120" y1="50" x2="-240" y2="50"></line>
@@ -331,10 +329,9 @@
                                     </a>
 
                                 </div>
-                                <div class="box" style="margin:4px;z-index:3">
-                                    <a class="scroll" href="#footer" style="text-decoration:none; color:rgba(255,255,255,0.7);">
-
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+                                <div class="box">
+                                    <a class="scroll" href="#footer">
+                                        <svg xmlns="http://www.w3.org/2000/svg">
                                             <line class="top" x1="0" y1="0" x2="360" y2="0"></line>
                                             <line class="left" x1="0" y1="50" x2="0" y2="-100"></line>
                                             <line class="bottom" x1="120" y1="50" x2="-240" y2="50"></line>
@@ -343,12 +340,10 @@
                                         <h5>Contact</h5>
                                     </a>
                                 </div>
-
                             </section>
                         </main>
-                        <a href="#_about" data-scroll="about" id="scroll_down" style="position: absolute"><i class="icon-dol" style="font:90px"></i></a>
+                        <a href="#_about" data-scroll="about" id="scroll_down"><img class="icon-dol" src="images/arrow.png"></a>
                     </div>
-
                     <div id="layer-1"></div>
                     <div id="layer-2"></div>
                     <div id="layer-1"></div>
@@ -363,10 +358,10 @@
 
                     <div id="_about" data-anchor="portfolio" class="image">
                         <div id="about-photo">
-                            <img src="images/contact_white.png" style="height:100%;" class="img-circle img-thumbnail center-block">
+                            <img src="images/contact_white.png" class="img-circle img-thumbnail center-block">
                         </div>
-                        <div id="personal-bio" style="height:auto">
-                            Hi there! My name is Eddie Zhang and I’m currently a <a href="https://uwaterloo.ca/find-out-more/programs/computer-engineering" style="cursor:pointer" target="_blank">Computer Engineering</a> student at <a style="cursor:pointer" href="https://uwaterloo.ca" target="_blank">University of Waterloo</a>. One thing to know about me is that I absolutely love technology and fell head over heels for it when I was young and soon found a passion for it in the field of software development. Recently I interned as a software engineer at <a style="cursor:pointer" href="http://www.veeva.com" target="_blank">Veeva Systems</a> in Toronto and prior at <a style="cursor:pointer" href="http://www.titletrading.com" target="_blank">Title Trading</a> as a UI/UX front-end developer. At school I try getting involved as much as I can with an engineering schedule. I was an orientating leader and I'm currently a part of four directorships as well as the ECE class of 2018 EngSoc and academic rep. When I'm not at school or programming, you can probably find me with a rod by the lake or dueling it out on the badminton court. <br>
+                        <div id="personal-bio">
+                            Hi there! My name is Eddie Zhang and I’m currently a <a href="https://uwaterloo.ca/find-out-more/programs/computer-engineering" target="_blank">Computer Engineering</a> student at <a href="https://uwaterloo.ca" target="_blank">University of Waterloo</a>. One thing to know about me is that I absolutely love technology and fell head over heels for it when I was young and soon found a passion for it in the field of software development. Recently I interned as a software engineer at <a href="http://www.veeva.com" target="_blank">Veeva Systems</a> in Toronto and prior at <a href="http://www.titletrading.com" target="_blank">Title Trading</a> as a UI/UX front-end developer. At school I try getting involved as much as I can with an engineering schedule. I was an orientating leader and I'm currently a part of four directorships as well as the ECE class of 2018 EngSoc and academic rep. When I'm not at school or programming, you can probably find me with a rod by the lake or dueling it out on the badminton court. <br>
                         </div>
                     </div>
                     <div id="layer-1"></div>
@@ -399,8 +394,7 @@
                     <div id="layer-4"></div> 
                     <div id="layer-3"></div>
                     <div id="layer-4"></div>                     
-                    <!--<div id="_about" data-anchor="about" class="image" style="margin-bottom:0px"> About me </div>-->
-                    <div id="_portfolio" data-anchor="about" style="margin-bottom:0px; height:auto">
+                    <div id="_portfolio" data-anchor="about">
                         <div id="project-banner">
                             <p class="project-header">My Works</p>
                         </div>
@@ -411,8 +405,8 @@
                     <div id="layer-4"></div> 
                     <div id="layer-3"></div>
                     <div id="layer-4"></div> 
-                        <div id="main-content" class="porfolio-container" style="min-width:100%; padding:0">
-                            <div id="portfolio-grid" class="da-thumbs isotope" style="overflow: hidden; min-width:100%; display: block;background-color:black">
+                        <div id="main-content" class="porfolio-container">
+                            <div id="portfolio-grid" class="da-thumbs isotope">
                                 <div class="portfolio-item  folio-35 isotope-item" style="width: 355px; position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(355px, 0px, 0px);padding:0">
                                     <a href="breakSmasher.html" rel="2786"><img width="480" height="295" src="images/portfolio/breakout/Break_Cover_2.png" data-lazy-type="image" data-lazy-src="images/portfolio/breakout/Break_Cover_2.png" class="lazy attachment-folio-thumb2 wp-post-image data-lazy-ready" alt="awesome_light" style="display: inline;">
                                         <div class="da-animate da-slideFromTop" style="display: block;">

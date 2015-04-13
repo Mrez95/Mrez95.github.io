@@ -7,12 +7,12 @@ function position_h_center(t) {
 
 function animate_scroll_button() {
     $("#scroll_down").animate({ 
-        bottom: "45px"
-    }, 500, function() {
+        bottom: "21px"
+    }, 600, function() {
         $("#scroll_down").animate({
-            bottom: "20px"
+            bottom: "0px"
         }, {
-            duration: 2e3,
+            duration: 1450,
             easing: "easeOutBounce"
         })
     })

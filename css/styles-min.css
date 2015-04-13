@@ -234,6 +234,9 @@
     -moz-transform: translateY(-50px);
     transform: translateY(-50px);
 }
+#navbar #nav-points a {
+    color: black;
+}
 .hidden_nav {
     opacity: 0;
     -webkit-transform: translateY(-50px);
@@ -278,17 +281,24 @@ body.background {
     position: relative;
     background: rgba(255, 255, 255, 1);
     display: inline-block;
-    margin: 0 10px;
+    margin:4 !important;
     cursor: pointer;
     color: #2c3e50;
     box-shadow: inset 0 0 0 3px #2c3e50;
+    z-index:3;
     -webkit-transition: background .4s .5s;
     transition: background .4s .5s;
 }
+.box a{
+    text-decoration:none;
+    color:rgba(255,255,255,0.7)
+} 
 .box svg {
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%
 }
 .box svg line {
     stroke-width: 3;
@@ -362,6 +372,7 @@ body.background {
 section.demo-3 {
     padding: 4em 2em;
     text-align: center;
+    padding-top:0px
 }
 #nav-points a {
     text-decoration: none;
@@ -892,14 +903,22 @@ input:-ms-input-placeholder {
     padding-bottom:0px;
     margin-top:65px;
 }
+#about-photo img {
+    height:100%;
+}
 #personal-bio {
     display: block;
     position: relative;
     margin: auto;
     width: 66%;
+    height:auto;
     top: 10%;
     line-height: 200%;
     font-size: 20px;
+
+}
+#personal-bio a {
+    cursor:pointer;
 }
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
     display: block;
@@ -1123,6 +1142,14 @@ ol ol, ol ul, ul ol, ul ul {
     margin-right: auto;
     margin-left: auto;
     height:100%;
+    min-width:100%;
+    padding:0
+}
+.portfolio-grid {
+    overflow: hidden;
+    min-width:100%;
+    display: block;
+    background-color:black
 }
 .container:after, .container:before, .portfolio-container:after, .portfolio-container:before,.contact-container:after, .contact-container:before {
     content: " ";
@@ -1326,7 +1353,9 @@ nav {
     letter-spacing: 1px;
 }
 .name-container {
-    opacity: 0;
+    position: absolute;
+    left: 299px; 
+    opacity: 1;
 }
 .name-container hr {
     border: none;
@@ -1665,24 +1694,26 @@ blockquote {
     width: 100%;
     height: auto;
 }
-.icon-dol:before {
-    content: '\e80c'}
+.icon-dol {
+    width:58px;
+    opacity: 0.8;
+    filter: alpha(opacity=80); /* For IE8 and earlier */
+}
 a#scroll_down {
     font-family: proxima_regular!important;
     z-index: 3;
     position: absolute;
-    bottom: 25px;
+    bottom: 4px;
     display: block;
     text-align: center;
-    font-size: 15px!important;
     color: rgba(255, 255, 255, .7);
 }
 a#scroll_down:hover {
     text-decoration: none;
 }
-a#scroll_down:hover i {
-    color: rgba(255, 255, 255, 0.7);
-    opacity: .9;
+a#scroll_down:hover img {
+    opacity: 1;
+    filter: alpha(opacity=100);
 }
 a#scroll_down span {
     display: block;
@@ -1718,6 +1749,41 @@ a#scroll_down i {
    margin:14px;
    margin-top:0%; 
    margin-bottom:0%
+}
+.nav-logo{
+    position: absolute;
+    height:100%;
+    left: 47.2%
+}
+.nav-logo img {
+    height:100%
+}
+#_home{
+    position:relative;
+    height:100%;
+    margin-bottom:0px;
+    border-bottom:0px;
+}
+#_portfolio{
+    margin-bottom:0px; 
+    height:auto
+}
+.logo{
+    position:relative;
+    z-index:3
+}
+#nameTag{
+    position:relative;
+    z-index:3;
+    color:rgba(255,255,255,1)
+}
+#nameTag span {
+    font-weight: 300
+}
+#typer{
+    position:relative;
+    z-index:3;
+    color:rgba(255,255,255,0.7);
 }
 @font-face {
     font-family: fontello;
