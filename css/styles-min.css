@@ -777,16 +777,19 @@ div#loading {
     }*/
 }
 .fa {
-    font-size:32px;
+    font-size:38px;
+    margin: 4%;
     width:33px;
-    cursor:pointer;
-    color: rgba(255,255,255,0.4);
+    cursor: pointer;
+    color: rgba(255, 255, 255, .4);
 }
-.fa-envelope-square {
-    margin-right: 14%}
-.fa-github {
-    margin-left: 14%}
-.fa-paper-plane {
+.fa-envelope-square{
+    margin-right:14%;
+}
+.fa-github{
+    margin-left:14%;
+}
+.fa-paper-plane{
     font-size:30px;
     margin:5%;
     margin-left:6%;
