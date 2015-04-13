@@ -1879,6 +1879,9 @@ a#scroll_down i {
     margin-bottom:10px !important;
     margin-top:-5% !important;
 }
+.reach_me a{
+    width:45px;
+}
 @font-face {
     font-family: fontello;
     src: url(../font/fontello.eot?90621633);

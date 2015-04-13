@@ -138,27 +138,27 @@ $(".navbar-header .fa").on("mouseleave", function() {
 
 $(".fa-github").on("mouseenter", function() {
             $("#custom-stamp").attr("src", "images/stamps/github.png"), $(this).css({
-                color: "rgba(182,156,255,0.5)",
+                color: "rgba(182,156,255,0.6)",
                 transition: "color ease 0.4s"
             })
         }),$(".fa-facebook-square").on("mouseenter", function() {
             $("#custom-stamp").attr("src", "images/stamps/facebook.png"), $(this).css({
-                color: "rgba(89,119,204,0.5)",
+                color: "rgb(75, 102, 160, 0.6)",
                 transition: "color ease 0.4s"
             })
         }), $(".fa-linkedin-square").on("mouseenter", function() {
             $("#custom-stamp").attr("src", "images/stamps/linkedin.png"), $(this).css({
-                color: "rgba(0,168,255,0.5)",
+                color: "rgba(0,168,255,0.6)",
                 transition: "color ease 0.4s"
             })
         }), $(".fa-envelope-square").on("mouseenter", function() {
             $("#custom-stamp").attr("src", "images/stamps/email.png"), $(this).css({
-                color: "rgba(127,224,80,0.5)",
+                color: "rgba(127,224,80,0.6)",
                 transition: "color ease 0.4s"
             })
         }), $(".fa-envelope-square").on("mouseenter", function() {
             $("#custom-stamp").attr("src", "images/stamps/email.png"), $(this).css({
-                color: "rgba(127,224,80,0.5)",
+                color: "rgba(127,224,80,0.6)",
                 transition: "color ease 0.4s"
             })
         }), $("#submit").on("mouseenter", function() {
