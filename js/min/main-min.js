@@ -161,7 +161,9 @@ $(".fa-github").on("mouseenter", function() {
                 color: "rgba(127,224,80,0.6)",
                 transition: "color ease 0.4s"
             })
-        }), $("#submit").on("mouseenter", function() {
+        }), $(".reach_me i").on("mouseleave", function() {
+            $("#custom-stamp").attr("src", "images/stamps/choice.png")
+        }),$("#submit").on("mouseenter", function() {
             $("#custom-stamp").attr("src", "images/stamps/default.png")
         }), $("#client").on("focus", function() {
             $(this).attr("placeholder", "Your Name")
