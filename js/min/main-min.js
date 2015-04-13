@@ -163,7 +163,7 @@ $(".fa-github").on("mouseenter", function() {
             })
         }), $(".reach_me i").on("mouseleave", function() {
             $("#custom-stamp").attr("src", "images/stamps/choice.png")
-        }), $(".#submit").on("mouseleave", function() {
+        }), $("#submit").on("mouseleave", function() {
             $("#custom-stamp").attr("src", "images/stamps/choice.png")
         }),$("#submit").on("mouseenter", function() {
             $("#custom-stamp").attr("src", "images/stamps/default.png")
