@@ -802,8 +802,6 @@ div#loading {
 }
 .sender {
     font-family: 'Rock Salt', cursive;
-    margin-left:0px !important;
-    padding-left:16px;
 }
 #footer {
     position:relative; 
