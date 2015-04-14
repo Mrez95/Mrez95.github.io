@@ -1,227 +1,3 @@
-@font-face {
-    font-family: stalemate_regular;
-    src: url(../font/Stalemate-Regular.ttf);
-}
-@font-face{
-    font-family: lobster_bold_italic;
-    src: url(../font/LobsterTwo-BoldItalic.ttf);
-}
-@font-face {
-    font-family: proxima_regular;
-    src: url(../font/proximanova-regular-webfont.woff);
-}
-@font-face{
-    font-family: scriptina;
-    src: url(../font/SCRIPTIN.ttf);
-}
-@font-face{
-    font-family: great_vibe;
-    src: url(../font/GreatVibes-Regular.otf);
-}
-@font-face{
-    font-family: mawns;
-    src: url(../font/Mawns_Handwriting.ttf);
-}
-@font-face{
-    font-family: worstveld_oblique;
-    src: url(../font/Worstveld_oblique.otf);
-}
-@font-face{
-    font-family: worstveld_sling;
-    src: url(../font/WorstveldSling.ttf);
-}
-@font-face{
-    font-family: yore_script;
-    src: url(../font/Yore_Script.ttf);
-}
-@font-face{
-    font-family: allura_regular;
-    src: url(../font/Allura-Regular.ttf);
-}
-@font-face{
-    font-family: reis_regular;
-    src: url(../font/REIS-Regular.otf);
-}
-@font-face{
-    font-family: bell_regular;
-    src: url(../font/BELLABOO-Regular.otf);
-}
-@media screen and (max-width: 700px){
-    #default-nav{
-        background-color:rgba(0,0,0,0.2);
-    }
-    #about-photo img{
-        height:186px !important;
-    }
-    #about-photo{
-        margin-top:25px !important;
-        width: 186px !important;
-        height: 186px !important;
-        border-width: 5px 3px 0px !important;
-    }
-    #personal-bio{
-        margin-top: 70px !important;
-        font-size: 14px !important;
-        font-weight: 200 !important;
-        width: 80% !important;
-    }
-    .image h2{
-        font-size: 40px !important
-    }
-    #nameTag{
-        font-size:30px !important;
-        margin-top: 15px !important;
-    }
-    .name-container{
-        margin-top:50px;
-        height: 100% !important;
-        width: 100% !important;
-    }
-    .name-container hr{
-        width:86%;
-        margin-bottom: 15px !important;
-    }
-    .name-container .logo {
-        display: block;
-        margin: auto;
-        width: 115px;
-        margin-top: 10px !important;
-        margin-bottom:-13px !important;
-    }
-    .icon-dol{
-        font-size: 28px !important;
-    }
-    #typer + hr{
-         margin-top:15px !important;
-         margin-bottom: 25px !important;
-    }
-    #typer{
-        font-size:16px !important;
-        margin-top: 10px !important;
-        margin-bottom: 0px !important;
-    }
-    #container {
-        height: 150px !important;
-        width: 250px !important;
-        top: 35%;
-    }
-    .loader{
-        width:110% !important;
-        margin-left: 5% !important;
-        margin-right: 5% !important;
-    }
-    #qoute{
-        font-size:13px;
-        font-weight: 100;
-    }
-    #contact-title{
-        margin-top:45px !important;
-        font-size: 30px;
-    }
-    #postcard{
-        background-image: none !important;
-        border-top: none !important;
-        margin: 0 !important;
-    }
-    #inner-border{ 
-        background-image: none !important;
-        border-top: none !important;
-        margin: 0 !important;
-    }
-    #about-me{
-        display:none;
-    }
-    #contact-me{
-        border:none !important;
-        float:left !important;
-        width:100% !important;
-    }
-    #footer{
-        height: 110% !important;
-    }
-
-    #client {
-        width: 70% !important;
-    }
-    #return {
-        width: 40% !important;
-    }
-    #message-con-0 {
-        width: 59% !important
-    }
-    #message-con-1, #message-con-2, #message-con-3, #message-con-4 {
-        width: 95% !important
-    }
-    #icon-wrapper{
-        display:none;
-    }
-    span.life{
-        font-size: 36px;
-    }
-    span.qoute-dance{
-        font-size: 42px;
-    }
-    span.qoute-typed{
-        margin-left:11%;
-        margin-right:85%;
-        font-size: 110px;
-    }
-    span.qoute-right{
-        font-size: 65px;
-        visibility: hidden;
-    }
-    div.qoute-life{
-        padding-bottom: 50px;
-    }
-    .navbar-brand {
-        padding-left: 3px !important;
-        font-size: 16px !important;
-    }
-    .box{
-        height:43px !important;
-        margin-bottom: 3px !important;
-    }
-    .box h5{
-        font-size: 15px;
-    }
-    .demo-3{
-        width:120px !important;
-        margin: auto !important;
-        padding:0px !important;
-    }
-    .nav-logo{
-        display: none !important;
-    }
-    .letter-writing{
-        margin: 20px !important;
-    }
-    #custom-stamp{
-        display:none;
-    }
-    #social-wrapper{
-        position: relative !important;
-        width:208px !important;
-        margin: auto !important;
-        margin-top: 45px !important;
-        padding:0px !important;
-    }
-}
-/*iphone 4,4s,5,5s*/
-@media screen and (max-width: 320px){
-    #return {
-        width: 35% !important;
-    }
-}
-@media screen and (min-width: 700px){
-    #default-nav{
-      background-color:rgba(0,0,0,0); 
-    }
-    .name-container .logo {
-    display: block;
-    margin: auto;
-    width: 225px;
-}
-}
 #navbar {
     opacity: 0;
     background-color: #fff;
@@ -653,14 +429,6 @@ div#loading {
     padding-top: 12px;
     padding-bottom: 16px;
 }
-@media screen and (max-width: 700px) {
-    #about-banner{
-        height:100px;
-    }
-    .about-header{
-        font-size: 40px;
-    }
-}
 #project-banner{
     position: relative;
     width: 100%;
@@ -740,38 +508,6 @@ div#loading {
     margin-top:30px !important;
     margin-bottom:25px;
     z-index:4;
-}
-
-@media screen and (max-width: 700px) {
-
-    .qoute-body{
-        font-family:worstveld_sling;
-        font-weight:300;
-        font-size:20px;
-    }
-    .qoute-dance{
-        font-family:great_vibe;
-        font-weight:200;
-        font-size:45px;
-    }
-    #postcard{
-        width: 100%;
-    }
-    #form-input{
-        position: relative;
-        margin-top: 50px;
-    }
-/*    #contact_layer {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        min-width: 100%;
-        min-height: 100%;
-        width: auto;
-        height: auto;
-        z-index: 0;
-        background: url(../images/filter1.png) bottom center;
-    }*/
 }
 #submit {
     position:relative;
@@ -1204,11 +940,7 @@ ol ol, ol ul, ul ol, ul ul {
 .navbar-header:after {
     clear: both;
 }
-@media (min-width:768px) {
-    .navbar-header {
-    float: left;
-}
-}.navbar-collapse {
+.navbar-collapse {
     max-height: 340px;
     overflow-x: visible;
     padding-right: 15px;
@@ -1418,31 +1150,7 @@ blockquote {
     color: #000;
     font-weight: 300;
 }
-@media (min-width:768px) {
-    .navbar-collapse {
-    width: auto;
-    border-top: 0;
-    box-shadow: none;
-}
-.navbar-collapse.collapse {
-    display: block!important;
-    height: auto!important;
-    padding-bottom: 0;
-    overflow: visible!important;
-}
-.navbar-collapse.in {
-    overflow-y: visible;
-}
-.navbar-collapse .navbar-nav.navbar-left:first-child {
-    margin-left: -15px;
-}
-.navbar-collapse .navbar-nav.navbar-right:last-child {
-    margin-right: -15px;
-}
-.navbar-collapse .navbar-text:last-child {
-    margin-right: 0;
-}
-}.container>.navbar-collapse, .container>.navbar-header {
+.container>.navbar-collapse, .container>.navbar-header {
     margin-right: -15px;
     margin-left: -15px;
     border-width: 0 0 1px;
@@ -1490,11 +1198,7 @@ blockquote {
 .navbar-toggle .icon-bar+.icon-bar {
     margin-top: 4px;
 }
-@media (min-width:768px) { 
-    .navbar-toggle {
-    display: none;
-}
-}.navbar-nav {
+.navbar-nav {
     margin: 6.5px -15px;
 }
 .navbar-nav>li>a {
@@ -1502,45 +1206,7 @@ blockquote {
     padding-bottom: 10px;
     line-height: 24px;
 }
-@media (max-width:767px) {
-    .navbar-nav .open .dropdown-menu {
-    position: static;
-    float: none;
-    width: auto;
-    margin-top: 0;
-    background-color: transparent;
-    border: 0;
-    box-shadow: none;
-}
-.navbar-nav .open .dropdown-menu .dropdown-header, .navbar-nav .open .dropdown-menu>li>a {
-    padding: 5px 15px 5px 25px;
-}
-.navbar-nav .open .dropdown-menu>li>a {
-    line-height: 24px;
-}
-.navbar-nav .open .dropdown-menu>li>a:focus, .navbar-nav .open .dropdown-menu>li>a:hover {
-    background-image: none;
-}
-}@media (min-width:768px) {
-    .navbar-nav {
-    float: left;
-    margin: 0;
-}
-.navbar-nav>li {
-    float: left;
-}
-.navbar-nav>li>a {
-    padding-top: 13px;
-    padding-bottom: 13px;
-}
-}@media (min-width:768px) {
-    .navbar-left {
-    float: left!important;
-}
-.navbar-right {
-    float: right!important;
-}
-}.navbar-form {
+.navbar-form {
     margin: 6px -15px;
     padding: 10px 15px;
     border-top: 1px solid transparent;
@@ -1850,13 +1516,6 @@ a#scroll_down i {
 }
 .reach_me a{
     width:45px;
-}
-@font-face {
-    font-family: fontello;
-    src: url(../font/fontello.eot?90621633);
-    src: url(../font/fontello.eot?90621633#iefix) format('embedded-opentype'), url(../font/fontello.woff?90621633) format('woff'), url(../font/fontello.ttf?90621633) format('truetype'), url(../font/fontello.svg?90621633#fontello) format('svg');
-    font-weight: 400;
-    font-style: normal;
 }
 [class*=" icon-"]:before, [class^=icon-]:before {
     font-family: fontello;

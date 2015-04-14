@@ -1,0 +1,160 @@
+@media screen and (max-width: 700px){
+    #default-nav{
+        background-color:rgba(0,0,0,0.2);
+    }
+    #about-photo img{
+        height:186px !important;
+    }
+    #about-photo{
+        margin-top:25px !important;
+        width: 186px !important;
+        height: 186px !important;
+        border-width: 5px 3px 0px !important;
+    }
+    #personal-bio{
+        margin-top: 70px !important;
+        font-size: 14px !important;
+        font-weight: 200 !important;
+        width: 80% !important;
+    }
+    .image h2{
+        font-size: 40px !important
+    }
+    #nameTag{
+        font-size:30px !important;
+        margin-top: 15px !important;
+    }
+    .name-container{
+        margin-top:50px;
+        height: 100% !important;
+        width: 100% !important;
+    }
+    .name-container hr{
+        width:86%;
+        margin-bottom: 15px !important;
+    }
+    .name-container .logo {
+        display: block;
+        margin: auto;
+        width: 115px;
+        margin-top: 10px !important;
+        margin-bottom:-13px !important;
+    }
+    .icon-dol{
+        font-size: 28px !important;
+    }
+    #typer + hr{
+         margin-top:15px !important;
+         margin-bottom: 25px !important;
+    }
+    #typer{
+        font-size:16px !important;
+        margin-top: 10px !important;
+        margin-bottom: 0px !important;
+    }
+    #container {
+        height: 150px !important;
+        width: 250px !important;
+        top: 35%;
+    }
+    .loader{
+        width:110% !important;
+        margin-left: 5% !important;
+        margin-right: 5% !important;
+    }
+    #qoute{
+        font-size:13px;
+        font-weight: 100;
+    }
+    #contact-title{
+        margin-top:45px !important;
+        font-size: 30px;
+    }
+    #postcard{
+        background-image: none !important;
+        border-top: none !important;
+        margin: 0 !important;
+    }
+    #inner-border{ 
+        background-image: none !important;
+        border-top: none !important;
+        margin: 0 !important;
+    }
+    #about-me{
+        display:none;
+    }
+    #contact-me{
+        border:none !important;
+        float:left !important;
+        width:100% !important;
+    }
+    #footer{
+        height: 110% !important;
+    }
+
+    #client {
+        width: 70% !important;
+    }
+    #return {
+        width: 40% !important;
+    }
+    #message-con-0 {
+        width: 59% !important
+    }
+    #message-con-1, #message-con-2, #message-con-3, #message-con-4 {
+        width: 95% !important
+    }
+    #icon-wrapper{
+        display:none;
+    }
+    span.life{
+        font-size: 36px;
+    }
+    span.qoute-dance{
+        font-size: 42px;
+    }
+    span.qoute-typed{
+        margin-left:11%;
+        margin-right:85%;
+        font-size: 110px;
+    }
+    span.qoute-right{
+        font-size: 65px;
+        visibility: hidden;
+    }
+    div.qoute-life{
+        padding-bottom: 50px;
+    }
+    .navbar-brand {
+        padding-left: 3px !important;
+        font-size: 16px !important;
+    }
+    .box{
+        height:43px !important;
+        margin-bottom: 3px !important;
+    }
+    .box h5{
+        font-size: 15px;
+    }
+    .demo-3{
+        width:120px !important;
+        margin: auto !important;
+        padding:0px !important;
+    }
+    .nav-logo{
+        display: none !important;
+    }
+    .letter-writing{
+        margin: 20px !important;
+    }
+    #custom-stamp{
+        display:none;
+    }
+    #social-wrapper{
+        position: relative !important;
+        width:208px !important;
+        margin: auto !important;
+        margin-top: 45px !important;
+        padding:0px !important;
+    }
+}
