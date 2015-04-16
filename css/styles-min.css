@@ -74,8 +74,8 @@ body.background {
     height: 100%
 }
 .box svg line {
-    stroke-width: 3;
-    stroke: rgba(255, 255, 255, .3);
+    stroke-width: 1;
+    stroke: rgba(255, 255, 255, 0.2);
     -webkit-transition: all .8s ease-in-out;
     transition: all .8s ease-in-out;
 }
@@ -104,8 +104,8 @@ body.background {
     transition: all .5s;
 }
 .demo-3 .box:hover svg line {
-    stroke-width: 8;
-    stroke: rgba(255, 255, 255, .4);
+    stroke-width: 3;
+    stroke: rgba(255, 255, 255, 0.4);
 }
 .box h5 {
     -webkit-transition: color .5s;
@@ -1339,9 +1339,9 @@ blockquote {
     height: auto;
 }
 .icon-dol {
-    width:58px;
-    opacity: 0.8;
-    filter: alpha(opacity=80); /* For IE8 and earlier */
+    width:60px;
+    opacity: 0.85;
+    filter: alpha(opacity=85); /* For IE8 and earlier */
 }
 a#scroll_down {
     font-family: proxima_regular!important;
