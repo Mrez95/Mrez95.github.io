@@ -52,7 +52,6 @@ body.background {
     width: 120px;
     height: 50px;
     position: relative;
-    background: rgba(255, 255, 255, 1);
     display: inline-block;
     margin:4 !important;
     cursor: pointer;
@@ -86,7 +85,7 @@ body.background {
     stroke-dasharray: 60 30;
 }
 .demo-3 .box {
-    background: rgba(255,255,255,0);
+    background: rgba(255,255,255,0.1);
     color: #fff;
     box-shadow: none;
     -webkit-transition: background .3s;
@@ -104,10 +103,11 @@ body.background {
     transition: all .5s;
 }
 .demo-3 .box:hover svg line {
-    stroke-width: 3;
-    stroke: rgba(255, 255, 255, 0.4);
+    stroke-width: 4;
+    stroke: rgba(255, 255, 255, 0.5);
 }
 .box h5 {
+    color: rgba(255, 255, 255, .7);
     -webkit-transition: color .5s;
     transition: color .5s;
 }
