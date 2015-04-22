@@ -105,6 +105,16 @@ $(document).ready(function() {
                 }), $(this).dequeue()
             })
         }), 
+// $(".splash").mouseover(function() {
+//                 $(this).css({
+//                 opacity: "0.1"
+//             })
+// }),
+// $(".splash").mouseout(function() {
+//                 $(this).css({
+//                 opacity: "1"
+//             })
+// }),
 $(".fa-git").on("mouseenter", function() {
 			$(this).css({
                 color: "rgba(0,0,0,0.4)"
@@ -184,15 +194,6 @@ $(".fa-github").on("mouseenter", function() {
                 color: "rgba(255,255,255,0.4)",
                 transition: "color ease 0.5s"
             })
-        })
-    }), $(function() {
-        $("a[href*=#]:not([href=#])").click(function() {
-            if (location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") && location.hostname == this.hostname) {
-                var t = $(this.hash);
-                if (t = t.length ? t : $("[name=" + this.hash.slice(1) + "]"), t.length) return $("html,body").animate({
-                    scrollTop: t.offset().top
-                }, 1e3), !1
-            }
         })
     }), $(window).resize(function() {
         position_h_center("scroll_down");
@@ -286,7 +287,7 @@ $(window).load(function() {
         if (n.csstransforms) {
             var f = n.csstransforms3d ? {
                     translate: function(t) {
-                        return "translate3d(" + t[0] + "px, " + t[1] + "px, 0) "
+                        return
                     },
                     scale: function(t) {
                         return "scale3d(" + t + ", " + t + ", 1) "
@@ -1871,98 +1872,13 @@ jQuery.easing.jswing = jQuery.easing.swing, jQuery.extend(jQuery.easing, {
                 "background-image": "url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAABJlBMVEXr6eb/2oD/wi7/xjr/0mP/ykf/tQD/vBj/3o7/uQ//vyL/twebhgD/4pzX1K3z8e349vK6tHCilCWbiQymn0jGworr6dXQza3HxcKkn1vWvV/5uRfk4dXZ1bD18+/52YebiAmyr5S9mhCzrWq5t6ufjRH54aLs0oS+qD751XqPhAybhwXsujG3sm+Zk0PTwG6Shg+PhhObhwOPgQL4zV2nlyrf27uLfgCPhRHu7OmLgAafkyiWkD3l49ibiAfTs0C+lgCniwD4sgDJxqOilzDWowWFfAH08uebig6qpFHBvH/aw26FfQTQzsvy8OyEfz20r3jAvaKbhgG9q0nc2LbZxXanoUu/u5WSggCtp1anpJKdmFz/zlX/1nGJiYmuq5Dx7+sAAADoPUZSAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfdBgUBGhh4aah5AAAAlklEQVQY02NgoBIIE8EUcwn1FkIXM1Tj5dDUQhPU502Mi7XXQxGz5uVIjGOJUUUW81HnYEyMi2HVcUOICQZzMMYmxrEyMylJwgUt5BljWRLjmJm4pI1hYp5SQLGYxDgmLnZOVxuooClIDKgXKMbN5ggV1ACLJcaBxNgcoiGCBiZwdWxOETBDrTyEFey0jYJ4eHjMGWgEAIpRFRCUt08qAAAAAElFTkSuQmCC)"
             }
         }
-    }), jQuery(document).ready(function() {
-        function t() {
-            var t = jQuery("#main-content").width(),
-                e = 3;
-            return 420 > t ? e = 1 : t >= 420 && 990 > t ? e = 2 : t >= 990 && 1320 > t ? e = 3 : t >= 1320 && 2100 > t ? e = 4 : t >= 2100 && (e = 5), e
-        }
-
-        function e() {
-            var e = t();
-            s = jQuery(window).width() < 768 ? 0 : n;
-            var i = jQuery("#main-content").width(),
-                o = i / e;
-            o = Math.floor(o), jQuery(".portfolio-item").each(function(t) {
-                jQuery(this).css({
-                    width: o + "px"
-                })
-            })
-        }
-
-        function i() {
-            var t = jQuery(window).width();
-            e(), o.isotope("reLayout", function() {
-                jQuery(window).width() != t && setTimeout(function() {
-                    i()
-                }, 10)
-            })
-        }
-        var o = jQuery("#portfolio-grid");
-        jQuery("html, document, body").scrollTop(0), jQuery("#portfolio-grid").hide(), jQuery("body").append('<div id="preloader"></div>'), jQuery("#close-post").live("click", function() {
-            jQuery("#portfolio-content").slideUp(300, function() {
-                jQuery("#portfolio-content").html("")
-            })
-        }), jQuery(".portfolio-item a, #prev-post, #next-post").live("click", function() {
-            jQuery("#portfolio-content").html("").fadeOut(200), jQuery(".loading-folio").fadeIn(200);
-            var t = jQuery(this).attr("rel");
-            jQuery.post(tie.ajaxurl, {
-                action: "tie_get_folio",
-                id: t
-            }, function(t) {
-                var e = jQuery(t);
-                e.fitVids(), jQuery("body").animate({
-                    scrollTop: "0px"
-                }, 1e3), jQuery("#portfolio-content").append(e), jQuery(".loading-folio").fadeOut(200, function() {
-                    jQuery("#portfolio-content").fadeIn(500)
-                })
-            }, "html")
-        }), jQuery(window).load(function() {
-            e(), o.isotope({
-                itemSelector: ".portfolio-item",
-                resizable: !1,
-                animationOptions: {
-                    duration: 400,
-                    easing: "swing",
-                    queue: !1
-                },
-                masonry: {}
-            }), i(), jQuery("#preloader").fadeOut("fast", function() {
-                jQuery(this).remove(), jQuery("#portfolio-grid").fadeIn("slow"), jQuery("#portfolio-grid").isotope();
-                var t = window.location.hash.match(/\d+$/);
-                t = parseInt(t), t && (jQuery("#portfolio-content").html("").fadeOut(200), jQuery(".loading-folio").fadeIn(200), jQuery.post(tie.ajaxurl, {
-                    action: "tie_get_folio",
-                    id: t
-                }, function(t) {
-                    var e = jQuery(t);
-                    e.fitVids(), jQuery("body").animate({
-                        scrollTop: "0px"
-                    }, 1e3), jQuery("#portfolio-content").append(e), jQuery(".loading-folio").fadeOut(200, function() {
-                        jQuery("#portfolio-content").fadeIn(500)
-                    })
-                }, "html"))
-            })
-        }), jQuery("#filters a").click(function() {
-            var t = jQuery(this).attr("data-filter");
-            return jQuery("#filters li").removeClass("current"), jQuery(this).parent().addClass("current"), e(), o.isotope({
-                filter: t
-            }), !1
-        });
-        var n = 238,
-            s = n;
-        jQuery(window).on("debouncedresize", function(t) {
-            i()
-        })
-    }), jQuery(function() {
+    }), jQuery(function() { // fly-in sliders
         jQuery(".da-thumbs > .portfolio-item").hoverdir()
     }),
     function(t, e) {
         t.HoverDir = function(e, i) {
             this.$el = t(i), this._init(e)
-        }, t.HoverDir.defaults = {
-            hoverDelay: 0,
-            reverse: !1
-        }, t.HoverDir.prototype = {
+        },   t.HoverDir.prototype = { // fly-in sliders
             _init: function(e) {
                 this.options = t.extend(!0, {}, t.HoverDir.defaults, e), this._loadEvents()
             },
@@ -2013,10 +1929,7 @@ jQuery.easing.jswing = jQuery.easing.swing, jQuery.extend(jQuery.easing, {
                 }
             }
         };
-        var i = function(t) {
-            this.console && console.error(t)
-        };
-        t.fn.hoverdir = function(e) {
+        t.fn.hoverdir = function(e) { // slider
             if ("string" == typeof e) {
                 var o = Array.prototype.slice.call(arguments, 1);
                 this.each(function() {

@@ -1,0 +1,55 @@
+@font-face {
+    font-family: stalemate_regular;
+    src: url(../font/Stalemate-Regular.ttf);
+}
+@font-face{
+    font-family: lobster_bold_italic;
+    src: url(../font/LobsterTwo-BoldItalic.ttf);
+}
+@font-face {
+    font-family: proxima_regular;
+    src: url(../font/proximanova-regular-webfont.woff);
+}
+@font-face{
+    font-family: scriptina;
+    src: url(../font/SCRIPTIN.ttf);
+}
+@font-face{
+    font-family: great_vibe;
+    src: url(../font/GreatVibes-Regular.otf);
+}
+@font-face{
+    font-family: mawns;
+    src: url(../font/Mawns_Handwriting.ttf);
+}
+@font-face{
+    font-family: worstveld_oblique;
+    src: url(../font/Worstveld_oblique.otf);
+}
+@font-face{
+    font-family: worstveld_sling;
+    src: url(../font/WorstveldSling.ttf);
+}
+@font-face{
+    font-family: yore_script;
+    src: url(../font/Yore_Script.ttf);
+}
+@font-face{
+    font-family: allura_regular;
+    src: url(../font/Allura-Regular.ttf);
+}
+@font-face{
+    font-family: reis_regular;
+    src: url(../font/REIS-Regular.otf);
+}
+@font-face{
+    font-family: bell_regular;
+    src: url(../font/BELLABOO-Regular.otf);
+}
+@font-face {
+    font-family: fontello;
+    src: url(../font/fontello.eot?90621633);
+    src: url(../font/fontello.eot?90621633#iefix) format('embedded-opentype'), url(../font/fontello.woff?90621633) format('woff'), url(../font/fontello.ttf?90621633) format('truetype'), url(../font/fontello.svg?90621633#fontello) format('svg');
+    font-weight: 400;
+    font-style: normal;
+}

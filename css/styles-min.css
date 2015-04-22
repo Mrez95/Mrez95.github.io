@@ -488,7 +488,7 @@ div#loading {
     display: block;
     position: relative;
     overflow: hidden;
-    top: 75%;
+    top: 80%;
     right: 10%;
     height: 100%;
     font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
@@ -523,8 +523,8 @@ div#loading {
 }
 #submit:hover {
     cursor: pointer;
-    color: rgba(255, 255, 255, .8);
-    border: 1px solid rgba(255, 255, 255, .8);
+    color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(255, 255, 255, 1);
     -webkit-transition: color ease .5s;
     -moz-transition: color ease .5s;
     transition: color ease .5s;
@@ -538,6 +538,7 @@ div#loading {
 }
 .sender {
     font-family: 'Rock Salt', cursive;
+    font-size: 13px;
     padding-left: 3px;
 }
 #footer {
@@ -842,7 +843,7 @@ ol, ul {
 ol ol, ol ul, ul ol, ul ul {
     margin-bottom: 0;
 }
-.container {
+.nav-container {
     position:relative;
     margin-right: auto;
     margin-left: auto;
@@ -851,7 +852,7 @@ ol ol, ol ul, ul ol, ul ul {
     height:100%;
     z-index:-2;
 }
-.portfolio-container, .contact-container{
+.contact-container{
     position:relative;
     margin-right: auto;
     margin-left: auto;
@@ -859,17 +860,11 @@ ol ol, ol ul, ul ol, ul ul {
     min-width:100%;
     padding:0
 }
-.portfolio-grid {
-    overflow: hidden;
-    min-width:100%;
-    display: block;
-    background-color:black
-}
-.container:after, .container:before, .portfolio-container:after, .portfolio-container:before,.contact-container:after, .contact-container:before {
+.nav-container:after, .nav-container:before,.contact-container:after, .contact-container:before {
     content: " ";
     display: table;
 }
-.container:after, .portfolio-container:after, .contact-container:after{
+.nav-container:after, .contact-container:after{
     clear: both;
 }
 .collapse {
@@ -1150,7 +1145,7 @@ blockquote {
     color: #000;
     font-weight: 300;
 }
-.container>.navbar-collapse, .container>.navbar-header {
+.nav-container>.navbar-collapse, .nav-container>.navbar-header {
     margin-right: -15px;
     margin-left: -15px;
     border-width: 0 0 1px;
@@ -1309,18 +1304,20 @@ blockquote {
 .da-slideLeft {
     left: 0;
 }
-.portfolio-item a img {
+.portfolio-item .splash{ 
+    border: 0.24em double rgba(0,0,0,0.7);
     -webkit-transition: 500ms;
     -moz-transition: 500ms;
     -o-transition: 500ms;
     transition: 500ms;
 }
-.portfolio-item a:hover img {
-    transform: scale(1.15, 1.15);
-    -ms-transform: scale(1.15, 1.15);
-    -webkit-transform: scale(1.15, 1.15);
-    -o-transform: scale(1.15, 1.15);
-    -moz-transform: scale(1.15, 1.15);
+/*FIX THIS ASAP!*/
+.portfolio-item a:hover .splash {
+/*    border: 0px solid #000;
+    border-radius: 40%;*/
+/*    opacity: 0.8;
+    border:0px solid rgba(0,0,0,0.7);*/
+    opacity: 0.1;
 }
 #portfolio-content {
     display: none;
@@ -1328,6 +1325,7 @@ blockquote {
 .portfolio-item {
     float: left;
     line-height: 0;
+    overflow: hidden;
 }
 .portfolio-item a {
     display: block;
@@ -1337,6 +1335,7 @@ blockquote {
 .portfolio-item img {
     width: 100%;
     height: auto;
+    overflow: hidden;
 }
 .icon-dol {
     width:60px;

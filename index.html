@@ -6,15 +6,16 @@
         <link href="css/font.css" rel="stylesheet" media="screen">
         <link href="css/styles-min.css" rel="stylesheet" media="screen">
         <link href="css/mobile.css" rel="stylesheet" media="screen">
+        <link href="css/skeleton.css" rel="stylesheet" media="screen">
         <link href="http://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet" type="text/css">
         <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
         <link rel="shortcut icon" href="images/mstile-310x310.png" type="image/x-icon">
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Nothing+You+Could+Do' rel='stylesheet' type='text/css'>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <script src="js/min/main-min.js" type="text/javascript"></script>
         <script>
         $(document).ready(function() {
@@ -149,7 +150,7 @@
                     <div class="loader">
                         <span class="progress"></span>
                     </div>
-                    <div id="qoute"><b >“</b> Welcome every day as if it was your first. <br>Cherish every moment as if it were to be your last&nbsp;<b>”</b><p>-<b><i>  Eddie Zhang</i></b></p></div>
+                    <div id="qoute"><b >“</b> Welcome every day as if it was your first. <br>Cherish every moment as if it were your last&nbsp;<b>”</b><p>-<b><i>  Eddie Zhang</i></b></p></div>
                 </div>
             </div>
             <script type="text/javascript">
@@ -158,18 +159,18 @@
                         'overflow': 'hidden',
                         'height': '100%'
                     })
-                    $("#qoute").delay(2200)
+                    $("#qoute").delay(2500)
                     .queue(function() {
                         $(this).stop().animate({
                             top: '50%',
                             opacity: '1'
-                        }, 2500, 'easeOutCubic');
+                        }, 1700, 'easeOutCubic');
                         $(this).dequeue();
                     });
                     </script>
 
                     <nav class="navbar navbar-inverse navbar-fixed-top" id="default-nav">
-                        <div class="container">
+                        <div class="nav-container">
                             <div class="navbar-header">
                                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                                     <span class="icon-bar"></span>
@@ -191,7 +192,7 @@
                         </div>
                     </nav>
                     <nav class="navbar navbar-inverse navbar-fixed-top hidden_nav" id="navbar">
-                        <div class="container">
+                        <div class="nav-container">
                             <div class="navbar-header">
                                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                                     <span class="icon-bar"></span>
@@ -332,10 +333,10 @@
                     <div id="layer-4"></div> 
                     <div id="layer-3"></div>
                     <div id="layer-4"></div> 
-                        <div id="main-content" class="porfolio-container">
-                            <div id="portfolio-grid" class="da-thumbs isotope">
-                                <div class="portfolio-item  folio-35 isotope-item" style="width: 355px; position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(355px, 0px, 0px);padding:0">
-                                    <a href="breakSmasher.html" rel="2786"><img width="480" height="295" src="images/portfolio/breakout/Break_Cover_2.png" data-lazy-type="image" data-lazy-src="images/portfolio/breakout/Break_Cover_2.png" class="lazy attachment-folio-thumb2 wp-post-image data-lazy-ready" alt="awesome_light" style="display: inline;">
+                        <div class="container">
+                            <div class="da-thumbs isotope row">
+                                <div class="portfolio-item isotope-item one-third column">
+                                    <a href="breakSmasher.html"><img width="480" height="295" class="splash" src="images/portfolio/breakout/Break_Cover_2.png" style="display: inline;">
                                         <div class="da-animate da-slideFromTop" style="display: block;">
                                             <span>
                                                 <img style="width:45px;height:45px;margin-top:-50px" src="images/breakout.svg"> 
@@ -345,8 +346,8 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="portfolio-item  folio-36 folio-26 folio-44 folio-45 isotope-item" style="width: 355px; position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(0px, 218px, 0px);padding:0">
-                                    <a href="oculus.html" rel="2016"><img width="480" height="295" src="images/portfolio/oculus/oculus_cover.png" data-lazy-type="image" data-lazy-src="images/portfolio/oculus/oculus_cover.png" class="lazy attachment-folio-thumb2 wp-post-image data-lazy-ready" alt="" style="display: inline;">
+                                <div class="portfolio-item isotope-item one-third column" >
+                                    <a href="oculus.html" rel="2016"><img width="480" height="295" class="splash" src="images/portfolio/oculus/oculus_cover.png" data-lazy-src="images/portfolio/oculus/oculus_cover.png" alt="" style="display: inline;">
                                         <div class="da-animate da-slideFromTop" style="display: block;">
                                             <span>
                                                 <img style="width:47px;height:47px;margin-top:-50px" src="images/oculus_logo.png"> 
@@ -356,116 +357,123 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="portfolio-item  folio-44 folio-35 isotope-item" style="width: 355px; position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(355px, 218px, 0px);padding:0">
-                                    <a href="pacman.html" rel="1943"><img width="480" height="295" src="images/portfolio/pacman/pacman_cover.png" data-lazy-type="image" data-lazy-src="images/portfolio/pacman/pacman_cover.png" class="lazy attachment-folio-thumb2 wp-post-image data-lazy-ready" alt="" style="display: inline;">
+                                <div class="portfolio-item isotope-item one-third column">
+                                    <a href="pacman.html" rel="1943"><img width="480" height="295" class="splash" src="images/portfolio/pacman/pacman_cover.png" style="display: inline;">
                                         <div class="da-animate da-slideFromTop" style="display: block;">
                                             <span>
-                                                <img style="width:103px;height:40px;margin-top:-50px" src="images/pacman_logo.png"> 
+                                                <img style="width:103px;height:40px;margin-top:-50px" src="images/pacman_logo.png">
                                                 <h2>Pac-Man</h2>
                                                 <h3 style="color:#ccc">Classic Arcade Game</h3>
                                             </span>
                                         </div>
                                     </a>
                                 </div>
-                                <div class="portfolio-item  folio-33 folio-38 folio-35 isotope-item" style="width: 355px; position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(355px, 436px, 0px);padding:0">
-                                    <a href="ScarletNight.html" rel="1656"><img width="480" height="295" src="images/portfolio/scarletNight/scarlet_cover.png" data-lazy-type="image" data-lazy-src="images/portfolio/scarletNight/scarlet_cover.png" class="lazy attachment-folio-thumb2 wp-post-image data-lazy-ready" alt="" style="display: inline;">
+
+                                <div class="da-thumbs isotope row">
+                                <div class="portfolio-item isotope-item one-third column">
+                                    <a href="ScarletNight.html" rel="1656"><img width="480" height="295" class="splash" src="images/portfolio/scarletNight/scarlet_cover.png" data-lazy-src="images/portfolio/scarletNight/scarlet_cover.png" alt="" style="display: inline;">
                                         <div class="da-animate da-slideFromLeft" style="display: block;">
                                             <span>
-                                                <img style="width:61px;height:61px;margin-top:-48px" src="images/guns.png"> 
+                                                <img style="width:61px;height:61px;margin-top:-48px" src="images/guns.png">
                                                 <h2>Scarlet Night</h2>
                                                 <h3 style="color:#ccc">Java SSB Fighter</h3>
                                             </span>
                                         </div>
                                     </a>
                                 </div>
-                                <div class="portfolio-item  folio-35 isotope-item" style="width: 355px; position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(710px, 0px, 0px);padding:0">
-                                    <a href="conshield.html" rel="2714"><img width="480" height="295" src="images/portfolio/Conshield/Conshield_Cover_2.png" data-lazy-type="image" data-lazy-src="images/portfolio/Conshield/Conshield_Cover_2.png" style="display: inline;">
+                                <div class="portfolio-item isotope-item one-third column">
+                                    <a href="conshield.html" rel="2714"><img width="480" height="295" class="splash" src="images/portfolio/Conshield/Conshield_Cover_2.png" data-lazy-src="images/portfolio/Conshield/Conshield_Cover_2.png" style="display: inline;">
                                         <div class="da-animate da-slideFromBottom" style="display: block;">
                                             <span>
-                                                <img style="width:52px;height:52px;margin-top:-50px" src="images/shield-icon.png"> 
+                                                <img style="width:52px;height:52px;margin-top:-50px" src="images/shield-icon.png">
                                                 <h2>ConShield</h2>
                                                 <h3 style="color:#ccc">Personal Security App</h3>
                                             </span>
                                         </div>
                                     </a>
                                 </div>
-                                <div class="portfolio-item  folio-35 isotope-item" style="width: 355px; position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(710px, 0px, 0px);padding:0">
-                                    <a href="pathfind.html" rel="2714"><img width="480" height="295" src="images/portfolio/pathfind/pathfind.png" data-lazy-type="image" data-lazy-src="images/portfolio/pathfind/pathfind.png" style="display: inline;">
+                                <div class="portfolio-item isotope-item one-third column">
+                                    <a href="pathfind.html" rel="2714"><img width="480" height="295" class="splash" src="images/portfolio/pathfind/pathfind.png" data-lazy-src="images/portfolio/pathfind/pathfind.png" style="display: inline;">
                                         <div class="da-animate da-slideFromBottom" style="display: block;">
                                             <span>
-                                                <img style="width:50px;height:50px;margin-top:-50px;margin-bottom:3px" src="images/web.svg"> 
+                                                <img style="width:50px;height:50px;margin-top:-50px;margin-bottom:3px" src="images/web.svg">
                                                 <h2>Indoor Navigator</h2>
                                                 <h3 style="color:#ccc">Android Pathfinder App</h3>
                                             </span>
                                         </div>
                                     </a>
                                 </div>
-                                <div class="portfolio-item  folio-35 isotope-item" style="width: 355px; position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(710px, 0px, 0px);padding:0">
-                                    <a href="recorder.html" rel="2714"><img width="480" height="295" src="images/portfolio/recorder/recorder_cover.png" data-lazy-type="image" data-lazy-src="images/portfolio/recorder/recorder_cover.png" style="display: inline;">
+                            </div>
+                            <div class="da-thumbs isotope row">
+                                <div class="portfolio-item isotope-item one-third column">
+                                    <a href="recorder.html" rel="2714"><img width="480" height="295" class="splash" src="images/portfolio/recorder/recorder_cover.png" data-lazy-src="images/portfolio/recorder/recorder_cover.png" style="display: inline;">
                                         <div class="da-animate da-slideFromBottom" style="display: block;">
                                             <span>
-                                                <img style="width:45px;height:45px;margin-top:-50px" src="images/interface.svg"> 
+                                                <img style="width:45px;height:45px;margin-top:-50px" src="images/interface.svg">
                                                 <h2>Re'corder</h2>
                                                 <h3 style="color:#ccc">OCR Budget Planner</h3>
                                             </span>
                                         </div>
                                     </a>
                                 </div>
-                                <div class="portfolio-item  folio-35 isotope-item" style="width: 355px; position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(710px, 0px, 0px);padding:0">
-                                    <a href="fox.html" rel="2714"><img width="480" height="295" src="images/fox-2.png" data-lazy-type="image" data-lazy-src="images/portfolio/fox/fox_cover.png"style="display: inline;">
+                                <div class="portfolio-item isotope-item one-third column">
+                                    <a href="fox.html" rel="2714"><img width="480" height="295" class="splash" src="images/fox-2.png" data-lazy-src="images/portfolio/fox/fox_cover.png"style="display: inline;">
                                         <div class="da-animate da-slideFromBottom" style="display: block;">
                                             <span>
-                                                <img style="width:70px;height:70px;margin-top:-50px" src="images/fox_logo.png"> 
+                                                <img style="width:70px;height:70px;margin-top:-50px" src="images/fox_logo.png">
                                                 <h2>Where does the fox jump</h2>
                                                 <h3 style="color:#ccc">JavaScript puzzle game</h3>
                                             </span>
                                         </div>
                                     </a>
                                 </div>
-                                <div class="portfolio-item  folio-35 isotope-item" style="width: 355px; position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(710px, 0px, 0px);padding:0">
-                                    <a href="color.html" rel="2714"><img width="480" height="295" src="images/portfolio/color/color_cover.png" data-lazy-type="image" data-lazy-src="images/portfolio/color/color_cover.png:                                                                                                                                                                                                                                                   "style="display: inline;">
+                                <div class="portfolio-item isotope-item one-third column">
+                                    <a href="color.html" rel="2714"><img width="480" height="295" class="splash" src="images/portfolio/color/color_cover.png" data-lazy-src="images/portfolio/color/color_cover.png:"style="display: inline;">
                                         <div class="da-animate da-slideFromBottom" style="display: block;">
                                             <span>
-                                                <img style="width:45px;height:45px;margin-top:-36px" src="images/colorGame.svg"> 
+                                                <img style="width:45px;height:45px;margin-top:-36px" src="images/colorGame.svg">
                                                 <h2>Color Game</h2>
                                                 <h3 style="color:#ccc">JavaScript strategy game</h3>
                                             </span>
                                         </div>
                                     </a>
                                 </div>
-                                <div class="portfolio-item  folio-35 isotope-item" style="width: 355px; position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(710px, 0px, 0px);padding:0">
-                                    <a href="bomber.html" rel="2714"><img width="480" height="295" src="images/portfolio/bomber/bomber_cover.png" data-lazy-type="image" data-lazy-src="images/portfolio/bomber/bomber_cover.png"  style="display: inline;">
+                            </div>
+                            <div class="da-thumbs isotope row">
+                                <div class="portfolio-item isotope-item one-third column">
+                                    <a href="bomber.html" rel="2714"><img width="480" height="295" class="splash" src="images/portfolio/bomber/bomber_cover.png" data-lazy-src="images/portfolio/bomber/bomber_cover.png"  style="display: inline;">
                                         <div class="da-animate da-slideFromBottom" style="display: block;">
                                             <span>
-                                                <img style="width:51px;height:51px;margin-bottom:2px;margin-top:-43px" src="images/portfolio/bomber/bomb2.png"> 
+                                                <img style="width:51px;height:51px;margin-bottom:2px;margin-top:-43px" src="images/portfolio/bomber/bomb2.png">
                                                 <h2>Bomber-Man</h2>
                                                 <h3 style="color:#ccc">Java Game</h3>
                                             </span>
                                         </div>
                                     </a>
                                 </div>
-                                <div class="portfolio-item  folio-35 isotope-item" style="width: 355px; position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(710px, 0px, 0px);padding:0">
-                                    <a href="pong.html" rel="2714"><img width="480" height="295" src="images/portfolio/pong/pong_title.png" data-lazy-type="image" data-lazy-src="images/portfolio/pong/pong_title.png"  style="display: inline;">
+                                <div class="portfolio-item isotope-item one-third column">
+                                    <a href="pong.html" rel="2714"><img width="480" height="295" class="splash" src="images/portfolio/pong/pong_title.png" data-lazy-src="images/portfolio/pong/pong_title.png"  style="display: inline;">
                                         <div class="da-animate da-slideFromBottom" style="display: block;">
                                             <span>
-                                                <img style="width:45px;height:45px;margin-bottom:-2px;margin-top:-50px" src="images/portfolio/pong/pong_cover.png"> 
+                                                <img style="width:45px;height:45px;margin-bottom:-2px;margin-top:-50px" src="images/portfolio/pong/pong_cover.png">
                                                 <h2>Pong-Out!</h2>
                                                 <h3 style="color:#ccc">Class pong with a surprising twist</h3>
                                             </span>
                                         </div>
                                     </a>
                                 </div>
-                                <div class="portfolio-item  folio-35 isotope-item" style="width: 355px; position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(710px, 0px, 0px);padding:0">
-                                    <a href="helic.html" rel="2714"><img width="480" height="295" src="images/portfolio/Helic/helic_title.png" data-lazy-type="image" data-lazy-src="images/portfolio/Helic/helic_title.png"  style="display: inline;">
+                                <div class="portfolio-item isotope-item one-third column">
+                                    <a href="helic.html" rel="2714"><img width="480" height="295" class="splash" src="images/portfolio/Helic/helic_title.png" data-lazy-src="images/portfolio/Helic/helic_title.png"  style="display: inline;">
                                         <div class="da-animate da-slideFromBottom" style="display: block;">
                                             <span>
-                                                <img style="width:50px;height:50px;margin-top:-50px" src="images/portfolio/Helic/heli.png"> 
+                                                <img style="width:50px;height:50px;margin-top:-50px" src="images/portfolio/Helic/heli.png">
                                                 <h2>H.E.L.I.C</h2>
                                                 <h3 style="color:#ccc">Helicopter game remade in Perl</h3>
                                             </span>
                                         </div>
                                     </a>
                                 </div>
+                            </div>
                             </div>
                         </div><!-- .container /--></div>
                         <!--hidden-sm hidden-xs-->
@@ -533,7 +541,6 @@
                                     <p class="lesstext">less</p>
                                 </div>
                             </div>
-
 
                         </body></html>
 
