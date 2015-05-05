@@ -105,16 +105,6 @@ $(document).ready(function() {
                 }), $(this).dequeue()
             })
         }), 
-// $(".splash").mouseover(function() {
-//                 $(this).css({
-//                 opacity: "0.1"
-//             })
-// }),
-// $(".splash").mouseout(function() {
-//                 $(this).css({
-//                 opacity: "1"
-//             })
-// }),
 $(".fa-git").on("mouseenter", function() {
 			$(this).css({
                 color: "rgba(0,0,0,0.4)"
@@ -146,6 +136,18 @@ $(".navbar-header .fa").on("mouseleave", function() {
             })
         }),
 
+// portfolio hover animations
+$(".portfolio-item").on("mouseenter", function() {
+    $(this).find(".splash").stop().fadeTo( 500, 0.1);
+});
+
+
+// // hover out
+$(".portfolio-item").on("mouseleave", function() {
+    $(this).find(".splash").stop().fadeTo( 500 , 1);
+});
+
+// postcard stamp magic
 $(".fa-github").on("mouseenter", function() {
             $("#custom-stamp").attr("src", "images/stamps/github.png"), $(this).css({
                 color: "rgba(182,156,255,0.6)",

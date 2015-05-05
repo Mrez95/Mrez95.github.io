@@ -1306,18 +1306,6 @@ blockquote {
 }
 .portfolio-item .splash{ 
     border: 0.24em double rgba(0,0,0,0.7);
-    -webkit-transition: 500ms;
-    -moz-transition: 500ms;
-    -o-transition: 500ms;
-    transition: 500ms;
-}
-/*FIX THIS ASAP!*/
-.portfolio-item a:hover .splash {
-/*    border: 0px solid #000;
-    border-radius: 40%;*/
-/*    opacity: 0.8;
-    border:0px solid rgba(0,0,0,0.7);*/
-    opacity: 0.1;
 }
 #portfolio-content {
     display: none;
