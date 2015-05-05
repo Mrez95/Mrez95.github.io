@@ -53,58 +53,73 @@ var previousId = "",
     tie = {},
     wordGap = 11;
 $(document).ready(function() {
-        $("html, body").css({
-            overflow: "hidden",
-            height: "100%"
-        }), getTime();
-        var t = document.getElementById("signature");
-        t.display, t.onloadedmetadata = function() {
-            $("#signature").css("visibility", "visible"), $("#container").delay(6000).queue(function() {
-                $(this).fadeOut(1e3, function() {
-                    $("html, body").css({
-                        overflow: "visible",
-                        height: "auto"
-                    }), $("#loading").fadeOut(650)
-                }), $(this).dequeue()
-            })
-        }, typerColor = "rgba(241,194,214,0.6)";
-        var e = $(window).height() - $(".container").height();
-        setTimeout(function() {
-            $("[data-typer-targets]").typer(), $.typer.options.typerInterval = 3e3
-        }, 2e3), position_h_center("scroll_down"), /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ? ($(".filter").hide(), $("#about_wrapper img#pajo").show()) : $(window).width() > 998 && setTimeout(function() {
-            setInterval("animate_scroll_button()", 3e3)
-        }, 0), $("input").keyup(function() {
-            $(this).val().length == $(this).attr("maxlength") && $(this).next().focus()
-        }), $("#submit").on("click", function() {
-            $.notify.addStyle("postage", {
-                html: "<div>&#10527;<span data-notify-text/>&#10528;</div>",
-                classes: {
-                    base: {
-                        "white-space": "nowrap",
-                        "background-color": "rgba(255,255,255,0.9)",
-                        padding: "35px",
-                        "margin-right": "10px"
-                    },
-                    postage: {
-                        color: "black",
-                        "background-color": "white"
-                    }
+    // smooth scrolling
+    $(function() {
+      $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html,body').animate({
+              scrollTop: target.offset().top
+            }, 1000);
+            return false;
+          }
+        }
+      });
+    });
+    $("html, body").css({
+        overflow: "hidden",
+        height: "100%"
+    }), getTime();
+    var t = document.getElementById("signature");
+    t.display, t.onloadedmetadata = function() {
+        $("#signature").css("visibility", "visible"), $("#container").delay(6000).queue(function() {
+            $(this).fadeOut(1e3, function() {
+                $("html, body").css({
+                    overflow: "visible",
+                    height: "auto"
+                }), $("#loading").fadeOut(650)
+            }), $(this).dequeue()
+        })
+    }, typerColor = "rgba(241,194,214,0.6)";
+    var e = $(window).height() - $(".container").height();
+    setTimeout(function() {
+        $("[data-typer-targets]").typer(), $.typer.options.typerInterval = 3e3
+    }, 2e3), position_h_center("scroll_down"), /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ? ($(".filter").hide(), $("#about_wrapper img#pajo").show()) : $(window).width() > 998 && setTimeout(function() {
+        setInterval("animate_scroll_button()", 3e3)
+    }, 0), $("input").keyup(function() {
+        $(this).val().length == $(this).attr("maxlength") && $(this).next().focus()
+    }), $("#submit").on("click", function() {
+        $.notify.addStyle("postage", {
+            html: "<div>&#10527;<span data-notify-text/>&#10528;</div>",
+            classes: {
+                base: {
+                    "white-space": "nowrap",
+                    "background-color": "rgba(255,255,255,0.9)",
+                    padding: "35px",
+                    "margin-right": "10px"
+                },
+                postage: {
+                    color: "black",
+                    "background-color": "white"
                 }
-            }), $(".navbar-collapse").delay(500).queue(function() {
-                $(this).notify("Let's keep in touch!", {
-                    style: "postage",
-                    elementPosition: "bottom centre",
-                    showDuration: 450,
-                    hideDuration: 200,
-                    autoHideDelay: 2400,
-                    arrowShow: !1,
-                    showAnimation: "slideDown",
-                    hideAnimation: "slideUp",
-                    className: "success",
-                    gap: 0
-                }), $(this).dequeue()
-            })
-        }), 
+            }
+        }), $(".navbar-collapse").delay(500).queue(function() {
+            $(this).notify("Let's keep in touch!", {
+                style: "postage",
+                elementPosition: "bottom centre",
+                showDuration: 450,
+                hideDuration: 200,
+                autoHideDelay: 2400,
+                arrowShow: !1,
+                showAnimation: "slideDown",
+                hideAnimation: "slideUp",
+                className: "success",
+                gap: 0
+            }), $(this).dequeue()
+        })
+    }), 
 $(".fa-git").on("mouseenter", function() {
 			$(this).css({
                 color: "rgba(0,0,0,0.4)"
@@ -138,13 +153,12 @@ $(".navbar-header .fa").on("mouseleave", function() {
 
 // portfolio hover animations
 $(".portfolio-item").on("mouseenter", function() {
-    $(this).find(".splash").stop().fadeTo( 500, 0.1);
+    $(this).find(".splash").stop().fadeTo(500, 0.1);
 });
-
 
 // // hover out
 $(".portfolio-item").on("mouseleave", function() {
-    $(this).find(".splash").stop().fadeTo( 500 , 1);
+    $(this).find(".splash").stop().fadeTo(500 , 1);
 });
 
 // postcard stamp magic
@@ -202,12 +216,6 @@ $(".fa-github").on("mouseenter", function() {
         var t = $(".name-container").parent().outerWidth(),
             e = $(".name-container").width();
         $(".name-container").css("left", (t - e) / 2 + "px"), updateVisual()
-    }), $("nav a").on("click", function() {
-        var t = $(this).attr("data-scroll"),
-            e = $('section[data-anchor="' + t + '"]').offset().top - 28;
-        return $("body,html").animate({
-            scrollTop: e
-        }, 500), !1
     }), $(window).scroll(function() {
         var t = $("li.current").attr("id");
         $(this).scrollTop() + 85 >= $('div[data-anchor="home"]').offset().top && $(this).scrollTop() < $('div[data-anchor="portfolio"]').offset().top - 230 && (hide_menu(), $("nav a#home").hasClass("active") || ($("nav a#about").removeClass("active"), $("nav a#portfolio").removeClass("active"), $("nav a#contact").removeClass("active")), $("nav li#home").hasClass("current") || ($("nav li#about").removeClass("current"), $("nav li#portfolio").removeClass("current"), $("nav li#contact").removeClass("current"), $("nav li#home").addClass("current"))), 
