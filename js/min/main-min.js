@@ -74,12 +74,12 @@ $(document).ready(function() {
     }), getTime();
     var t = document.getElementById("signature");
     t.display, t.onloadedmetadata = function() {
-        $("#signature").css("visibility", "visible"), $("#container").delay(6000).queue(function() {
+        $("#signature").css("visibility", "visible"), $("#container").delay(5600).queue(function() {
             $(this).fadeOut(1e3, function() {
                 $("html, body").css({
                     overflow: "visible",
                     height: "auto"
-                }), $("#loading").fadeOut(650)
+                }), $("#loading").fadeOut(250)
             }), $(this).dequeue()
         })
     }, typerColor = "rgba(241,194,214,0.6)";
