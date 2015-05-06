@@ -2,6 +2,9 @@
     video#background {
         display: none;
     }
+    #static-background {
+        display: inline;
+    }
     #default-nav{
         background-color:rgba(0,0,0,0.2);
     }
