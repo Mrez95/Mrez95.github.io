@@ -5,6 +5,12 @@
     #static-background {
         display: inline;
     }
+    video#signature {
+        display: hidden;
+    }
+    #static-signature {
+        display: block;
+    }
     #default-nav{
         background-color:rgba(0,0,0,0.2);
     }

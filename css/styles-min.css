@@ -333,6 +333,14 @@ video#signature {
     top: 30%;
     margin: auto;
 }
+#static-signature {
+    display: none;
+    visibility: hidden;
+    position: relative;
+    width: 80%;
+    top: 30%;
+    margin: auto;
+}
 #container {
     display: block;
     position: relative;
