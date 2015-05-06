@@ -11,12 +11,6 @@
     #static-signature {
         display: block;
     }
-    #qoute {
-        display: none;
-    }
-    #min-qoute {
-        display: block;
-    }
     #default-nav{
         background-color:rgba(0,0,0,0.2);
     }
@@ -81,7 +75,7 @@
         margin-right: 5% !important;
     }
     #qoute{
-        font-size:13px;
+        font-size:10px;
         font-weight: 100;
     }
     #contact-title{
@@ -217,6 +211,14 @@
         background-image: none;
     }
 }
+
+/*tablet*/
+@media screen and (max-width: 900px){
+    #qoute{
+        font-size: 12px;
+    }
+}
+
 
 /*iphone 4,4s,5,5s*/
 @media screen and (max-width: 320px){

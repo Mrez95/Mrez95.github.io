@@ -33,7 +33,7 @@
                 else{
                     localStorage.setItem("initialVisit",localStorage.getItem("currentVisit")); 
                     localStorage.setItem("currentVisit", t);
-                    if (localStorage.getItem("currentVisit")-localStorage.getItem("initialVisit") <= 420000){ // timeout 8 min 
+                    if (localStorage.getItem("currentVisit")-localStorage.getItem("initialVisit") <= 420){ // timeout 8 min 
                         $("html, body").css({
                             overflow: "hidden",
                             height: "100%"
@@ -151,7 +151,6 @@
                     <div class="loader">
                         <span class="progress"></span>
                     </div>
-                    <div id="min-qoute"><b >“</b> TGIT - Thank God It's Today!&nbsp;<b>”</b><p>-<b><i>  Eddie Zhang</i></b></p></div>
                     <div id="qoute"><b >“</b> Welcome every day as if it was your first. <br>Cherish every moment as if it were your last&nbsp;<b>”</b><p>-<b><i>  Eddie Zhang</i></b></p></div>
                 </div>
             </div>
