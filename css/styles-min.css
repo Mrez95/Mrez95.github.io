@@ -211,7 +211,7 @@ section.demo-3 {
     background-attachment: scroll;
     text-align: center;
 }
-#background {
+video#background {
     min-width: 100%;
     min-height: 100%;
     width: auto;
@@ -1337,13 +1337,13 @@ a#scroll_down {
     bottom: 4px;
     display: block;
     text-align: center;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, .7);
 }
 a#scroll_down:hover {
     text-decoration: none;
 }
 a#scroll_down:hover img {
-    opacity: 0.6;
+    opacity: 1;
     filter: alpha(opacity=100);
 }
 a#scroll_down span {
