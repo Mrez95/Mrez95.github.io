@@ -33,7 +33,7 @@
                 else{
                     localStorage.setItem("initialVisit",localStorage.getItem("currentVisit")); 
                     localStorage.setItem("currentVisit", t);
-                    if (localStorage.getItem("currentVisit")-localStorage.getItem("initialVisit") <= 420){ // timeout 8 min 
+                    if (localStorage.getItem("currentVisit")-localStorage.getItem("initialVisit") <= 420000){ // timeout 8 min 
                         $("html, body").css({
                             overflow: "hidden",
                             height: "100%"
