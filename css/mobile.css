@@ -11,6 +11,12 @@
     #static-signature {
         display: block;
     }
+    #qoute {
+        display: none;
+    }
+    #min-qoute {
+        display: block;
+    }
     #default-nav{
         background-color:rgba(0,0,0,0.2);
     }
