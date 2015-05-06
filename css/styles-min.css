@@ -334,7 +334,7 @@ video#signature {
     margin: auto;
 }
 #static-signature {
-    display: block;
+    display: none;
     position: relative;
     width: 80%;
     top: 30%;
