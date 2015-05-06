@@ -1397,8 +1397,8 @@ a#scroll_down i {
 }
 #_portfolio{
     /*TODO: hack for anchoring smooth scrolling accounting for navbar height*/
-    padding-top: 68px;  
-    margin-top: -68px;
+    padding-top: 69px;  
+    margin-top: -69px;
     margin-bottom:0px; 
     height:auto
 }
