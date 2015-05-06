@@ -33,7 +33,7 @@
                 else{
                     localStorage.setItem("initialVisit",localStorage.getItem("currentVisit")); 
                     localStorage.setItem("currentVisit", t);
-                    if (localStorage.getItem("currentVisit")-localStorage.getItem("initialVisit") <= 420000){ // timeout 8 min 
+                    if (localStorage.getItem("currentVisit")-localStorage.getItem("initialVisit") <= 420){ // timeout 8 min 
                         $("html, body").css({
                             overflow: "hidden",
                             height: "100%"
@@ -147,7 +147,7 @@
                 <img id="static-signature" src="signature/signature_text.png">
                 <video id="signature" preload="auto" autoplay="true" muted="muted">
                     <source src="signature/Signature_21.mp4" type="video/mp4">
-                    </video>
+                </video>
                     <div class="loader">
                         <span class="progress"></span>
                     </div>
@@ -222,7 +222,7 @@
                         </div>
                     </nav>
                     <div class="filter"></div>
-                    <img src="background/images/45.jpg" id="static-background">
+                    <img src="background/images/forest.jpg" id="static-background">
                     <video id="background" preload="none" autoplay="true" loop="loop" muted="muted" poster="background/images/45.jpg">
                         <!-- video source gets appended via JS -->
                     </video>

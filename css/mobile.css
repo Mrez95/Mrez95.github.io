@@ -6,7 +6,7 @@
         display: inline;
     }
     video#signature {
-        display: hidden;
+        display: none;
     }
     #static-signature {
         display: block;
