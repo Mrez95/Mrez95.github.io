@@ -1302,6 +1302,7 @@ blockquote {
     opacity: .7;
 }
 .da-thumbs .portfolio-item a div.da-animate {
+    background-color: rgba(0,0,0,0.6);
     -webkit-transition: all .3s ease;
     -moz-transition: all .3s ease-in-out;
     -o-transition: all .3s ease-in-out;
