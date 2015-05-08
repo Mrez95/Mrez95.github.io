@@ -143,9 +143,15 @@ body.background {
     transform: translateY(-100px);
 }
 section.demo-3 {
+    position: relative;
+    z-index: 1;
+    visibility: hidden;
     padding: 4em 2em;
     text-align: center;
-    padding-top:0px
+    padding-top:0px;
+    -webkit-animation-delay: 0.4s; /* Chrome, Safari, Opera */
+    -moz-animation-delay: 0.4s;
+    animation-delay: 0.4s;
 }
 #nav-points a {
     text-decoration: none;
@@ -329,9 +335,11 @@ video#signature {
     display: block;
     visibility: hidden;
     position: relative;
-    width: 70%;
+    width: 68%;
     top: 30%;
     margin: auto;
+    margin-bottom:10px !important;
+    margin-top:-5% !important;
 }
 #static-signature {
     display: none;
@@ -466,6 +474,7 @@ div#loading {
     padding-top: 12px;
 }
 .greeting{
+    visibility: hidden;
     font-family: great_vibe;
     color:black;
     font-size:57px;
@@ -1412,6 +1421,11 @@ a#scroll_down i {
 .nav-logo img {
     height:100%
 }
+#name-wrap{
+    visibility: hidden;
+    position: relative;
+    z-index:1;
+}
 #_home{
     position:relative;
     height:100%;
@@ -1426,8 +1440,12 @@ a#scroll_down i {
     height:auto
 }
 .logo{
+    visibility: hidden;
     position:relative;
-    z-index:3
+    z-index:3;
+    -webkit-animation-delay: 0.4s; /* Chrome, Safari, Opera */
+    -moz-animation-delay: 0.4s;
+    animation-delay: 0.4s;
 }
 #nameTag{
     position:relative;
@@ -1519,13 +1537,9 @@ a#scroll_down i {
     height:auto !important;
 }
 #personal-bio{
+    visibility: hidden;
     margin-top:100px;
     padding-bottom:70px;
-}
-#signature{
-    width:80% !important;
-    margin-bottom:10px !important;
-    margin-top:-5% !important;
 }
 .reach_me a{
     width:45px;

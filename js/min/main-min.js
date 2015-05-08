@@ -53,6 +53,37 @@ var previousId = "",
     tie = {},
     wordGap = 11;
 $(document).ready(function() {
+    // get dynamic greeting
+    getTime();
+    // waypoints scrollable animations
+    $('#footer').waypoint(function() {
+        $('#footer').addClass('animated fadeInUp');
+    }, {
+        offset: '75%'
+    });
+    $('#personal-bio').waypoint(function() {
+        $('.greeting').css("visibility", "visible")
+        $('.greeting').addClass('animated fadeInRight');
+    }, {
+        offset: '80%'
+    });
+    $('#personal-bio').waypoint(function() {
+        $('#personal-bio').css("visibility", "visible")
+        $('#personal-bio').addClass('animated fadeInLeft');
+    }, {
+        offset: '80%'
+    });
+    // $('.wp5').waypoint(function() {
+    //     $('.wp5').addClass('animated fadeInUp');
+    // }, {
+    //     offset: '75%'
+    // });
+    // $('.wp6').waypoint(function() {
+    //     $('.wp6').addClass('animated fadeInDown');
+    // }, {
+    //     offset: '75%'
+    // });
+
     // smooth scrolling
     $(function() {
       $('a[href*=#]:not([href=#])').click(function() {
@@ -71,7 +102,7 @@ $(document).ready(function() {
     $("html, body").css({
         overflow: "hidden",
         height: "100%"
-    }), getTime();
+    });
     var t = document.getElementById("signature");
     t.display, t.onloadedmetadata = function() {
         $("#signature").css("visibility", "visible"), $("#container").delay(5600).queue(function() {
@@ -79,7 +110,14 @@ $(document).ready(function() {
                 $("html, body").css({
                     overflow: "visible",
                     height: "auto"
-                }), $("#loading").fadeOut(250)
+                }), $("#loading").fadeOut(250,function(){
+                        $('.logo').css("visibility","visible");
+                        $('.logo').addClass('animated fadeInDown');
+                        $('.demo-3').css("visibility","visible");
+                        $('.demo-3').addClass('animated fadeInUp');
+                        $('#name-wrap').css("visibility","visible");
+                        $('#name-wrap').addClass('animated fadeIn');
+                })
             }), $(this).dequeue()
         })
     }, typerColor = "rgba(241,194,214,0.6)";

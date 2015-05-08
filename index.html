@@ -7,7 +7,7 @@
         <link href="css/styles-min.css" rel="stylesheet" media="screen">
         <link href="css/mobile.css" rel="stylesheet" media="screen">
         <link href="css/skeleton.css" rel="stylesheet" media="screen">
-        <link rel="stylesheet" href="animate.min.css">
+        <link rel="stylesheet" href="css/animate.min.css">
         <link href="http://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet" type="text/css">
         <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
@@ -17,6 +17,7 @@
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Nothing+You+Could+Do' rel='stylesheet' type='text/css'>
+        <script src="js/min/jquery.waypoints.min.js" type="text/javascript"></script>
         <script src="js/min/main-min.js" type="text/javascript"></script>
         <script>
         $(document).ready(function() {
@@ -46,7 +47,14 @@
                                     $("html, body").css({
                                         overflow: "visible",
                                         height: "auto"
-                                    }), $("#loading").fadeOut(250)
+                                    }), $("#loading").fadeOut(250,function(){
+                                        $('.logo').css("visibility","visible");
+                                         $('.logo').addClass('animated fadeInDown');
+                                         $('.demo-3').css("visibility","visible");
+                                        $('.demo-3').addClass('animated fadeInUp');
+                                                                         $('#name-wrap').css("visibility","visible");
+                                 $('#name-wrap').addClass('animated fadeIn');
+                                    })
                                 }), $(this).dequeue()
                             })
                         }
@@ -64,7 +72,14 @@
                             $("html, body").css({
                                 overflow: "visible",
                                 height: "auto"
-                            }), $("#loading").fadeOut(250)
+                            }), $("#loading").fadeOut(250,function(){
+                                  $('.logo').css("visibility","visible");
+                                 $('.logo').addClass('animated fadeInUp');
+                                  $('.logo').css("visibility","visible");
+                                 $('.logo').addClass('animated fadeInUp');
+                                 $('#name-wrap').css("visibility","visible");
+                                 $('#name-wrap').addClass('animated fadeIn');
+                            })
                         }), $(this).dequeue()
                     })
                 }
@@ -231,11 +246,12 @@
                     <div id="_home" data-anchor="home">
                         <main class="name-container">
                             <img src="images/logo_white.png" alt="logo" class="logo">
+                            <div id="name-wrap">
                             <hr class="dotted-lines">
                             <h1 id="nameTag"> Eddie Tianyi <span>Zhang</span></h1>
                             <h2 id="typer" data-typer-targets="interactive design · front-end development, interactive design · mobile development, interactive design · full stack development,responsive design · full stack development,responsive design · object-oriented development,creative design · object-oriented development,scalable design · object-oriented development, scalable design · game development,scalable design · back-end development, graphic design · back-end development, web design · back-end development,ui / ux design · front-end development"> ui / ux design · front-end development</h2>
                             <hr class="dotted-lines">
-
+                            </div>
                             <section class="demo-3">
                                 <div class="box">
                                     <a class="scroll" href="#_about">
