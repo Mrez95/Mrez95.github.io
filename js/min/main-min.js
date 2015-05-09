@@ -89,7 +89,7 @@ $(document).ready(function() {
         $('#personal-bio').addClass('animated fadeInLeft');
         this.destroy();
     }, {
-        offset: '80%'
+        offset: '82%'
     });
     $('#personal-bio').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
         $('#personal-bio').removeClass('animated fadeInLeft');

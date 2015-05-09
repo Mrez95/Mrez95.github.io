@@ -1118,6 +1118,10 @@ nav {
     padding: 0!important;
     background-color: inherit;
 }
+.row {
+    position: relative;
+    z-index: 2;
+}
 .portfolio-item {
     width: 100%;
     margin: 0;
