@@ -143,15 +143,15 @@ body.background {
     transform: translateY(-100px);
 }
 section.demo-3 {
+    visibility: hidden;
     position: relative;
     z-index: 1;
-    visibility: hidden;
     padding: 4em 2em;
     text-align: center;
     padding-top:0px;
-    -webkit-animation-delay: 0.1s; /* Chrome, Safari, Opera */
-    -moz-animation-delay: 0.1s;
-    animation-delay: 0.1s;
+    -webkit-animation-delay: 0.6s; /* Chrome, Safari, Opera */
+    -moz-animation-delay: 0.6s;
+    animation-delay: 0.6s;
 }
 #nav-points a {
     text-decoration: none;
@@ -216,6 +216,8 @@ section.demo-3 {
     padding-top: 40px;
     background-attachment: scroll;
     text-align: center;
+    /*hacky solution for safari browser display bug with flipY*/
+    -webkit-perspective: 1000;
 }
 #static-background {
     display: none;
@@ -633,7 +635,6 @@ input:-ms-input-placeholder {
     font-family: 'Nothing You Could Do', cursive;
 }
 #about-photo {
-    /*visibility: hidden;*/
     position: relative;
     z-index: 1;
     border-style: solid;
@@ -662,7 +663,6 @@ input:-ms-input-placeholder {
     height:100%;
 }
 #personal-bio {
-    /*visibility: hidden;*/
     display: block;
     position: relative;
     margin: auto;
@@ -1437,9 +1437,12 @@ a#scroll_down i {
 }
 #_home{
     position:relative;
+    z-index: 1;
     height:100%;
     margin-bottom:0px;
     border-bottom:0px;
+    /*hack for safari browser*/
+    -webkit-perspective: 1000;
 }
 #_portfolio{
     /*TODO: hack for anchoring smooth scrolling accounting for navbar height*/
@@ -1452,9 +1455,6 @@ a#scroll_down i {
     visibility: hidden;
     position:relative;
     z-index:3;
-    -webkit-animation-delay: 0.1s; /* Chrome, Safari, Opera */
-    -moz-animation-delay: 0.1s;
-    animation-delay: 0.1s;
 }
 #nameTag{
     position:relative;

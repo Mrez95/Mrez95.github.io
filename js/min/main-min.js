@@ -55,6 +55,18 @@ var previousId = "",
 $(document).ready(function() {
     // get dynamic greeting
     getTime();
+
+    // remove main loader
+    $('.logo').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+        $('.logo').removeClass('animated fadeInRight');
+    });
+    $('#name-wrap').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+        $('#name-wrap').removeClass('animated fadeInLeft');
+    });  
+    $('.demo-3').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+        $('.demo-3').removeClass('animated flipInX');
+    });  
+
     // waypoints scrollable animations
     $('#personal-bio').waypoint(function() {
         $('.greeting').css("visibility", "visible"),
@@ -67,16 +79,16 @@ $(document).ready(function() {
         $('.greeting').removeClass('animated flipInX');
     });
 
-    // $('#personal-bio').waypoint(function() {
-    //     $('#personal-bio').css("visibility", "visible"),
-    //     $('#personal-bio').addClass('animated fadeInLeft');
-    //     this.destroy();
-    // }, {
-    //     offset: '100%'
-    // });
-    // $('#personal-bio').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-    //     $('#personal-bio').removeClass('animated fadeInLeft');
-    // });
+    $('#personal-bio').waypoint(function() {
+        $('#personal-bio').css("visibility", "visible"),
+        $('#personal-bio').addClass('animated fadeIn');
+        this.destroy();
+    }, {
+        offset: '100%'
+    });
+    $('#personal-bio').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+        $('#personal-bio').removeClass('animated fadeIn');
+    });
 
     $('.qoute-life').waypoint(function() {
         $('.qoute-container').css("visibility", "visible"),
@@ -88,17 +100,6 @@ $(document).ready(function() {
     $('.qoute-container').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
         $('.qoute-container').removeClass('animated fadeIn');
     });
-
-    // $('.image').waypoint(function() {
-    //     $('#about-photo').css("visibility", "visible")
-    //     $('#about-photo').addClass('animated fadeInRight');
-    //     this.destroy();
-    // }, {
-    //     offset: '75%'
-    // });
-    // $('#about-photo').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-    //     $('#about-photo').removeClass('animated fadeInRight');
-    // });
 
     // portfolio
     $('.break').waypoint(function() {
@@ -256,28 +257,85 @@ $(document).ready(function() {
         }
       });
     });
-    $("html, body").css({
-        overflow: "hidden",
-        height: "100%"
-    });
-    var t = document.getElementById("signature");
-    t.display, t.onloadedmetadata = function() {
-        $("#signature").css("visibility", "visible"), $("#container").delay(5600).queue(function() {
-            $(this).fadeOut(1e3, function() {
+
+    // ** main algorithm for splash loader computation ** //
+    var d = new Date(); 
+    var t = d.getTime(); // ms since midnight Jan 1, 1970
+
+    try {
+        if (localStorage.getItem("initialVisit") == null && localStorage.getItem("currentVisit") == null){  
+            localStorage.setItem("currentVisit", t);    // set time accordinglyx`
+            localStorage.setItem("initialVisit", null); // never visited initially. First visit
+        }
+        else{
+            localStorage.setItem("initialVisit",localStorage.getItem("currentVisit")); 
+            localStorage.setItem("currentVisit", t);
+
+            if (localStorage.getItem("currentVisit")-localStorage.getItem("initialVisit") <= 420000)
+            { // timeout 8 min 
                 $("html, body").css({
                     overflow: "visible",
                     height: "auto"
-                }), $("#loading").fadeOut(250,function(){
-                        $('.logo').css("visibility","visible");
-                        $('.logo').addClass('animated fadeInDown');
-                        $('.demo-3').css("visibility","visible");
-                        $('.demo-3').addClass('animated fadeInUp');
-                        $('#name-wrap').css("visibility","visible");
-                        $('#name-wrap').addClass('animated fadeIn');
+                }), $("#loading").fadeOut(10,function(){
+                    $('.logo').css("visibility","visible");
+                    $('.logo').addClass('animated fadeInRight');
+                    $('#name-wrap').css("visibility","visible");
+                    $('#name-wrap').addClass('animated fadeInLeft');
+                    $('.demo-3').css("visibility","visible");
+                    $('.demo-3').addClass('animated flipInX');
                 })
-            }), $(this).dequeue()
-        })
-    }, typerColor = "rgba(241,194,214,0.6)";
+            } 
+            else 
+            {
+                $("html, body").css({
+                    overflow: "hidden",
+                    height: "100%"
+                });
+                var t = document.getElementById("signature");
+                t.display, t.onloadedmetadata = function() {
+                    $("#signature").css("visibility", "visible"), $("#container").delay(5600).queue(function() {
+                        $(this).fadeOut(1e3, function() {
+                            $("html, body").css({
+                                overflow: "visible",
+                                height: "auto"
+                            }), $("#loading").fadeOut(250,function(){
+                                $('.logo').css("visibility","visible");
+                                $('.logo').addClass('animated fadeInRight');
+                                $('#name-wrap').css("visibility","visible");
+                                $('#name-wrap').addClass('animated fadeInLeft');
+                                $('.demo-3').css("visibility","visible");
+                                $('.demo-3').addClass('animated flipInX');
+                            })
+                        }), $(this).dequeue()
+                    })
+                }
+            }
+        }
+    } catch (e) {
+        $("html, body").css({
+            overflow: "hidden",
+            height: "100%"
+        });
+        var t = document.getElementById("signature");
+        t.display, t.onloadedmetadata = function() {
+            $("#signature").css("visibility", "visible"), $("#container").delay(0).queue(function() {
+                $(this).fadeOut(0, function() {
+                    $("html, body").css({
+                        overflow: "visible",
+                        height: "auto"
+                    }), $("#loading").fadeOut(250,function(){
+                            $('.logo').css("visibility","visible");
+                            $('.logo').addClass('animated fadeInRight');
+                            $('#name-wrap').css("visibility","visible");
+                            $('#name-wrap').addClass('animated fadeInLeft');
+                            $('.demo-3').css("visibility","visible");
+                            $('.demo-3').addClass('animated flipInX');
+                    })
+                }), $(this).dequeue()
+            })
+        }
+    };
+    typerColor = "rgba(241,194,214,0.6)";
     var e = $(window).height() - $(".container").height();
     setTimeout(function() {
         $("[data-typer-targets]").typer(), $.typer.options.typerInterval = 3e3
