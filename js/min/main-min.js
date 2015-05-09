@@ -56,33 +56,110 @@ $(document).ready(function() {
     // get dynamic greeting
     getTime();
     // waypoints scrollable animations
-    $('#footer').waypoint(function() {
-        $('#footer').addClass('animated fadeInUp');
+    $('#postcard').waypoint(function() {
+        $('#postcard').css("visibility", "visible"),
+        $('#postcard').addClass('animated fadeInUp');
     }, {
         offset: '75%'
     });
     $('#personal-bio').waypoint(function() {
-        $('.greeting').css("visibility", "visible")
+        $('.greeting').css("visibility", "visible"),
         $('.greeting').addClass('animated fadeInRight');
     }, {
-        offset: '80%'
+        offset: '100%'
     });
     $('#personal-bio').waypoint(function() {
-        $('#personal-bio').css("visibility", "visible")
+        $('#personal-bio').css("visibility", "visible"),
         $('#personal-bio').addClass('animated fadeInLeft');
+    }, {
+        offset: '100%'
+    });
+    $('.qoute-life').waypoint(function() {
+        $('.qoute-container').css("visibility", "visible"),
+        $('.qoute-container').addClass('animated fadeIn');
+    }, {
+        offset: '50%'
+    });
+    $('.image').waypoint(function() {
+        $('#about-photo').css("visibility", "visible")
+        $('#about-photo').addClass('animated fadeInRight');
+    }, {
+        offset: '75%'
+    });
+
+    // portfolio
+    $('.break').waypoint(function() {
+        $('.break').css("visibility", "visible"),
+        $('.break').addClass('animated flipInY');
     }, {
         offset: '80%'
     });
-    // $('.wp5').waypoint(function() {
-    //     $('.wp5').addClass('animated fadeInUp');
-    // }, {
-    //     offset: '75%'
-    // });
-    // $('.wp6').waypoint(function() {
-    //     $('.wp6').addClass('animated fadeInDown');
-    // }, {
-    //     offset: '75%'
-    // });
+    $('.oculus').waypoint(function() {
+        $('.oculus').css("visibility", "visible"),
+        $('.oculus').addClass('animated flipInY');
+    }, {
+        offset: '80%'
+    });
+    $('.pacman').waypoint(function() {
+        $('.pacman').css("visibility", "visible"),
+        $('.pacman').addClass('animated flipInY');
+    }, {
+        offset: '80%'
+    });
+    $('.scarlet').waypoint(function() {
+        $('.scarlet').css("visibility", "visible"),
+        $('.scarlet').addClass('animated flipInY');
+    }, {
+        offset: '80%'
+    });
+    $('.conshield').waypoint(function() {
+        $('.conshield').css("visibility", "visible"),
+        $('.conshield').addClass('animated flipInY');
+    }, {
+        offset: '80%'
+    });
+    $('.pathfind').waypoint(function() {
+        $('.pathfind').css("visibility", "visible"),
+        $('.pathfind').addClass('animated flipInY');
+    }, {
+        offset: '80%'
+    });
+    $('.recorder').waypoint(function() {
+        $('.recorder').css("visibility", "visible"),
+        $('.recorder').addClass('animated flipInY');
+    }, {
+        offset: '80%'
+    });
+    $('.fox').waypoint(function() {
+        $('.fox').css("visibility", "visible"),
+        $('.fox').addClass('animated flipInY');
+    }, {
+        offset: '80%'
+    });
+    $('.color').waypoint(function() {
+        $('.color').css("visibility", "visible"),
+        $('.color').addClass('animated flipInY');
+    }, {
+        offset: '80%'
+    });
+    $('.bomber').waypoint(function() {
+        $('.bomber').css("visibility", "visible"),
+        $('.bomber').addClass('animated flipInY');
+    }, {
+        offset: '80%'
+    });
+    $('.pong').waypoint(function() {
+        $('.pong').css("visibility", "visible"),
+        $('.pong').addClass('animated flipInY');
+    }, {
+        offset: '80%'
+    });
+    $('.helic').waypoint(function() {
+        $('.helic').css("visibility", "visible"),
+        $('.helic').addClass('animated flipInY');
+    }, {
+        offset: '80%'
+    });
 
     // smooth scrolling
     $(function() {
@@ -191,7 +268,7 @@ $(".navbar-header .fa").on("mouseleave", function() {
 
 // portfolio hover animations
 $(".portfolio-item").on("mouseenter", function() {
-    $(this).find(".splash").stop().fadeTo(500, 0.1);
+    $(this).find(".splash").stop().fadeTo(800, 0.1);
 });
 
 // // hover out
