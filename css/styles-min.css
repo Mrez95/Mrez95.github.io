@@ -633,7 +633,7 @@ input:-ms-input-placeholder {
     font-family: 'Nothing You Could Do', cursive;
 }
 #about-photo {
-    visibility: hidden;
+    /*visibility: hidden;*/
     position: relative;
     z-index: 1;
     border-style: solid;
@@ -662,6 +662,7 @@ input:-ms-input-placeholder {
     height:100%;
 }
 #personal-bio {
+    /*visibility: hidden;*/
     display: block;
     position: relative;
     margin: auto;
@@ -1545,7 +1546,6 @@ a#scroll_down i {
     height:auto !important;
 }
 #personal-bio{
-    visibility: hidden;
     margin-top:100px;
     padding-bottom:70px;
 }

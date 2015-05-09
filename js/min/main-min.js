@@ -40,7 +40,7 @@ function updateVisual() {
     }), $("p.letter-writing").css({
         fontSize: "17px",
         marginTop: "21%"
-    }), $(".image").css("height", "90%")) : ($("#personal-bio").css("font-size", "16px"), $(".name-container").css({
+    }), $(".image").css("height", "95%")) : ($("#personal-bio").css("font-size", "16px"), $(".name-container").css({
         width: "566px",
         height: "457px",
         top: .11 * window.innerHeight
@@ -56,109 +56,189 @@ $(document).ready(function() {
     // get dynamic greeting
     getTime();
     // waypoints scrollable animations
-    $('#postcard').waypoint(function() {
-        $('#postcard').css("visibility", "visible"),
-        $('#postcard').addClass('animated fadeInUp');
-    }, {
-        offset: '75%'
-    });
     $('#personal-bio').waypoint(function() {
         $('.greeting').css("visibility", "visible"),
-        $('.greeting').addClass('animated fadeInRight');
+        $('.greeting').addClass('animated flipInX');
+        this.destroy();
     }, {
         offset: '100%'
     });
-    $('#personal-bio').waypoint(function() {
-        $('#personal-bio').css("visibility", "visible"),
-        $('#personal-bio').addClass('animated fadeInLeft');
-    }, {
-        offset: '100%'
+    $('.greeting').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+        $('.greeting').removeClass('animated flipInX');
     });
+
+    // $('#personal-bio').waypoint(function() {
+    //     $('#personal-bio').css("visibility", "visible"),
+    //     $('#personal-bio').addClass('animated fadeInLeft');
+    //     this.destroy();
+    // }, {
+    //     offset: '100%'
+    // });
+    // $('#personal-bio').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+    //     $('#personal-bio').removeClass('animated fadeInLeft');
+    // });
+
     $('.qoute-life').waypoint(function() {
         $('.qoute-container').css("visibility", "visible"),
         $('.qoute-container').addClass('animated fadeIn');
+        this.destroy();
     }, {
         offset: '50%'
     });
-    $('.image').waypoint(function() {
-        $('#about-photo').css("visibility", "visible")
-        $('#about-photo').addClass('animated fadeInRight');
-    }, {
-        offset: '75%'
+    $('.qoute-container').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+        $('.qoute-container').removeClass('animated fadeIn');
     });
+
+    // $('.image').waypoint(function() {
+    //     $('#about-photo').css("visibility", "visible")
+    //     $('#about-photo').addClass('animated fadeInRight');
+    //     this.destroy();
+    // }, {
+    //     offset: '75%'
+    // });
+    // $('#about-photo').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+    //     $('#about-photo').removeClass('animated fadeInRight');
+    // });
 
     // portfolio
     $('.break').waypoint(function() {
         $('.break').css("visibility", "visible"),
         $('.break').addClass('animated flipInY');
+        this.destroy();
     }, {
-        offset: '80%'
+        offset: '95%'
     });
+    $('.break').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+        $('.break').removeClass('animated flipInY');
+    });
+
     $('.oculus').waypoint(function() {
         $('.oculus').css("visibility", "visible"),
         $('.oculus').addClass('animated flipInY');
+        this.destroy();
     }, {
-        offset: '80%'
+        offset: '95%'
     });
+    $('.oculus').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+        $('.oculus').removeClass('animated flipInY')
+    });
+
     $('.pacman').waypoint(function() {
         $('.pacman').css("visibility", "visible"),
         $('.pacman').addClass('animated flipInY');
+        this.destroy();
     }, {
-        offset: '80%'
+        offset: '95%'
     });
+    $('.pacman').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+        $('.pacman').removeClass('animated flipInY');
+    });
+
     $('.scarlet').waypoint(function() {
         $('.scarlet').css("visibility", "visible"),
         $('.scarlet').addClass('animated flipInY');
+        this.destroy();
     }, {
-        offset: '80%'
+        offset: '95%'
     });
+    $('.scarlet').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+        $('.scarlet').removeClass('animated flipInY');
+    });
+
     $('.conshield').waypoint(function() {
         $('.conshield').css("visibility", "visible"),
         $('.conshield').addClass('animated flipInY');
+        this.destroy();
     }, {
-        offset: '80%'
+        offset: '95%'
     });
+    $('.conshield').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+        $('.conshield').removeClass('animated flipInY');
+    });
+
     $('.pathfind').waypoint(function() {
         $('.pathfind').css("visibility", "visible"),
         $('.pathfind').addClass('animated flipInY');
+        this.destroy();
     }, {
-        offset: '80%'
+        offset: '95%'
     });
+    $('.pathfind').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+        $('.pathfind').removeClass('animated flipInY');
+    });
+
     $('.recorder').waypoint(function() {
         $('.recorder').css("visibility", "visible"),
         $('.recorder').addClass('animated flipInY');
+        this.destroy();
     }, {
-        offset: '80%'
+        offset: '95%'
     });
+    $('.recorder').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+        $('.recorder').removeClass('animated flipInY');
+    });
+
     $('.fox').waypoint(function() {
         $('.fox').css("visibility", "visible"),
         $('.fox').addClass('animated flipInY');
+        this.destroy();
     }, {
-        offset: '80%'
+        offset: '95%'
     });
+    $('.fox').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+        $('.fox').removeClass('animated flipInY');
+    });
+
     $('.color').waypoint(function() {
         $('.color').css("visibility", "visible"),
         $('.color').addClass('animated flipInY');
+        this.destroy();
     }, {
-        offset: '80%'
+        offset: '95%'
     });
+    $('.color').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+        $('.color').removeClass('animated flipInY');
+    });
+
     $('.bomber').waypoint(function() {
         $('.bomber').css("visibility", "visible"),
         $('.bomber').addClass('animated flipInY');
+        this.destroy();
     }, {
-        offset: '80%'
+        offset: '95%'
     });
+    $('.bomber').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+        $('.bomber').removeClass('animated flipInY');
+    });
+
     $('.pong').waypoint(function() {
         $('.pong').css("visibility", "visible"),
         $('.pong').addClass('animated flipInY');
+        this.destroy();
     }, {
-        offset: '80%'
+        offset: '95%'
     });
+    $('.pong').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+        $('.pong').removeClass('animated flipInY');
+    });
+
     $('.helic').waypoint(function() {
         $('.helic').css("visibility", "visible"),
         $('.helic').addClass('animated flipInY');
+        this.destroy();
     }, {
-        offset: '80%'
+        offset: '95%'
+    });
+    $('.helic').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+        $('.helic').removeClass('animated flipInY');
+    });
+
+    //postcard
+    $('#postcard').waypoint(function() {
+        $('#postcard').css("visibility", "visible"),
+        $('#postcard').addClass('animated fadeInRightBig');
+    }, {
+        offset: '95%'
     });
 
     // smooth scrolling
