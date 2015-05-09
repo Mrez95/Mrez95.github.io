@@ -68,6 +68,7 @@ $(document).ready(function() {
     });  
     $('#scroll_down').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
         // scroll arrow animation
+        $('#scroll_down').removeClass('animated fadeInDown');
         setInterval("animate_scroll_button()", 1e3); 
     });  
 
@@ -88,7 +89,7 @@ $(document).ready(function() {
         $('#personal-bio').addClass('animated fadeInLeft');
         this.destroy();
     }, {
-        offset: '75%'
+        offset: '80%'
     });
     $('#personal-bio').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
         $('#personal-bio').removeClass('animated fadeInLeft');
@@ -291,7 +292,6 @@ $(document).ready(function() {
                                 $('#name-wrap').addClass('animated fadeInLeft');
                                 $('.demo-3').css("visibility","visible");
                                 $('.demo-3').addClass('animated flipInX');
-
                                 $('#scroll_down').css("visibility","visible");
                                 $('#scroll_down').addClass('animated fadeInDown');
                             })
@@ -319,7 +319,6 @@ $(document).ready(function() {
                                 $('#name-wrap').addClass('animated fadeInLeft');
                                 $('.demo-3').css("visibility","visible");
                                 $('.demo-3').addClass('animated flipInX');
-
                                 $('#scroll_down').css("visibility","visible");
                                 $('#scroll_down').addClass('animated fadeInDown');
                             })
@@ -347,7 +346,6 @@ $(document).ready(function() {
                             $('#name-wrap').addClass('animated fadeInLeft');
                             $('.demo-3').css("visibility","visible");
                             $('.demo-3').addClass('animated flipInX');
-
                             $('#scroll_down').css("visibility","visible");
                             $('#scroll_down').addClass('animated fadeInDown');
                     })

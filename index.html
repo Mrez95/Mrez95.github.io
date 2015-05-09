@@ -22,61 +22,7 @@
         <script src="js/min/main-min.js" type="text/javascript"></script>
         <script>
         $(document).ready(function() {
-            // var d = new Date(); 
-            // var t = d.getTime(); // ms since midnight Jan 1, 1970
-            
-            // Safari, in Private Browsing Mode, looks like it supports localStorage but all calls to setItem
-            // throw QuotaExceededError. We're going to detect this and just silently drop any calls to setItem
-            // to avoid the entire page breaking, without having to do a check at each usage of Storage.
-            // try {
-            //     if (localStorage.getItem("initialVisit") == null && localStorage.getItem("currentVisit") == null){  
-            //         localStorage.setItem("currentVisit", t);    // set time accordinglyx`
-            //         localStorage.setItem("initialVisit", null); // never visited initially. First visit
-            //     }
-            //     else{
-            //         localStorage.setItem("initialVisit",localStorage.getItem("currentVisit")); 
-            //         localStorage.setItem("currentVisit", t);
-
-            //         if (localStorage.getItem("currentVisit")-localStorage.getItem("initialVisit") <= 420000)
-            //         { // timeout 8 min 
-            //             $("html, body").css({
-            //                 overflow: "visible",
-            //                 height: "auto"
-            //             }), $("#loading").fadeOut(10,function(){
-            //                 $('.logo').css("visibility","visible");
-            //                 $('.logo').addClass('animated fadeInRight');
-            //                 $('#name-wrap').css("visibility","visible");
-            //                 $('#name-wrap').addClass('animated fadeInLeft');
-            //                 $('.demo-3').css("visibility","visible");
-            //                 $('.demo-3').addClass('animated flipInX');
-            //             })
-            //         } 
-            //     }
-            // } catch (e) {
-            //     $("html, body").css({
-            //         overflow: "hidden",
-            //         height: "100%"
-            //     });
-            //     var t = document.getElementById("signature");
-            //     t.display, t.onloadedmetadata = function() {
-            //         $("#signature").css("visibility", "visible"), $("#container").delay(0).queue(function() {
-            //             $(this).fadeOut(0, function() {
-            //                 $("html, body").css({
-            //                     overflow: "visible",
-            //                     height: "auto"
-            //                 }), $("#loading").fadeOut(250,function(){
-            //                         $('.logo').css("visibility","visible");
-            //                         $('.logo').addClass('animated fadeInRight');
-            //                         $('#name-wrap').css("visibility","visible");
-            //                         $('#name-wrap').addClass('animated fadeInLeft');
-            //                         $('.demo-3').css("visibility","visible");
-            //                         $('.demo-3').addClass('animated flipInX');
-            //                 })
-            //             }), $(this).dequeue()
-            //         })
-            //     }
-            // }
-
+    
             $( "#social-wrapper").css( "width",$("#contact-me").width());
             $( "#icon-wrapper").css( "width",$("#social-wrapper").width()-$("#submit").width()-5);
             var randBackground = Math.floor((Math.random() * 6) + 1); // rad number 1-8 
