@@ -663,6 +663,7 @@ input:-ms-input-placeholder {
     height:100%;
 }
 #personal-bio {
+    visibility: hidden;
     display: block;
     position: relative;
     margin: auto;

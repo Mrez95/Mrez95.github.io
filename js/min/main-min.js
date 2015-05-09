@@ -68,7 +68,7 @@ $(document).ready(function() {
     });  
 
     // waypoints scrollable animations
-    $('#personal-bio').waypoint(function() {
+    $('.greeting').waypoint(function() {
         $('.greeting').css("visibility", "visible"),
         $('.greeting').addClass('animated flipInX');
         this.destroy();
@@ -81,13 +81,13 @@ $(document).ready(function() {
 
     $('#personal-bio').waypoint(function() {
         $('#personal-bio').css("visibility", "visible"),
-        $('#personal-bio').addClass('animated fadeIn');
+        $('#personal-bio').addClass('animated fadeInLeft');
         this.destroy();
     }, {
-        offset: '100%'
+        offset: '75%'
     });
     $('#personal-bio').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-        $('#personal-bio').removeClass('animated fadeIn');
+        $('#personal-bio').removeClass('animated fadeInLeft');
     });
 
     $('.qoute-life').waypoint(function() {
