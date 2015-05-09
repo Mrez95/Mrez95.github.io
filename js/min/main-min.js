@@ -241,10 +241,16 @@ $(document).ready(function() {
 
     //postcard
     $('#postcard').waypoint(function() {
-        $('#postcard').css("visibility", "visible"),
+        $('#postcard').css("visibility", "visible");
         $('#postcard').addClass('animated fadeInRightBig');
+        $('#contact-title').css("visibility", "visible");
+        $('#contact-title').addClass('animated fadeIn');
     }, {
         offset: '95%'
+    });
+    $('#postcard').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+        $('#postcard').removeClass('animated fadeInRightBig');
+        $('#contact-title').removeClass('animated fadeIn');
     });
 
     // smooth scrolling
