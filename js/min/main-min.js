@@ -26,9 +26,9 @@ function hide_menu() {
 
 function show_menu() {
     $("#navbar").hasClass("hidden_nav") && ($("#navbar").removeClass("hidden_nav"), $("#navbar").delay(140).queue(function() {
-        $(this).css({
-            opacity: "1"
-        }), $("#navbar").addClass("display_nav"), $(this).dequeue()
+            $(this).css({
+                opacity: "1"
+            }), $("#navbar").addClass("display_nav"), $(this).dequeue()
     }))
 }
 
@@ -65,6 +65,9 @@ $(document).ready(function() {
     });  
     $('.demo-3').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
         $('.demo-3').removeClass('animated flipInX');
+    });  
+    $('.milestone-wrapper').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+        $('.milestone-wrapper').removeClass('animated flipInX');
     });  
     $('#scroll_down').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
         // scroll arrow animation
@@ -106,139 +109,490 @@ $(document).ready(function() {
         $('.qoute-container').removeClass('animated fadeIn');
     });
 
-    // portfolio
+    // ** TIMELINE TREE ** // 
+
+    // timeline TODO: TESTING EXPERIMENT
+    $('#fifteen').waypoint(function() {
+        $('.timeline').css("visibility","visible");
+        $('.timeline').addClass("animated fadeIn");
+        this.destroy();
+    }, {
+        offset: '500px'
+    });
+
+    $('#fifteen').waypoint(function(direction) {
+        if (direction == "down")
+        {
+            $('.middleline').removeClass('line-black');
+            $('.middleline').addClass('line-htn');
+            $('.htn .milestone').removeClass('line-black');
+            $('.htn .milestone').addClass('line-htn');
+            $('.htn .arrow-right').removeClass('right-black');
+            $('.htn .arrow-right').addClass('right-htn');
+
+            $('.htn').css("visibility","visible");
+            $('.htn').addClass("animated flipInX");
+        }
+        else 
+        {
+            $('.middleline').removeClass('line-htn');
+            $('.middleline').addClass('line-black');
+            $('.htn .milestone').removeClass('line-htn');
+            $('.htn .milestone').addClass('line-black');
+            $('.htn .arrow-right').addClass('right-black');
+            $('.htn .arrow-right').removeClass('right-htn');
+        }
+    }, {
+        offset: '120px'
+    });
+
+    $('#fifteen').waypoint(function(direction) {
+        if (direction == "down")
+        {
+            $('#fifteen').removeClass('node-black');
+            $('#fifteen').addClass('node-htn');
+        }
+        else 
+        {
+            $('#fifteen').addClass('node-black');
+            $('#fifteen').removeClass('node-htn');
+        }
+    }, {
+        offset: '275px'
+    });
+
+    $('#fourteen').waypoint(function(direction) {
+        if (direction == "down")
+        {
+            $('#fourteen').removeClass('node-black');
+            $('#fourteen').addClass('node-fourteen');
+
+            $('.nav-logo img').removeClass('web-logo');
+            $('.nav-logo img').addClass('veeva-logo');
+            $('.middleline').removeClass('line-site');
+            $('.middleline').addClass('line-veeva');
+
+            $('.veeva .milestone').removeClass('line-site');
+            $('.veeva .milestone').addClass('line-veeva');
+            $('.veeva .arrow-left').addClass('left-veeva');
+            $('.veeva .arrow-left').removeClass('left-black');
+
+            $('.veeva').css("visibility","visible");
+            $('.veeva').addClass("animated flipInX");
+        }
+        else 
+        {
+            $('#fourteen').removeClass('node-fourteen');
+            $('#fourteen').addClass('node-black');
+
+            $('.nav-logo img').removeClass('veeva-logo');
+            $('.nav-logo img').addClass('web-logo');  
+            $('.middleline').removeClass('line-veeva');
+            $('.middleline').addClass('line-site');
+
+            $('.veeva .milestone').addClass('line-black');
+            $('.veeva .milestone').removeClass('line-veeva');
+            $('.veeva .arrow-left').removeClass('left-veeva');
+            $('.veeva .arrow-left').addClass('left-black');
+        }
+    }, {
+        offset: '170px'
+    });
+
+    $('#thirteen').waypoint(function(direction) {
+        if (direction == "down")
+        {
+            $('#thirteen').removeClass('node-black');
+            $('#thirteen').addClass('node-thirteen');
+
+            $('.nav-logo img').removeClass('hack-logo');
+            $('.nav-logo img').addClass('title-logo');
+            $('.middleline').removeClass('line-hack');
+            $('.middleline').addClass('line-title');
+
+            $('.titletrade .milestone').removeClass('line-black');
+            $('.titletrade .milestone').addClass('line-title');
+            $('.titletrade .arrow-left').addClass('left-title');
+            $('.titletrade .arrow-left').removeClass('left-black');
+
+            $('.titletrade').css("visibility","visible");
+            $('.titletrade').addClass("animated flipInX");
+        }
+        else 
+        {
+            $('#thirteen').removeClass('node-thirteen');
+            $('#thirteen').addClass('node-black');
+
+            $('.nav-logo img').removeClass('title-logo');
+            $('.nav-logo img').addClass('hack-logo');
+            $('.middleline').removeClass('line-title');
+            $('.middleline').addClass('line-hack');
+
+
+            $('.titletrade .milestone').addClass('line-black');
+            $('.titletrade .milestone').removeClass('line-title');
+            $('.titletrade .arrow-left').removeClass('left-title');
+            $('.titletrade .arrow-left').addClass('left-black');
+        }
+    }, {
+        offset: '185px'
+    });
+
+    $('#ninety-five').waypoint(function(direction) {
+        if (direction == "down")
+        {
+            $('#ninety-five').removeClass('node-black');
+            $('#ninety-five').addClass('node-ninefive');
+            $('.nav-logo img').removeClass('title-logo');
+            $('.nav-logo img').addClass('born-logo');
+
+            $('.middleline').removeClass('line-title');
+            $('.middleline').addClass('line-born');
+
+            $('.born .milestone').removeClass('line-black');
+            $('.born .milestone').addClass('line-born');
+            $('.born .arrow-right').addClass('right-born');
+            $('.born .arrow-right').removeClass('right-black');
+
+            $('.born').css("visibility","visible");
+            $('.born').addClass("animated flipInX");           
+        }
+        else 
+        {
+            $('#ninety-five').removeClass('node-ninefive');
+            $('#ninety-five').addClass('node-black');
+            $('.nav-logo img').removeClass('born-logo');
+            $('.nav-logo img').addClass('title-logo');
+
+            $('.middleline').removeClass('line-born');
+            $('.middleline').addClass('line-title');
+
+            $('.born .milestone').addClass('line-black');
+            $('.born .milestone').removeClass('line-born');
+            $('.born .arrow-right').removeClass('right-born');
+            $('.born .arrow-right').addClass('right-black');
+        }
+    }, {
+        offset: '170px'
+    });
+
+    $('#born').waypoint(function(direction) {
+        if (direction == "down")
+        {
+            $('#born').removeClass('node-black');
+            $('#born').addClass('node-last');
+
+            $('.middleline').removeClass('node-black');
+            $('.middleline').addClass('line-base');
+        }
+        else 
+        {
+            $('#born').removeClass('node-last');
+            $('#born').addClass('node-black');
+
+            $('.middleline').removeClass('line-base');
+            $('.middleline').addClass('line-black');
+        }
+    }, {
+        offset: '210px'
+    });
+
+    $('.qoute-life').waypoint(function(direction) {
+        if (direction == "down")
+        {
+            $('.nav-logo img').removeClass('born-logo');
+            $('.nav-logo').removeClass('enlarge-photo');
+        }
+        else
+        {
+            $('.nav-logo img').addClass('born-logo');
+            $('.nav-logo').addClass('enlarge-photo');
+        }
+    }, {
+        offset: '80px'
+    });
+
+    // node change logic
+    $('#fifteen').waypoint(function(direction) {
+        if (direction == "down")
+        {
+            $('.nav-logo').addClass('animated fadeOutUp');
+            $('#navbar').removeClass("stick-white");
+            $('#navbar').addClass("stick-transparent");
+        }
+        else
+        {
+            $('#navbar').removeClass("stick-transparent");
+            $('#navbar').addClass("stick-white");
+        }
+    }, {
+        offset: '100px'
+    });
+
+    $('.htn').waypoint(function(direction) {
+        if (direction == "down")
+        {
+            $('.nav-logo').removeClass('animated fadeOutUp');
+            $('#navbar').removeClass("stick-transparent");
+            $('#navbar').addClass("stick-white");
+            $('.nav-logo').addClass('enlarge-photo');
+            $('.nav-logo img').addClass('htn-logo');
+            $('.nav-logo').addClass('animated fadeInDown');
+        }
+        else
+        {
+            $('.nav-logo').removeClass('animated fadeInDown');
+            $('#navbar').addClass("stick-transparent");
+            $('#navbar').removeClass("stick-white");
+            $('.nav-logo img').removeClass('htn-logo');
+            $('.nav-logo').removeClass('enlarge-photo');
+        }
+    }, {
+        offset: '71px'
+    });
+
+    $('.zynga').waypoint(function(direction) {
+        if(direction == "down")
+        {
+            $('.nav-logo img').removeClass('htn-logo');
+            $('.nav-logo img').addClass('zynga-logo');     
+
+            $('.middleline').removeClass('line-htn');
+            $('.middleline').addClass('line-zynga');
+
+            $('.zynga .milestone').removeClass('line-black');
+            $('.zynga .milestone').addClass('line-zynga');
+            $('.zynga .arrow-left').removeClass('left-black');
+            $('.zynga .arrow-left').addClass('left-zynga');
+
+            $('.zynga').css("visibility","visible");
+            $('.zynga').addClass("animated flipInX");
+        }
+        else
+        {
+            $('.nav-logo img').removeClass('zynga-logo');
+            $('.nav-logo img').addClass('htn-logo');   
+
+            $('.middleline').removeClass('line-zynga');
+            $('.middleline').addClass('line-htn');
+
+            $('.zynga .milestone').addClass('line-black');
+            $('.zynga .milestone').removeClass('line-zynga');
+            $('.zynga .arrow-left').addClass('left-black');
+            $('.zynga .arrow-left').removeClass('left-zynga');
+        }
+    }, {
+        offset: '150px'
+    });
+
+    $('.website').waypoint(function(direction) {
+        if (direction == "down")
+        {
+            $('.nav-logo img').removeClass('zynga-logo');
+            $('.nav-logo img').addClass('web-logo');
+
+            $('.middleline').removeClass('line-zynga');
+            $('.middleline').addClass('line-site');
+
+            $('.website .milestone').removeClass('line-zynga');
+            $('.website .milestone').addClass('line-site');
+            $('.website .arrow-right').addClass('right-site');
+            $('.website .arrow-right').removeClass('right-black');
+
+            $('.website').css("visibility","visible");
+            $('.website').addClass("animated flipInX");
+        }
+        else 
+        {
+            $('.nav-logo img').removeClass('web-logo');
+            $('.nav-logo img').addClass('zynga-logo');
+
+            $('.middleline').removeClass('line-site');
+            $('.middleline').addClass('line-zynga');
+
+            $('.website .milestone').removeClass('line-site');
+            $('.website .milestone').addClass('line-black');
+            $('.website .arrow-right').removeClass('right-site');
+            $('.website .arrow-right').addClass('right-black');
+        }
+
+    }, {
+        offset: '145px'
+    });
+
+    $('.hackathon').waypoint(function(direction) {
+        if (direction == "down")
+        {
+            $('.nav-logo img').removeClass('veeva-logo');
+            $('.nav-logo img').addClass('hack-logo');
+
+            $('.middleline').removeClass('line-veeva');
+            $('.middleline').addClass('line-hack');
+
+            $('.hackathon .milestone').removeClass('line-black');
+            $('.hackathon .milestone').addClass('line-hack');
+            $('.hackathon .arrow-right').addClass('right-hack');
+            $('.hackathon .arrow-right').removeClass('right-black');
+
+            $('.hackathon').css("visibility","visible");
+            $('.hackathon').addClass("animated flipInX");
+        }
+        else
+        {
+            $('.nav-logo img').removeClass('hack-logo');
+            $('.nav-logo img').addClass('veeva-logo'); 
+
+            $('.middleline').removeClass('line-hack');
+            $('.middleline').addClass('line-veeva');   
+
+
+            $('.hackathon .milestone').addClass('line-black');
+            $('.hackathon .milestone').removeClass('line-hack');
+            $('.hackathon .arrow-right').removeClass('right-hack');
+            $('.hackathon .arrow-right').addClass('right-black');
+        }
+    }, {
+        offset: '155px'
+    });
+
+    // // portfolio
     $('.break').waypoint(function() {
         $('.break').css("visibility", "visible"),
-        $('.break').addClass('animated flipInY');
+        $('.break').addClass('animated fadeInLeftBig');
         this.destroy();
     }, {
         offset: '95%'
     });
     $('.break').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-        $('.break').removeClass('animated flipInY');
-    });
-
+        $('.break').removeClass('animated fadeInLeft');
+    }); 
     $('.oculus').waypoint(function() {
         $('.oculus').css("visibility", "visible"),
-        $('.oculus').addClass('animated flipInY');
+        $('.oculus').addClass('animated fadeInLeftBig');
         this.destroy();
     }, {
         offset: '95%'
     });
     $('.oculus').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-        $('.oculus').removeClass('animated flipInY')
+        $('.oculus').removeClass('animated fadeInLeftBig')
     });
 
     $('.pacman').waypoint(function() {
         $('.pacman').css("visibility", "visible"),
-        $('.pacman').addClass('animated flipInY');
+        $('.pacman').addClass('animated fadeInLeftBig');
         this.destroy();
     }, {
         offset: '95%'
     });
     $('.pacman').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-        $('.pacman').removeClass('animated flipInY');
+        $('.pacman').removeClass('animated fadeInLeftBig');
     });
 
     $('.scarlet').waypoint(function() {
         $('.scarlet').css("visibility", "visible"),
-        $('.scarlet').addClass('animated flipInY');
+        $('.scarlet').addClass('animated fadeInLeftBig');
         this.destroy();
     }, {
         offset: '95%'
     });
     $('.scarlet').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-        $('.scarlet').removeClass('animated flipInY');
+        $('.scarlet').removeClass('animated fadeInLeftBig');
     });
 
     $('.conshield').waypoint(function() {
         $('.conshield').css("visibility", "visible"),
-        $('.conshield').addClass('animated flipInY');
+        $('.conshield').addClass('animated fadeInLeftBig');
         this.destroy();
     }, {
         offset: '95%'
     });
+
     $('.conshield').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-        $('.conshield').removeClass('animated flipInY');
+        $('.conshield').removeClass('animated fadeInLeftBig');
     });
 
     $('.pathfind').waypoint(function() {
         $('.pathfind').css("visibility", "visible"),
-        $('.pathfind').addClass('animated flipInY');
+        $('.pathfind').addClass('animated fadeInLeftBig');
         this.destroy();
     }, {
         offset: '95%'
     });
+
     $('.pathfind').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-        $('.pathfind').removeClass('animated flipInY');
+        $('.pathfind').removeClass('animated fadeInLeftBig');
     });
 
     $('.recorder').waypoint(function() {
         $('.recorder').css("visibility", "visible"),
-        $('.recorder').addClass('animated flipInY');
+        $('.recorder').addClass('animated fadeInLeftBig');
         this.destroy();
     }, {
         offset: '95%'
     });
     $('.recorder').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-        $('.recorder').removeClass('animated flipInY');
+        $('.recorder').removeClass('animated fadeInLeftBig');
     });
 
     $('.fox').waypoint(function() {
         $('.fox').css("visibility", "visible"),
-        $('.fox').addClass('animated flipInY');
+        $('.fox').addClass('animated fadeInLeftBig');
         this.destroy();
     }, {
         offset: '95%'
     });
+
     $('.fox').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-        $('.fox').removeClass('animated flipInY');
+        $('.fox').removeClass('animated fadeInLeftBig');
     });
 
     $('.color').waypoint(function() {
         $('.color').css("visibility", "visible"),
-        $('.color').addClass('animated flipInY');
+        $('.color').addClass('animated fadeInLeftBig');
         this.destroy();
     }, {
         offset: '95%'
     });
+
     $('.color').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-        $('.color').removeClass('animated flipInY');
+        $('.color').removeClass('animated fadeInLeftBig');
     });
 
     $('.bomber').waypoint(function() {
         $('.bomber').css("visibility", "visible"),
-        $('.bomber').addClass('animated flipInY');
+        $('.bomber').addClass('animated fadeInLeftBig');
         this.destroy();
     }, {
         offset: '95%'
     });
+
     $('.bomber').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-        $('.bomber').removeClass('animated flipInY');
+        $('.bomber').removeClass('animated fadeInLeftBig');
     });
 
     $('.pong').waypoint(function() {
         $('.pong').css("visibility", "visible"),
-        $('.pong').addClass('animated flipInY');
+        $('.pong').addClass('animated fadeInLeftBig');
         this.destroy();
     }, {
         offset: '95%'
     });
+
     $('.pong').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-        $('.pong').removeClass('animated flipInY');
+        $('.pong').removeClass('animated fadeInLeftBig');
     });
 
     $('.helic').waypoint(function() {
         $('.helic').css("visibility", "visible"),
-        $('.helic').addClass('animated flipInY');
+        $('.helic').addClass('animated fadeInLeftBig');
         this.destroy();
     }, {
         offset: '95%'
     });
-    $('.helic').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-        $('.helic').removeClass('animated flipInY');
-    });
 
+    $('.helic').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+        $('.helic').removeClass('animated fadeInLeftBig');
+    });
     //postcard
     $('#postcard').waypoint(function() {
         $('#postcard').css("visibility", "visible");
@@ -433,7 +787,7 @@ $(".navbar-header .fa").on("mouseleave", function() {
 
 // portfolio hover animations
 $(".portfolio-item").on("mouseenter", function() {
-    $(this).find(".splash").stop().fadeTo(800, 0.1);
+    $(this).find(".splash").stop().fadeTo(500, 0.1);
 });
 
 // // hover out
@@ -497,6 +851,9 @@ $(".fa-github").on("mouseenter", function() {
             e = $(".name-container").width();
         $(".name-container").css("left", (t - e) / 2 + "px"), updateVisual()
     }), $(window).scroll(function() {
+        // timeline logo offset logic 
+        var eTop = $('#fifteen').offset().top; //get the offset top of the element
+        var distance = eTop - $(window).scrollTop() - 120;
         var t = $("li.current").attr("id");
         $(this).scrollTop() + 85 >= $('div[data-anchor="home"]').offset().top && $(this).scrollTop() < $('div[data-anchor="portfolio"]').offset().top - 230 && (hide_menu(), $("nav a#home").hasClass("active") || ($("nav a#about").removeClass("active"), $("nav a#portfolio").removeClass("active"), $("nav a#contact").removeClass("active")), $("nav li#home").hasClass("current") || ($("nav li#about").removeClass("current"), $("nav li#portfolio").removeClass("current"), $("nav li#contact").removeClass("current"), $("nav li#home").addClass("current"))), 
         $(this).scrollTop() + 230 >= $('div[data-anchor="portfolio"]').offset().top && $(this).scrollTop() < $('div[data-anchor="about"]').offset().top && (show_menu(), $("nav a#about").hasClass("active") || ($("nav a#home").removeClass("active"), $("nav a#portfolio").removeClass("active"), $("nav a#contact").removeClass("active"), $("nav a#about").addClass("active")), $("nav li#about").hasClass("current") || ($("nav li#home").removeClass("current"), $("nav li#portfolio").removeClass("current"), $("nav li#contact").removeClass("current"), $("nav li#about").addClass("current"))), 

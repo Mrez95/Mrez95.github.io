@@ -212,6 +212,16 @@
     }
 }
 
+/*temp fix before mobile support*/
+@media screen and (max-width: 1200px){
+    .timeline{
+        display:none;
+    }
+    .nav-logo{
+        visibility: hidden;
+    }
+}
+
 /*tablet*/
 @media screen and (max-width: 900px){
     #qoute{

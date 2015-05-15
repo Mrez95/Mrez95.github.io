@@ -43,8 +43,12 @@
     src: url(../font/REIS-Regular.otf);
 }
 @font-face{
-    font-family: bell_regular;
-    src: url(../font/BELLABOO-Regular.otf);
+    font-family: josefin-t;
+    src: url(../font/JosefinSans-Light.ttf);
+}
+@font-face{
+    font-family: josefin-b;
+    src: url(../font/JosefinSans-Regular.ttf);
 }
 @font-face {
     font-family: fontello;
