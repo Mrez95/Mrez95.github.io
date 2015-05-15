@@ -63,9 +63,9 @@ $(document).ready(function() {
     $('#name-wrap').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
         $('#name-wrap').removeClass('animated fadeInLeft');
     });  
-    $('.demo-3').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-        $('.demo-3').removeClass('animated flipInX');
-    });  
+    // $('.demo-3').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+    //     $('.demo-3').removeClass('animated flipInX');
+    // });  
     $('.milestone-wrapper').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
         $('.milestone-wrapper').removeClass('animated flipInX');
     });  
@@ -78,13 +78,13 @@ $(document).ready(function() {
     // waypoints scrollable animations
     $('.greeting').waypoint(function() {
         $('.greeting').css("visibility", "visible"),
-        $('.greeting').addClass('animated flipInX');
+        $('.greeting').addClass('animated bounceIn');
         this.destroy();
     }, {
         offset: '90%'
     });
     $('.greeting').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-        $('.greeting').removeClass('animated flipInX');
+        $('.greeting').removeClass('animated bounceIn');
     });
 
     $('#personal-bio').waypoint(function() {
@@ -92,7 +92,7 @@ $(document).ready(function() {
         $('#personal-bio').addClass('animated fadeInLeft');
         this.destroy();
     }, {
-        offset: '82%'
+        offset: '85%'
     });
     $('#personal-bio').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
         $('#personal-bio').removeClass('animated fadeInLeft');
@@ -117,7 +117,7 @@ $(document).ready(function() {
         $('.timeline').addClass("animated fadeIn");
         this.destroy();
     }, {
-        offset: '500px'
+        offset: '510px'
     });
 
     $('#fifteen').waypoint(function(direction) {
@@ -129,9 +129,6 @@ $(document).ready(function() {
             $('.htn .milestone').addClass('line-htn');
             $('.htn .arrow-right').removeClass('right-black');
             $('.htn .arrow-right').addClass('right-htn');
-
-            $('.htn').css("visibility","visible");
-            $('.htn').addClass("animated flipInX");
         }
         else 
         {
@@ -142,6 +139,14 @@ $(document).ready(function() {
             $('.htn .arrow-right').addClass('right-black');
             $('.htn .arrow-right').removeClass('right-htn');
         }
+    }, {
+        offset: '120px'
+    });
+
+    $('#fifteen').waypoint(function() {
+        $('.htn').css("visibility","visible");
+        $('.htn').addClass("animated flipInX");
+        this.destroy();
     }, {
         offset: '120px'
     });
@@ -176,9 +181,6 @@ $(document).ready(function() {
             $('.veeva .milestone').addClass('line-veeva');
             $('.veeva .arrow-left').addClass('left-veeva');
             $('.veeva .arrow-left').removeClass('left-black');
-
-            $('.veeva').css("visibility","visible");
-            $('.veeva').addClass("animated flipInX");
         }
         else 
         {
@@ -196,7 +198,15 @@ $(document).ready(function() {
             $('.veeva .arrow-left').addClass('left-black');
         }
     }, {
-        offset: '170px'
+        offset: '300px'
+    });
+
+    $('#fourteen').waypoint(function() {
+        $('.veeva').css("visibility","visible");
+        $('.veeva').addClass("animated flipInX");
+        this.destroy();
+    }, {
+        offset: '300px'
     });
 
     $('#thirteen').waypoint(function(direction) {
@@ -214,9 +224,6 @@ $(document).ready(function() {
             $('.titletrade .milestone').addClass('line-title');
             $('.titletrade .arrow-left').addClass('left-title');
             $('.titletrade .arrow-left').removeClass('left-black');
-
-            $('.titletrade').css("visibility","visible");
-            $('.titletrade').addClass("animated flipInX");
         }
         else 
         {
@@ -235,7 +242,15 @@ $(document).ready(function() {
             $('.titletrade .arrow-left').addClass('left-black');
         }
     }, {
-        offset: '185px'
+        offset: '300px'
+    });
+
+    $('#thirteen').waypoint(function() {
+        $('.titletrade').css("visibility","visible");
+        $('.titletrade').addClass("animated flipInX");
+        this.destroy();
+    }, {
+        offset: '300px'
     });
 
     $('#ninety-five').waypoint(function(direction) {
@@ -252,10 +267,7 @@ $(document).ready(function() {
             $('.born .milestone').removeClass('line-black');
             $('.born .milestone').addClass('line-born');
             $('.born .arrow-right').addClass('right-born');
-            $('.born .arrow-right').removeClass('right-black');
-
-            $('.born').css("visibility","visible");
-            $('.born').addClass("animated flipInX");           
+            $('.born .arrow-right').removeClass('right-black');    
         }
         else 
         {
@@ -273,8 +285,16 @@ $(document).ready(function() {
             $('.born .arrow-right').addClass('right-black');
         }
     }, {
-        offset: '170px'
+        offset: '300px'
     });
+    
+    $('#ninety-five').waypoint(function() {
+        $('.born').css("visibility","visible");
+        $('.born').addClass("animated flipInX");   
+        this.destroy();
+    }, {
+        offset: '300px'
+    });    
 
     $('#born').waypoint(function(direction) {
         if (direction == "down")
@@ -294,7 +314,7 @@ $(document).ready(function() {
             $('.middleline').addClass('line-black');
         }
     }, {
-        offset: '210px'
+        offset: '300px'
     });
 
     $('.qoute-life').waypoint(function(direction) {
@@ -309,7 +329,7 @@ $(document).ready(function() {
             $('.nav-logo').addClass('enlarge-photo');
         }
     }, {
-        offset: '80px'
+        offset: '170px'
     });
 
     // node change logic
@@ -348,7 +368,7 @@ $(document).ready(function() {
             $('.nav-logo').removeClass('enlarge-photo');
         }
     }, {
-        offset: '71px'
+        offset: '70px'
     });
 
     $('.zynga').waypoint(function(direction) {
@@ -364,9 +384,6 @@ $(document).ready(function() {
             $('.zynga .milestone').addClass('line-zynga');
             $('.zynga .arrow-left').removeClass('left-black');
             $('.zynga .arrow-left').addClass('left-zynga');
-
-            $('.zynga').css("visibility","visible");
-            $('.zynga').addClass("animated flipInX");
         }
         else
         {
@@ -382,7 +399,15 @@ $(document).ready(function() {
             $('.zynga .arrow-left').removeClass('left-zynga');
         }
     }, {
-        offset: '150px'
+        offset: '300px'
+    });
+
+    $('.zynga').waypoint(function() {
+         $('.zynga').css("visibility","visible");
+         $('.zynga').addClass("animated flipInX");
+         this.destroy();
+    }, {
+        offset: '300px'
     });
 
     $('.website').waypoint(function(direction) {
@@ -398,9 +423,6 @@ $(document).ready(function() {
             $('.website .milestone').addClass('line-site');
             $('.website .arrow-right').addClass('right-site');
             $('.website .arrow-right').removeClass('right-black');
-
-            $('.website').css("visibility","visible");
-            $('.website').addClass("animated flipInX");
         }
         else 
         {
@@ -417,7 +439,15 @@ $(document).ready(function() {
         }
 
     }, {
-        offset: '145px'
+        offset: '300px'
+    });
+
+    $('.website').waypoint(function() {
+         $('.website').css("visibility","visible");
+         $('.website').addClass("animated flipInX");
+         this.destroy();
+    }, {
+        offset: '300px'
     });
 
     $('.hackathon').waypoint(function(direction) {
@@ -433,9 +463,6 @@ $(document).ready(function() {
             $('.hackathon .milestone').addClass('line-hack');
             $('.hackathon .arrow-right').addClass('right-hack');
             $('.hackathon .arrow-right').removeClass('right-black');
-
-            $('.hackathon').css("visibility","visible");
-            $('.hackathon').addClass("animated flipInX");
         }
         else
         {
@@ -452,147 +479,155 @@ $(document).ready(function() {
             $('.hackathon .arrow-right').addClass('right-black');
         }
     }, {
-        offset: '155px'
+        offset: '300px'
+    });
+
+    $('.hackathon').waypoint(function() {
+         $('.hackathon').css("visibility","visible");
+         $('.hackathon').addClass("animated flipInX");
+         this.destroy();
+    }, {
+        offset: '300px'
     });
 
     // // portfolio
-    $('.break').waypoint(function() {
-        $('.break').css("visibility", "visible"),
-        $('.break').addClass('animated fadeInLeftBig');
-        this.destroy();
-    }, {
-        offset: '95%'
-    });
-    $('.break').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-        $('.break').removeClass('animated fadeInLeft');
-    }); 
-    $('.oculus').waypoint(function() {
-        $('.oculus').css("visibility", "visible"),
-        $('.oculus').addClass('animated fadeInLeftBig');
-        this.destroy();
-    }, {
-        offset: '95%'
-    });
-    $('.oculus').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-        $('.oculus').removeClass('animated fadeInLeftBig')
-    });
+    // $('.break').waypoint(function() {
+    //     $('.break').css("visibility", "visible"),
+    //     $('.break').addClass('animated fadeInLeftBig');
+    //     this.destroy();
+    // }, {
+    //     offset: '95%'
+    // });
+    // $('.break').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+    //     $('.break').removeClass('animated fadeInLeft');
+    // }); 
+    // $('.oculus').waypoint(function() {
+    //     $('.oculus').css("visibility", "visible"),
+    //     $('.oculus').addClass('animated fadeInLeftBig');
+    //     this.destroy();
+    // }, {
+    //     offset: '95%'
+    // });
+    // $('.oculus').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+    //     $('.oculus').removeClass('animated fadeInLeftBig')
+    // });
 
-    $('.pacman').waypoint(function() {
-        $('.pacman').css("visibility", "visible"),
-        $('.pacman').addClass('animated fadeInLeftBig');
-        this.destroy();
-    }, {
-        offset: '95%'
-    });
-    $('.pacman').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-        $('.pacman').removeClass('animated fadeInLeftBig');
-    });
+    // $('.pacman').waypoint(function() {
+    //     $('.pacman').css("visibility", "visible"),
+    //     $('.pacman').addClass('animated fadeInLeftBig');
+    //     this.destroy();
+    // }, {
+    //     offset: '95%'
+    // });
+    // $('.pacman').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+    //     $('.pacman').removeClass('animated fadeInLeftBig');
+    // });
 
-    $('.scarlet').waypoint(function() {
-        $('.scarlet').css("visibility", "visible"),
-        $('.scarlet').addClass('animated fadeInLeftBig');
-        this.destroy();
-    }, {
-        offset: '95%'
-    });
-    $('.scarlet').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-        $('.scarlet').removeClass('animated fadeInLeftBig');
-    });
+    // $('.scarlet').waypoint(function() {
+    //     $('.scarlet').css("visibility", "visible"),
+    //     $('.scarlet').addClass('animated fadeInLeftBig');
+    //     this.destroy();
+    // }, {
+    //     offset: '95%'
+    // });
+    // $('.scarlet').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+    //     $('.scarlet').removeClass('animated fadeInLeftBig');
+    // });
 
-    $('.conshield').waypoint(function() {
-        $('.conshield').css("visibility", "visible"),
-        $('.conshield').addClass('animated fadeInLeftBig');
-        this.destroy();
-    }, {
-        offset: '95%'
-    });
+    // $('.conshield').waypoint(function() {
+    //     $('.conshield').css("visibility", "visible"),
+    //     $('.conshield').addClass('animated fadeInLeftBig');
+    //     this.destroy();
+    // }, {
+    //     offset: '95%'
+    // });
 
-    $('.conshield').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-        $('.conshield').removeClass('animated fadeInLeftBig');
-    });
+    // $('.conshield').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+    //     $('.conshield').removeClass('animated fadeInLeftBig');
+    // });
 
-    $('.pathfind').waypoint(function() {
-        $('.pathfind').css("visibility", "visible"),
-        $('.pathfind').addClass('animated fadeInLeftBig');
-        this.destroy();
-    }, {
-        offset: '95%'
-    });
+    // $('.pathfind').waypoint(function() {
+    //     $('.pathfind').css("visibility", "visible"),
+    //     $('.pathfind').addClass('animated fadeInLeftBig');
+    //     this.destroy();
+    // }, {
+    //     offset: '95%'
+    // });
 
-    $('.pathfind').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-        $('.pathfind').removeClass('animated fadeInLeftBig');
-    });
+    // $('.pathfind').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+    //     $('.pathfind').removeClass('animated fadeInLeftBig');
+    // });
 
-    $('.recorder').waypoint(function() {
-        $('.recorder').css("visibility", "visible"),
-        $('.recorder').addClass('animated fadeInLeftBig');
-        this.destroy();
-    }, {
-        offset: '95%'
-    });
-    $('.recorder').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-        $('.recorder').removeClass('animated fadeInLeftBig');
-    });
+    // $('.recorder').waypoint(function() {
+    //     $('.recorder').css("visibility", "visible"),
+    //     $('.recorder').addClass('animated fadeInLeftBig');
+    //     this.destroy();
+    // }, {
+    //     offset: '95%'
+    // });
+    // $('.recorder').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+    //     $('.recorder').removeClass('animated fadeInLeftBig');
+    // });
 
-    $('.fox').waypoint(function() {
-        $('.fox').css("visibility", "visible"),
-        $('.fox').addClass('animated fadeInLeftBig');
-        this.destroy();
-    }, {
-        offset: '95%'
-    });
+    // $('.fox').waypoint(function() {
+    //     $('.fox').css("visibility", "visible"),
+    //     $('.fox').addClass('animated fadeInLeftBig');
+    //     this.destroy();
+    // }, {
+    //     offset: '95%'
+    // });
 
-    $('.fox').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-        $('.fox').removeClass('animated fadeInLeftBig');
-    });
+    // $('.fox').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+    //     $('.fox').removeClass('animated fadeInLeftBig');
+    // });
 
-    $('.color').waypoint(function() {
-        $('.color').css("visibility", "visible"),
-        $('.color').addClass('animated fadeInLeftBig');
-        this.destroy();
-    }, {
-        offset: '95%'
-    });
+    // $('.color').waypoint(function() {
+    //     $('.color').css("visibility", "visible"),
+    //     $('.color').addClass('animated fadeInLeftBig');
+    //     this.destroy();
+    // }, {
+    //     offset: '95%'
+    // });
 
-    $('.color').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-        $('.color').removeClass('animated fadeInLeftBig');
-    });
+    // $('.color').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+    //     $('.color').removeClass('animated fadeInLeftBig');
+    // });
 
-    $('.bomber').waypoint(function() {
-        $('.bomber').css("visibility", "visible"),
-        $('.bomber').addClass('animated fadeInLeftBig');
-        this.destroy();
-    }, {
-        offset: '95%'
-    });
+    // $('.bomber').waypoint(function() {
+    //     $('.bomber').css("visibility", "visible"),
+    //     $('.bomber').addClass('animated fadeInLeftBig');
+    //     this.destroy();
+    // }, {
+    //     offset: '95%'
+    // });
 
-    $('.bomber').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-        $('.bomber').removeClass('animated fadeInLeftBig');
-    });
+    // $('.bomber').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+    //     $('.bomber').removeClass('animated fadeInLeftBig');
+    // });
 
-    $('.pong').waypoint(function() {
-        $('.pong').css("visibility", "visible"),
-        $('.pong').addClass('animated fadeInLeftBig');
-        this.destroy();
-    }, {
-        offset: '95%'
-    });
+    // $('.pong').waypoint(function() {
+    //     $('.pong').css("visibility", "visible"),
+    //     $('.pong').addClass('animated fadeInLeftBig');
+    //     this.destroy();
+    // }, {
+    //     offset: '95%'
+    // });
 
-    $('.pong').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-        $('.pong').removeClass('animated fadeInLeftBig');
-    });
+    // $('.pong').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+    //     $('.pong').removeClass('animated fadeInLeftBig');
+    // });
 
-    $('.helic').waypoint(function() {
-        $('.helic').css("visibility", "visible"),
-        $('.helic').addClass('animated fadeInLeftBig');
-        this.destroy();
-    }, {
-        offset: '95%'
-    });
+    // $('.helic').waypoint(function() {
+    //     $('.helic').css("visibility", "visible"),
+    //     $('.helic').addClass('animated fadeInLeftBig');
+    //     this.destroy();
+    // }, {
+    //     offset: '95%'
+    // });
 
-    $('.helic').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-        $('.helic').removeClass('animated fadeInLeftBig');
-    });
+    // $('.helic').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+    //     $('.helic').removeClass('animated fadeInLeftBig');
+    // });
     //postcard
     $('#postcard').waypoint(function() {
         $('#postcard').css("visibility", "visible");
@@ -650,8 +685,8 @@ $(document).ready(function() {
                                 $('.logo').addClass('animated fadeInRight');
                                 $('#name-wrap').css("visibility","visible");
                                 $('#name-wrap').addClass('animated fadeInLeft');
-                                $('.demo-3').css("visibility","visible");
-                                $('.demo-3').addClass('animated flipInX');
+                                // $('.demo-3').css("visibility","visible");
+                                // $('.demo-3').addClass('animated flipInX');
                                 $('#scroll_down').css("visibility","visible");
                                 $('#scroll_down').addClass('animated fadeInDown');
                             })
@@ -677,8 +712,8 @@ $(document).ready(function() {
                                 $('.logo').addClass('animated fadeInRight');
                                 $('#name-wrap').css("visibility","visible");
                                 $('#name-wrap').addClass('animated fadeInLeft');
-                                $('.demo-3').css("visibility","visible");
-                                $('.demo-3').addClass('animated flipInX');
+                                // $('.demo-3').css("visibility","visible");
+                                // $('.demo-3').addClass('animated flipInX');
                                 $('#scroll_down').css("visibility","visible");
                                 $('#scroll_down').addClass('animated fadeInDown');
                             })
@@ -704,8 +739,8 @@ $(document).ready(function() {
                             $('.logo').addClass('animated fadeInRight');
                             $('#name-wrap').css("visibility","visible");
                             $('#name-wrap').addClass('animated fadeInLeft');
-                            $('.demo-3').css("visibility","visible");
-                            $('.demo-3').addClass('animated flipInX');
+                            // $('.demo-3').css("visibility","visible");
+                            // $('.demo-3').addClass('animated flipInX');
                             $('#scroll_down').css("visibility","visible");
                             $('#scroll_down').addClass('animated fadeInDown');
                     })

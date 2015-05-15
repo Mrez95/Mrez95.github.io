@@ -347,7 +347,6 @@ video#background {
 }
 .milestone{
     font-family: josefin-t;
-    text-rendering: optimizeLegibility; 
     font-weight: 100;
     position:relative;
     color: white;
@@ -980,7 +979,7 @@ input:-ms-input-placeholder {
     margin-top:65px;
 }
 .splash {
-    visibility: hidden;
+    /*visibility: hidden;*/
 }
 .img-circle {
     position: relative;
@@ -1711,9 +1710,9 @@ a#scroll_down {
     text-align: center;
     opacity: 0.6;
     color: white;
-    -webkit-animation-delay: 1.1s; /* Chrome, Safari, Opera */
-    -moz-animation-delay: 1.1s;
-    animation-delay: 1.1s;
+    -webkit-animation-delay: 0.9s; /* Chrome, Safari, Opera */
+    -moz-animation-delay: 0.9s;
+    animation-delay: 0.9s;
 }
 a#scroll_down:hover {
     text-decoration: none;
