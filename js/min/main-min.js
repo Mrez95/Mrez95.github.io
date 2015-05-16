@@ -198,7 +198,7 @@ $(document).ready(function() {
             $('.veeva .arrow-left').addClass('left-black');
         }
     }, {
-        offset: '300px'
+        offset: '285px'
     });
 
     $('#fourteen').waypoint(function() {
@@ -206,7 +206,7 @@ $(document).ready(function() {
         $('.veeva').addClass("animated flipInX");
         this.destroy();
     }, {
-        offset: '300px'
+        offset: '285px'
     });
 
     $('#thirteen').waypoint(function(direction) {
@@ -242,7 +242,7 @@ $(document).ready(function() {
             $('.titletrade .arrow-left').addClass('left-black');
         }
     }, {
-        offset: '300px'
+        offset: '285px'
     });
 
     $('#thirteen').waypoint(function() {
@@ -250,7 +250,7 @@ $(document).ready(function() {
         $('.titletrade').addClass("animated flipInX");
         this.destroy();
     }, {
-        offset: '300px'
+        offset: '285px'
     });
 
     $('#ninety-five').waypoint(function(direction) {
@@ -285,7 +285,7 @@ $(document).ready(function() {
             $('.born .arrow-right').addClass('right-black');
         }
     }, {
-        offset: '300px'
+        offset: '285px'
     });
     
     $('#ninety-five').waypoint(function() {
@@ -293,7 +293,7 @@ $(document).ready(function() {
         $('.born').addClass("animated flipInX");   
         this.destroy();
     }, {
-        offset: '300px'
+        offset: '285px'
     });    
 
     $('#born').waypoint(function(direction) {
@@ -314,7 +314,7 @@ $(document).ready(function() {
             $('.middleline').addClass('line-black');
         }
     }, {
-        offset: '300px'
+        offset: '285px'
     });
 
     $('.qoute-life').waypoint(function(direction) {
@@ -399,7 +399,7 @@ $(document).ready(function() {
             $('.zynga .arrow-left').removeClass('left-zynga');
         }
     }, {
-        offset: '300px'
+        offset: '285px'
     });
 
     $('.zynga').waypoint(function() {
@@ -407,7 +407,7 @@ $(document).ready(function() {
          $('.zynga').addClass("animated flipInX");
          this.destroy();
     }, {
-        offset: '300px'
+        offset: '285px'
     });
 
     $('.website').waypoint(function(direction) {
@@ -439,7 +439,7 @@ $(document).ready(function() {
         }
 
     }, {
-        offset: '300px'
+        offset: '285px'
     });
 
     $('.website').waypoint(function() {
@@ -447,7 +447,7 @@ $(document).ready(function() {
          $('.website').addClass("animated flipInX");
          this.destroy();
     }, {
-        offset: '300px'
+        offset: '285px'
     });
 
     $('.hackathon').waypoint(function(direction) {
@@ -479,7 +479,7 @@ $(document).ready(function() {
             $('.hackathon .arrow-right').addClass('right-black');
         }
     }, {
-        offset: '300px'
+        offset: '285px'
     });
 
     $('.hackathon').waypoint(function() {
@@ -487,7 +487,7 @@ $(document).ready(function() {
          $('.hackathon').addClass("animated flipInX");
          this.destroy();
     }, {
-        offset: '300px'
+        offset: '285px'
     });
 
     // // portfolio

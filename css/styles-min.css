@@ -360,6 +360,15 @@ video#background {
     margin-top: 12px;
     margin-bottom: 12px;
 }
+.milestone a{
+    color: white;
+}
+.milestone a:hover{
+    color: white;
+}
+.milestone a:visited{
+  color:white;
+}
 .milestone-wrapper{
     visibility: hidden;
     position:relative;
