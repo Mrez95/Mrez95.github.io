@@ -361,6 +361,7 @@ video#background {
     margin-bottom: 12px;
 }
 .milestone a{
+    color: white;
     border-style: solid;
     border-width: 0 0 1 0px;
 }
