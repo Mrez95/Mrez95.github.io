@@ -371,10 +371,13 @@ video#background {
     transform:translate(0px,8px);
 }
 .milestone a:hover{
-    /*color:rgba(255,255,255,0.7);*/
+    color:rgba(255,255,255,0.8);
 }
 .milestone a:visited{
     color:white;
+}
+#content-wrapper{
+    color: white !important;
 }
 .milestone-wrapper{
     visibility: hidden;
