@@ -361,13 +361,20 @@ video#background {
     margin-bottom: 12px;
 }
 .milestone a{
-    color: white;
+    border-style: solid;
+    border-width: 0 0 1 0px;
+}
+.milestone h a{
+    border-style:none;
+}
+.milestone:hover{
+    transform:translate(0px,8px);
 }
 .milestone a:hover{
-    color: white;
+    /*color:rgba(255,255,255,0.7);*/
 }
 .milestone a:visited{
-  color:white;
+    color:white;
 }
 .milestone-wrapper{
     visibility: hidden;
@@ -1719,9 +1726,9 @@ a#scroll_down {
     text-align: center;
     opacity: 0.6;
     color: white;
-    -webkit-animation-delay: 0.9s; /* Chrome, Safari, Opera */
-    -moz-animation-delay: 0.9s;
-    animation-delay: 0.9s;
+    -webkit-animation-delay: 0.8s; /* Chrome, Safari, Opera */
+    -moz-animation-delay: 0.8s;
+    animation-delay: 0.8s;
 }
 a#scroll_down:hover {
     text-decoration: none;
