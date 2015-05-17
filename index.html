@@ -99,7 +99,7 @@
             <div id="container"> 
                 <img id="static-signature" src="signature/signature_text.png">
                 <video id="signature" preload="auto" autoplay="true" muted="muted">
-                    <source src="signature/Signature_21.mp4" type="video/mp4">
+                    <source src="signature/signature_fast.mp4" type="video/mp4">
                 </video>
                     <div class="loader">
                         <span class="progress"></span>
@@ -113,12 +113,12 @@
                         'overflow': 'hidden',
                         'height': '100%'
                     })
-                    $("#qoute").delay(2500)
+                    $("#qoute").delay(1400)
                     .queue(function() {
                         $(this).stop().animate({
                             top: '50%',
                             opacity: '1'
-                        }, 1700, 'easeOutCubic');
+                        }, 1200, 'easeOutCubic');
                         $(this).dequeue();
                     });
                     </script>

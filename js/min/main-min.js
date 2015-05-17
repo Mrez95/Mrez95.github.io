@@ -671,7 +671,7 @@ $(document).ready(function() {
             localStorage.setItem("initialVisit",localStorage.getItem("currentVisit")); 
             localStorage.setItem("currentVisit", t);
 
-            if (localStorage.getItem("currentVisit")-localStorage.getItem("initialVisit") <= 420000)
+            if (localStorage.getItem("currentVisit")-localStorage.getItem("initialVisit") <= 42)
             { // timeout 8 min 
                 var t = document.getElementById("signature");
                 t.display, t.onloadedmetadata = function() {
@@ -702,7 +702,7 @@ $(document).ready(function() {
                 });
                 var t = document.getElementById("signature");
                 t.display, t.onloadedmetadata = function() {
-                    $("#signature").css("visibility", "visible"), $("#container").delay(5600).queue(function() {
+                    $("#signature").css("visibility", "visible"), $("#container").delay(4200).queue(function() {
                         $(this).fadeOut(1e3, function() {
                             $("html, body").css({
                                 overflow: "visible",
