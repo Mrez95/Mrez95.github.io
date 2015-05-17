@@ -671,7 +671,7 @@ $(document).ready(function() {
             localStorage.setItem("initialVisit",localStorage.getItem("currentVisit")); 
             localStorage.setItem("currentVisit", t);
 
-            if (localStorage.getItem("currentVisit")-localStorage.getItem("initialVisit") <= 42)
+            if (localStorage.getItem("currentVisit")-localStorage.getItem("initialVisit") <= 420000)
             { // timeout 8 min 
                 var t = document.getElementById("signature");
                 t.display, t.onloadedmetadata = function() {
