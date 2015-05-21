@@ -705,9 +705,10 @@ $(document).ready(function() {
         else{
             localStorage.setItem("initialVisit",localStorage.getItem("currentVisit")); 
             localStorage.setItem("currentVisit", t);
-
+            alert("TRY");
             if (localStorage.getItem("currentVisit")-localStorage.getItem("initialVisit") <= 420000)
             { // timeout 8 min 
+                alert("IF");
                 var t = document.getElementById("signature");
                 t.display, t.onloadedmetadata = function() {
                     $("#signature").css("visibility", "visible"), $("#container").delay(0).queue(function() {
@@ -735,6 +736,7 @@ $(document).ready(function() {
                     overflow: "hidden",
                     height: "100%"
                 });
+                alert("ELSE");
                 var t = document.getElementById("signature");
                 t.display, t.onloadedmetadata = function() {
                     $("#signature").css("visibility", "visible"), $("#container").delay(4200).queue(function() {
@@ -758,6 +760,7 @@ $(document).ready(function() {
             }
         }
     } catch (e) {
+        alert("CATCH");
         $("html, body").css({
             overflow: "hidden",
             height: "100%"
