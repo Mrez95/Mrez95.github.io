@@ -931,12 +931,11 @@ div#loading {
     position:relative; 
     margin-bottom:0px;
     bottom:0px;
-    padding-bottom:80px;
+    padding-bottom:0px;
     padding-top: 80px;
     text-align: center;
 }
 .reference-container{
-    font-family: josefin-t;
     font-style: italic;
     margin-top:40px;
     margin-bottom:40px;
@@ -946,7 +945,6 @@ div#loading {
     font-size:17px;
 }
 .author-container{
-    font-family: josefin-t;
     margin-top:10px;
     margin-bottom:120px;
     margin-left:185px;
@@ -955,6 +953,7 @@ div#loading {
     font-size:16px;
 }
 .endorsement-container{
+    font-family: josefin-t;
     visibility: hidden;
 }
 input {
