@@ -926,6 +926,37 @@ div#loading {
     -ra-bottom:0px; 
     padding-bottom:100px;
 }
+.endorsements{
+    background-color: rgba(0,0,0,0.7);
+    position:relative; 
+    margin-bottom:0px;
+    bottom:0px;
+    padding-bottom:80px;
+    padding-top: 80px;
+    text-align: center;
+}
+.reference-container{
+    font-family: josefin-t;
+    /*font-style: italic;*/
+    /*visibility: hidden;*/
+    margin-top:40px;
+    margin-bottom:40px;
+    margin-left:185px;
+    margin-right:185px;
+    color:rgba(255,255,255,0.7);
+    font-size:18px;
+}
+.author-container{
+    font-family: josefin-t;
+    /*visibility: hidden;*/
+    margin-top:10px;
+    margin-bottom:120px;
+    margin-left:185px;
+    margin-right:185px;
+    color:rgba(255,255,255,0.7);
+    font-size:16px;
+}
+
 input {
     background-color: transparent;
     color: rgba(255, 255, 255, .6);

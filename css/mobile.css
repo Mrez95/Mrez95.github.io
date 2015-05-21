@@ -23,6 +23,10 @@
         height: 186px !important;
         border-width: 5px 3px 0px !important;
     }
+    .reference-container{
+        margin-left:40px;
+        margin-right:40px;
+    }
     #personal-bio{
         margin-top: 70px !important;
         font-size: 14px !important;

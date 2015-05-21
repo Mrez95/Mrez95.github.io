@@ -50,6 +50,10 @@
     font-family: josefin-b;
     src: url(../font/JosefinSans-Regular.ttf);
 }
+@font-face{
+    font-family: raleway-t;
+    src: url(../font/Raleway-Thin.ttf);
+}
 @font-face {
     font-family: fontello;
     src: url(../font/fontello.eot?90621633);
