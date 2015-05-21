@@ -937,18 +937,16 @@ div#loading {
 }
 .reference-container{
     font-family: josefin-t;
-    /*font-style: italic;*/
-    /*visibility: hidden;*/
+    font-style: italic;
     margin-top:40px;
     margin-bottom:40px;
     margin-left:185px;
     margin-right:185px;
     color:rgba(255,255,255,0.7);
-    font-size:18px;
+    font-size:17px;
 }
 .author-container{
     font-family: josefin-t;
-    /*visibility: hidden;*/
     margin-top:10px;
     margin-bottom:120px;
     margin-left:185px;
@@ -956,7 +954,9 @@ div#loading {
     color:rgba(255,255,255,0.7);
     font-size:16px;
 }
-
+.endorsement-container{
+    visibility: hidden;
+}
 input {
     background-color: transparent;
     color: rgba(255, 255, 255, .6);

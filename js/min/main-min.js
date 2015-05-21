@@ -92,7 +92,7 @@ $(document).ready(function() {
         $('#personal-bio').addClass('animated fadeInLeft');
         this.destroy();
     }, {
-        offset: '75%'
+        offset: '70%'
     });
     $('#personal-bio').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
         $('#personal-bio').removeClass('animated fadeInLeft');
@@ -108,6 +108,41 @@ $(document).ready(function() {
     $('.qoute-container').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
         $('.qoute-container').removeClass('animated fadeIn');
     });
+
+    // ** REFERENCES ** //
+    $('.endorsement-container.will').waypoint(function() {
+        $('.endorsement-container.will').css("visibility", "visible"),
+        $('.endorsement-container.will').addClass('animated fadeIn');
+        this.destroy();
+    }, {
+        offset: '75%'
+    });
+    $('.endorsement-container.will').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+        $('.endorsement-container.will').removeClass('animated fadeIn');
+    });
+
+    $('.endorsement-container.kevin').waypoint(function() {
+        $('.endorsement-container.kevin').css("visibility", "visible"),
+        $('.endorsement-container.kevin').addClass('animated fadeIn');
+        this.destroy();
+    }, {
+        offset: '75%'
+    });
+    $('.endorsement-container.kevin').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+        $('.endorsement-container.kevin').removeClass('animated fadeIn');
+    });
+
+    $('.endorsement-container.shawn').waypoint(function() {
+        $('.endorsement-container.shawn').css("visibility", "visible"),
+        $('.endorsement-container.shawn').addClass('animated fadeIn');
+        this.destroy();
+    }, {
+        offset: '75%'
+    });
+    $('.endorsement-container.shawn').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+        $('.endorsement-container.shawn').removeClass('animated fadeIn');
+    });
+
 
     // ** TIMELINE TREE ** // 
 
