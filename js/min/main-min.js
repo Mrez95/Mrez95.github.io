@@ -698,10 +698,33 @@ $(document).ready(function() {
     var t = d.getTime(); // ms since midnight Jan 1, 1970
 
     try {
+        $("html, body").css({
+            overflow: "hidden",
+            height: "100%"
+        });
         if (localStorage.getItem("initialVisit") == null && localStorage.getItem("currentVisit") == null){  
-            alert("AGEGAWEGAWEG");
             localStorage.setItem("currentVisit", t);    // set time accordinglyx`
             localStorage.setItem("initialVisit", null); // never visited initially. First visit
+            var t = document.getElementById("signature");
+            t.display, t.onloadedmetadata = function() {
+                $("#signature").css("visibility", "visible"), $("#container").delay(4200).queue(function() {
+                    $(this).fadeOut(1e3, function() {
+                        $("html, body").css({
+                            overflow: "visible",
+                            height: "auto"
+                        }), $("#loading").fadeOut(250,function(){
+                            $('.logo').css("visibility","visible");
+                            $('.logo').addClass('animated fadeInRight');
+                            $('#name-wrap').css("visibility","visible");
+                            $('#name-wrap').addClass('animated fadeInLeft');
+                            // $('.demo-3').css("visibility","visible");
+                            // $('.demo-3').addClass('animated flipInX');
+                            $('#scroll_down').css("visibility","visible");
+                            $('#scroll_down').addClass('animated fadeInDown');
+                        })
+                    }), $(this).dequeue()
+                })
+            }
         }
         else{
             localStorage.setItem("initialVisit",localStorage.getItem("currentVisit")); 
@@ -731,10 +754,6 @@ $(document).ready(function() {
             } 
             else 
             {
-                $("html, body").css({
-                    overflow: "hidden",
-                    height: "100%"
-                });
                 var t = document.getElementById("signature");
                 t.display, t.onloadedmetadata = function() {
                     $("#signature").css("visibility", "visible"), $("#container").delay(4200).queue(function() {
@@ -758,7 +777,6 @@ $(document).ready(function() {
             }
         }
     } catch (e) {
-        alert("CATCH");
         $("html, body").css({
             overflow: "hidden",
             height: "100%"
