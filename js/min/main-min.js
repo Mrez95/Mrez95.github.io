@@ -699,16 +699,15 @@ $(document).ready(function() {
 
     try {
         if (localStorage.getItem("initialVisit") == null && localStorage.getItem("currentVisit") == null){  
+            alert("AGEGAWEGAWEG");
             localStorage.setItem("currentVisit", t);    // set time accordinglyx`
             localStorage.setItem("initialVisit", null); // never visited initially. First visit
         }
         else{
             localStorage.setItem("initialVisit",localStorage.getItem("currentVisit")); 
             localStorage.setItem("currentVisit", t);
-            alert("TRY");
             if (localStorage.getItem("currentVisit")-localStorage.getItem("initialVisit") <= 420000)
             { // timeout 8 min 
-                alert("IF");
                 var t = document.getElementById("signature");
                 t.display, t.onloadedmetadata = function() {
                     $("#signature").css("visibility", "visible"), $("#container").delay(0).queue(function() {
@@ -736,7 +735,6 @@ $(document).ready(function() {
                     overflow: "hidden",
                     height: "100%"
                 });
-                alert("ELSE");
                 var t = document.getElementById("signature");
                 t.display, t.onloadedmetadata = function() {
                     $("#signature").css("visibility", "visible"), $("#container").delay(4200).queue(function() {
