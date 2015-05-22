@@ -143,6 +143,17 @@ $(document).ready(function() {
         $('.endorsement-container.shawn').removeClass('animated fadeIn');
     });
 
+    $('.endorsement-container.wood').waypoint(function() {
+        $('.endorsement-container.wood').css("visibility", "visible"),
+        $('.endorsement-container.wood').addClass('animated fadeIn');
+        this.destroy();
+    }, {
+        offset: '75%'
+    });
+    $('.endorsement-container.shawn').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+        $('.endorsement-container.shawn').removeClass('animated fadeIn');
+    });
+
 
     // ** TIMELINE TREE ** // 
 
