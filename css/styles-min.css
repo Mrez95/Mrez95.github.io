@@ -929,7 +929,8 @@ div#loading {
 .endorsements{
     background-color: rgba(0,0,0,0.7);
     position:relative; 
-    margin-bottom:-15px;
+    /*solution for div overflow*/
+    margin-bottom:-12px;
     bottom:0px;
     padding-bottom:0px;
     padding-top: 80px;
