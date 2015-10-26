@@ -7,12 +7,12 @@ function position_h_center(t) {
 
 function animate_scroll_button() {
     $("#scroll_down").animate({ 
-        bottom: "21px"
-    }, 600, function() {
+        bottom: "22px"
+    }, 500, function() {
         $("#scroll_down").animate({
             bottom: "0px"
         }, {
-            duration: 1450,
+            duration: 1500,
             easing: "easeOutBounce"
         })
     })
@@ -72,7 +72,7 @@ $(document).ready(function() {
     $('#scroll_down').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
         // scroll arrow animation
         $('#scroll_down').removeClass('animated fadeInDown');
-        setInterval("animate_scroll_button()", 1e3); 
+        setInterval("animate_scroll_button()", 500); 
     });  
 
     // waypoints scrollable animations
@@ -163,7 +163,7 @@ $(document).ready(function() {
         $('.timeline').addClass("animated fadeIn");
         this.destroy();
     }, {
-        offset: '510px'
+        offset: '420px'
     });
 
     $('#fifteen').waypoint(function(direction) {
@@ -209,7 +209,7 @@ $(document).ready(function() {
             $('#fifteen').removeClass('node-htn');
         }
     }, {
-        offset: '275px'
+        offset: '280px'
     });
 
     $('#fourteen').waypoint(function(direction) {
@@ -815,7 +815,7 @@ $(document).ready(function() {
     };
 
     // typer.js
-    typerColor = "rgba(241,194,214,0.6)";
+    typerColor = "rgba(255,255,255,0.4)";
     var e = $(window).height() - $(".container").height();
     setTimeout(function() {
         $("[data-typer-targets]").typer(), $.typer.options.typerInterval = 3e3

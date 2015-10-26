@@ -241,7 +241,7 @@ section.demo-3 {
     bottom: 0;
     right: 0;
 }
-video#background {
+#background {
     /*display:none;*/
     min-width: 100%;
     min-height: 100%;
@@ -317,7 +317,7 @@ video#background {
     height:40px;
     border-radius: 300px;
     font-weight: 100;
-    font-size: 14px;
+    font-size: 16px;
     text-align: center;
     margin: auto;
     line-height: 40px;
@@ -398,9 +398,6 @@ video#background {
     padding-top: 80px;
     height:300px;
 }
-.line-black{
-    background-color:lightblue;
-}
 .line-zynga{
     background-color:rgb(215, 30, 30);
 }
@@ -426,7 +423,7 @@ video#background {
     background-color:rgb(254, 216, 13);
 }
 .line-black{
-    background-color:lightblue;
+    background-color:#CECBCB;
 }
 .line-zynga{
     background-color:rgb(215, 30, 30);
@@ -465,69 +462,74 @@ video#background {
     content:url(../images/htn-logo.png);
 }
 .node-fourteen{
-    color: white;
-    background-color: rgb(248, 150, 42);
-    border: 1px solid rgb(248, 150, 42);
+    color: rgb(248, 150, 42);
+    font-weight: bold;
+    background-color: white;
+    border: 2px solid rgb(248, 150, 42);
 }
 .node-thirteen{
-    color: white;
-    background-color: rgb(7, 89, 174);
-    border: 1px solid rgb(7, 89, 174);
+    color: rgb(7, 89, 174);
+    font-weight: bold;
+    background-color: white;
+    border: 2px solid rgb(7, 89, 174);
 }
 .node-ninefive{
-    color: white;
-    background-color: rgb(61,201,179);
-    border: 1px solid rgb(61,201,179);
+    color: rgb(61,201,179);
+    font-weight: bold;
+    background-color: white;
+    border: 2px solid rgb(61,201,179);
 }
 .node-last{
-    color: white;
-    background-color: rgb(254, 216, 13);
-    border: 1px solid rgb(254, 216, 13);
+    color: rgb(247, 207, 0);
+    font-weight: bold;
+    background-color: white;
+    border: 2px solid rgb(254, 216, 13);
 }
 .node-black{
     color: black;
     background-color: white;
-    border: 3px solid lightblue;
+    border: 2px solid gray;
 }
 .node-zynga{
     color:rgb(215, 30, 30);
     background-color: white;
-    border: 3px solid rgb(244, 1, 35);
+    border: 2px solid rgb(244, 1, 35);
 }
 .node-htn{
     color:rgb(53, 177, 212);
+    font-weight: bold;
     background-color: white;
-    border: 3px solid rgb(53, 177, 212);
+    border: 2px solid rgb(53, 177, 212);
 }
 .node-veeva{
     color:rgb(248, 150, 42);
     background-color: white;
-    border: 3px solid rgb(248, 150, 42);
+    border: 2px solid rgb(248, 150, 42);
 }
 .node-title{
     color:rgb(7, 89, 174);
     background-color: white;
-    border: 3px solid rgb(7, 89, 174);
+    border: 2px solid rgb(7, 89, 174);
 }
 .node-hack{
     color:rgb(128, 184, 24);
     background-color: white;
-    border: 3px solid rgb(128, 184, 24);
+    border: 2px solid rgb(128, 184, 24);
 }
 .node-site{
     color:rgb(236, 106, 195);
     background-color: white;
-    border: 3px solid rgb(236, 106, 195);
+    border: 2px solid rgb(236, 106, 195);
 }
 .node-born{
-    color:rgb(61,201,179);
+    color:rgb(245, 206, 0);
     background-color: white;
-    border: 3px solid rgb(61,201,179);
+    border: 2px solid rgb(61,201,179);
 }
 .node-base{
     color:rgb(254, 216, 13);
     background-color: white;
-    border: 3px solid rgb(254, 216, 13);
+    border: 2px solid rgb(254, 216, 13);
 }
 /**/
 .rightside{
@@ -553,7 +555,7 @@ video#background {
 }
 
 .right-black{
-    border-left:15px solid lightblue; 
+    border-left:15px solid #CECBCB; 
 }
 .right-zynga{
     border-left:15px solid rgb(215, 30, 30); 
@@ -582,7 +584,7 @@ video#background {
 
 /*left*/
 .left-black{
-    border-right:15px solid lightblue; 
+    border-right:15px solid #CECBCB; 
 }
 .left-zynga{
     border-right:15px solid rgb(215, 30, 30); 
@@ -856,7 +858,7 @@ div#loading {
 }
 .qoute-container{
     visibility: hidden;
-    color:lightgray;
+    color: lightgray;
     font-size:25px;
 }
 #qoute {
@@ -1013,13 +1015,14 @@ input:-ms-input-placeholder {
     position: relative;
     z-index: 1;
     border-style: solid;
-    border-color: #000;
+    border-color: black;
     border-top:7px solid black; 
     border-bottom:0px;
     border-right:4px solid black;
     border-left:4px solid black;
-    width: 255px;
-    height: 255px;
+    background-color: black;
+    width: 240px;
+    height: 240px;
     text-align: center;
     border-radius: 300px;
     vertical-align: middle;
@@ -1759,7 +1762,7 @@ a#scroll_down {
     bottom: 4px;
     display: block;
     text-align: center;
-    opacity: 0.6;
+    opacity: 0.9;
     color: white;
     -webkit-animation-delay: 0.8s; /* Chrome, Safari, Opera */
     -moz-animation-delay: 0.8s;
@@ -1775,11 +1778,11 @@ a#scroll_down:hover img {
 }
 a#scroll_down span {
     display: block;
-    opacity: .6;
+    opacity: 1;
 }
 a#scroll_down i {
     font-size: 32px;
-    opacity: .6;
+    opacity: 1;
 }
 #qoute b{
     font-size:18px
