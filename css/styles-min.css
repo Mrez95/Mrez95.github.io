@@ -604,6 +604,19 @@ section.demo-3 {
 #right-container{
     float: right;
 }
+#credits{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width:auto;
+}
+#creditentials{
+    padding-right: 15px;
+    color: rgba(255, 255, 255, .2);
+}
+i .fa .fa-heart{
+    color: rgba(255, 255, 255, .4);
+}
 .timeline {
     visibility: hidden;
     position: relative;
