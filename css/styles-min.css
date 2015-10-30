@@ -10,12 +10,6 @@
 #navbar #nav-points a {
     color: black;
 }
-.stick-transparent{
-    background-color: transparent !important;
-}
-.stick-white {
-    background-color: white !important;
-}
 .hidden_nav {
     opacity: 0;
     -webkit-transform: translateY(-50px);
@@ -91,7 +85,7 @@ body.background {
     stroke-dasharray: 60 30;
 }
 .demo-3 .box {
-    background: rgba(255,255,255,0.1);
+    background: rgba(0,0,0,0);
     color: #fff;
     box-shadow: none;
     -webkit-transition: background .3s;
@@ -149,16 +143,15 @@ body.background {
     transform: translateY(-100px);
 }
 section.demo-3 {
-    display: none;
     visibility: hidden;
     position: relative;
     z-index: 1;
     padding: 4em 2em;
     text-align: center;
     padding-top:0px;
-    -webkit-animation-delay: 0.6s; /* Chrome, Safari, Opera */
-    -moz-animation-delay: 0.6s;
-    animation-delay: 0.6s;
+    -webkit-animation-delay: 1.3s; /* Chrome, Safari, Opera */
+    -moz-animation-delay: 1.3s;
+    animation-delay: 1.3s;
 }
 #nav-points a {
     text-decoration: none;
@@ -211,20 +204,6 @@ section.demo-3 {
     -webkit-transform: translateX(0px)!important;
     -moz-transform: translateX(0px)!important;
     transform: translateX(0px)!important;
-}
-.image {
-    position: relative;
-    left: 0;
-    height: 120%;
-    background-color: #fff;
-    background-position: 50% 50%;
-    margin-bottom:0px;
-    background-size: cover;
-    padding-top: 40px;
-    background-attachment: scroll;
-    text-align: center;
-    /*hacky solution for safari browser display bug with flipY*/
-    -webkit-perspective: 1000;
 }
 #static-background {
     display: none;
@@ -626,7 +605,6 @@ section.demo-3 {
     float: right;
 }
 .timeline {
-/*    display: inline;*/
     visibility: hidden;
     position: relative;
     background-color: none;
@@ -1032,8 +1010,20 @@ input:-ms-input-placeholder {
     padding-bottom:0px;
     margin-top:65px;
 }
-.splash {
-    /*visibility: hidden;*/
+.image {
+    position: relative;
+    left: 0;
+    height: 120%;
+    background-color: rgba(255,255,255,0.1);
+    background-position: 50% 50%;
+    margin-bottom:0px;
+    background-size: cover;
+    padding-top: 40px;
+    background-attachment: scroll;
+    text-align: center;
+    height:auto !important;
+    /*hacky solution for safari browser display bug with flipY*/
+    -webkit-perspective: 1000;
 }
 .img-circle {
     position: relative;
@@ -1966,9 +1956,6 @@ a#scroll_down i {
 #icon-wrapper{
     position:relative;
     float:right;
-}
-.image{
-    height:auto !important;
 }
 #personal-bio{
     margin-top:100px;

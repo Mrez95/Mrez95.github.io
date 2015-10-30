@@ -2,13 +2,35 @@
 "CodeKitInfo": "This is a CodeKit 2.x project configuration file. It is designed to sync project settings across multiple machines. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. If you do so, you will likely cause CodeKit to crash. This file is not useful unless accompanied by the project that created it in CodeKit 2. This file is not backwards-compatible with CodeKit 1.x. For more information, see: http:\/\/incident57.com\/codekit",
 "creatorBuild": "17682",
 "files": {
-	"\/background\/static_blue.png": {
-		"fileType": 32768,
+	"\/background\/images\/mountains_bw.jpg": {
+		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 674502,
-		"inputAbbreviatedPath": "\/background\/static_blue.png",
-		"outputAbbreviatedPath": "\/background\/static_blue.png",
+		"initialSize": 468613,
+		"inputAbbreviatedPath": "\/background\/images\/mountains_bw.jpg",
+		"outputAbbreviatedPath": "\/background\/images\/mountains_bw.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/background\/images\/mountains_color.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 488007,
+		"inputAbbreviatedPath": "\/background\/images\/mountains_color.jpg",
+		"outputAbbreviatedPath": "\/background\/images\/mountains_color.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/background\/images\/mountains_px.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 99795,
+		"inputAbbreviatedPath": "\/background\/images\/mountains_px.jpg",
+		"outputAbbreviatedPath": "\/background\/images\/mountains_px.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -121,6 +143,24 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/css\/animate.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/css\/animate.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/css\/animate.min.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/css\/animate.min.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/css\/contact.css": {
 		"fileType": 16,
 		"ignore": 0,
@@ -135,6 +175,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/css\/css.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/css\/font.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/css\/font.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -166,11 +215,20 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/css\/portfolio-cleaned.css": {
+	"\/css\/mobile.css": {
 		"fileType": 16,
 		"ignore": 0,
-		"ignoreWasSetByUser": 1,
-		"inputAbbreviatedPath": "\/css\/portfolio-cleaned.css",
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/css\/mobile.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/css\/normalize.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/css\/normalize.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -198,6 +256,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/css\/scroll.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/css\/skeleton.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/css\/skeleton.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -234,6 +301,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/css\/styling.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/css\/sunny.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/css\/sunny.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -816,13 +892,24 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/images\/color.png": {
+	"\/images\/arrow.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 49681,
-		"inputAbbreviatedPath": "\/images\/color.png",
-		"outputAbbreviatedPath": "\/images\/color.png",
+		"initialSize": 3849,
+		"inputAbbreviatedPath": "\/images\/arrow.png",
+		"outputAbbreviatedPath": "\/images\/arrow.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/born.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 148565,
+		"inputAbbreviatedPath": "\/images\/born.png",
+		"outputAbbreviatedPath": "\/images\/born.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -838,17 +925,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/images\/default_filter.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 3060,
-		"inputAbbreviatedPath": "\/images\/default_filter.png",
-		"outputAbbreviatedPath": "\/images\/default_filter.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/images\/filter1.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -856,17 +932,6 @@
 		"initialSize": 145,
 		"inputAbbreviatedPath": "\/images\/filter1.png",
 		"outputAbbreviatedPath": "\/images\/filter1.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/filter_blue.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 2987,
-		"inputAbbreviatedPath": "\/images\/filter_blue.png",
-		"outputAbbreviatedPath": "\/images\/filter_blue.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -904,24 +969,35 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/images\/home_screen.png": {
+	"\/images\/hack-logo.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 3.04008e+06,
-		"inputAbbreviatedPath": "\/images\/home_screen.png",
-		"outputAbbreviatedPath": "\/images\/home_screen.png",
+		"initialSize": 155207,
+		"inputAbbreviatedPath": "\/images\/hack-logo.png",
+		"outputAbbreviatedPath": "\/images\/hack-logo.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/images\/loading_screen.png": {
+	"\/images\/homepage\/profile.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 2.78783e+06,
-		"inputAbbreviatedPath": "\/images\/loading_screen.png",
-		"outputAbbreviatedPath": "\/images\/loading_screen.png",
+		"initialSize": 328731,
+		"inputAbbreviatedPath": "\/images\/homepage\/profile.png",
+		"outputAbbreviatedPath": "\/images\/homepage\/profile.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/htn-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 45806,
+		"inputAbbreviatedPath": "\/images\/htn-logo.png",
+		"outputAbbreviatedPath": "\/images\/htn-logo.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -944,28 +1020,6 @@
 		"initialSize": 382730,
 		"inputAbbreviatedPath": "\/images\/logo_white.png",
 		"outputAbbreviatedPath": "\/images\/logo_white.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/metal_logo.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 454055,
-		"inputAbbreviatedPath": "\/images\/metal_logo.png",
-		"outputAbbreviatedPath": "\/images\/metal_logo.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/mstile-310x310.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 121748,
-		"inputAbbreviatedPath": "\/images\/mstile-310x310.png",
-		"outputAbbreviatedPath": "\/images\/mstile-310x310.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1322,68 +1376,68 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/images\/portfolio\/Helic\/heli.png": {
+	"\/images\/portfolio\/helic\/heli.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 49121,
-		"inputAbbreviatedPath": "\/images\/portfolio\/Helic\/heli.png",
-		"outputAbbreviatedPath": "\/images\/portfolio\/Helic\/heli.png",
+		"inputAbbreviatedPath": "\/images\/portfolio\/helic\/heli.png",
+		"outputAbbreviatedPath": "\/images\/portfolio\/helic\/heli.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/images\/portfolio\/Helic\/helic.png": {
+	"\/images\/portfolio\/helic\/helic.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 21746,
-		"inputAbbreviatedPath": "\/images\/portfolio\/Helic\/helic.png",
-		"outputAbbreviatedPath": "\/images\/portfolio\/Helic\/helic.png",
+		"inputAbbreviatedPath": "\/images\/portfolio\/helic\/helic.png",
+		"outputAbbreviatedPath": "\/images\/portfolio\/helic\/helic.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/images\/portfolio\/Helic\/helic2.png": {
+	"\/images\/portfolio\/helic\/helic2.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 133421,
-		"inputAbbreviatedPath": "\/images\/portfolio\/Helic\/helic2.png",
-		"outputAbbreviatedPath": "\/images\/portfolio\/Helic\/helic2.png",
+		"inputAbbreviatedPath": "\/images\/portfolio\/helic\/helic2.png",
+		"outputAbbreviatedPath": "\/images\/portfolio\/helic\/helic2.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/images\/portfolio\/Helic\/helic3.png": {
+	"\/images\/portfolio\/helic\/helic3.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 188150,
-		"inputAbbreviatedPath": "\/images\/portfolio\/Helic\/helic3.png",
-		"outputAbbreviatedPath": "\/images\/portfolio\/Helic\/helic3.png",
+		"inputAbbreviatedPath": "\/images\/portfolio\/helic\/helic3.png",
+		"outputAbbreviatedPath": "\/images\/portfolio\/helic\/helic3.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/images\/portfolio\/Helic\/helic4.png": {
+	"\/images\/portfolio\/helic\/helic4.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 42367,
-		"inputAbbreviatedPath": "\/images\/portfolio\/Helic\/helic4.png",
-		"outputAbbreviatedPath": "\/images\/portfolio\/Helic\/helic4.png",
+		"inputAbbreviatedPath": "\/images\/portfolio\/helic\/helic4.png",
+		"outputAbbreviatedPath": "\/images\/portfolio\/helic\/helic4.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/images\/portfolio\/Helic\/helic_title.png": {
+	"\/images\/portfolio\/helic\/helic_title.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 23489,
-		"inputAbbreviatedPath": "\/images\/portfolio\/Helic\/helic_title.png",
-		"outputAbbreviatedPath": "\/images\/portfolio\/Helic\/helic_title.png",
+		"inputAbbreviatedPath": "\/images\/portfolio\/helic\/helic_title.png",
+		"outputAbbreviatedPath": "\/images\/portfolio\/helic\/helic_title.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1839,229 +1893,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/images\/Projects\/Break Smasher-export\/Break Smasher.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/images\/Projects\/Break Smasher-export\/Break Smasher.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/images\/Projects\/brick_logo.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 8281,
-		"inputAbbreviatedPath": "\/images\/Projects\/brick_logo.png",
-		"outputAbbreviatedPath": "\/images\/Projects\/brick_logo.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/Projects\/brick_logo2.jpeg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 12450,
-		"inputAbbreviatedPath": "\/images\/Projects\/brick_logo2.jpeg",
-		"outputAbbreviatedPath": "\/images\/Projects\/brick_logo2.jpeg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/Projects\/brick_logo_3.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 1771,
-		"inputAbbreviatedPath": "\/images\/Projects\/brick_logo_3.png",
-		"outputAbbreviatedPath": "\/images\/Projects\/brick_logo_3.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/Projects\/color_game_logo.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 3039,
-		"inputAbbreviatedPath": "\/images\/Projects\/color_game_logo.png",
-		"outputAbbreviatedPath": "\/images\/Projects\/color_game_logo.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/Projects\/fox jump.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 58957,
-		"inputAbbreviatedPath": "\/images\/Projects\/fox jump.jpg",
-		"outputAbbreviatedPath": "\/images\/Projects\/fox jump.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/Projects\/fox_logo_2.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 24391,
-		"inputAbbreviatedPath": "\/images\/Projects\/fox_logo_2.png",
-		"outputAbbreviatedPath": "\/images\/Projects\/fox_logo_2.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/Projects\/heli.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 70394,
-		"inputAbbreviatedPath": "\/images\/Projects\/heli.png",
-		"outputAbbreviatedPath": "\/images\/Projects\/heli.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/Projects\/lab_logo.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 5197,
-		"inputAbbreviatedPath": "\/images\/Projects\/lab_logo.jpg",
-		"outputAbbreviatedPath": "\/images\/Projects\/lab_logo.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/Projects\/lab_logo_2.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 9094,
-		"inputAbbreviatedPath": "\/images\/Projects\/lab_logo_2.jpg",
-		"outputAbbreviatedPath": "\/images\/Projects\/lab_logo_2.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/Projects\/metal_logo.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 121671,
-		"inputAbbreviatedPath": "\/images\/Projects\/metal_logo.jpg",
-		"outputAbbreviatedPath": "\/images\/Projects\/metal_logo.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/Projects\/MetalArena-export\/MetalArena.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/images\/Projects\/MetalArena-export\/MetalArena.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/images\/Projects\/metalSlug.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 721421,
-		"inputAbbreviatedPath": "\/images\/Projects\/metalSlug.png",
-		"outputAbbreviatedPath": "\/images\/Projects\/metalSlug.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/Projects\/metalSlug2.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 685812,
-		"inputAbbreviatedPath": "\/images\/Projects\/metalSlug2.png",
-		"outputAbbreviatedPath": "\/images\/Projects\/metalSlug2.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/Projects\/metalSlug3.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 662320,
-		"inputAbbreviatedPath": "\/images\/Projects\/metalSlug3.png",
-		"outputAbbreviatedPath": "\/images\/Projects\/metalSlug3.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/Projects\/ocr.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 1745,
-		"inputAbbreviatedPath": "\/images\/Projects\/ocr.png",
-		"outputAbbreviatedPath": "\/images\/Projects\/ocr.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/Projects\/oculus.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 2.20743e+06,
-		"inputAbbreviatedPath": "\/images\/Projects\/oculus.png",
-		"outputAbbreviatedPath": "\/images\/Projects\/oculus.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/Projects\/pacman-export\/pacman.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/images\/Projects\/pacman-export\/pacman.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/images\/Projects\/ScarletNight-export\/ScarletNight.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/images\/Projects\/ScarletNight-export\/ScarletNight.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/images\/Projects\/shield_2.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 5080,
-		"inputAbbreviatedPath": "\/images\/Projects\/shield_2.png",
-		"outputAbbreviatedPath": "\/images\/Projects\/shield_2.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/Projects\/shield_invert.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 4416,
-		"inputAbbreviatedPath": "\/images\/Projects\/shield_invert.png",
-		"outputAbbreviatedPath": "\/images\/Projects\/shield_invert.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/images\/shield-icon.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -2080,17 +1911,6 @@
 		"initialSize": 448294,
 		"inputAbbreviatedPath": "\/images\/stamps\/choice.png",
 		"outputAbbreviatedPath": "\/images\/stamps\/choice.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/stamps\/default(1).png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 448216,
-		"inputAbbreviatedPath": "\/images\/stamps\/default(1).png",
-		"outputAbbreviatedPath": "\/images\/stamps\/default(1).png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -2150,13 +1970,46 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/images\/stamps\/plain.png": {
+	"\/images\/title.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 460842,
-		"inputAbbreviatedPath": "\/images\/stamps\/plain.png",
-		"outputAbbreviatedPath": "\/images\/stamps\/plain.png",
+		"initialSize": 14090,
+		"inputAbbreviatedPath": "\/images\/title.png",
+		"outputAbbreviatedPath": "\/images\/title.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/veeva.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 6885,
+		"inputAbbreviatedPath": "\/images\/veeva.png",
+		"outputAbbreviatedPath": "\/images\/veeva.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/waterloo-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 195854,
+		"inputAbbreviatedPath": "\/images\/waterloo-logo.png",
+		"outputAbbreviatedPath": "\/images\/waterloo-logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/zynga-logo.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 622053,
+		"inputAbbreviatedPath": "\/images\/zynga-logo.jpg",
+		"outputAbbreviatedPath": "\/images\/zynga-logo.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -2302,12 +2155,21 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/js\/min\/main-min.js": {
-		"fileType": 64,
-		"ignore": 1,
+	"\/js\/min\/font.css": {
+		"fileType": 16,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/min\/main-min.js",
-		"outputAbbreviatedPath": "\/js\/min\/min\/main-min-min.js",
+		"inputAbbreviatedPath": "\/js\/min\/font.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/js\/min\/jquery.waypoints.min.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/min\/jquery.waypoints.min.js",
+		"outputAbbreviatedPath": "\/js\/min\/min\/jquery.waypoints.min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -2527,15 +2389,6 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/recorder.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/referrer.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/referrer.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0

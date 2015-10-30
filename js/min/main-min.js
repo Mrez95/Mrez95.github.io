@@ -43,7 +43,7 @@ function updateVisual() {
     }), $(".image").css("height", "95%")) : ($("#personal-bio").css("font-size", "16px"), $(".name-container").css({
         width: "566px",
         height: "457px",
-        top: .11 * window.innerHeight
+        top: .1 * window.innerHeight
     }), $("p.letter-writing").css({
         fontSize: "15px",
         marginTop: "11%"
@@ -53,6 +53,8 @@ var previousId = "",
     tie = {},
     wordGap = 11;
 $(document).ready(function() {
+    isAlphaModifiable = false;
+
     // get dynamic greeting
     getTime();
 
@@ -63,26 +65,44 @@ $(document).ready(function() {
     $('#name-wrap').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
         $('#name-wrap').removeClass('animated fadeInLeft');
     });  
-    // $('.demo-3').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-    //     $('.demo-3').removeClass('animated flipInX');
-    // });  
+    $('.demo-3').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+        $('.demo-3').removeClass('animated fadeIn');
+    });  
     $('.milestone-wrapper').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
         $('.milestone-wrapper').removeClass('animated flipInX');
     });  
     $('#scroll_down').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
         // scroll arrow animation
         $('#scroll_down').removeClass('animated fadeInDown');
-        setInterval("animate_scroll_button()", 500); 
+        setInterval("animate_scroll_button()", 800); 
     });  
 
     // waypoints scrollable animations
-    $('.greeting').waypoint(function() {
+    $('.greeting').waypoint(function(direction) {
         $('.greeting').css("visibility", "visible"),
         $('.greeting').addClass('animated bounceIn');
+        if (direction == "down") {
+            isAlphaModifiable = true;
+        } else {
+            isAlphaModifiable = false;
+        }
+        
         this.destroy();
     }, {
         offset: '90%'
     });
+
+    // determines the opacity of the background canvas
+    $('.greeting').waypoint(function(direction) {
+        if (direction == "down") {
+            isAlphaModifiable = true;
+        } else {
+            isAlphaModifiable = false;
+        }
+    }, {
+        offset: '70%'
+    });
+
     $('.greeting').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
         $('.greeting').removeClass('animated bounceIn');
     });
@@ -536,145 +556,6 @@ $(document).ready(function() {
         offset: '285px'
     });
 
-    // // portfolio
-    // $('.break').waypoint(function() {
-    //     $('.break').css("visibility", "visible"),
-    //     $('.break').addClass('animated fadeInLeftBig');
-    //     this.destroy();
-    // }, {
-    //     offset: '95%'
-    // });
-    // $('.break').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-    //     $('.break').removeClass('animated fadeInLeft');
-    // }); 
-    // $('.oculus').waypoint(function() {
-    //     $('.oculus').css("visibility", "visible"),
-    //     $('.oculus').addClass('animated fadeInLeftBig');
-    //     this.destroy();
-    // }, {
-    //     offset: '95%'
-    // });
-    // $('.oculus').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-    //     $('.oculus').removeClass('animated fadeInLeftBig')
-    // });
-
-    // $('.pacman').waypoint(function() {
-    //     $('.pacman').css("visibility", "visible"),
-    //     $('.pacman').addClass('animated fadeInLeftBig');
-    //     this.destroy();
-    // }, {
-    //     offset: '95%'
-    // });
-    // $('.pacman').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-    //     $('.pacman').removeClass('animated fadeInLeftBig');
-    // });
-
-    // $('.scarlet').waypoint(function() {
-    //     $('.scarlet').css("visibility", "visible"),
-    //     $('.scarlet').addClass('animated fadeInLeftBig');
-    //     this.destroy();
-    // }, {
-    //     offset: '95%'
-    // });
-    // $('.scarlet').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-    //     $('.scarlet').removeClass('animated fadeInLeftBig');
-    // });
-
-    // $('.conshield').waypoint(function() {
-    //     $('.conshield').css("visibility", "visible"),
-    //     $('.conshield').addClass('animated fadeInLeftBig');
-    //     this.destroy();
-    // }, {
-    //     offset: '95%'
-    // });
-
-    // $('.conshield').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-    //     $('.conshield').removeClass('animated fadeInLeftBig');
-    // });
-
-    // $('.pathfind').waypoint(function() {
-    //     $('.pathfind').css("visibility", "visible"),
-    //     $('.pathfind').addClass('animated fadeInLeftBig');
-    //     this.destroy();
-    // }, {
-    //     offset: '95%'
-    // });
-
-    // $('.pathfind').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-    //     $('.pathfind').removeClass('animated fadeInLeftBig');
-    // });
-
-    // $('.recorder').waypoint(function() {
-    //     $('.recorder').css("visibility", "visible"),
-    //     $('.recorder').addClass('animated fadeInLeftBig');
-    //     this.destroy();
-    // }, {
-    //     offset: '95%'
-    // });
-    // $('.recorder').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-    //     $('.recorder').removeClass('animated fadeInLeftBig');
-    // });
-
-    // $('.fox').waypoint(function() {
-    //     $('.fox').css("visibility", "visible"),
-    //     $('.fox').addClass('animated fadeInLeftBig');
-    //     this.destroy();
-    // }, {
-    //     offset: '95%'
-    // });
-
-    // $('.fox').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-    //     $('.fox').removeClass('animated fadeInLeftBig');
-    // });
-
-    // $('.color').waypoint(function() {
-    //     $('.color').css("visibility", "visible"),
-    //     $('.color').addClass('animated fadeInLeftBig');
-    //     this.destroy();
-    // }, {
-    //     offset: '95%'
-    // });
-
-    // $('.color').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-    //     $('.color').removeClass('animated fadeInLeftBig');
-    // });
-
-    // $('.bomber').waypoint(function() {
-    //     $('.bomber').css("visibility", "visible"),
-    //     $('.bomber').addClass('animated fadeInLeftBig');
-    //     this.destroy();
-    // }, {
-    //     offset: '95%'
-    // });
-
-    // $('.bomber').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-    //     $('.bomber').removeClass('animated fadeInLeftBig');
-    // });
-
-    // $('.pong').waypoint(function() {
-    //     $('.pong').css("visibility", "visible"),
-    //     $('.pong').addClass('animated fadeInLeftBig');
-    //     this.destroy();
-    // }, {
-    //     offset: '95%'
-    // });
-
-    // $('.pong').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-    //     $('.pong').removeClass('animated fadeInLeftBig');
-    // });
-
-    // $('.helic').waypoint(function() {
-    //     $('.helic').css("visibility", "visible"),
-    //     $('.helic').addClass('animated fadeInLeftBig');
-    //     this.destroy();
-    // }, {
-    //     offset: '95%'
-    // });
-
-    // $('.helic').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-    //     $('.helic').removeClass('animated fadeInLeftBig');
-    // });
-    //postcard
     $('#postcard').waypoint(function() {
         $('#postcard').css("visibility", "visible");
         $('#postcard').addClass('animated fadeInRightBig');
@@ -687,7 +568,6 @@ $(document).ready(function() {
         $('#postcard').removeClass('animated fadeInRightBig');
         $('#contact-title').removeClass('animated fadeIn');
     });
-
     // smooth scrolling
     $(function() {
       $('a[href*=#]:not([href=#])').click(function() {
@@ -728,8 +608,8 @@ $(document).ready(function() {
                             $('.logo').addClass('animated fadeInRight');
                             $('#name-wrap').css("visibility","visible");
                             $('#name-wrap').addClass('animated fadeInLeft');
-                            // $('.demo-3').css("visibility","visible");
-                            // $('.demo-3').addClass('animated flipInX');
+                            $('.demo-3').css("visibility","visible");
+                            $('.demo-3').addClass('animated fadeInUp');
                             $('#scroll_down').css("visibility","visible");
                             $('#scroll_down').addClass('animated fadeInDown');
                         })
@@ -754,8 +634,8 @@ $(document).ready(function() {
                                 $('.logo').addClass('animated fadeInRight');
                                 $('#name-wrap').css("visibility","visible");
                                 $('#name-wrap').addClass('animated fadeInLeft');
-                                // $('.demo-3').css("visibility","visible");
-                                // $('.demo-3').addClass('animated flipInX');
+                                $('.demo-3').css("visibility","visible");
+                                $('.demo-3').addClass('animated fadeIn');
                                 $('#scroll_down').css("visibility","visible");
                                 $('#scroll_down').addClass('animated fadeInDown');
                             })
@@ -777,8 +657,8 @@ $(document).ready(function() {
                                 $('.logo').addClass('animated fadeInRight');
                                 $('#name-wrap').css("visibility","visible");
                                 $('#name-wrap').addClass('animated fadeInLeft');
-                                // $('.demo-3').css("visibility","visible");
-                                // $('.demo-3').addClass('animated flipInX');
+                                $('.demo-3').css("visibility","visible");
+                                $('.demo-3').addClass('animated fadeIn');
                                 $('#scroll_down').css("visibility","visible");
                                 $('#scroll_down').addClass('animated fadeInDown');
                             })
@@ -804,8 +684,8 @@ $(document).ready(function() {
                             $('.logo').addClass('animated fadeInRight');
                             $('#name-wrap').css("visibility","visible");
                             $('#name-wrap').addClass('animated fadeInLeft');
-                            // $('.demo-3').css("visibility","visible");
-                            // $('.demo-3').addClass('animated flipInX');
+                            $('.demo-3').css("visibility","visible");
+                            $('.demo-3').addClass('animated fadeIn');
                             $('#scroll_down').css("visibility","visible");
                             $('#scroll_down').addClass('animated fadeInDown');
                     })
@@ -890,7 +770,7 @@ $(".portfolio-item").on("mouseenter", function() {
     $(this).find(".splash").stop().fadeTo(500, 0.1);
 });
 
-// // hover out
+// hover out
 $(".portfolio-item").on("mouseleave", function() {
     $(this).find(".splash").stop().fadeTo(500 , 1);
 });
@@ -965,9 +845,12 @@ $(".fa-github").on("mouseenter", function() {
         }), previousId = t;
         var e = $(this).scrollTop(),
             i = $(".filter").height();
+            f = $("#personal-bio").height();
         $("#default-nav").css("opacity", .8 - e / i).show();
         $("#scroll_down").css("opacity", 0.65 - e / i).show();
-        $(".dotted-lines").css("opacity", 0.65 - e / i).show()
+        $(".dotted-lines").css("opacity", 0.65 - e / i).show();
+        // magical code. canvas transition color. 
+        $(".image").css("background-color", "rgba(255,255,255," + (((0.04*(e-f))/100)+0.5) + ")").show();
     }), 
 $(window).load(function() {
         updateVisual(), $(".name-container").css($(window).width() > 768 ? {

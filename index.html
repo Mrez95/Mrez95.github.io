@@ -1,87 +1,83 @@
 <html>
-    <head>
-        <title>Eddie Zhang | Home</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-        <meta charset="utf-8">
-        <link href="css/font.css" rel="stylesheet" media="screen">
-        <link href="css/styles-min.css" rel="stylesheet" media="screen">
-        <link href="css/mobile.css" rel="stylesheet" media="screen">
-        <link href="css/skeleton.css" rel="stylesheet" media="screen">
-        <link href="http://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet" type="text/css">
-        <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
-        <link rel="stylesheet" href="css/animate.css" />
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
-        <link rel="shortcut icon" href="images/mstile-310x310.png" type="image/x-icon">
-        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-        <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Nothing+You+Could+Do' rel='stylesheet' type='text/css'>
-        <script src="js/min/jquery.waypoints.min.js" type="text/javascript"></script>
-        <script src="js/min/main-min.js" type="text/javascript"></script>
-        <script>
-        $(document).ready(function() {
+<head>
+    <title>Eddie Zhang | Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta charset="utf-8">
+    <link href="css/font.css" rel="stylesheet" media="screen">
+    <link href="css/styles-min.css" rel="stylesheet" media="screen">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/mobile.css" rel="stylesheet" media="screen">
+    <link href="css/skeleton.css" rel="stylesheet" media="screen">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,399.9" rel="stylesheet" type="text/css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Nothing+You+Could+Do' rel='stylesheet' type='text/css'>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="js/min/main-min.js" type="text/javascript"></script>
+    <script src="js/min/jquery.waypoints.min.js" type="text/javascript"></script>
+    <script>
+    $(document).ready(function() {
+        $( "#social-wrapper").css( "width",$("#contact-me").width());
+        $( "#icon-wrapper").css( "width",$("#social-wrapper").width()-$("#submit").width()-5);
+        $(".filter").css("background-color","rgba(0,0,0,0.2)");
+        $( window ).resize(function() {
             $( "#social-wrapper").css( "width",$("#contact-me").width());
-            $( "#icon-wrapper").css( "width",$("#social-wrapper").width()-$("#submit").width()-5);
-            // var randBackground = Math.floor((Math.random() * 5) + 1); // rad number 1-5
-            $(".filter").css("background-color","rgba(0,0,0,0.2)");
-            $( window ).resize(function() {
-                $( "#social-wrapper").css( "width",$("#contact-me").width());
-                $( "#icon-wrapper").css( "width",$("#social-wrapper").width()-180);
-            });
+            $( "#icon-wrapper").css( "width",$("#social-wrapper").width()-180);
         });
-        </script>
-        <style type="text/css">
-        .filter{
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-            background: url(images/filter1.png) top left repeat;
-        }
-        .fa {
-            font-size:26px;
-            margin: 4%;
-            width:33px;
-            cursor: pointer;
-            color: rgba(255, 255, 255, .4);
-        }
-        .fa-envelope-square{
-            margin-right:14%;
-        }
-        .fa-github{
-            margin-left:14%;
-        }
-        .fa-paper-plane{
-            font-size:21px;
-            margin:5%;
-            margin-left:8px;
-            width:25px;
-            cursor:pointer;
-            color: rgba(255,255,255,0.5);
-            -webkit-transition: color ease 0.5s;
-            -moz-transition: color ease 0.5s;
-            transition: color ease 0.5s;
-        }
-        </style>   
-    </head>
+    });
+    </script>
 
-    <body class="background">
-        <div id='loading'>
-            <div id="container"> 
-                <img id="static-signature" src="signature/signature_text.png">
-                <video id="signature" preload="auto" autoplay="true" muted="muted">
-                    <source src="signature/signature_fast.mp4" type="video/mp4">
+    <style type="text/css">
+    .filter{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background: url(images/filter1.png) top left repeat;
+    }
+    .fa {
+        font-size: 26px;
+        margin: 4%;
+        width: 33px;
+        cursor: pointer;
+        color: rgba(255, 255, 255, .4);
+    }
+    .fa-envelope-square{
+        margin-right:14%;
+    }
+    .fa-github{
+        margin-left:14%;
+    }
+    .fa-paper-plane{
+        font-size:21px;
+        margin:5%;
+        margin-left:8px;
+        width:25px;
+        cursor:pointer;
+        color: rgba(255,255,255,0.5);
+        -webkit-transition: color ease 0.5s;
+        -moz-transition: color ease 0.5s;
+        transition: color ease 0.5s;
+    }
+    </style>   
+</head>
+
+<body class="background">
+    <div id='loading'>
+        <div id="container"> 
+            <img id="static-signature" src="signature/signature_text.png">
+            <video id="signature" preload="auto" autoplay="true" muted="muted">
+                <source src="signature/signature_fast.mp4" type="video/mp4">
                 </video>
-                    <div class="loader">
-                        <span class="progress"></span>
-                    </div>
-                    <div id="qoute"><b >“</b> Welcome every day as if it was your first. <br>Cherish every moment as if it were your last&nbsp;<b>”</b><p>-<b><i>  Eddie Zhang</i></b></p></div>
+                <div class="loader">
+                    <span class="progress"></span>
                 </div>
+                <div id="qoute"><b >“</b> Welcome every day as if it was your first. <br>Cherish every moment as if it were your last&nbsp;<b>”</b><p>-<b><i>  Eddie Zhang</i></b></p></div>
             </div>
-            <script type="text/javascript">
+        </div>
+        <script type="text/javascript">
                     $('html, body').css({//hide scroll bar
                         'overflow': 'hidden',
                         'height': '100%'
@@ -104,7 +100,6 @@
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span>
                                 </button>
-
                                 <a class="navbar-brand" href="#" >Eddie Tianyi Zhang</a>
                             </div>
                             <!--top toolbar menu-->
@@ -153,10 +148,10 @@
                         <main class="name-container">
                             <img src="images/logo_white.png" alt="logo" class="logo">
                             <div id="name-wrap">
-                            <hr class="dotted-lines">
-                            <h1 id="nameTag"> Eddie Tianyi <span>Zhang</span></h1>
-                            <h2 id="typer" data-typer-targets="material design · front-end development, material design · mobile development, material design · full stack development, interactive design · full stack development,responsive design · full stack development,responsive design · object-oriented development,creative design · object-oriented development,scalable design · object-oriented development, scalable design · game development,scalable design · back-end development, graphic design · back-end development, web design · back-end development,ui / ux design · front-end development"> ui / ux design · front-end development</h2>
-                            <hr class="dotted-lines">
+                                <hr class="dotted-lines">
+                                <h1 id="nameTag"> Eddie Tianyi <span>Zhang</span></h1>
+                                <h2 id="typer" data-typer-targets="material design · front-end development, material design · mobile development, material design · full stack development, interactive design · full stack development,responsive design · full stack development,responsive design · object-oriented development,creative design · object-oriented development,scalable design · object-oriented development, scalable design · game development,scalable design · back-end development, graphic design · back-end development, web design · back-end development,ui / ux design · front-end development"> ui / ux design · front-end development</h2>
+                                <hr class="dotted-lines">
                             </div>
                             <section class="demo-3">
                                 <div class="box">
@@ -180,7 +175,6 @@
                                         </svg>
                                         <h5>Portfolio</h5>
                                     </a>
-
                                 </div>
                                 <div class="box">
                                     <a class="scroll" href="#footer">
@@ -197,6 +191,7 @@
                         </main>
                         <a href="#_about" data-scroll="about" id="scroll_down"><img class="icon-dol" src="images/arrow.png"></a>
                     </div>
+
                     <div id="layer-1"></div>
                     <div id="layer-2"></div>
                     <div id="layer-1"></div>
@@ -214,8 +209,6 @@
                             <div id="photo-container">
                                 <img src="images/homepage/profile.png" class="img-circle img-thumbnail center-block">
                             </div>
-                            <br>
-                            <br>
                         </div>
                         <div id="personal-bio">
                             Hi there! My name is Eddie Zhang and I’m currently a <a href="https://uwaterloo.ca/find-out-more/programs/computer-engineering" target="_blank">Computer Engineering</a> student at <a href="https://uwaterloo.ca" target="_blank">University of Waterloo</a>. One thing to know about me is that I absolutely love technology and fell head over heels for it when I was young and soon found a passion for it in the field of software development. Recently I interned as a software engineer at <a href="http://www.zynga.com" target="_blank">Zynga</a> and prior at <a href="http://www.veeva.com" target="_blank">Veeva Systems</a> in Toronto and <a href="http://www.titletrading.com" target="_blank">Title Trading</a> as a UI/UX front-end developer. At school I try getting involved as much as I can with an engineering schedule. I was an orientating leader and I'm currently a part of four directorships as well as the ECE class of 2018 EngSoc and academic rep. When I'm not at school or programming, you can probably find me with a rod by the lake or dueling it out on the badminton court. <br>
@@ -226,18 +219,18 @@
                             <div class="middleline line-black"></div>
                             <div class="milestone-wrapper htn">
                                 <div class="node node-black first-node"></div>
-                                    <div class="milestone line-black">
-                                        <div class="arrow-right right-black"></div>
-                                        <h><a href="http://hackthenorth.com/2014/" target="_blank">HACK THE NORTH</a></h>
-                                        <p>#Android Developer</p>
-                                        <div id="title-section"></div>
-                                        <p><b>JAVA</b></p>
-                                        <li>Design and implement core features for <a href="https://play.google.com/store/apps/details?id=com.hackthenorth.android" target="_blank"> HTN app </a></li>
-                                        <li>Regular code reviews and agile development</li>
-                                        <a href="https://play.google.com/store/apps/details?id=com.hackthenorth.android" target="_blank">
+                                <div class="milestone line-black">
+                                    <div class="arrow-right right-black"></div>
+                                    <h><a href="http://hackthenorth.com/2014/" target="_blank">HACK THE NORTH</a></h>
+                                    <p>#Android Developer</p>
+                                    <div id="title-section"></div>
+                                    <p><b>JAVA</b></p>
+                                    <li>Design and implement core features for <a href="https://play.google.com/store/apps/details?id=com.hackthenorth.android" target="_blank"> HTN app </a></li>
+                                    <li>Regular code reviews and agile development</li>
+                                    <a href="https://play.google.com/store/apps/details?id=com.hackthenorth.android" target="_blank">
                                         <li>App available on Google Play</li>
-                                        </a>
-                                    </div>
+                                    </a>
+                                </div>
                             </div>
                             <div class="milestone-wrapper zynga">
                                 <div class="node node-black"></div>
@@ -298,25 +291,25 @@
                                         </div>
                                     </a>
                                 </div>
-                           
+
                             </div>
                             <div class="new-year node-black" id="thirteen">2013</div>
                             <div class="milestone-wrapper titletrade">
                                 <div class="node node-black" ></div>
                                 <a href="http://www.titletrading.com/" target="_blank">
-                                <div class="milestone line-black" id="right-container">
-                                    <div class="arrow-left left-black"></div>
-                                    <h>TITLE TRADING INC.</h>
-                                    <p>#Full-Stack Developer</p>
-                                    <div id="title-section"></div>
-                                    <p><b>LAMP</b></p>
-                                    <li>Front-end development leveraging the Bootstrap framework</li>
-                                    <li>Developed web applications for backend systems</li>
-                                </div></a>
-                            </div>
-                            <div class="new-year node-black" id="ninety-five">1995</div>
-                            <div class="milestone-wrapper born">
-                                <div class="node node-black"></div>
+                                    <div class="milestone line-black" id="right-container">
+                                        <div class="arrow-left left-black"></div>
+                                        <h>TITLE TRADING INC.</h>
+                                        <p>#Full-Stack Developer</p>
+                                        <div id="title-section"></div>
+                                        <p><b>LAMP</b></p>
+                                        <li>Front-end development leveraging the Bootstrap framework</li>
+                                        <li>Developed web applications for backend systems</li>
+                                    </div></a>
+                                </div>
+                                <div class="new-year node-black" id="ninety-five">1995</div>
+                                <div class="milestone-wrapper born">
+                                    <div class="node node-black"></div>
                                     <div class="milestone line-black" style="height:210px">
                                         <a href="https://instagram.com/zhangular/" target="_blank">
                                             <div id="content-wrapper">
@@ -330,126 +323,126 @@
                                         </a>
                                     </div>
                                 </div>
-                            <div class="new-year node-black" id="born">YO!</div>
-                        </div>
-                    </div>
-
-                    <div id="layer-1"></div>
-                    <div id="layer-2"></div>
-                    <div id="layer-1"></div>
-                    <div id="layer-2"></div>
-                    <div id="layer-1"></div>
-                    <div id="layer-2"></div>
-                    <div id="layer-1"></div>
-                    <div id="layer-2"></div>
-                    <div id="layer-1"></div>
-                    <div id="layer-2"></div>
-                    <div id="layer-1"></div>
-                    <div id="layer-2"></div>
-                    <div id="layer-1"></div>
-                    <div id="layer-2"></div>
-                    <div id="layer-1"></div>
-                    <div id="layer-2"></div>
-                    <div id="layer-1"></div>
-                    <div id="layer-2"></div>
-    
-
-                    <div class="qoute-life">
-                        <p class="qoute-container"><span class="qoute-typed">“ </span><span class="life"><b>Life  </b></span><span class="qoute-body"><i> isn't about waiting for the storm to pass . . .<br> It's learning to &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <br></i></span><span class="qoute-dance"><b> &nbsp &nbsp &nbsp &nbsp &nbsp Dance in the rain</b></span><span class="qoute-right">&nbsp ”</span></p>
-                    </div>     
-
-                    <div id="layer-3"></div>
-                    <div id="layer-4"></div>
-                    <div id="layer-3"></div>
-                    <div id="layer-4"></div> 
-                    <div id="layer-3"></div>
-                    <div id="layer-4"></div>                     
-                    <div id="_portfolio" data-anchor="about">
-                        <div id="project-banner">
-                            <p class="project-header">References</p>
-                        </div>
-                    <div id="layer-3"></div>
-                    <div id="layer-4"></div>
-                    <div id="layer-3"></div>
-                    <div id="layer-4"></div> 
-                    <div id="layer-3"></div>
-                    <div id="layer-4"></div> 
-                    <div class="endorsements">
-                        <div class="endorsement-container will">
-                            <p class="reference-container">"Eddie has been a valuable member to our team.  He is very dedicated and always tries to perform to the best of his abilities.  He volunteers his time outside work hours to understand and further contribute to the team.  He is very social, always positive and has helped improve our work place environment by becoming a member of our social committee.  Any project task we gave him was executed autonomously in a timely manner.  If he encountered any difficulty, he would seek out assistance from his colleagues and made sure he thoroughly understood the problem before moving on to his next task.  Eddie has exceeded all our expectations and we would gladly welcome him back into our team."</p>
-                            <p class="author-container">- William Yip - Senior Software Engineer - Zynga Inc., May 2015</p>
+                                <div class="new-year node-black" id="born">YO!</div>
+                            </div>
                         </div>
 
-                        <div class="endorsement-container kevin">
-                            <p class="reference-container">"Eddie is an extremely intelligent and adaptive developer. His unwavering tenacity and drive for solving technical challenges distinguishes him as a rare talent among software engineers. During his time at Veeva, Eddie served as point man for the development and maintenance of our in-house metrics aggregation and reporting utility. I provided Eddie with consultation on various front-end programming problems to which his reception was always positive and open. His utilization of digital and human resources is exceptional and always served as an effective asset when faced with daunting engineering problems. I believe that Eddie will continue to grow substantially throughout his university career and will undoubtedly be a great fit for any team."</p>
-                            <p class="author-container">- Kevin Chen - Software Engineer - Veeva Systems, September 2014</p>
-                        </div>
+                        <div id="layer-1"></div>
+                        <div id="layer-2"></div>
+                        <div id="layer-1"></div>
+                        <div id="layer-2"></div>
+                        <div id="layer-1"></div>
+                        <div id="layer-2"></div>
+                        <div id="layer-1"></div>
+                        <div id="layer-2"></div>
+                        <div id="layer-1"></div>
+                        <div id="layer-2"></div>
+                        <div id="layer-1"></div>
+                        <div id="layer-2"></div>
+                        <div id="layer-1"></div>
+                        <div id="layer-2"></div>
+                        <div id="layer-1"></div>
+                        <div id="layer-2"></div>
+                        <div id="layer-1"></div>
+                        <div id="layer-2"></div>
 
-                        <div class="endorsement-container shawn">
-                            <p class="reference-container">"First and foremost, Eddie has an incredible work ethic and integrity. Whenever I assign a challenge to Eddie, I have no doubt that he would accurately and methodically attack the problem in a timely manner. As his mentor, I trust him fully in his judgment and output. He simply need to understand the goal and immediately goes off to achieve it. During Eddie's short term here, he was able to participate in multiple projects and drive all of them to completion. Finally, and most importantly of which makes Eddie unique, is his ability to bring a fun and energetic atmosphere to the office. Everyone loved working with him and I feel like we were very lucky to have had Eddie as part of the team. I would highly recommend him for any position he decides to pursue in the future."</p>
-                            <p class="author-container">- Shawn Luo - Engineering Mentor - Veeva Systems, August 2014</p>
-                        </div>
 
-                        <div class="endorsement-container wood">
-                            <p class="reference-container">"Eddie, you are phenomenal. Not only making us a more analytical, efficient, and data-oriented team but also making us a much happier one. You've been a ray of sunshine and happiness. We'll absolutely miss your hard work and amazing attitude."</p>
-                            <p class="author-container">- Wood Chai - Lead Engineer - Title Trading Inc., October 2013</p>
-                        </div>
-                    </div>   
-    
+                        <div class="qoute-life">
+                            <p class="qoute-container"><span class="qoute-typed">“ </span><span class="life"><b>Life  </b></span><span class="qoute-body"><i> isn't about waiting for the storm to pass . . .<br> It's learning to &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <br></i></span><span class="qoute-dance"><b> &nbsp &nbsp &nbsp &nbsp &nbsp Dance in the rain</b></span><span class="qoute-right">&nbsp ”</span></p>
+                        </div>     
 
-                    <div id="layer-3"></div>
-                    <div id="layer-4"></div>
-                    <div id="layer-3"></div>
-                    <div id="layer-4"></div> 
-                    <div id="layer-3"></div>
-                    <div id="layer-4"></div>                     
-                        <div id="project-banner">
-                            <p class="project-header">My Works</p>
-                        </div>
-
-                    <div id="layer-3"></div>
-                    <div id="layer-4"></div>
-                    <div id="layer-3"></div>
-                    <div id="layer-4"></div> 
-                    <div id="layer-3"></div>
-                    <div id="layer-4"></div> 
-                        <div class="container">
-                            <div class="filter"></div>
-                            <div class="da-thumbs isotope row">
-                                <div class="portfolio-item isotope-item one-third column">
-                                    <a href="breakSmasher.html"><img width="480" height="295" class="splash break" src="images/portfolio/breakout/Break_Cover_2.png" style="display: inline;">
-                                        <div class="da-animate da-slideFromTop" style="display: block;">
-                                            <span>
-                                                <img style="width:45px;height:45px;margin-top:-50px" src="images/breakout.svg"> 
-                                                <h2>Break Breaker</h2>
-                                                <h3 style="color:#ccc">Breakout Java Clone</h3>
-                                            </span>
-                                        </div>
-                                    </a>
+                        <div id="layer-3"></div>
+                        <div id="layer-4"></div>
+                        <div id="layer-3"></div>
+                        <div id="layer-4"></div> 
+                        <div id="layer-3"></div>
+                        <div id="layer-4"></div>                     
+                        <div id="_portfolio" data-anchor="about">
+                            <div id="project-banner">
+                                <p class="project-header">References</p>
+                            </div>
+                            <div id="layer-3"></div>
+                            <div id="layer-4"></div>
+                            <div id="layer-3"></div>
+                            <div id="layer-4"></div> 
+                            <div id="layer-3"></div>
+                            <div id="layer-4"></div> 
+                            <div class="endorsements">
+                                <div class="endorsement-container will">
+                                    <p class="reference-container">"Eddie has been a valuable member to our team.  He is very dedicated and always tries to perform to the best of his abilities.  He volunteers his time outside work hours to understand and further contribute to the team.  He is very social, always positive and has helped improve our work place environment by becoming a member of our social committee.  Any project task we gave him was executed autonomously in a timely manner.  If he encountered any difficulty, he would seek out assistance from his colleagues and made sure he thoroughly understood the problem before moving on to his next task.  Eddie has exceeded all our expectations and we would gladly welcome him back into our team."</p>
+                                    <p class="author-container">- William Yip - Senior Software Engineer - Zynga Inc., May 2015</p>
                                 </div>
-                                <div class="portfolio-item isotope-item one-third column" >
-                                    <a href="oculus.html" rel="2016"><img width="480" height="295" class="splash oculus" src="images/portfolio/oculus/oculus_cover.png" data-lazy-src="images/portfolio/oculus/oculus_cover.png" alt="" style="display: inline;">
-                                        <div class="da-animate da-slideFromTop" style="display: block;">
-                                            <span>
-                                                <img style="width:47px;height:47px;margin-top:-50px" src="images/oculus_logo.png"> 
-                                                <h2>The Grasslands</h2>
-                                                <h3 style="color:#ccc">Oculus & Myo Hack</h3>
-                                            </span>
-                                        </div>
-                                    </a>
+
+                                <div class="endorsement-container kevin">
+                                    <p class="reference-container">"Eddie is an extremely intelligent and adaptive developer. His unwavering tenacity and drive for solving technical challenges distinguishes him as a rare talent among software engineers. During his time at Veeva, Eddie served as point man for the development and maintenance of our in-house metrics aggregation and reporting utility. I provided Eddie with consultation on various front-end programming problems to which his reception was always positive and open. His utilization of digital and human resources is exceptional and always served as an effective asset when faced with daunting engineering problems. I believe that Eddie will continue to grow substantially throughout his university career and will undoubtedly be a great fit for any team."</p>
+                                    <p class="author-container">- Kevin Chen - Software Engineer - Veeva Systems, September 2014</p>
                                 </div>
-                                <div class="portfolio-item isotope-item one-third column">
-                                    <a href="pacman.html" rel="1943"><img width="480" height="295" class="splash pacman" src="images/portfolio/pacman/pacman_cover.png" style="display: inline;">
-                                        <div class="da-animate da-slideFromTop" style="display: block;">
-                                            <span>
-                                                <img style="width:103px;height:40px;margin-top:-50px" src="images/pacman_logo.png">
-                                                <h2>Pac-Man</h2>
-                                                <h3 style="color:#ccc">Classic Arcade Game</h3>
-                                            </span>
-                                        </div>
-                                    </a>
+
+                                <div class="endorsement-container shawn">
+                                    <p class="reference-container">"First and foremost, Eddie has an incredible work ethic and integrity. Whenever I assign a challenge to Eddie, I have no doubt that he would accurately and methodically attack the problem in a timely manner. As his mentor, I trust him fully in his judgment and output. He simply need to understand the goal and immediately goes off to achieve it. During Eddie's short term here, he was able to participate in multiple projects and drive all of them to completion. Finally, and most importantly of which makes Eddie unique, is his ability to bring a fun and energetic atmosphere to the office. Everyone loved working with him and I feel like we were very lucky to have had Eddie as part of the team. I would highly recommend him for any position he decides to pursue in the future."</p>
+                                    <p class="author-container">- Shawn Luo - Engineering Mentor - Veeva Systems, August 2014</p>
                                 </div>
-                            </div>       
+
+                                <div class="endorsement-container wood">
+                                    <p class="reference-container">"Eddie, you are phenomenal. Not only making us a more analytical, efficient, and data-oriented team but also making us a much happier one. You've been a ray of sunshine and happiness. We'll absolutely miss your hard work and amazing attitude."</p>
+                                    <p class="author-container">- Wood Chai - Lead Engineer - Title Trading Inc., October 2013</p>
+                                </div>
+                            </div>   
+
+
+                            <div id="layer-3"></div>
+                            <div id="layer-4"></div>
+                            <div id="layer-3"></div>
+                            <div id="layer-4"></div> 
+                            <div id="layer-3"></div>
+                            <div id="layer-4"></div>                     
+                            <div id="project-banner">
+                                <p class="project-header">My Works</p>
+                            </div>
+
+                            <div id="layer-3"></div>
+                            <div id="layer-4"></div>
+                            <div id="layer-3"></div>
+                            <div id="layer-4"></div> 
+                            <div id="layer-3"></div>
+                            <div id="layer-4"></div> 
+                            <div class="container">
+                                <div class="filter"></div>
+                                <div class="da-thumbs isotope row">
+                                    <div class="portfolio-item isotope-item one-third column">
+                                        <a href="breakSmasher.html"><img width="480" height="295" class="splash break" src="images/portfolio/breakout/Break_Cover_2.png" style="display: inline;">
+                                            <div class="da-animate da-slideFromTop" style="display: block;">
+                                                <span>
+                                                    <img style="width:45px;height:45px;margin-top:-50px" src="images/breakout.svg"> 
+                                                    <h2>Break Breaker</h2>
+                                                    <h3 style="color:#ccc">Breakout Java Clone</h3>
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="portfolio-item isotope-item one-third column" >
+                                        <a href="oculus.html" rel="2016"><img width="480" height="295" class="splash oculus" src="images/portfolio/oculus/oculus_cover.png" data-lazy-src="images/portfolio/oculus/oculus_cover.png" alt="" style="display: inline;">
+                                            <div class="da-animate da-slideFromTop" style="display: block;">
+                                                <span>
+                                                    <img style="width:47px;height:47px;margin-top:-50px" src="images/oculus_logo.png"> 
+                                                    <h2>The Grasslands</h2>
+                                                    <h3 style="color:#ccc">Oculus & Myo Hack</h3>
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="portfolio-item isotope-item one-third column">
+                                        <a href="pacman.html" rel="1943"><img width="480" height="295" class="splash pacman" src="images/portfolio/pacman/pacman_cover.png" style="display: inline;">
+                                            <div class="da-animate da-slideFromTop" style="display: block;">
+                                                <span>
+                                                    <img style="width:103px;height:40px;margin-top:-50px" src="images/pacman_logo.png">
+                                                    <h2>Pac-Man</h2>
+                                                    <h3 style="color:#ccc">Classic Arcade Game</h3>
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>       
                                 <div class="da-thumbs isotope row">
                                     <div class="portfolio-item isotope-item one-third column">
                                         <a href="ScarletNight.html" rel="1656"><img width="480" height="295" class="splash scarlet" src="       images/portfolio/scarletNight/ScarletNight3.png" data-lazy-src="       images/portfolio/scarletNight/scarlet_cover.png" alt="" style="display: inline;">
@@ -485,78 +478,78 @@
                                         </a>
                                     </div>
                                 </div>
-                            <div class="da-thumbs isotope row">
-                                <div class="portfolio-item isotope-item one-third column">
-                                    <a href="recorder.html" rel="2714"><img width="480" height="295" class="splash recorder" src="images/portfolio/recorder/recorder_cover.png" data-lazy-src="images/portfolio/recorder/recorder_cover.png" style="display: inline;">
-                                        <div class="da-animate da-slideFromBottom" style="display: block;">
-                                            <span>
-                                                <img style="width:45px;height:45px;margin-top:-50px" src="images/interface.svg">
-                                                <h2>Re'corder</h2>
-                                                <h3 style="color:#ccc">OCR Budget Planner</h3>
-                                            </span>
-                                        </div>
-                                    </a>
+                                <div class="da-thumbs isotope row">
+                                    <div class="portfolio-item isotope-item one-third column">
+                                        <a href="recorder.html" rel="2714"><img width="480" height="295" class="splash recorder" src="images/portfolio/recorder/recorder_cover.png" data-lazy-src="images/portfolio/recorder/recorder_cover.png" style="display: inline;">
+                                            <div class="da-animate da-slideFromBottom" style="display: block;">
+                                                <span>
+                                                    <img style="width:45px;height:45px;margin-top:-50px" src="images/interface.svg">
+                                                    <h2>Re'corder</h2>
+                                                    <h3 style="color:#ccc">OCR Budget Planner</h3>
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="portfolio-item isotope-item one-third column">
+                                        <a href="fox.html" rel="2714"><img width="480" height="295" class="splash fox" src="images/fox-2.png" data-lazy-src="images/portfolio/fox/fox_cover.png"style="display: inline;">
+                                            <div class="da-animate da-slideFromBottom" style="display: block;">
+                                                <span>
+                                                    <img style="width:70px;height:70px;margin-top:-50px" src="images/fox_logo.png">
+                                                    <h2>Where does the fox jump</h2>
+                                                    <h3 style="color:#ccc">JavaScript puzzle game</h3>
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="portfolio-item isotope-item one-third column">
+                                        <a href="color.html" rel="2714"><img width="480" height="295" class="splash color" src="images/portfolio/color/color_cover.png" data-lazy-src="images/portfolio/color/color_cover.png:"style="display: inline;">
+                                            <div class="da-animate da-slideFromBottom" style="display: block;">
+                                                <span>
+                                                    <img style="width:45px;height:45px;margin-top:-36px" src="images/colorGame.svg">
+                                                    <h2>Color Game</h2>
+                                                    <h3 style="color:#ccc">JavaScript strategy game</h3>
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </div>
                                 </div>
-                                <div class="portfolio-item isotope-item one-third column">
-                                    <a href="fox.html" rel="2714"><img width="480" height="295" class="splash fox" src="images/fox-2.png" data-lazy-src="images/portfolio/fox/fox_cover.png"style="display: inline;">
-                                        <div class="da-animate da-slideFromBottom" style="display: block;">
-                                            <span>
-                                                <img style="width:70px;height:70px;margin-top:-50px" src="images/fox_logo.png">
-                                                <h2>Where does the fox jump</h2>
-                                                <h3 style="color:#ccc">JavaScript puzzle game</h3>
-                                            </span>
-                                        </div>
-                                    </a>
+                                <div class="da-thumbs isotope row">
+                                    <div class="portfolio-item isotope-item one-third column">
+                                        <a href="bomber.html" rel="2714"><img width="480" height="295" class="splash bomber" src="images/portfolio/bomber/bomber_cover.png" data-lazy-src="images/portfolio/bomber/bomber_cover.png"  style="display: inline;">
+                                            <div class="da-animate da-slideFromBottom" style="display: block;">
+                                                <span>
+                                                    <img style="width:51px;height:51px;margin-bottom:2px;margin-top:-43px" src="images/portfolio/bomber/bomb2.png">
+                                                    <h2>Bomber-Man</h2>
+                                                    <h3 style="color:#ccc">Java Game</h3>
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="portfolio-item isotope-item one-third column">
+                                        <a href="pong.html" rel="2714"><img width="480" height="295" class="splash pong" src="images/portfolio/pong/pong_title.png" data-lazy-src="images/portfolio/pong/pong_title.png"  style="display: inline;">
+                                            <div class="da-animate da-slideFromBottom" style="display: block;">
+                                                <span>
+                                                    <img style="width:45px;height:45px;margin-bottom:-2px;margin-top:-50px" src="images/portfolio/pong/pong_cover.png">
+                                                    <h2>Pong-Out!</h2>
+                                                    <h3 style="color:#ccc">Class pong with a surprising twist</h3>
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="portfolio-item isotope-item one-third column">
+                                        <a href="helic.html" rel="2714"><img width="480" height="295" class="splash helic" src="images/portfolio/Helic/helic_title.png" data-lazy-src="images/portfolio/Helic/helic_title.png"  style="display: inline;">
+                                            <div class="da-animate da-slideFromBottom" style="display: block;">
+                                                <span>
+                                                    <img style="width:50px;height:50px;margin-top:-50px" src="images/portfolio/Helic/heli.png">
+                                                    <h2>H.E.L.I.C</h2>
+                                                    <h3 style="color:#ccc">Helicopter game remade in Perl</h3>
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </div>
                                 </div>
-                                <div class="portfolio-item isotope-item one-third column">
-                                    <a href="color.html" rel="2714"><img width="480" height="295" class="splash color" src="images/portfolio/color/color_cover.png" data-lazy-src="images/portfolio/color/color_cover.png:"style="display: inline;">
-                                        <div class="da-animate da-slideFromBottom" style="display: block;">
-                                            <span>
-                                                <img style="width:45px;height:45px;margin-top:-36px" src="images/colorGame.svg">
-                                                <h2>Color Game</h2>
-                                                <h3 style="color:#ccc">JavaScript strategy game</h3>
-                                            </span>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="da-thumbs isotope row">
-                                <div class="portfolio-item isotope-item one-third column">
-                                    <a href="bomber.html" rel="2714"><img width="480" height="295" class="splash bomber" src="images/portfolio/bomber/bomber_cover.png" data-lazy-src="images/portfolio/bomber/bomber_cover.png"  style="display: inline;">
-                                        <div class="da-animate da-slideFromBottom" style="display: block;">
-                                            <span>
-                                                <img style="width:51px;height:51px;margin-bottom:2px;margin-top:-43px" src="images/portfolio/bomber/bomb2.png">
-                                                <h2>Bomber-Man</h2>
-                                                <h3 style="color:#ccc">Java Game</h3>
-                                            </span>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="portfolio-item isotope-item one-third column">
-                                    <a href="pong.html" rel="2714"><img width="480" height="295" class="splash pong" src="images/portfolio/pong/pong_title.png" data-lazy-src="images/portfolio/pong/pong_title.png"  style="display: inline;">
-                                        <div class="da-animate da-slideFromBottom" style="display: block;">
-                                            <span>
-                                                <img style="width:45px;height:45px;margin-bottom:-2px;margin-top:-50px" src="images/portfolio/pong/pong_cover.png">
-                                                <h2>Pong-Out!</h2>
-                                                <h3 style="color:#ccc">Class pong with a surprising twist</h3>
-                                            </span>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="portfolio-item isotope-item one-third column">
-                                    <a href="helic.html" rel="2714"><img width="480" height="295" class="splash helic" src="images/portfolio/Helic/helic_title.png" data-lazy-src="images/portfolio/Helic/helic_title.png"  style="display: inline;">
-                                        <div class="da-animate da-slideFromBottom" style="display: block;">
-                                            <span>
-                                                <img style="width:50px;height:50px;margin-top:-50px" src="images/portfolio/Helic/heli.png">
-                                                <h2>H.E.L.I.C</h2>
-                                                <h3 style="color:#ccc">Helicopter game remade in Perl</h3>
-                                            </span>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div><!-- .container /-->
-                    </div>
+                            </div><!-- .container /-->
+                        </div>
                         <!--hidden-sm hidden-xs-->
 
                         <div data-anchor="contact" id ="footer">
