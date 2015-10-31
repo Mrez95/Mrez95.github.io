@@ -850,7 +850,7 @@ $(".fa-github").on("mouseenter", function() {
         $("#scroll_down").css("opacity", 0.65 - e / i).show();
         $(".dotted-lines").css("opacity", 0.65 - e / i).show();
         // magical code. canvas transition color. 
-        $(".image").css("background-color", "rgba(255,255,255," + (((0.04*(e-f))/100)+0.5) + ")").show();
+        $(".image").css("background-color", "rgba(255,255,255," + (((0.048*(e-f))/100)+0.5) + ")").show();
     }), 
 $(window).load(function() {
         updateVisual(), $(".name-container").css($(window).width() > 768 ? {

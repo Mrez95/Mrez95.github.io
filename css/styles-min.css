@@ -612,13 +612,14 @@ section.demo-3 {
 }
 #creditentials{
     padding-right: 10px;
+    width: 220px;
     float:right;
     color: rgba(255, 255, 255, .2);
 }
 i .fa-heart{
-    font-size: 16px;
-    padding-left: 4px;
-    padding-right: 4px;
+    font-size: 16px !important;
+    padding-left: 4px !important;
+    padding-right: 4px !important;
     color: rgba(255, 255, 255, .4);
 }
 .timeline {
