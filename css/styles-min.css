@@ -612,7 +612,7 @@ section.demo-3 {
 }
 #creditentials{
     padding-right: 10px;
-    width: 250px;
+    width: 240px;
     float:right;
     font-size: 14px;
     font-style: italic;
@@ -1981,9 +1981,9 @@ a#scroll_down i {
 .fa-heart{
     cursor: default !important;
     font-size: 16px !important;
-    padding-left: 4px !important;
+    padding-left: 8px !important;
     padding-right: 4px !important;
-    width: 28px !important;
+    width: 26px !important;
     margin: 0% !important;
 }
 [class*=" icon-"]:before, [class^=icon-]:before {
