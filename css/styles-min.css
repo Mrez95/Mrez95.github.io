@@ -612,8 +612,10 @@ section.demo-3 {
 }
 #creditentials{
     padding-right: 10px;
-    width: 175px;
+    width: 250px;
     float:right;
+    font-size: 14px;
+    font-style: italic;
     color: rgba(255, 255, 255, .2);
 }
 .timeline {
