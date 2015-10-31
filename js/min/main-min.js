@@ -845,12 +845,12 @@ $(".fa-github").on("mouseenter", function() {
         }), previousId = t;
         var e = $(this).scrollTop(),
             i = $(".filter").height();
-            f = $("#personal-bio").height();
+            f = $("#personal-bio").height()+150;
         $("#default-nav").css("opacity", .8 - e / i).show();
         $("#scroll_down").css("opacity", 0.65 - e / i).show();
         $(".dotted-lines").css("opacity", 0.65 - e / i).show();
         // magical code. canvas transition color. 
-        $(".image").css("background-color", "rgba(255,255,255," + (((0.048*(e-f))/100)+0.5) + ")").show();
+        $(".image").css("background-color", "rgba(255,255,255," + (((0.05*(e-f))/100)+0.6) + ")").show();
     }), 
 $(window).load(function() {
         updateVisual(), $(".name-container").css($(window).width() > 768 ? {
