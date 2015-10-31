@@ -608,10 +608,11 @@ section.demo-3 {
     position: absolute;
     right: 0;
     bottom: 0;
-    width:auto;
+    width:100%;
 }
 #creditentials{
-    padding-right: 20px;
+    padding-right: 10px;
+    float:right;
     color: rgba(255, 255, 255, .2);
 }
 i .fa-heart{
