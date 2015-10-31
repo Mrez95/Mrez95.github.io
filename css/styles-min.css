@@ -612,7 +612,7 @@ section.demo-3 {
 }
 #creditentials{
     padding-right: 10px;
-    width: 310px;
+    width: 175px;
     float:right;
     color: rgba(255, 255, 255, .2);
 }
@@ -1977,11 +1977,12 @@ a#scroll_down i {
     width:45px;
 }
 .fa-heart{
-    cursor: default;
+    cursor: default !important;
     font-size: 16px !important;
     padding-left: 4px !important;
     padding-right: 4px !important;
-    color: rgba(255, 255, 255, .4);
+    width: 28px !important;
+    margin: 0% !important;
 }
 [class*=" icon-"]:before, [class^=icon-]:before {
     font-family: fontello;
