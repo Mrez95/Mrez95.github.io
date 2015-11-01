@@ -768,11 +768,13 @@ $(".navbar-header .fa").on("mouseleave", function() {
 // portfolio hover animations
 $(".portfolio-item").on("mouseenter", function() {
     $(this).find(".splash").stop().fadeTo(500, 0.1);
+    $(this).find(".portfolio-overlay").stop().fadeTo(250, 0);
 });
 
 // hover out
 $(".portfolio-item").on("mouseleave", function() {
-    $(this).find(".splash").stop().fadeTo(500 , 1);
+    $(this).find(".splash").stop().fadeTo(250, 1);
+    $(this).find(".portfolio-overlay").stop().delay(450).fadeTo(650, 1);
 });
 
 // postcard stamp magic
