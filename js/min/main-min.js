@@ -178,6 +178,30 @@ $(document).ready(function() {
     // ** TIMELINE TREE ** // 
 
     // timeline TODO: TESTING EXPERIMENT
+
+    // timeline starting animations/transitions
+    $('.yelp').waypoint(function(direction) {
+        if (direction == "down")
+        {
+            $('.nav-logo').removeClass('animated fadeOutUp');
+            $('#navbar').removeClass("stick-transparent");
+            $('#navbar').addClass("stick-white");
+            $('.nav-logo').addClass('enlarge-photo-wide'); // cause yelp is a wide logo. use enlarge-photo if logo is square
+            $('.nav-logo img').addClass('yelp-logo');
+            $('.nav-logo').addClass('animated fadeInDown');
+        }
+        else
+        {
+            $('.nav-logo').removeClass('animated fadeInDown');
+            $('#navbar').addClass("stick-transparent");
+            $('#navbar').removeClass("stick-white");
+            $('.nav-logo img').removeClass('yelp-logo');
+            $('.nav-logo').removeClass('enlarge-photo-wide');
+        }
+    }, {
+        offset: '69px'
+    });
+
     $('#fifteen').waypoint(function() {
         $('.timeline').css("visibility","visible");
         $('.timeline').addClass("animated fadeIn");
@@ -190,28 +214,28 @@ $(document).ready(function() {
         if (direction == "down")
         {
             $('.middleline').removeClass('line-black');
-            $('.middleline').addClass('line-htn');
-            $('.htn .milestone').removeClass('line-black');
-            $('.htn .milestone').addClass('line-htn');
-            $('.htn .arrow-right').removeClass('right-black');
-            $('.htn .arrow-right').addClass('right-htn');
+            $('.middleline').addClass('line-yelp');
+            $('.yelp .milestone').removeClass('line-black');
+            $('.yelp .milestone').addClass('line-yelp');
+            $('.yelp .arrow-left').removeClass('left-black');
+            $('.yelp .arrow-left').addClass('left-yelp');
         }
         else 
         {
-            $('.middleline').removeClass('line-htn');
+            $('.middleline').removeClass('line-yelp');
             $('.middleline').addClass('line-black');
-            $('.htn .milestone').removeClass('line-htn');
-            $('.htn .milestone').addClass('line-black');
-            $('.htn .arrow-right').addClass('right-black');
-            $('.htn .arrow-right').removeClass('right-htn');
+            $('.yelp .milestone').removeClass('line-yelp');
+            $('.yelp .milestone').addClass('line-black');
+            $('.yelp .arrow-left').addClass('left-black');
+            $('.yelp .arrow-left').removeClass('left-yelp');
         }
     }, {
         offset: '120px'
     });
 
     $('#fifteen').waypoint(function() {
-        $('.htn').css("visibility","visible");
-        $('.htn').addClass("animated flipInX");
+        $('.yelp').css("visibility","visible");
+        $('.yelp').addClass("animated flipInX");
         this.destroy();
     }, {
         offset: '120px'
@@ -221,12 +245,12 @@ $(document).ready(function() {
         if (direction == "down")
         {
             $('#fifteen').removeClass('node-black');
-            $('#fifteen').addClass('node-htn');
+            $('#fifteen').addClass('node-yelp');
         }
         else 
         {
             $('#fifteen').addClass('node-black');
-            $('#fifteen').removeClass('node-htn');
+            $('#fifteen').removeClass('node-yelp');
         }
     }, {
         offset: '280px'
@@ -264,7 +288,7 @@ $(document).ready(function() {
             $('.veeva .arrow-left').addClass('left-black');
         }
     }, {
-        offset: '285px'
+        offset: '250px'
     });
 
     $('#fourteen').waypoint(function() {
@@ -272,7 +296,7 @@ $(document).ready(function() {
         $('.veeva').addClass("animated flipInX");
         this.destroy();
     }, {
-        offset: '285px'
+        offset: '250px'
     });
 
     $('#thirteen').waypoint(function(direction) {
@@ -308,7 +332,7 @@ $(document).ready(function() {
             $('.titletrade .arrow-left').addClass('left-black');
         }
     }, {
-        offset: '285px'
+        offset: '250px'
     });
 
     $('#thirteen').waypoint(function() {
@@ -316,7 +340,7 @@ $(document).ready(function() {
         $('.titletrade').addClass("animated flipInX");
         this.destroy();
     }, {
-        offset: '285px'
+        offset: '250px'
     });
 
     $('#ninety-five').waypoint(function(direction) {
@@ -351,7 +375,7 @@ $(document).ready(function() {
             $('.born .arrow-right').addClass('right-black');
         }
     }, {
-        offset: '285px'
+        offset: '250px'
     });
     
     $('#ninety-five').waypoint(function() {
@@ -359,7 +383,7 @@ $(document).ready(function() {
         $('.born').addClass("animated flipInX");   
         this.destroy();
     }, {
-        offset: '285px'
+        offset: '250px'
     });    
 
     $('#born').waypoint(function(direction) {
@@ -380,7 +404,7 @@ $(document).ready(function() {
             $('.middleline').addClass('line-black');
         }
     }, {
-        offset: '285px'
+        offset: '250px'
     });
 
     $('.qoute-life').waypoint(function(direction) {
@@ -416,25 +440,46 @@ $(document).ready(function() {
     });
 
     $('.htn').waypoint(function(direction) {
-        if (direction == "down")
+    if(direction == "down")
         {
-            $('.nav-logo').removeClass('animated fadeOutUp');
-            $('#navbar').removeClass("stick-transparent");
-            $('#navbar').addClass("stick-white");
+            $('.nav-logo').removeClass('enlarge-photo-wide'); // remove these 2 lines if logo is square
             $('.nav-logo').addClass('enlarge-photo');
-            $('.nav-logo img').addClass('htn-logo');
-            $('.nav-logo').addClass('animated fadeInDown');
+            $('.nav-logo img').removeClass('yelp-logo');
+            $('.nav-logo img').addClass('htn-logo');     
+
+            $('.middleline').removeClass('line-yelp');
+            $('.middleline').addClass('line-htn');
+
+            $('.htn .milestone').removeClass('line-black');
+            $('.htn .milestone').addClass('line-htn');
+            $('.htn .arrow-right').removeClass('right-black');
+            $('.htn .arrow-right').addClass('right-htn');
         }
         else
         {
-            $('.nav-logo').removeClass('animated fadeInDown');
-            $('#navbar').addClass("stick-transparent");
-            $('#navbar').removeClass("stick-white");
-            $('.nav-logo img').removeClass('htn-logo');
+            $('.nav-logo').addClass('enlarge-photo-wide'); // remove these 2 lines if logo is square
             $('.nav-logo').removeClass('enlarge-photo');
+            $('.nav-logo img').removeClass('htn-logo');
+            $('.nav-logo img').addClass('yelp-logo');   
+
+            $('.middleline').removeClass('line-htn');
+            $('.middleline').addClass('line-yelp');
+
+            $('.htn .milestone').addClass('line-black');
+            $('.htn .milestone').removeClass('line-htn');
+            $('.htn .arrow-right').addClass('right-black');
+            $('.htn .arrow-right').removeClass('right-htn');
         }
     }, {
-        offset: '70px'
+        offset: '186px'
+    });
+
+    $('.htn').waypoint(function() {
+         $('.htn').css("visibility","visible");
+         $('.htn').addClass("animated flipInX");
+         this.destroy();
+    }, {
+        offset: '250px'
     });
 
     $('.zynga').waypoint(function(direction) {
@@ -465,7 +510,7 @@ $(document).ready(function() {
             $('.zynga .arrow-left').removeClass('left-zynga');
         }
     }, {
-        offset: '285px'
+        offset: '250px'
     });
 
     $('.zynga').waypoint(function() {
@@ -473,7 +518,7 @@ $(document).ready(function() {
          $('.zynga').addClass("animated flipInX");
          this.destroy();
     }, {
-        offset: '285px'
+        offset: '250px'
     });
 
     $('.website').waypoint(function(direction) {
@@ -505,7 +550,7 @@ $(document).ready(function() {
         }
 
     }, {
-        offset: '285px'
+        offset: '250px'
     });
 
     $('.website').waypoint(function() {
@@ -513,7 +558,7 @@ $(document).ready(function() {
          $('.website').addClass("animated flipInX");
          this.destroy();
     }, {
-        offset: '285px'
+        offset: '250px'
     });
 
     $('.hackathon').waypoint(function(direction) {
@@ -545,7 +590,7 @@ $(document).ready(function() {
             $('.hackathon .arrow-right').addClass('right-black');
         }
     }, {
-        offset: '285px'
+        offset: '250px'
     });
 
     $('.hackathon').waypoint(function() {
@@ -553,7 +598,7 @@ $(document).ready(function() {
          $('.hackathon').addClass("animated flipInX");
          this.destroy();
     }, {
-        offset: '285px'
+        offset: '250px'
     });
 
     $('#postcard').waypoint(function() {
@@ -774,7 +819,7 @@ $(".portfolio-item").on("mouseenter", function() {
 // hover out
 $(".portfolio-item").on("mouseleave", function() {
     $(this).find(".splash").stop().fadeTo(250, 1);
-    $(this).find(".portfolio-overlay").stop().delay(450).fadeTo(650, 1);
+    $(this).find(".portfolio-overlay").stop().delay(400).fadeTo(650, 1);
 });
 
 // postcard stamp magic

@@ -372,10 +372,13 @@ section.demo-3 {
     margin: auto;
     height:90%;
 }
-.htn {
+.yelp {
     visibility: hidden;
     padding-top: 80px;
     height:300px;
+}
+.line-yelp{
+    background-color:rgb(196, 18, 0);
 }
 .line-zynga{
     background-color:rgb(215, 30, 30);
@@ -469,6 +472,11 @@ section.demo-3 {
     background-color: white;
     border: 2px solid gray;
 }
+.node-yelp{
+    color:rgb(196, 18, 0);
+    background-color: white;
+    border: 2px solid rgb(196, 18, 0);
+}
 .node-zynga{
     color:rgb(215, 30, 30);
     background-color: white;
@@ -536,6 +544,9 @@ section.demo-3 {
 .right-black{
     border-left:15px solid #CECBCB; 
 }
+.right-yelp{
+    border-left:15px solid rgb(196, 18, 0);; 
+}
 .right-zynga{
     border-left:15px solid rgb(215, 30, 30); 
 }
@@ -564,6 +575,9 @@ section.demo-3 {
 /*left*/
 .left-black{
     border-right:15px solid #CECBCB; 
+}
+.left-yelp{
+    border-right:15px solid rgb(196, 18, 0);; 
 }
 .left-zynga{
     border-right:15px solid rgb(215, 30, 30); 
@@ -1845,13 +1859,20 @@ a#scroll_down i {
     height:78px;
     width:78px;
 }
-
+.enlarge-photo-wide{
+    padding-left: 12px;
+    margin-top: 5px;
+    width:125px;
+}
 .eddie-logo{
     content: url(../images/logo_default.png);
 }
 .htn-logo {
     margin-top: 0px !important;
     content:url(../images/htn-logo.png);
+}
+.yelp-logo {
+    content:url(../images/yelp-logo.png);
 }
 .zynga-logo {
     content:url(../images/zynga-logo.jpg);
