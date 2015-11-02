@@ -374,7 +374,7 @@ section.demo-3 {
 }
 .yelp {
     visibility: hidden;
-    padding-top: 80px;
+    padding-top: 100px;
     height:300px;
 }
 .line-yelp{
@@ -1042,7 +1042,7 @@ input:-ms-input-placeholder {
     position: relative;
     left: 0;
     height: 120%;
-    background-color: rgba(255,255,255,0.1);
+    background-color: rgba(255,255,255,0.6);
     background-position: 50% 50%;
     margin-bottom:0px;
     background-size: cover;
@@ -1860,9 +1860,9 @@ a#scroll_down i {
     width:78px;
 }
 .enlarge-photo-wide{
-    padding-left: 12px;
+    padding-left: 16px;
     margin-top: 5px;
-    width:125px;
+    width:135px;
 }
 .eddie-logo{
     content: url(../images/logo_default.png);

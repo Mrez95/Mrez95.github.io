@@ -174,7 +174,6 @@ $(document).ready(function() {
         $('.endorsement-container.shawn').removeClass('animated fadeIn');
     });
 
-
     // ** TIMELINE TREE ** // 
 
     // timeline TODO: TESTING EXPERIMENT
@@ -880,7 +879,7 @@ $(".fa-github").on("mouseenter", function() {
     }), $(window).scroll(function() {
         // timeline logo offset logic 
         var eTop = $('#fifteen').offset().top; //get the offset top of the element
-        var distance = eTop - $(window).scrollTop() - 120;
+        var distance = eTop - $(window).scrollTop() ;
         var t = $("li.current").attr("id");
         $(this).scrollTop() + 85 >= $('div[data-anchor="home"]').offset().top && $(this).scrollTop() < $('div[data-anchor="portfolio"]').offset().top - 230 && (hide_menu(), $("nav a#home").hasClass("active") || ($("nav a#about").removeClass("active"), $("nav a#portfolio").removeClass("active"), $("nav a#contact").removeClass("active")), $("nav li#home").hasClass("current") || ($("nav li#about").removeClass("current"), $("nav li#portfolio").removeClass("current"), $("nav li#contact").removeClass("current"), $("nav li#home").addClass("current"))), 
         $(this).scrollTop() + 230 >= $('div[data-anchor="portfolio"]').offset().top && $(this).scrollTop() < $('div[data-anchor="about"]').offset().top && (show_menu(), $("nav a#about").hasClass("active") || ($("nav a#home").removeClass("active"), $("nav a#portfolio").removeClass("active"), $("nav a#contact").removeClass("active"), $("nav a#about").addClass("active")), $("nav li#about").hasClass("current") || ($("nav li#home").removeClass("current"), $("nav li#portfolio").removeClass("current"), $("nav li#contact").removeClass("current"), $("nav li#about").addClass("current"))), 
@@ -897,7 +896,10 @@ $(".fa-github").on("mouseenter", function() {
         $("#scroll_down").css("opacity", 0.65 - e / i).show();
         $(".dotted-lines").css("opacity", 0.65 - e / i).show();
         // magical code. canvas transition color. 
-        $(".image").css("background-color", "rgba(255,255,255," + (((0.05*(e-f))/100)+0.6) + ")").show();
+        if (f-e < 0) {
+            console.log(e-f);
+            $(".image").css("background-color", "rgba(255,255,255," + (((e-f)/1000)+0.6) + ")").show();
+        }
     }), 
 $(window).load(function() {
         updateVisual(), $(".name-container").css($(window).width() > 768 ? {
