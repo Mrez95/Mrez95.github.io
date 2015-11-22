@@ -669,7 +669,9 @@ section.demo-3 {
 .left-base{
     border-right:15px solid rgb(254, 216, 13); 
 }
-
+.filter {
+    background-color: rgba(0,0,0,0.2);
+}
 .first-node{
     top:130px !important;
 }
