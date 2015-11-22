@@ -818,7 +818,7 @@ $(".portfolio-item").on("mouseenter", function() {
 // hover out
 $(".portfolio-item").on("mouseleave", function() {
     $(this).find(".splash").stop().fadeTo(250, 1);
-    $(this).find(".portfolio-overlay").stop().delay(400).fadeTo(650, 1);
+    $(this).find(".portfolio-overlay").stop().delay(400).fadeTo(500, 1);
 });
 
 // postcard stamp magic
@@ -891,7 +891,7 @@ $(".fa-github").on("mouseenter", function() {
         }), previousId = t;
         var e = $(this).scrollTop(),
             i = $(".filter").height();
-            f = $("#personal-bio").height()+150;
+            f = $("#personal-bio").height()+440;
         $("#default-nav").css("opacity", .8 - e / i).show();
         $("#scroll_down").css("opacity", 0.65 - e / i).show();
         $(".dotted-lines").css("opacity", 0.65 - e / i).show();
