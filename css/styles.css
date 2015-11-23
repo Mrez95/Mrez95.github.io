@@ -174,6 +174,8 @@ body.background {
 }
 .box h5 {
     color: rgba(255, 255, 255, .7);
+    font-size: 18px;
+    margin-top: 15px;
     -webkit-transition: color .5s;
     transition: color .5s;
 }
@@ -214,7 +216,7 @@ section.demo-3 {
     z-index: 1;
     padding: 4em 2em;
     text-align: center;
-    padding-top:0px;
+    padding-top:2px;
     -webkit-animation-delay: 1.3s; /* Chrome, Safari, Opera */
     -moz-animation-delay: 1.3s;
     animation-delay: 1.3s;
@@ -669,9 +671,6 @@ section.demo-3 {
 .left-base{
     border-right:15px solid rgb(254, 216, 13); 
 }
-.filter {
-    background-color: rgba(0,0,0,0.2);
-}
 .first-node{
     top:130px !important;
 }
@@ -1083,6 +1082,8 @@ input:-ms-input-placeholder {
 #message-con-1, #message-con-2, #message-con-3, #message-con-4 {
     width: 44%}
 .letter-writing {
+    font-size: 15px;
+    margin-top: 11%;
     font-family: 'Nothing You Could Do', cursive;
 }
 #about-photo {
@@ -1135,7 +1136,7 @@ input:-ms-input-placeholder {
     height:auto;
     top: 10%;
     line-height: 200%;
-    font-size: 20px;
+    font-size: 16px;
 }
 #personal-bio a {
     cursor:pointer;
@@ -1564,11 +1565,17 @@ nav {
 }
 .name-container {
     position: absolute;
-    left: 299px; 
+    top: 50%;
+    transform: translate(0,-53%);
+    width: 500px;
+    height: 457px;
+    z-index: 1;
     opacity: 1;
 }
 .name-container hr {
     border: none;
+    padding-left: 10px;
+    padding-right: 10px;
     border-top: 1px dashed #fff;
 }
 .btn-same-size {
@@ -1984,11 +1991,13 @@ a#scroll_down i {
 .logo{
     visibility: hidden;
     position:relative;
+    margin-bottom: -10px !important;
     z-index:3;
 }
 #nameTag{
     position:relative;
     z-index:3;
+    font-size: 58px;
     color:rgba(255,255,255,1)
 }
 #nameTag span {
@@ -1997,6 +2006,7 @@ a#scroll_down i {
 #typer{
     position:relative;
     z-index:3;
+    font-size: 21px;
     color:rgba(255,255,255,0.7);
 }
 #contact-body {
@@ -2102,6 +2112,20 @@ a#scroll_down i {
     line-height: 1em;
     margin-left: .2em;
 }
+
+/*large monitors 27" and plus */
+@media screen and (min-height: 800px){
+    #personal-bio {
+        font-size: 20px !important;
+    }
+    p.letter-writing {
+        font-size: 17px;
+        margin-top: 21%
+    }
+    .image {
+        height: 100%;
+    }
+}
 /*mobile screens*/
 @media screen and (max-width: 700px){
     video#background {
@@ -2149,13 +2173,13 @@ a#scroll_down i {
         font-size:30px !important;
         margin-top: 15px !important;
     }
-    .name-container{
-        margin-top:50px;
-        height: 100% !important;
-        width: 100% !important;
+    .name-container {
+        transform: translate(0,-50%);
+        width: 100%;
+        height: 75%;
     }
     .name-container hr{
-        width:86%;
+        width:300px;
         margin-bottom: 15px !important;
     }
     .name-container .logo {
@@ -2357,7 +2381,7 @@ a#scroll_down i {
     .name-container .logo {
         display: block;
         margin: auto;
-        width: 225px;
+        width: 150px;
     }
 }
 

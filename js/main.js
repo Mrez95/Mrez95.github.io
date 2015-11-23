@@ -33,30 +33,28 @@ function show_menu() {
 }
 
 function updateVisual() {
-    $("#message-con-0").attr("maxlength", Math.round($("#message-con-0").width() / wordGap)), $("#message-con-1").attr("maxlength", Math.round($("#message-con-1").width() / wordGap)), $("#message-con-2").attr("maxlength", Math.round($("#message-con-2").width() / wordGap)), $("#message-con-3").attr("maxlength", Math.round($("#message-con-3").width() / wordGap)), $("#message-con-4").attr("maxlength", Math.round($("#message-con-4").width() / wordGap)), $("#footer").css("height", window.innerHeight - $("#navbar").height()), $("#icon-wrapper").css("width", $("#about-me").width()), $(".logo").css("margin-bottom", "-30px"), $("#nameTag").css("font-size", "69px"), $("#typer").css("font-size", "22px"), $(".demo-3").css("margin-top", "none"), $(".box").css("margin", "2px"), window.innerHeight > 800 ? ($("#personal-bio").css("font-size", "18px"), $(".name-container").css({
-        width: "566px",
-        height: "457px",
-        top: .21 * window.innerHeight
-    }), $("p.letter-writing").css({
-        fontSize: "17px",
-        marginTop: "21%"
-    }), $(".image").css("height", "95%")) : ($("#personal-bio").css("font-size", "16px"), $(".name-container").css({
-        width: "566px",
-        height: "457px",
-        top: .1 * window.innerHeight
-    }), $("p.letter-writing").css({
-        fontSize: "15px",
-        marginTop: "11%"
-    }), $(".image").css("height", "120%"))
+    $("#message-con-0").attr("maxlength", Math.round($("#message-con-0").width() / wordGap)),
+    $("#message-con-1").attr("maxlength", Math.round($("#message-con-1").width() / wordGap)), 
+    $("#message-con-2").attr("maxlength", Math.round($("#message-con-2").width() / wordGap)), 
+    $("#message-con-3").attr("maxlength", Math.round($("#message-con-3").width() / wordGap)), 
+    $("#message-con-4").attr("maxlength", Math.round($("#message-con-4").width() / wordGap)), 
+    $("#footer").css("height", window.innerHeight - $("#navbar").height()), 
+    $("#footer").css("height", window.innerHeight - $("#navbar").height()),
+    $("#icon-wrapper").css("width", $("#about-me").width());
 }
+
 var previousId = "",
     tie = {},
     wordGap = 11;
+
 $(document).ready(function() {
     isAlphaModifiable = false;
 
     // get dynamic greeting
     getTime();
+
+    // sync layout to position correctly in frame
+    $(window).resize();
 
     // remove main loader
     $('.logo').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
@@ -901,18 +899,6 @@ $(".fa-github").on("mouseenter", function() {
             $(".image").css("background-color", "rgba(255,255,255," + (((e-f)/1000)+0.6) + ")").show();
         }
     }), 
-$(window).load(function() {
-        updateVisual(), $(".name-container").css($(window).width() > 768 ? {
-            position: "absolute",
-            left: ($(window).width() - $(".name-container").outerWidth()) / 2,
-            top: ($(window).height() - $(".name-container").outerHeight()) / 2,
-            opacity: 1
-        } : {
-            position: "relative",
-            top: 0,
-            left: 0
-        }), $(window).resize()
-    }),
 
     function(t, e, i) {
         "use strict";
