@@ -895,7 +895,6 @@ $(".fa-github").on("mouseenter", function() {
         $(".dotted-lines").css("opacity", 0.65 - e / i).show();
         // magical code. canvas transition color. 
         if (f-e < 0) {
-            console.log(e-f);
             $(".image").css("background-color", "rgba(255,255,255," + (((e-f)/1000)+0.6) + ")").show();
         }
     }), 
